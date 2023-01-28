@@ -18,4 +18,4 @@ It is possible to run the website locally on your own machine.
 - run `bundle exec jekyll serve` or simply `jekyll serve` if that doesn't work.
 
 ## Acknowledgements
-This course was originally designed by Amos Bloomberg. All course materials were forked from his [GitHub repository]{https://github.com/nyu-java-programming}.
+This course was originally designed by Amos Bloomberg. All course materials were forked from his [GitHub repository](https://github.com/nyu-java-programming).
