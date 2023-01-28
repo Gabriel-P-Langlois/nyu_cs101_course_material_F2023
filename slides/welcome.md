@@ -55,11 +55,7 @@ template: introductions
 
 ## Me
 
-Foo Barstein
-
-instagram: [foo.barstein](https://instagram.com/foo.barstein)
-
-discord: @foo.barstein
+Gabriel Provencher Langlois
 
 ---
 
