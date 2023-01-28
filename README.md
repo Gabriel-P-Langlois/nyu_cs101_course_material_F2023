@@ -16,3 +16,6 @@ It is possible to run the website locally on your own machine.
 - Install [Jekyll](https://jekyllrb.com/) globally
 - Install the dependencies listed in the `Gemfile` by running the command, `bundle`.
 - run `bundle exec jekyll serve` or simply `jekyll serve` if that doesn't work.
+
+## Acknowledgements
+This course was originally designed by Amos Bloomberg. All course materials were forked from his [GitHub repository]{https://github.com/nyu-java-programming}.
