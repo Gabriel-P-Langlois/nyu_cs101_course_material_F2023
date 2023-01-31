@@ -8,7 +8,7 @@ class: center, middle
 
 # Basic UNIX Commands
 
-for those who don't know
+
 
 ---
 
@@ -54,7 +54,9 @@ Unix commands are necessary in order to be able to navigate directories/folders 
 
 - all Unix commands are run in the command-line interface, such as that offered by Terminal on OS X or Git Bash on Windows.
 
-Review [basic Unix commands](/slides/unix_intro.md).
+We'll go over some of the basic commands in \*NIX.
+
+You may find chapters 1 and 2 of the following [tutorial]{http://www.ee.surrey.ac.uk/Teaching/Unix/} useful.
 
 ---
 
@@ -357,7 +359,7 @@ foo@bar$ mkdir ../arugula
 Make a new directory somewhere totally different on the hard drive:
 
 ```bash
-foo@bar$ mkdir /Users/foo/Photos/compromising/nudes
+foo@bar$ mkdir /Users/foo/Photos/Animals/Penguins
 ```
 
 ---
@@ -400,7 +402,7 @@ Users who have access to a file or folder fall into one of three categories:
 
 ## Access types
 
-There are three types of access to a file or foldeer:
+There are three types of access to a file or folder:
 
 - read
 - write
@@ -556,4 +558,4 @@ name: conclusions
 
 --
 
-- Thank you. Bye.
+- Thank you!
