@@ -56,7 +56,7 @@ Unix commands are necessary in order to be able to navigate directories/folders 
 
 We'll go over some of the basic commands in \*NIX.
 
-You may find chapters 1 and 2 of the following [tutorial]{http://www.ee.surrey.ac.uk/Teaching/Unix/} useful.
+You may find chapters 1 and 2 of the following [tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/) useful.
 
 ---
 
