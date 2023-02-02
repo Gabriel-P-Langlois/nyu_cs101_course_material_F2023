@@ -85,18 +85,7 @@ Computer programming code is plain text. In order to edit code, you will need a 
 
 --
 
-Just about any code editor or Integrated Development Environment, such as [Visual Studio Code](https://code.visualstudio.com), is a good plain text editor.
-
----
-
-template: text editors
-
-## Warnings about text editor quality
-
-- Never use TextEdit on OS X to edit code.
-- Never use Notepad on Windows to edit code.
-- Do not use Microsoft Word or Google Docs to edit code
-- Emacs is a plain text editor that can be run from the command line. Vim is another.
+I will use [Visual Studio Code](https://code.visualstudio.com), which is a good plain text editor.
 
 ---
 
@@ -125,10 +114,10 @@ template: starter-code
 
 ## Add starter Java code to the file
 
-Edit the text file you just created using a text editor of your choice.
+Edit the text file you just created. Assuming you are using Visual Studio Code,
 
 ```bash
-foo@bar$ emacs MyFirstJavaProgram.java
+foo@bar$ code MyFirstJavaProgram.java
 ```
 
 Add the following code:
@@ -149,9 +138,7 @@ template: starter-code
 
 ## Save your file
 
-If you are using the emacs editor, press `Ctrl-x Ctrl-S` to save, then `Ctrl-x Ctrl-c` to quit.
-
-If using any other graphical user interface editor, just save the ordinary way.
+If you are using Visual Studio Code, press `Ctrl-S` to save.
 
 ---
 
@@ -188,39 +175,13 @@ Note the command does not require the `.java` or `.class` file extension.
 
 name: better-code
 
-# Better starter code
+# Running code stored in a different directory
 
 ---
 
 template: better-code
 
-## Add a package
-
-Java code can be organized into "packages" of related files.
-
-Add a similar package declaration to your source code file in an editor of your choice, but replace `fb1258` with your own NYU Net ID.
-
-```java
-package edu.nyu.cs.fb1258;
-
-public class MyFirstJavaProgram {
-	public static void main(String[] args) {
-		// put the main contents of your program below here
-		System.out.println("Welcome to Java from the command line!");
-		// put the main contents of your program above here
-	}
-}
-```
-
----
-
-template: better-code
-
-## Move the file to the proper location
-
-Sadly, with a package identifier, the `.java` and `.class` files must now be located in a directory that matches the package or the JVM will not execute them.
-
-Create an appropriate set of sub-directories, and move both files at once (replace `fb1258` with yoru own NYU Net ID):
+Create an appropriate set of sub-directories, and move both files at once (replace `fb1258` with your own NYU Net ID):
 
 ```bash
 foo@bar$ mkdir edu
@@ -243,7 +204,7 @@ template: better-code
 
 ## Recompile the Java source code.
 
-Sadder still, the Java source code must now be re-compiled, since the byte code is no longer up to date.
+The Java source code must now be re-compiled, since the byte code is no longer up to date.
 
 ```bash
 foo@bar$ javac edu/nyu/cs/fb1258/MyFirstJavaProgram.java
@@ -262,8 +223,8 @@ At this point, you have two files named `MyFirstJavaProgram.java` (source code) 
 Now try running it. Here we will tell the JVM that it should look in the current working directory (nicknamed `.` in UNIX) and any sub-directories for the appropriate .class files within the indicated package.
 
 ```bash
-foo@bar$ java -classpath . edu.nyu.cs.fb1258.MyFirstJavaProgram
-Better welcome to Java from the command line!
+foo@bar$ java edu.nyu.cs.fb1258.MyFirstJavaProgram
+Welcome to Java from the command line!
 ```
 
 Use package identifiers from now on in all work.
