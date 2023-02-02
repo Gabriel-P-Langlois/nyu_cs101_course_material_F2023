@@ -8,8 +8,6 @@ class: center, middle
 
 # Starter code
 
-Welcome
-
 ---
 
 # Agenda
@@ -51,9 +49,14 @@ If you have any terminal emulators open (such as Terminal or Git Bash), close th
 
 ---
 
-template: assumptions
+name: text editors
 
-## Understanding of plain text
+# Text editors
+
+---
+template: text editors
+
+## Understanding plain text
 
 Plain text is a term frequently used to mean one data on a computer that is represented as codes in the ASCII encoding system or the Unicode encoding system, a successor to ASCII.
 
@@ -61,9 +64,9 @@ These coding systems map specific numeric codes to every text character. For exa
 
 ---
 
-template: assumptions
+template: text editors
 
-## Understanding of plain text
+## Understanding plain text
 
 When you as a human see plain text on your screen or type text characters on your keyboard, chances are the computer behind the scenes will store that text's numeric codes (in binary) according to one of these two encoding systems.
 
@@ -71,13 +74,13 @@ A plain text file is a file that has nothing but numeric codes that map out to c
 
 ---
 
-template: assumptions
+template: text editors
 
 ## Ability to edit plain text
 
 Computer programming code is plain text. In order to edit code, you will need a decent plain text editor program.
 
-- Install [Sublime Text](https://www.sublimetext.com/), a free good quality plain text editor.
+- One option is to install [Sublime Text](https://www.sublimetext.com/), a free good quality plain text editor.
 - Sublime Text is freeware, but periodically will ask for donations. You are not required to donate.
 
 --
@@ -86,37 +89,14 @@ Just about any code editor or Integrated Development Environment, such as [Visua
 
 ---
 
-template: assumptions
+template: text editors
 
 ## Warnings about text editor quality
 
 - Never use TextEdit on OS X to edit code.
 - Never use Notepad on Windows to edit code.
 - Do not use Microsoft Word or Google Docs to edit code
-- Beware of Emacs, lest you find yourself forever dreaming of keyboard shortcuts.
-
----
-
-template: assumptions
-
-## Command line text editors
-
-Emacs is a plain text editor that can be run from the command line. Vim is another.
-
-If you want to have the most fun with the \*NIX command line, use Emacs instead of Sublime Text or Visual Studio Code.
-
----
-
-template: assumptions
-
-## Emacs shortcuts
-
-Emacs functionality depends upon a lot of keyboard shortcut combinations. The following will get you started:
-
-- `Ctrl-x Ctrl-s` to save a file
-- `Ctrl-x Ctrl-c` to quit emacs
-
-Learn more shortcuts with an [emacs cheat sheet](https://duckduckgo.com/?q=emacs+cheat+sheet&t=brave&ia=cheatsheet&iax=1).
+- Emacs is a plain text editor that can be run from the command line. Vim is another.
 
 ---
 
@@ -791,4 +771,4 @@ We can now use the command line to write and compile Java source code into Java 
 
 --
 
-- Thank you. Bye.
+- Thank you!
