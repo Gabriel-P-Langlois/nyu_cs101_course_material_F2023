@@ -220,26 +220,22 @@ template: better-code
 
 At this point, you have two files named `MyFirstJavaProgram.java` (source code) and `MyFirstJavaProgram.class` (byte code) in the directory `edu/nyu/cs/fb1258`, where `fb1258` is replaced with your own NYU Net ID.
 
-Now try running it. Here we will tell the JVM that it should look in the current working directory (nicknamed `.` in UNIX) and any sub-directories for the appropriate .class files within the indicated package.
+Now try running it.
 
 ```bash
-foo@bar$ java edu.nyu.cs.fb1258.MyFirstJavaProgram
+foo@bar$ java edu/nyu/cs/fb1258.MyFirstJavaProgram
 Welcome to Java from the command line!
 ```
-
-Use package identifiers from now on in all work.
 
 ---
 
 name: even-better-code
 
-# Even better starter code
+# Can we do better?
 
 --
 
-## How could it be any better?!
-
-We can do even better than our [better starter code](#better-code) by putting Java source code into a `src/` directory and compiling our Java byte code into a separate `bin/` directory.
+We can do better by putting Java source code into a `src/` directory and compiling our Java byte code into a separate `bin/` directory.
 
 --
 
@@ -262,7 +258,7 @@ foo@bar$ javac -d bin src/edu/nyu/cs/fb1258/MyFirstJavaProgram.java
 ```
 
 ```bash
-foo@bar$ java -cp bin edu.nyu.cs.fb12358.MyFirstJavaProgram
+foo@bar$ java -cp bin src/edu/nyu/cs/fb1258/MyFirstJavaProgram.java
 ```
 
 ---
@@ -278,8 +274,6 @@ name: input
 In order to easily receive keyboard input from a user, a Java program must import `java.util.Scanner`.
 
 ```java
-package edu.nyu.cs.fb1258;
-
 import java.util.Scanner;
 
 public class AgreeableBot {
@@ -318,7 +312,6 @@ template: input
 Using any of the functions besides `nextLine()` creates complication. For example:
 
 ```java
-package edu.nyu.cs.fb1258;
 import java.util.Scanner;
 
 public class LookHowGreatJavaIs {
