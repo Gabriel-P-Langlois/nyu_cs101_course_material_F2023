@@ -26,64 +26,16 @@ name: assumptions
 
 # Assumptions
 
-template: assumptions
-
-## Ability to run \*NIX commands
-
-In order to run Unix or Linux commands (collectively known as \*NIX), you will need a UNIX terminal emulator:
+You will need a UNIX terminal emulator:
 
 - OS X users already have the Terminal app we will use for this purpose.
 - Windows users must have [Git for Windows](https://gitforwindows.org/) installed.
 
----
-
-template: assumptions
-
-## Ability to execute Java programs
-
 You will need to have the [Java Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/) (JDK) installed.
 
-If you have any terminal emulators open (such as Terminal or Git Bash), close them and reopen them after installing the JDK.
+You will need a text editor. I will use [Visual Studio Code](https://code.visualstudio.com), which is a good plain text editor.
 
----
-
-name: text editors
-
-# Text editors
-
----
-template: text editors
-
-## Understanding plain text
-
-Plain text is a term frequently used to mean one data on a computer that is represented as codes in the ASCII encoding system or the Unicode encoding system, a successor to ASCII.
-
-These coding systems map specific numeric codes to every text character. For example, the letter `a` is 97, `b` is 98, and so on and so forth.
-
----
-
-template: text editors
-
-## Understanding plain text
-
-When you as a human see plain text on your screen or type text characters on your keyboard, chances are the computer behind the scenes will store that text's numeric codes (in binary) according to one of these two encoding systems.
-
-A plain text file is a file that has nothing but numeric codes that map out to characters in one of these systems. Unicode is today's standard and includes all the Anglocentric characters ASCII did, plus characters of all other languages.
-
----
-
-template: text editors
-
-## Ability to edit plain text
-
-Computer programming code is plain text. In order to edit code, you will need a decent plain text editor program.
-
-- One option is to install [Sublime Text](https://www.sublimetext.com/), a free good quality plain text editor.
-- Sublime Text is freeware, but periodically will ask for donations. You are not required to donate.
-
---
-
-I will use [Visual Studio Code](https://code.visualstudio.com), which is a good plain text editor.
+- OS X users should read [this](https://code.visualstudio.com/docs/setup/mac) to use Visual Studio Code in the command line. In particular, you need to open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
 
 ---
 
