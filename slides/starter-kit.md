@@ -1,12 +1,12 @@
 ---
 layout: presentation
-title: Starter code
+title: Starter code, I/O using Scanner and data types.
 permalink: /slides/starter-code/
 ---
 
 class: center, middle
 
-# Starter code
+# Starter code, I/O using Scanner and data types
 
 ---
 
@@ -25,8 +25,6 @@ class: center, middle
 name: assumptions
 
 # Assumptions
-
----
 
 template: assumptions
 
