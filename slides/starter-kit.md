@@ -11,10 +11,13 @@ class: center, middle
 ---
 
 # Agenda
-
+Part I
 1. [Things you need](#assumptions)
 1. [Your first Java program](#starter-code) 
 1. [Explaining your first Java program](#java-program-explained)
+1. [A Java program with the Scanner class](#code-starter) 
+
+Part II (Next lecture)
 1. [Better starter code](#better-code)
 1. [Even better starter code](#even-better-code)
 1. [Soliciting input](#input)
@@ -238,6 +241,37 @@ The statement "System.out.println" instructs the computer to display a message i
 The message we will be displaying in the program is "Welcome to Java from the command line!".
 
 Note: Almost all statements in Java must end with a semicolon **;**.
+
+---
+
+name: code-scanner
+
+# A Java program with the Scanner class
+
+---
+
+template: code-scanner
+
+In order to easily receive keyboard input from a user, a Java program must import `java.util.Scanner`.
+
+```java
+import java.util.Scanner; // a predefined Java library for keyboard input
+
+public class Welcome {
+	public static void main(String[] args) {
+		System.out.println("Enter your username:"); // prompt for input
+		
+		Scanner input = new Scanner(System.in);
+		// the next line declares a String variable named "nextName" and
+		// makes the input scanner reads the string. (input.next())
+		String nextName = input.next();
+		
+		System.out.println("Welcome to Java Programming, " + nextName + "!");
+		
+		input.close(); // closing the input Scanner
+	}
+}
+```
 
 ---
 
