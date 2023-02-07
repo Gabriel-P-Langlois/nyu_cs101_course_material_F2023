@@ -153,7 +153,7 @@ Each class has a name.
 - The name of our class is MyFirstJavaProgram
 - By convention, class names start with an uppercase letter.
 
-The name of the class that contain the main method must match the name of the source file (MyFirstJavaProgram.java)
+The name of the class containing the main method must match the name of the source file (MyFirstJavaProgram.java)
 
 ---
 
@@ -189,7 +189,7 @@ public class MyFirstJavaProgram {
 }
 ```
 
-**Public** , **Static** , **void** are called reserved words.
+"Public" , "Static" , "void" are called **reserved words**.
 
 Each one of them has a specific meaning to the compiler. 
 
@@ -209,11 +209,13 @@ public class MyFirstJavaProgram {
 }
 ```
 
-The line **// put the main contents of your program below here** is a comment.
+The line "// put the main contents of your program below here" is a **comment**.
 
 A comment documents information about the program.
 
 Comments help programmers communicate and understand the program.
+
+Note: Comment your programs! See this [website](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/) for best practices.
 
 ---
 
@@ -229,13 +231,13 @@ public class MyFirstJavaProgram {
 }
 ```
 
-**system.out.println** is a Java statement.
+"System.out.println" is a **Java statement**.
 
-The statement **System.out.println** instructs the computer to display a message in the console.
+The statement "System.out.println" instructs the computer to display a message in the console.
 
 The message we will be displaying in the program is "Welcome to Java from the command line!".
 
-Note: Almost all statements in Java must end with a semicolon ;.
+Note: Almost all statements in Java must end with a semicolon **;**.
 
 ---
 
