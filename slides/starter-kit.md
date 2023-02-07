@@ -26,6 +26,12 @@ name: assumptions
 
 # Things you need
 
+---
+
+template: assumptions
+
+# Things you need
+
 You will need a UNIX terminal emulator.
 
 - OS X users already have the Terminal app we will use for this purpose.
@@ -45,7 +51,7 @@ You will need a text editor. I will use [Visual Studio Code](https://code.visual
 
 name: starter-code
 
-# Starter code
+# Getting started
 
 ---
 
@@ -61,10 +67,6 @@ foo@bar$ mkdir first_try
 foo@bar$ cd first_try
 foo@bar$ touch MyFirstJavaProgram.java
 ```
-
----
-
-template: starter-code
 
 ## Add starter Java code to the file
 
