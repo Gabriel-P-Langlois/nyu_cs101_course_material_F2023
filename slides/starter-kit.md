@@ -16,13 +16,15 @@ Part I
 1. [Your first Java program](#starter-code) 
 1. [Explaining your first Java program](#java-program-explained)
 1. [A Java program with the Scanner class](#code-scanner) 
+1. [More about the Scanner class](#input)
+1. [Conclusion for part I](#conclusions-part-1)
 
-Part II (Next lecture)
-1. [Better starter code](#better-code)
-1. [Even better starter code](#even-better-code)
-1. [Soliciting input](#input)
+Part II (Next lecture -- in construction!)
+1. [A note about structure project folders](#better-code)
 1. [Data types](#data-types)
-1. [Conclusions](#conclusions)
+1. [Operators and operands]
+1. [Arithmetics in Java]
+3. [Conclusions](#conclusions)
 
 ---
 
@@ -354,9 +356,98 @@ public class Welcome {
 }
 ```
 
-Demo: Create a new java file (Welcome.java), compile it, and run it. 
+**Demo**: Create a new java file (Welcome.java), compile it, and run it. 
 
 Try using different inputs (e.g., username123, username 123, etc.)
+
+---
+
+name: input
+
+# More about the Scanner class
+
+---
+
+template: input
+
+## Scanner's built-in functions
+
+Scanner has a few different functions for fetching the user input as different data types, e.g.:
+
+- `next()` - returns a `String` with the user's input up until a space(" ") is encountered.
+- `nextLine()` - returns a `String` with the user's input up to the newline (i.e. `\n`) character they type
+- `nextInt()` - returns an `int` with the user's input, if they entered an integer; otherwise crashes
+- `nextDouble()` - returns a `double` with the user's input, if they entered a number; otherwise crashes
+
+---
+
+template: input
+
+## Scanner weirdness
+
+Using `nextInt()` or `nextDouble()` can create complications. For example:
+
+```java
+import java.util.Scanner;
+
+public class LookHowGreatJavaIs {
+	public static void main(String[] args) {
+		Scanner scnr = new Scanner(System.in);
+		// get user's age
+		System.out.println("Please enter your age: ");
+		int ageAsInt = scnr.nextInt(); // an int
+		// get user's name
+		System.out.println("Please enter your name: ");
+		String name = scnr.nextLine(); // a String
+		// print out a friendly welcome message
+		System.out.println("Welcome, " +  name + "! You are " + ageAsInt/7 + " years old in dog years!");
+		scnr.close(); // close the Scanner to conserve resources
+	}
+}
+```
+
+--
+
+This program will always output, `Welcome, !` no matter what you do...
+
+---
+
+template: input
+
+## Avoiding Scanner weirdness
+
+One way to avoid Scanner's weirdness, when asking the user for data types besides String, is to use `nextLine()` for all input and then convert the String it returns to other data types.
+
+```java
+public class StickToScanningStrings {
+    public static void main(String[] args) throws Exception {
+		Scanner scnr = new Scanner(System.in);
+		// get user's age
+		System.out.println("Please enter your age: ");
+		String ageAsString = scnr.nextLine(); // a String... avoid nextInt() and nextDouble!
+        int ageAsInt = Integer.parseInt(ageAsString); // and for doubles use Double.parseDouble(age)
+		// get user's name
+		System.out.println("Please enter your name: ");
+		String name = scnr.nextLine(); // a String
+		// print out a friendly welcome message
+		System.out.println("Welcome, " +  name + "! You are " + ageAsInt/7 + " years old in dog years!");
+		scnr.close();
+    }
+}
+```
+
+---
+
+name: conclusions-part-1
+
+# Conclusions
+---
+
+template: conclusions-part-1
+
+We can now use the command line to write and compile Java source code into Java byte code and then execute that byte code using the JVM interpreter.
+
+Thank you!
 
 ---
 
@@ -448,104 +539,6 @@ foo@bar$ javac -d bin src/edu/nyu/cs/fb1258/MyFirstJavaProgram.java
 foo@bar$ java -cp bin src/edu/nyu/cs/fb1258/MyFirstJavaProgram.java
 ```
 
----
-
-name: input
-
-# Soliciting input
-
---
-
-## Scanner
-
-In order to easily receive keyboard input from a user, a Java program must import `java.util.Scanner`.
-
-```java
-import java.util.Scanner;
-
-public class AgreeableBot {
-
-	public static void main(String[] args) {
-		System.out.println("What's on your mind? ");
-
-		Scanner scnr = new Scanner(System.in);
-		String response = scnr.nextLine();
-
-		System.out.println("I'm also thinking about " +  response + "!");
-
-		scnr.close();
-	}
-}
-```
-
----
-
-template: input
-
-## Scanner's built-in functions
-
-Scanner has a few different functions for fetching the user input as different data types, e.g.:
-
-- `nextLine()` - returns a `String` with the user's input up to the newline (i.e. `\n`) character they type
-- `nextInt()` - returns an `int` with the user's input, if they entered an integer; otherwise crashes
-- `nextDouble()` - returns a `double` with the user's input, if they entered a number; otherwise crashes
-
----
-
-template: input
-
-## Scanner weirdness
-
-Using any of the functions besides `nextLine()` creates complication. For example:
-
-```java
-import java.util.Scanner;
-
-public class LookHowGreatJavaIs {
-	public static void main(String[] args) {
-		Scanner scnr = new Scanner(System.in);
-		// get user's age
-		System.out.println("Please enter your age: ");
-		int ageAsInt = scnr.nextInt(); // an int
-		// get user's name
-		System.out.println("Please enter your name: ");
-		String name = scnr.nextLine(); // a String
-		// print out a friendly welcome message
-		System.out.println("Welcome, " +  name + "! You are " + ageAsInt/7 + " years old in dog years!");
-		scnr.close(); // close the Scanner to conserve resources
-	}
-}
-```
-
---
-
-This program will always output, `Welcome, !` no matter what you do!
-
----
-
-template: input
-
-## Avoiding Scanner weirdness
-
-One way to avoid Scanner's weirdness, when asking the user for data types besides String, is to use `nextLine()` for all input and then convert the String it returns to other data types.
-
-```java
-public class StickToScanningStrings {
-    public static void main(String[] args) throws Exception {
-		Scanner scnr = new Scanner(System.in);
-		// get user's age
-		System.out.println("Please enter your age: ");
-		String ageAsString = scnr.nextLine(); // a String... avoid nextInt() and nextDouble!
-        int ageAsInt = Integer.parseInt(ageAsString); // and for doubles use Double.parseDouble(age)
-		// get user's name
-		System.out.println("Please enter your name: ");
-		String name = scnr.nextLine(); // a String
-		// print out a friendly welcome message
-		System.out.println("Welcome, " +  name + "! You are " + ageAsInt/7 + " years old in dog years!");
-		scnr.close();
-    }
-}
-```
 
 ---
 
