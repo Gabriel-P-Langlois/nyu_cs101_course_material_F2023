@@ -297,6 +297,36 @@ public class Welcome {
 }
 ```
 
+In Java, you must declare a variable before you can use it.
+
+The declaration establishes the name and type of the variable.
+- "Scanner" is the **type name**
+- "input" is the **variable name**
+- "new" is a **reserved** Java identifier (more on this later)
+- "System.in" permits you to read input.
+
+---
+
+template: code-scanner
+
+```java
+import java.util.Scanner; // a predefined Java library for keyboard input
+
+public class Welcome {
+	public static void main(String[] args) {
+		System.out.println("Enter your username:"); // prompt for input
+		
+		Scanner input = new Scanner(System.in);
+		// the next line declares a String variable named "nextName" and
+		// makes the input scanner reads the string. (input.next())
+		String nextName = input.next();
+		
+		System.out.println("Welcome to Java Programming, " + nextName + "!");
+		
+		input.close(); // closing the input Scanner
+	}
+}
+```
 The next() **method** is used to get input from the user.
 
 It can read the input only until a space(" ") is encountered.
