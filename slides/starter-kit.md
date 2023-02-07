@@ -13,7 +13,7 @@ class: center, middle
 # Agenda
 
 1. [Things you need](#assumptions)
-1. [Starter code](#starter-code)
+1. [Your first Java program](#starter-code)
 1. [Better starter code](#better-code)
 1. [Even better starter code](#even-better-code)
 1. [Soliciting input](#input)
@@ -49,7 +49,7 @@ You will need a text editor. I will use [Visual Studio Code](https://code.visual
 
 name: starter-code
 
-# Getting started
+# Your first Java program
 
 ---
 
@@ -94,7 +94,7 @@ public class MyFirstJavaProgram {
 
 template: starter-code
 
-## Save and your file
+## Save your file
 
 If you are using Visual Studio Code, press `Ctrl-S` to save.
 
@@ -125,6 +125,30 @@ Welcome to Java from the command line!
 ```
 
 Note the command does not require the `.java` or `.class` file extension.
+
+---
+name: java-program-explained
+
+# Your first java program explained
+---
+
+template: java-program-explained
+
+Let's explain your first Java program.
+
+```java
+public class MyFirstJavaProgram {
+	public static void main(String[] args) {
+		// put the main contents of your program below here
+		System.out.println("Welcome to Java from the command line!");
+		// put the main contents of your program above here
+	}
+}
+```
+
+- Blablabla
+- Blablabla
+- Blablabla
 
 ---
 
