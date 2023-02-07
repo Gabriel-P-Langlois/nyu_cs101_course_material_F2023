@@ -13,7 +13,8 @@ class: center, middle
 # Agenda
 
 1. [Things you need](#assumptions)
-1. [Your first Java program](#starter-code)
+1. [Your first Java program](#starter-code) 
+1. [Explaining your first Java program](#java-program-explained)
 1. [Better starter code](#better-code)
 1. [Even better starter code](#even-better-code)
 1. [Soliciting input](#input)
@@ -134,7 +135,29 @@ name: java-program-explained
 
 template: java-program-explained
 
-Let's explain your first Java program.
+```java
+public class MyFirstJavaProgram {
+	public static void main(String[] args) {
+		// put the main contents of your program below here
+		System.out.println("Welcome to Java from the command line!");
+		// put the main contents of your program above here
+	}
+}
+```
+
+The first line defines a **class**.
+
+Every Java program must have at least one class.
+
+Each class has a name.
+- The name of our class is MyFirstJavaProgram
+- By convention, class names start with an uppercase letter.
+
+The name of the class that contain the main method must match the name of the source file (MyFirstJavaProgram.java)
+
+---
+
+template: java-program-explained
 
 ```java
 public class MyFirstJavaProgram {
@@ -146,9 +169,73 @@ public class MyFirstJavaProgram {
 }
 ```
 
-- Blablabla
-- Blablabla
-- Blablabla
+The second line defines the **main method**.
+
+A java program is executed from the main method. It is the entry point where the program begins execution.
+
+A method has a name (e.g., main) and contains a set a statements.
+
+---
+
+template: java-program-explained
+
+```java
+public class MyFirstJavaProgram {
+	public static void main(String[] args) {
+		// put the main contents of your program below here
+		System.out.println("Welcome to Java from the command line!");
+		// put the main contents of your program above here
+	}
+}
+```
+
+**Public** , **Static** , **void** are called reserved words.
+
+Each one of them has a specific meaning to the compiler. 
+
+We will explain these words in detail later in the course.
+
+---
+
+template: java-program-explained
+
+```java
+public class MyFirstJavaProgram {
+	public static void main(String[] args) {
+		// put the main contents of your program below here
+		System.out.println("Welcome to Java from the command line!");
+		// put the main contents of your program above here
+	}
+}
+```
+
+The line **// put the main contents of your program below here** is a comment.
+
+A comment documents information about the program.
+
+Comments help programmers communicate and understand the program.
+
+---
+
+template: java-program-explained
+
+```java
+public class MyFirstJavaProgram {
+	public static void main(String[] args) {
+		// put the main contents of your program below here
+		System.out.println("Welcome to Java from the command line!");
+		// put the main contents of your program above here
+	}
+}
+```
+
+**system.out.println** is a Java statement.
+
+The statement **System.out.println** instructs the computer to display a message in the console.
+
+The message we will be displaying in the program is "Welcome to Java from the command line!".
+
+Note: Almost all statements in Java must end with a semicolon ;.
 
 ---
 
