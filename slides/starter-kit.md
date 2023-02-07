@@ -1,17 +1,17 @@
 ---
 layout: presentation
-title: Starter code, I/O using Scanner and data types.
+title: Starter code, I/O using Scanner, data types, and arithmetic.
 permalink: /slides/starter-code/
 ---
 
 class: center, middle
 
-# Part 1: Starter code and I/O using Scanner.
+# Starter code and I/O using the Scanner class
 
 ---
 
 # Agenda
-Part I
+Part I: Starter code and I/O using the Scanner class
 1. [Things you need](#assumptions)
 1. [Your first Java program](#starter-code) 
 1. [Explaining your first Java program](#java-program-explained)
@@ -19,7 +19,7 @@ Part I
 1. [More about the Scanner class](#input)
 1. [Conclusion for part I](#conclusions-part-1)
 
-Part II (Next lecture -- in construction!)
+Part II (Next lecture -- in construction)
 1. [A note about structure project folders](#better-code)
 1. [Data types](#data-types)
 1. [Java identifiers]
