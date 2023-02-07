@@ -30,8 +30,6 @@ name: assumptions
 
 template: assumptions
 
-# Things you need
-
 You will need a UNIX terminal emulator.
 
 - OS X users already have the Terminal app we will use for this purpose.
@@ -68,6 +66,10 @@ foo@bar$ cd first_try
 foo@bar$ touch MyFirstJavaProgram.java
 ```
 
+---
+
+template: starter-code
+
 ## Add starter Java code to the file
 
 Edit the text file you just created. Assuming you are using Visual Studio Code,
@@ -92,15 +94,12 @@ public class MyFirstJavaProgram {
 
 template: starter-code
 
-## Save your file
+## Save and your file
 
 If you are using Visual Studio Code, press `Ctrl-S` to save.
 
----
 
-template: starter-code
-
-## Compile the Java source code
+## Compile your file
 
 Java code must be compiled to byte code before it can be run. Use the `javac` command to do this.
 
