@@ -15,7 +15,7 @@ Part I
 1. [Things you need](#assumptions)
 1. [Your first Java program](#starter-code) 
 1. [Explaining your first Java program](#java-program-explained)
-1. [A Java program with the Scanner class](#code-starter) 
+1. [A Java program with the Scanner class](#code-scanner) 
 
 Part II (Next lecture)
 1. [Better starter code](#better-code)
@@ -131,6 +131,7 @@ Welcome to Java from the command line!
 Note the command does not require the `.java` or `.class` file extension.
 
 ---
+
 name: java-program-explained
 
 # Your first java program explained
@@ -272,6 +273,60 @@ public class Welcome {
 	}
 }
 ```
+
+---
+
+template: code-scanner
+
+```java
+import java.util.Scanner; // a predefined Java library for keyboard input
+
+public class Welcome {
+	public static void main(String[] args) {
+		System.out.println("Enter your username:"); // prompt for input
+		
+		Scanner input = new Scanner(System.in);
+		// the next line declares a String variable named "nextName" and
+		// makes the input scanner reads the string. (input.next())
+		String nextName = input.next();
+		
+		System.out.println("Welcome to Java Programming, " + nextName + "!");
+		
+		input.close(); // closing the input Scanner
+	}
+}
+```
+
+The next() **method** is used to get input from the user.
+
+It can read the input only until a space(" ") is encountered.
+
+---
+
+template: code-scanner
+
+```java
+import java.util.Scanner; // a predefined Java library for keyboard input
+
+public class Welcome {
+	public static void main(String[] args) {
+		System.out.println("Enter your username:"); // prompt for input
+		
+		Scanner input = new Scanner(System.in);
+		// the next line declares a String variable named "nextName" and
+		// makes the input scanner reads the string. (input.next())
+		String nextName = input.next();
+		
+		System.out.println("Welcome to Java Programming, " + nextName + "!");
+		
+		input.close(); // closing the input Scanner
+	}
+}
+```
+
+Demo: Create a new java file (Welcome.java), compile it, and run it. 
+
+Try using different inputs (e.g., username123, username 123, etc.)
 
 ---
 
