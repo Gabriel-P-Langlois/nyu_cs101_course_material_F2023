@@ -412,7 +412,7 @@ Demo: Try it yourself!
 
 template: input
 
-## Scanner weirdness
+## Note: Scanner weirdness
 
 Using `nextInt()` or `nextDouble()` with `nextLine()` can create complications. For example:
 
@@ -443,7 +443,7 @@ This program will always output, `Welcome, !` no matter what you do...
 
 template: input
 
-## Avoiding Scanner weirdness
+## Note: Scanner weirdness
 
 One way to avoid Scanner's weirdness, when asking the user for data types besides String, is to use `nextLine()` for all input and then convert the String it returns to other data types.
 
@@ -466,6 +466,64 @@ public class StickToScanningStrings {
     }
 }
 ```
+
+name: division-type-casts
+
+---
+
+template: division-type-casts
+
+## Note: Division and type casts
+
+Consider the following Java codes, which intends to convert celsius temperature to its Fahrenheit equivalent:
+
+```java
+public class CelciusToFahrenheit {
+	public static void main(String[] args) {
+		double c = 100; // double data type is a double-precision 64-bit IEEE 754 floating point.
+		double f = 9 / 5 *c + 32;
+        System.out.println("Fahrenheit temperature is: " + f); // Correct temperature should be 212 degrees Fahrenheit
+	}
+}
+```
+
+Demo: What happens when the code is run?
+
+---
+
+template: division-type-casts
+
+```java
+public class CelciusToFahrenheit {
+	public static void main(String[] args) {
+		double c = 100; // double data type is a double-precision 64-bit IEEE 754 floating point.
+		double f = 9 / 5 *c + 32;
+        System.out.println("Fahrenheit temperature is: " + f); // Correct temperature should be 212 degrees Fahrenheit
+	}
+}
+```
+
+The problem arises from the fact that both 9 and 5 are of type `int`, which means that the result is also an `int`.
+
+Thus 9 / 5 = 1 in Java (!)
+
+You can fix this problem by converting the fraction to a double, either by inserting decimal points or by using a type cast:
+
+---
+
+template: division-type-casts
+
+```java
+public class BetterCelciusToFahrenheit {
+	public static void main(String[] args) {
+		double c = 100; // double data type is a double-precision 64-bit IEEE 754 floating point.
+		double f = 9.0 / 5.0 *c + 32;
+        System.out.println("Fahrenheit temperature is: " + f); // Correct temperature should be 212 degrees Fahrenheit
+	}
+}
+```
+
+Demo: What happens now?
 
 ---
 
