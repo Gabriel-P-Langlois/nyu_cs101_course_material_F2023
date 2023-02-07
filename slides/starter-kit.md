@@ -12,7 +12,7 @@ class: center, middle
 
 # Agenda
 
-1. [Assumptions](#assumptions)
+1. [Things you need](#assumptions)
 1. [Starter code](#starter-code)
 1. [Better starter code](#better-code)
 1. [Even better starter code](#even-better-code)
@@ -24,18 +24,22 @@ class: center, middle
 
 name: assumptions
 
-# Assumptions
+# Things you need
 
-You will need a UNIX terminal emulator:
+You will need a UNIX terminal emulator.
 
 - OS X users already have the Terminal app we will use for this purpose.
 - Windows users must have [Git for Windows](https://gitforwindows.org/) installed.
 
+
 You will need to have the [Java Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/) (JDK) installed.
+
 
 You will need a text editor. I will use [Visual Studio Code](https://code.visualstudio.com), which is a good plain text editor.
 
-- OS X users should read [this](https://code.visualstudio.com/docs/setup/mac) to use Visual Studio Code in the command line. In particular, you need to open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
+- OS X users should read [this](https://code.visualstudio.com/docs/setup/mac) to use Visual Studio Code in the command line. 
+- In particular, you need to open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
+- After that, restart the terminal and you should be good to go.
 
 ---
 
