@@ -6,7 +6,7 @@ permalink: /slides/starter-code/
 
 class: center, middle
 
-# Starter code, I/O using Scanner and data types
+# Part 1: Starter code and I/O using Scanner.
 
 ---
 
@@ -22,9 +22,10 @@ Part I
 Part II (Next lecture -- in construction!)
 1. [A note about structure project folders](#better-code)
 1. [Data types](#data-types)
-1. [Operators and operands]
-1. [Arithmetics in Java]
-3. [Conclusions](#conclusions)
+1. [Java identifiers]
+3. [Operators and operands]
+4. [Arithmetic in Java]
+5. [Conclusions](#conclusions)
 
 ---
 
@@ -195,7 +196,7 @@ public class MyFirstJavaProgram {
 }
 ```
 
-"Public" , "Static" , "void" are called **reserved words**.
+`Public` , `Static` , `void` are called **reserved words**.
 
 Each one of them has a specific meaning to the compiler. 
 
@@ -215,7 +216,7 @@ public class MyFirstJavaProgram {
 }
 ```
 
-The line "// put the main contents of your program below here" is a **comment**.
+The line `// put the main contents of your program below here` is a **comment**.
 
 A comment documents information about the program.
 
@@ -237,9 +238,9 @@ public class MyFirstJavaProgram {
 }
 ```
 
-"System.out.println" is a **Java statement**.
+`System.out.println` is a **Java statement**.
 
-The statement "System.out.println" instructs the computer to display a message in the console.
+The statement `System.out.println` instructs the computer to display a message in the console.
 
 The message we will be displaying in the program is "Welcome to Java from the command line!".
 
@@ -302,10 +303,10 @@ public class Welcome {
 In Java, you must declare a variable before you can use it.
 
 The declaration establishes the name and type of the variable.
-- "Scanner" is the **type name**
-- "input" is the **variable name**
-- "new" is a **reserved** Java identifier (more on this later)
-- "System.in" permits you to read input.
+- `Scanner` is the **type name**
+- `input` is the **variable name**
+- `new` is a **reserved** Java identifier (more on this later)
+- `System.in` permits you to read input.
 
 ---
 
@@ -383,9 +384,37 @@ Scanner has a few different functions for fetching the user input as different d
 
 template: input
 
+## Example: Adding two integers
+
+```java
+import java.util.Scanner;
+
+class AddingIntegers{
+  public static void main(String[] args) {
+    int x, y, sum;
+    Scanner myObj = new Scanner(System.in);
+    
+    System.out.println("Type a number:");
+    x = myObj.nextInt(); // Read user input
+
+    System.out.println("Type another number:");
+    y = myObj.nextInt(); // Read user input
+
+    sum = x + y;  // Calculate the sum of x + y
+    System.out.println("Sum is: " + sum); // Print the sum
+  }
+} 
+```
+
+Demo: Try it yourself!
+
+---
+
+template: input
+
 ## Scanner weirdness
 
-Using `nextInt()` or `nextDouble()` can create complications. For example:
+Using `nextInt()` or `nextDouble()` with `nextLine()` can create complications. For example:
 
 ```java
 import java.util.Scanner;
@@ -419,6 +448,8 @@ template: input
 One way to avoid Scanner's weirdness, when asking the user for data types besides String, is to use `nextLine()` for all input and then convert the String it returns to other data types.
 
 ```java
+import java.util.Scanner;
+
 public class StickToScanningStrings {
     public static void main(String[] args) throws Exception {
 		Scanner scnr = new Scanner(System.in);
