@@ -17,6 +17,7 @@ Part I: Starter code and I/O using the Scanner class
 1. [Explaining your first Java program](#java-program-explained)
 1. [A Java program with the Scanner class](#code-scanner) 
 1. [More about the Scanner class](#input)
+1. [A note about division and type casts](#division-type-casts)
 1. [Conclusion for part I](#conclusions-part-1)
 
 Part II (Next lecture -- in construction)
@@ -493,6 +494,8 @@ Demo: What happens when the code is run?
 
 template: division-type-casts
 
+## Note: Division and type casts
+
 ```java
 public class CelciusToFahrenheit {
 	public static void main(String[] args) {
@@ -513,6 +516,8 @@ You can fix this problem by converting the fraction to a double, either by inser
 
 template: division-type-casts
 
+## Note: Division and type casts
+
 ```java
 public class BetterCelciusToFahrenheit {
 	public static void main(String[] args) {
@@ -523,7 +528,7 @@ public class BetterCelciusToFahrenheit {
 }
 ```
 
-Demo: What happens now?
+Demo: Now it should work!
 
 ---
 
