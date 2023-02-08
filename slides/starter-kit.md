@@ -551,6 +551,9 @@ name: organizationI
 
 ---
 
+template: organizationI
+
+
 We'll organize different projects into different project directories.
 
 Each project directory contains three sub-directories: `src/`, `lib/, and `bin/`.
@@ -571,6 +574,8 @@ project-directory/
 
 ---
 
+template: organizationI
+
 Create a new directory called `project-directory` and add `src/`, `lib/` and `bin/` directories in it.
 
 ```bash
@@ -590,7 +595,9 @@ foo@bar$ code src/AddingDoubles.java
 
 ---
 
-Write (or copy-paste) the code below in AddingDoubles.java:
+template: organizationI
+
+Write or copy-paste the code below in AddingDoubles.java:
 
 ```java
 import java.util.Scanner; // Import the Scanner class
@@ -619,6 +626,9 @@ foo@bar$ java -cp bin AddingDoubles
 ```
 
 ---
+
+
+
 
 In which case, we'd need to modify our compile and execute commands. Assuming the source code files were in the new location:
 
