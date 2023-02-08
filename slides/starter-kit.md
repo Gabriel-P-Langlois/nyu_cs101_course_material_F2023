@@ -704,7 +704,6 @@ Java natively supports 8 fundamental [primitive data types](http://docs.oracle.c
 - `double` = 64-bit floating point number (**the default** for floating point literals)
 - `char` = 16-bit Unicode character code
 - `boolean` = 1-bit true (1) or false (0) value
-- **arrays**, while not a data type, are a fundamental data structure in Java
 
 ---
 
@@ -712,11 +711,12 @@ template: data-types
 
 ## Overview (continued)
 
-Observations:
+There is no `String` primitive data type in Java. Instead, `String` is a predefined class that is written in Java code.
 
-- `float` and `double` are fundamentally inaccurate. Use `java.math.BigDecimal` for accuracy.
-- there is no `String` primitive data type in Java. `String` is a `class` that is written in Java code.
-- because it contains "primitive" data types that are not only `class` types, _Java is not a purely object-oriented language_.
+There is no 'Arrays` primitive data type in Java. Instead, 'Arrays` is a predefined class that is written in java code.
+- It is a fundamental data structure in Java (more on this later in the course).
+
+Because Java contains primitive data types that are not only `class` types, _Java is not a purely object-oriented language_.
 
 ---
 
@@ -724,7 +724,9 @@ template: data-types
 
 ## Utility/Helper/Wrapper classes
 
-The Java API (a set of `classes` written in Java that are distributed with Java) offers a set of utility classes to help manipulate data of the fundamental primitive data types and structures.
+The **Java API** (Application Programming Interface) is a set of `classes` written in Java that are distributed with Java.
+
+It offers a set of utility classes to help manipulate data of the fundamental primitive data types and structures.
 
 - `Byte`
 - `Short`
@@ -734,6 +736,7 @@ The Java API (a set of `classes` written in Java that are distributed with Java)
 - `Double`
 - `Character`
 - `Boolean`
+- `String`
 - `Arrays`
 
 --
@@ -746,17 +749,17 @@ template: data-types
 
 ## Utility/Helper/Wrapper classes (continued)
 
-Observations:
+Utility classes contain useful methods for manipulating the types of data usually stored as fundamental primitive data types.
 
-- Utility classes contain useful methods for manipulating the types of data usually stored as fundamental primitive data types.
-- They are often called "wrapper" or "helper" classes because they offer additional functionality built around primitive data types.
-- These are fully-**objected-oriented** correlates of the fundamental primitive data types.
+They are often called "wrapper" or "helper" classes because they offer additional functionality built around primitive data types.
+
+These are fully-**objected-oriented** correlates of the fundamental primitive data types.
 
 ---
 
 template: data-types
 
-## Apache Commons Lang
+## Utility/Helper/Wrapper classes (continued)
 
 Due to the limitations of working with primitive data types and the conservative nature of the Java API's included Utility/HelperWrapper/ classes, the [Apache Software Foundation](https://apache.org) sponsors a project called [Commons Lang](https://commons.apache.org/proper/commons-lang/) that aims to provide functionality that many programmers regret is not present in the Java API. This library includes additional helper classes, such as:
 
