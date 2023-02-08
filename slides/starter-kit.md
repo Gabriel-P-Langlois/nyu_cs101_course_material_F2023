@@ -21,11 +21,12 @@ Part I: Starter code and I/O using the Scanner class
 
 Part II (Next lecture -- in construction)
 1. [Organizing projects I](#organizationI)
-1. [Data types](#data-types)
-1. [Java identifiers]
-3. [Operators and operands]
-4. [Arithmetic in Java]
-5. [Conclusions](#conclusions)
+1. [Organizing projects II](#organizationII)
+3. [Data types](#data-types)
+4. [Java identifiers]
+5. [Operators and operands]
+6. [Arithmetic in Java]
+7. [Conclusions](#conclusions)
 
 ---
 
@@ -584,20 +585,20 @@ template: organizationI
 Write or copy-paste the code below in AddingDoubles.java:
 
 ```java
-import java.util.Scanner; // Import the Scanner class
+import java.util.Scanner;
 
 class AddingDoubles{
   public static void main(String[] args) {
-    Scanner myObj = new Scanner(System.in); // Create a Scanner object
+    Scanner myObj = new Scanner(System.in);
     System.out.println("Type a number:");
 
-    double x = myObj.nextDouble(); // Read user input
+    double x = myObj.nextDouble();
 
     System.out.println("Type another number:");
     double y = myObj.nextDouble(); // Read user input
 
-    double sum = x + y;  // Calculate the sum of x + y
-    System.out.println("Sum is: " + sum); // Print the sum
+    double sum = x + y;
+    System.out.println("Sum is: " + sum); 
   }
 }
 ```
@@ -609,82 +610,66 @@ foo@bar$ javac -d bin src/AddingDoubles.java
 foo@bar$ java -cp bin AddingDoubles
 ```
 
-Demo: Try it yourself!
+---
+
+name: organizationII
+
+# Organizing Java project files and folders II
 
 ---
 
+template: organizationII
 
+Java code can be organized into "packages" of related files.
 
+A **package** in Java is used to group related classes. Think of it as a folder in a file directory.
 
-In which case, we'd need to modify our compile and execute commands. Assuming the source code files were in the new location:
+Add a similar package declaration to your source code file in VSC, but replace gp2442 with your own NYU Net ID.
 
-```bash
-foo@bar$ javac -d bin src/edu/nyu/cs/fb1258/MyFirstJavaProgram.java
-```
+```java
+package edu.nyu.cs.gp2442; // Add this line here, but with your NYU Net ID.
+import java.util.Scanner;
 
-```bash
-foo@bar$ java -cp bin src/edu/nyu/cs/fb1258/MyFirstJavaProgram.java
-```
+class AddingDoubles{
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Type a number:");
 
----
+    double x = myObj.nextDouble();
 
-template: organizationI
+    System.out.println("Type another number:");
+    double y = myObj.nextDouble(); // Read user input
 
-Create an appropriate set of sub-directories, and move both files at once (replace `fb1258` with your own NYU Net ID):
-
-```bash
-foo@bar$ mkdir edu
-foo@bar$ mkdir edu/nyu
-foo@bar$ mkdir edu/nyu/cs
-foo@bar$ mkdir edu/nyu/cs/fb1258
-foo@bar$ mv MyFirstJavaProgram.* edu/nyu/cs/fb1258
-```
-
-Of course there is a way to create all these sub-directories at once using the `-p` flag to the `mkdir` command:
-
-```bash
-foo@bar$ mkdir -p edu/nyu/cs/fb1258
-foo@bar$ mv MyFirstJavaProgram.* edu/nyu/cs/fb1258
+    double sum = x + y;
+    System.out.println("Sum is: " + sum); 
+  }
+}
 ```
 
 ---
 
-template: better-code
+template: organizationII
 
-## Recompile the Java source code.
+**Note**: When using a package identifier, the .java and .class files must be located in a directory that matches the package.
+
+Create an appropriate set of sub-directories, and move both files at once (replace gp2442 with your own NYU Net ID):
+
+```bash
+foo@bar$ mkdir -p src/edu/nyu/cs/gp2442
+foo@bar$ mv AddingDoubles.* src/edu/nyu/cs/gp2442
+```
 
 The Java source code must now be re-compiled, since the byte code is no longer up to date.
 
 ```bash
-foo@bar$ javac edu/nyu/cs/fb1258/MyFirstJavaProgram.java
+foo@bar$ javac -d bin src/edu/nyu/cs/gp2442/AddingDoubles.java
 ```
 
-This will overwrite the file named `MyFirstJavaProgram.class` in the appropriate directory.
-
----
-
-template: better-code
-
-## Re-execute the Java byte code
-
-At this point, you have two files named `MyFirstJavaProgram.java` (source code) and `MyFirstJavaProgram.class` (byte code) in the directory `edu/nyu/cs/fb1258`, where `fb1258` is replaced with your own NYU Net ID.
-
-Now try running it.
+Finally, we can run the compiled code:
 
 ```bash
-foo@bar$ java edu/nyu/cs/fb1258.MyFirstJavaProgram
-Welcome to Java from the command line!
+foo@bar$ java -cp bin edu.nyu.cs.gp2442.AddingDoubles
 ```
-
----
-
-name: even-better-code
-
-# Can we do better?
-
-
-
-
 ---
 
 name: data-types
