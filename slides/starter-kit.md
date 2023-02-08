@@ -21,7 +21,7 @@ Part I: Starter code and I/O using the Scanner class
 1. [Conclusion for part I](#conclusions-part-1)
 
 Part II (Next lecture -- in construction)
-1. [A note about structure project folders](#better-code)
+1. [Organizing projects I](#organizationI)
 1. [Data types](#data-types)
 1. [Java identifiers]
 3. [Operators and operands]
@@ -545,13 +545,94 @@ Thank you!
 
 ---
 
-name: better-code
+name: organizationI
 
-# Running code stored in a different directory
+# Organizing Java project files and folders I
 
 ---
 
-template: better-code
+We'll organize different projects into different project directories.
+
+Each project directory contains three sub-directories: `src/`, `lib/, and `bin/`.
+- Java source code goes into `src/`.
+- Compiled code goes into `bin/`.
+- Any external dependencies (e.g., input from an external source) go into the `lib/`.
+
+
+```bash
+project-directory/
+       |
+       |----------> src/ (Java source code)
+       |
+       |----------> lib/ (external dependencies)
+       |
+       |----------> bin/ (compiled byte code)
+```
+
+---
+
+Create a new directory called `project-directory` and add `src/`, `lib/` and `bin/` directories in it.
+
+```bash
+foo@bar$ mkdir project-directory
+foo@bar$ cd project-directory
+foo@bar$ mkdir src
+foo@bar$ mkdir lib
+foo@bar$ mkdir bin
+```
+
+Create an empty Java file called AddingDoubles.java inside the src folder, and open the file with VSC:
+
+```bash
+foo@bar$ touch src/AddingDoubles.java
+foo@bar$ code src/AddingDoubles.java
+```
+
+---
+
+Write (or copy-paste) the code below in AddingDoubles.java:
+
+```java
+import java.util.Scanner; // Import the Scanner class
+
+class AddingDoubles{
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in); // Create a Scanner object
+    System.out.println("Type a number:");
+
+    double x = myObj.nextDouble(); // Read user input
+
+    System.out.println("Type another number:");
+    double y = myObj.nextDouble(); // Read user input
+
+    double sum = x + y;  // Calculate the sum of x + y
+    System.out.println("Sum is: " + sum); // Print the sum
+  }
+}
+```
+
+We can compile and run the code using the following commands:
+
+```bash
+foo@bar$ javac -d bin src/AddingDoubles.java
+foo@bar$ java -cp bin AddingDoubles
+```
+
+---
+
+In which case, we'd need to modify our compile and execute commands. Assuming the source code files were in the new location:
+
+```bash
+foo@bar$ javac -d bin src/edu/nyu/cs/fb1258/MyFirstJavaProgram.java
+```
+
+```bash
+foo@bar$ java -cp bin src/edu/nyu/cs/fb1258/MyFirstJavaProgram.java
+```
+
+---
+
+template: organizationI
 
 Create an appropriate set of sub-directories, and move both files at once (replace `fb1258` with your own NYU Net ID):
 
@@ -605,33 +686,7 @@ name: even-better-code
 
 # Can we do better?
 
---
 
-We can do better by putting Java source code into a `src/` directory and compiling our Java byte code into a separate `bin/` directory.
-
---
-
-```bash
-project-directory/
-       |
-       |----------> src/ (Java source code)
-       |
-       |----------> lib/ (external dependencies)
-       |
-       |----------> bin/ (compiled byte code)
-```
-
---
-
-In which case, we'd need to modify our compile and execute commands. Assuming the source code files were in the new location:
-
-```bash
-foo@bar$ javac -d bin src/edu/nyu/cs/fb1258/MyFirstJavaProgram.java
-```
-
-```bash
-foo@bar$ java -cp bin src/edu/nyu/cs/fb1258/MyFirstJavaProgram.java
-```
 
 
 ---
