@@ -18,7 +18,6 @@ Part I: Starter code and I/O using the Scanner class
 1. [A Java program with the Scanner class](#code-scanner) 
 1. [More about the Scanner class](#input)
 1. [A note about division and type casts](#division-type-casts)
-1. [Conclusion for part I](#conclusions-part-1)
 
 Part II (Next lecture -- in construction)
 1. [Organizing projects I](#organizationI)
@@ -532,19 +531,6 @@ Demo: Now it should work!
 
 ---
 
-name: conclusions-part-1
-
-# Conclusions
----
-
-template: conclusions-part-1
-
-We can now use the command line to write and compile Java source code into Java byte code and then execute that byte code using the JVM interpreter.
-
-Thank you!
-
----
-
 name: organizationI
 
 # Organizing Java project files and folders I
@@ -553,14 +539,7 @@ name: organizationI
 
 template: organizationI
 
-
 We'll organize different projects into different project directories.
-
-Each project directory contains three sub-directories: `src/`, `lib/, and `bin/`.
-- Java source code goes into `src/`.
-- Compiled code goes into `bin/`.
-- Any external dependencies (e.g., input from an external source) go into the `lib/`.
-
 
 ```bash
 project-directory/
@@ -572,11 +551,16 @@ project-directory/
        |----------> bin/ (compiled byte code)
 ```
 
+Each project directory contains three sub-directories: `src/`, `lib/`, and `bin/`.
+- Java source code goes into `src/`.
+- Compiled code goes into `bin/`.
+- Any external dependencies (e.g., input from an external source) go into the `lib/`.
+
 ---
 
 template: organizationI
 
-Create a new directory called `project-directory` and add `src/`, `lib/` and `bin/` directories in it.
+Create a new directory called `project-directory` and add `src/`, `lib/`, and `bin/` directories in it.
 
 ```bash
 foo@bar$ mkdir project-directory
@@ -624,6 +608,8 @@ We can compile and run the code using the following commands:
 foo@bar$ javac -d bin src/AddingDoubles.java
 foo@bar$ java -cp bin AddingDoubles
 ```
+
+Demo: Try it yourself!
 
 ---
 
