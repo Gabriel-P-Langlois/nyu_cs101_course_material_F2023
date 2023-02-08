@@ -659,6 +659,21 @@ foo@bar$ mkdir -p src/edu/nyu/cs/gp2442
 foo@bar$ mv AddingDoubles.* src/edu/nyu/cs/gp2442
 ```
 
+---
+
+---
+
+template: organizationII
+
+**Note**: When using a package identifier, the .java and .class files must be located in a directory that matches the package.
+
+Create an appropriate set of sub-directories, and move both files at once (replace gp2442 with your own NYU Net ID):
+
+```bash
+foo@bar$ mkdir -p src/edu/nyu/cs/gp2442
+foo@bar$ mv AddingDoubles.* src/edu/nyu/cs/gp2442
+```
+
 The Java source code must now be re-compiled, since the byte code is no longer up to date.
 
 ```bash
@@ -670,6 +685,7 @@ Finally, we can run the compiled code:
 ```bash
 foo@bar$ java -cp bin edu.nyu.cs.gp2442.AddingDoubles
 ```
+
 ---
 
 name: data-types
