@@ -661,8 +661,6 @@ foo@bar$ mv AddingDoubles.* src/edu/nyu/cs/gp2442
 
 ---
 
----
-
 template: organizationII
 
 **Note**: When using a package identifier, the .java and .class files must be located in a directory that matches the package.
