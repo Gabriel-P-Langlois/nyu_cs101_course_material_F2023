@@ -22,11 +22,10 @@ Part I: Starter code and I/O using the Scanner class
 Part II (Next lecture -- in construction)
 1. [Organizing projects I](#organizationI)
 1. [Organizing projects II](#organizationII)
-3. [Data types](#data-types)
-4. [Java identifiers]
-5. [Operators and operands]
-6. [Arithmetic in Java]
-7. [Conclusions](#conclusions)
+1. [Variables and identifiers](#variables-identifiers)
+1. [Data types](#data-types)
+1. [Operators, operands, and assignment operators](#operators)
+1. [Conclusions](#conclusions)
 
 ---
 
@@ -470,11 +469,12 @@ public class StickToScanningStrings {
 
 name: division-type-casts
 
+# Note: Division and type casts
+
 ---
 
 template: division-type-casts
 
-## Note: Division and type casts
 
 Consider the following Java codes, which intends to convert celsius temperature to its Fahrenheit equivalent:
 
@@ -493,8 +493,6 @@ Demo: What happens when the code is run?
 ---
 
 template: division-type-casts
-
-## Note: Division and type casts
 
 ```java
 public class CelciusToFahrenheit {
@@ -515,8 +513,6 @@ You can fix this problem by converting the fraction to a double, either by inser
 ---
 
 template: division-type-casts
-
-## Note: Division and type casts
 
 ```java
 public class BetterCelciusToFahrenheit {
@@ -686,6 +682,34 @@ foo@bar$ java -cp bin edu.nyu.cs.gp2442.AddingDoubles
 
 ---
 
+name: variables-identifiers
+
+# Variables and identifiers
+
+---
+
+template: variables-identifiers
+
+Stuff about variables and identifiers
+
+---
+
+---
+
+template: variables-identifiers
+
+Stuff about variables and identifiers
+
+---
+
+---
+
+template: variables-identifiers
+
+Stuff about variables and identifiers
+
+---
+
 name: data-types
 
 # Data types
@@ -704,6 +728,30 @@ Java natively supports 8 fundamental [primitive data types](http://docs.oracle.c
 - `double` = 64-bit floating point number (**the default** for floating point literals)
 - `char` = 16-bit Unicode character code
 - `boolean` = 1-bit true (1) or false (0) value
+
+---
+
+template: data-types
+
+byte and short
+
+---
+
+template: data-types
+
+int and long
+
+---
+
+template: data-types
+
+float and double
+
+---
+
+template: data-types
+
+Char and boolean
 
 ---
 
@@ -739,9 +787,7 @@ It offers a set of utility classes to help manipulate data of the fundamental pr
 - `String`
 - `Arrays`
 
---
-
-- These classes are especially helpful when converting a value of one data type to another.
+These classes are especially helpful when converting a value of one data type to another.
 
 ---
 
@@ -769,9 +815,7 @@ Due to the limitations of working with primitive data types and the conservative
 - `ArrayUtils`
 - ... and [many more](https://commons.apache.org/proper/commons-lang/apidocs/index.html) for dealing with data of non-primitive types.
 
---
-
-- Commons Lang is perhaps most well-known for its `String`-related helper classes: `StringUtils`, `WordUtils`, and `StringEscapeUtils`.
+Commons Lang is perhaps most well-known for its `String`-related helper classes: `StringUtils`, `WordUtils`, and `StringEscapeUtils`.
 
 ---
 
@@ -1039,6 +1083,20 @@ catch(NumberFormatException e) {
 	System.out.println(e); // will output the Exception but not crash the program
 }
 ```
+
+---
+
+name: operators
+
+# Operators, operands, and assignment operators
+
+---
+
+template: operators
+
+## Operators
+
+Blablabla...
 
 ---
 
