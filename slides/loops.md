@@ -56,7 +56,6 @@ While loops give us ultimate flexibility in controlling repetition.
 ---
 
 template: while
-name: while-2
 
 ## Accumulator-based loop
 
@@ -75,7 +74,6 @@ while (i < 10) {
 ---
 
 template: while
-name: while-2
 
 ## Flag-based loop
 
@@ -99,7 +97,6 @@ while (keepGoing) {
 ---
 
 template: while
-name: while-3
 
 ## Infinite loop
 
@@ -134,7 +131,6 @@ For loops allow us to simplify the syntax for writing an 'accumulator'- or 'coun
 ---
 
 template: for
-name: for-2
 
 ## Accumulator-based loop
 
@@ -152,7 +148,6 @@ for (int i = 0; i < 10; i++) {
 ---
 
 template: for
-name: for-2
 
 ## Flag-based loop
 
@@ -178,7 +173,6 @@ for (; keepGoing ;) {
 ---
 
 template: for
-name: for-3
 
 ## Infinite loop
 
@@ -221,7 +215,6 @@ for (int i=0; i<messages.length; i++) {
 ---
 
 template: common
-name: common-2
 
 ## Iterating until a particular response is received from a user
 
@@ -247,7 +240,6 @@ scn.close(); // close the scanner resource to be nice to the processor
 ---
 
 template: common
-name: common-3
 
 ## Iterating through the characters in a string
 
@@ -264,7 +256,6 @@ for (int i = 0; i < s.length(); i++) {
 ---
 
 template: common
-name: common-4
 
 ## Calculating a running total
 
