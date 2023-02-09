@@ -468,6 +468,8 @@ public class StickToScanningStrings {
 }
 ```
 
+---
+
 name: division-type-casts
 
 # Note: Division and type casts
@@ -779,20 +781,61 @@ template: data-types
 
 template: data-types
 
-int and long
+**int**:
+- int data type is a 32-bit signed two's complement integer.
+- Minimum value is -2,147,483,648 (-2^31).
+- Max value is 2,147,483,647 (2^31 - 1).
+- Default value is 0.
+- **Generally the default data type for integers**.
+- Example: int a = 100000;
+
+**long**:
+- long data type is a 64-bit signed two's complement integer.
+- Minimum value is -9,223,372,036,854,775,808 (-2^63).
+- Max value is 9,223,372,036,854,775,807 (2^63 - 1).
+- Default value is 0L.
+- This type is used when a wider range than int is needed.
+- Example: int a = 100000L;
 
 ---
 
 template: data-types
 
-float and double
+**float**:
+- float data type is a single-precision 32-bit IEEE 754 floating point.
+- IEEE stands for `Institute of Electrical and Electronics Engineers`.
+- Float is used to save memory in large arrays of floating point numbers.
+- Default valie is 0.0f.
+- Don't use it if you need precisce value! Use BigDecimal instead.
+- Example: float f1 = 234.5f;
+- Example: BigDecimal k = BigDecimal.valueOf(floatvalue);
+
+**double**:
+- double data type is a double-precision 64-bit IEEE 754 floating point.
+- **Generally the default data type for decimal values**.
+- Default valie is 0.0d.
+- Don't use it if you need precisce value! Use BigDecimal instead.
+- Example: double d1 = 123.4;
+- Example: BigDecimal k = BigDecimal.valueOf(doublevalue);
 
 ---
 
 template: data-types
 
-Char and boolean
+**char**:
+- char data type is a single 16-bit Unicode character.
+- Minimum value is `\u0000` (or 0).
+- Maximum value is `\uffff` (or 65,535).
+- char data type is used to store any character.
+- Example: char letterA = 'A';
 
+**boolean**:
+- boolean data type represents one bit of information.
+- There are only two possible values: true and false.
+- This data type is used for simple flags that track true/false conditions.
+- Default value is false.
+- Example: boolean one = true.
+- (More on this next class!)
 ---
 
 template: data-types
