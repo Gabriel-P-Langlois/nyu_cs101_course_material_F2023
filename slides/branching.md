@@ -39,23 +39,13 @@ name: concept
 
 The flow of a program can be controlled such that it deviates from its '_normal_' path.
 
---
-
 - What is a program's 'normal' path?
-
---
 
 - By default, a program will execute statements in the order written, from top to bottom.
 
---
-
 - Some branches are _unconditional_ - the control will always break out of this sequential flow every time the program is executed.
 
---
-
 - Other branches are _conditional_ - certain contextual conditions must be met if the control of the program is to break out of its usual flow.
-
---
 
 - Conditional branches are our focus here.
 
@@ -65,25 +55,15 @@ name: flow-charts
 
 # Flow Charts
 
---
-
 ## Concept
 
 Understanding the flow of a program's control can be visualized easily with diagrams, irrespective of the programming language and code.
 
---
-
 - Writing code is precarious, laborious, and error-prone.
-
---
 
 - Creating such flow diagrams can help understand and communicate the problem being solved without such burden.
 
---
-
 - The [Unified Modeling Language](https://en.wikipedia.org/wiki/Activity_diagram) (UML) has attempted to define the "Activity Diagram" - a standard for how such diagrams should be drawn.
-
---
 
 - In practice, people often use parts of the UML Activity Diagram style mixed with their own personal styles.
 
@@ -117,27 +97,15 @@ name: activity-diagrams
 
 UML Activity Diagrams follow a few basic rules:
 
---
-
 - program control starts at the top of the diagram and ends at the bottom.
-
---
 
 - the start point is indicated with just filled circle, the end with a filled circle with a line around it
 
---
-
 - any process is indicated with an ellipse (or a rounded rectangle)
-
---
 
 - if any process being diagrammed is so complex it makes the diagram complex and difficult to understand, make a separate activity diagram for that sub-process, and represent it as a single process in this diagram.
 
---
-
 - any decision point leading to more than one branch is indicated with a diamond shape (also called a rhombus)
-
---
 
 - branches should have simple annotations indicating in what decision context they are followed
 
@@ -146,8 +114,6 @@ UML Activity Diagrams follow a few basic rules:
 name: ifs
 
 # If/Else if/Else
-
---
 
 ## Isolated ifs
 
@@ -228,21 +194,13 @@ name: switch-case
 
 # Switch/Case
 
---
-
 ## Concept
 
 In Java, an alternative to if/else if/else statements is switch/case statements.
 
---
-
 - these can be easier to read and write in particular situations.
 
---
-
 - such as when the branch followed depends upon the value of a single variable
-
---
 
 - and when multiple conditions lead to the same branch
 
@@ -319,8 +277,6 @@ name: ternary
 
 # The Ternary Operator
 
---
-
 ## Concept
 
 It is often the case that we use if/else statements to control setting the value of a variable.
@@ -333,11 +289,7 @@ if (breakfastWasServed && breakfastWasEaten) {
 }
 ```
 
---
-
 The ternary operator, `?`, thankfully allows us to simplify such syntax:
-
---
 
 ```javascript
 satiationLevel = breakfastWasServed && breakfastWasEaten ? "full" : "hungry";
@@ -349,10 +301,4 @@ name: conclusions
 
 # Conclusions
 
---
-
 You now have a basic understanding of UML activity diagrams, if/else if/else statements, and switch/case statements.
-
---
-
-- Thank you. Bye.
