@@ -1223,7 +1223,11 @@ name: conclusions
 
 --
 
-We can now use the command line to write and compile Java source code into Java byte code and then execute that byte code using the JVM interpreter. We also understand a bit about data types in Java.
+Phew, that was a lot!
+
+You will become more familiar with these expression with practice. :-)
+
+Next week: Booleans; if/else statements, and for loops.
 
 --
 
