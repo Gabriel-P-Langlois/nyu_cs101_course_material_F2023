@@ -37,8 +37,6 @@ name: concept-1
 
 It is often useful to repeat a block of code more than once.
 
---
-
 - Rather than copy/paste the same code multiple times in sequence, loops provide a way of writing the code only once and indicating the instructions for how many iterations it should be repeated.
 
 ---
@@ -47,17 +45,11 @@ name: while
 
 # While Loops
 
---
-
 ## Concept
 
 While loops give us ultimate flexibility in controlling repetition.
 
---
-
 - We can easily set up counter-based loops known as 'accumulators', or loops based on the value in flag variables.
-
---
 
 - We can also write infinite loops that never stop repeating.
 
@@ -133,15 +125,9 @@ name: for
 
 For loops allow us to simplify the syntax for writing an 'accumulator'- or 'counter'-based loop.
 
---
-
 - The accumulator pattern is baked into the `for` loop syntax.
 
---
-
 - A `for` loop can be set to terminate based on a flag's value, but its syntax is not designed for that.
-
---
 
 - A `for` loop can be set to run infinitely, but its syntax is not designed for that.
 
@@ -211,8 +197,6 @@ for (; ;) {
 name: common
 
 # Some Common Tasks
-
---
 
 ## Iterating through values in an array
 
@@ -318,7 +302,3 @@ name: conclusions
 --
 
 You now have a basic understanding of for loops, while loops, and a few common tasks performed by each.
-
---
-
-- Thank you. Bye.
