@@ -24,8 +24,9 @@ Part II (Next lecture -- in construction)
 1. [Organizing projects II](#organizationII)
 1. [Variables and identifiers](#variables-identifiers)
 1. [Data types](#data-types)
-1. [Operators, operands, and assignment operators](#operators)
-1. [Conclusions](#conclusions)
+1. [Operators and operands](#operators)
+1. [Assignment operators](#assignment)
+3. [Conclusions](#conclusions)
 
 ---
 
@@ -690,23 +691,48 @@ name: variables-identifiers
 
 template: variables-identifiers
 
-Stuff about variables and identifiers
+## Variables
 
----
+A **variable** is a placeholder for a value that can be updated as the program runs.
+
+Think of a variable a box capable of storing a value.
+
+Each variable has the following attributes:
+- A name, which enables you to differentiate one variable from another.
+- A type, which specifies what type of value the variable can contain.
+- A value, which represents the current contents of a variable.
+
+Note: The name and type of a variable are fixed, but the value changes whenever you assign it a new value.
 
 ---
 
 template: variables-identifiers
 
-Stuff about variables and identifiers
+## Identifiers
 
----
+Names for variables (and other things) are called **identifiers**.
+
+Identifiers in Java conform to certain rules:
+- A variable name must begin with a letter or the underscore letter.
+- The remaining characters must be letters, digits, or underscores.
+- The name must NOT be one of Java's [reserved words](https://en.wikipedia.org/wiki/List_of_Java_keywords).
+- Identifiers should make their purpose obvious to the reader.
 
 ---
 
 template: variables-identifiers
 
-Stuff about variables and identifiers
+## Variable declarations
+
+In Java, you must declare a variable before you can use it.
+
+The declaration establishes the name and type of the variable and, in most cases, specifies the initial value as well.
+
+The most common form of a variable declaration is
+
+```java
+type_name = value; // int z = 10;
+```
 
 ---
 
@@ -733,7 +759,21 @@ Java natively supports 8 fundamental [primitive data types](http://docs.oracle.c
 
 template: data-types
 
-byte and short
+**Byte**:
+- Byte date type is an 8-bit signed two's complement integer.
+- Minimum value is -128 (-2^7).
+- Max value is 127 (2^7 - 1).
+- Default value is 0.
+- Byte data type is used to save space in large arrays (a byte is four times smaller than an int).
+- Example: byte a = 100;
+
+**Short**:
+- Short data type is a 16-bit signed two's complement integer.
+- Minimum value is -32,768 (-2^15).
+- Max value is 32,767 (2^15 - 1).
+- Default value is 0.
+- Short data type can also be used to save memory.
+- Example: short s = 10000;
 
 ---
 
@@ -1088,13 +1128,33 @@ catch(NumberFormatException e) {
 
 name: operators
 
-# Operators, operands, and assignment operators
+# Operators and operands
 
 ---
 
 template: operators
 
 ## Operators
+
+Blablabla...
+
+---
+
+template: operators
+
+## Operands
+
+Blablabla...
+
+---
+
+name: assignment
+
+&& Assignment operators
+
+---
+
+template: assignment
 
 Blablabla...
 
