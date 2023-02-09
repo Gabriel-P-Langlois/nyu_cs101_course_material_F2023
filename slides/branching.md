@@ -25,6 +25,10 @@ name: concept
 
 # Overview
 
+---
+
+template: concept
+
 ## Concept
 
 The flow of a program can be controlled such that it deviates from its '_normal_' path.
@@ -44,6 +48,10 @@ The flow of a program can be controlled such that it deviates from its '_normal_
 name: flow-charts
 
 # Flow Charts
+
+---
+
+template: flow-charts
 
 ## Concept
 
@@ -101,6 +109,10 @@ UML Activity Diagrams follow a few basic rules:
 name: ifs
 
 # If/Else if/Else
+
+---
+
+template: ifs
 
 ## Isolated ifs
 
@@ -177,6 +189,10 @@ template: ifs
 name: switch-case
 
 # Switch/Case
+
+---
+
+template: switch-case
 
 ## Concept
 
@@ -257,6 +273,10 @@ switch (weather) {
 name: ternary
 
 # The Ternary Operator
+
+---
+
+template: ternary
 
 ## Concept
 
