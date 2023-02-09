@@ -1184,9 +1184,9 @@ What is an expression contains more than one operator?
 Java uses precedence to determine the order of evaluation.
 
 From highest to lowest precedence:
-- unary - (type cast)
-- * / %
-- + -
+- `unary - (type cast)`
+- `* / %`
+- `+ -`
 
 Precedence applies only when two operands compute for the same operator.
 
@@ -1207,7 +1207,7 @@ You can change the value of a variable in your program by using an assignment st
 
 The assignment statement computes the value of the expression on the right side of the equal sign and assign that value to the variable that appears on the left.
 
-Statements such as `x = x + value` are so common that Java allows the following shorthand: `x += value;`.
+Statements such as `x = x + value;` are so common that Java allows the following shorthand: `x += value;`.
 
 The general form is `variable op= expression;`, where op is any of Java's binary operators.
 
