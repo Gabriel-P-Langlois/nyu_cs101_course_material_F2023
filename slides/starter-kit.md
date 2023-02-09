@@ -870,7 +870,7 @@ It offers a set of utility classes to help manipulate data of the fundamental pr
 - `String`
 - `Arrays`
 
-These classes are especially helpful when converting a value of one data type to another.
+These are helpful when converting the value of one data type to another!
 
 ---
 
@@ -921,48 +921,6 @@ Scanner scn = new Scanner(System.in);
 String x = "hello";
 String y = scn.nextLine(); // let's imagine the user enters the same text, "hello"...
 boolean theSameMemoryAddress = (x == y); // -> most likely false!, but not guaranteed to be so
-```
-
----
-
-template: data-types
-
-## Strings (again)
-
-`String` is not a primitive data type, it's an object-oriented `class`.
-
-- Only primitive data types with the same value are guaranteed to be stored in the same spot in memory
-- So two Strings with the same value may be stored in different spots in memory
-- So the `==` operator may not always result in a `true`, when comparing two Strings, even those with the same text.
-- So use the `.equals()` method for Strings instead.
-
-```java
-String x = "hello";
-String y = "hello";
-boolean theSameMemoryAddress = x.equals(x); // -> true if they contain the same text, false otherwise
-```
-
----
-
-template: data-types
-
-## Strings (once more)
-
-There is also a `StringBuilder` class, which is a utility class for the `String` class.
-
-- Even though `String` is actually fully object-oriented, Strings are immutable.
-- The `StringBuilder` class is a convenient mutable equivalent of the String class.
-
-```java
-StringBuilder str = new StringBuilder();
-str.append("goodbye");
-str.append("foo");
-str.append("world!");
-str.delete(7,10); // remove the characters at index positions 7-9, i.e. "foo"
-str.insert(" ", 7); // insert a space at index position 7
-str.replace(0, 7, "hello"); // replaces the characters at index positions 0-6 (i.e. "goodbye) with "hello"
-String result = str.toString(); // -> "hello world!";
-System.out.println(result);
 ```
 
 ---
@@ -1177,29 +1135,85 @@ name: operators
 
 template: operators
 
-## Operators
+Java specifies computation in the form of arithmetic expressions that closely resemble expressions in mathematics.
 
-Blablabla...
+**Operators** usually appear between two subexpressions, which are called its **operands**.
+
+Common operators include:
+- `+` Addition
+- `-` Subtraction
+- `*` Multiplication
+- `/` Division
+- `%` Remainder
+
+Note: The `-` operator can also appear as a unary operator, as in the expression `-x`, which denotes the negative of `x`.
 
 ---
 
 template: operators
 
-## Operands
+## Recall: Division and type casts
 
-Blablabla...
+When you apply a binary operator to numeric values in Java, the result will be of type `int` if both operands are of type `int`, and `double` if either operand is a double.
+
+Remember: `9/5 = 1` in Java, because both 9 and 5 are integers. Use the type cast `(double) 9/5` instead.
+
+---
+
+template: operators
+
+## About the remainder operator
+
+The remainder operator `%` applies only to integer operands.
+
+It computes the remainder when the first is divided by the second:
+- `14 % 5` returns 4.
+- `14 % 7` returns 0.
+- `7 % 14` returns 7.
+
+This is a very useful operator!
+
+---
+
+template: operators
+
+## Precedence
+
+What is an expression contains more than one operator?
+
+Java uses precedence to determine the order of evaluation.
+
+From highest to lowest precedence:
+- unary - (type cast)
+- * / %
+- + -
+
+Precedence applies only when two operands compute for the same operator.
+
+**Note**: Use parentheses if you forget the precedence rule (or for clarity)!
 
 ---
 
 name: assignment
 
-&& Assignment operators
+## Assignment operators
 
 ---
 
 template: assignment
 
-Blablabla...
+You can change the value of a variable in your program by using an assignment statement:
+- `variable = expression;`
+
+The assignment statement computes the value of the expression on the right side of the equal sign and assign that value to the variable that appears on the left.
+
+Statements such as `x = x + value` are so common that Java allows the following shorthand: `x += value;`.
+
+The general form is `variable op= expression;`, where op is any of Java's binary operators.
+
+Example: the following statement multiplies salary by 2: `salary *= 2;`
+
+There are even increment and decrement operators, such as `x++;` and `x--;`, which are equivalent to `x = x + 1;` and `x = x - 1;`.
 
 ---
 
