@@ -6,7 +6,7 @@ permalink: /slides/starter-code/
 
 class: center, middle
 
-# Starter code and I/O using the Scanner class
+# Starter code
 
 ---
 
@@ -19,7 +19,7 @@ Part I: Starter code and I/O using the Scanner class
 1. [More about the Scanner class](#input)
 1. [A note about division and type casts](#division-type-casts)
 
-Part II (Next lecture -- in construction)
+Part II: Organizing projects, variables and identifiers, data types, operators and operans.
 1. [Organizing projects I](#organizationI)
 1. [Organizing projects II](#organizationII)
 1. [Variables and identifiers](#variables-identifiers)
@@ -655,7 +655,7 @@ Create an appropriate set of sub-directories, and move both files at once (repla
 
 ```bash
 foo@bar$ mkdir -p src/edu/nyu/cs/gp2442
-foo@bar$ mv AddingDoubles.* src/edu/nyu/cs/gp2442
+foo@bar$ mv src/AddingDoubles.java src/edu/nyu/cs/gp2442
 ```
 
 ---
@@ -795,7 +795,7 @@ template: data-types
 - Max value is 9,223,372,036,854,775,807 (2^63 - 1).
 - Default value is 0L.
 - This type is used when a wider range than int is needed.
-- Example: int a = 100000L;
+- Example: long a = 100000L;
 
 ---
 
@@ -805,7 +805,7 @@ template: data-types
 - float data type is a single-precision 32-bit IEEE 754 floating point.
 - IEEE stands for `Institute of Electrical and Electronics Engineers`.
 - Float is used to save memory in large arrays of floating point numbers.
-- Default valie is 0.0f.
+- Default value is 0.0f.
 - Don't use it if you need precisce value! Use BigDecimal instead.
 - Example: float f1 = 234.5f;
 - Example: BigDecimal k = BigDecimal.valueOf(floatvalue);
@@ -813,7 +813,7 @@ template: data-types
 **double**:
 - double data type is a double-precision 64-bit IEEE 754 floating point.
 - **Generally the default data type for decimal values**.
-- Default valie is 0.0d.
+- Default value is 0.0d.
 - Don't use it if you need precisce value! Use BigDecimal instead.
 - Example: double d1 = 123.4;
 - Example: BigDecimal k = BigDecimal.valueOf(doublevalue);
@@ -834,7 +834,7 @@ template: data-types
 - There are only two possible values: true and false.
 - This data type is used for simple flags that track true/false conditions.
 - Default value is false.
-- Example: boolean one = true.
+- Example: boolean one = true;
 - (More on this next class!)
 ---
 
@@ -844,7 +844,7 @@ template: data-types
 
 There is no `String` primitive data type in Java. Instead, `String` is a predefined class that is written in Java code.
 
-There is no 'Arrays` primitive data type in Java. Instead, 'Arrays` is a predefined class that is written in java code.
+There is no `Arrays` primitive data type in Java. Instead, `Arrays` is a predefined class that is written in java code.
 - It is a fundamental data structure in Java (more on this later in the course).
 
 Because Java contains primitive data types that are not only `class` types, _Java is not a purely object-oriented language_.
@@ -899,29 +899,6 @@ Due to the limitations of working with primitive data types and the conservative
 - ... and [many more](https://commons.apache.org/proper/commons-lang/apidocs/index.html) for dealing with data of non-primitive types.
 
 Commons Lang is perhaps most well-known for its `String`-related helper classes: `StringUtils`, `WordUtils`, and `StringEscapeUtils`.
-
----
-
-template: data-types
-
-## Strings
-
-The `==` operator performs a comparison of the position in memory where two values are stored in memory.
-
-- It does not compare the values stored at those locations of memory
-
-```java
-String x = "hello";
-String y = "hello";
-boolean theSameMemoryAddress = (x == y); // -> most likely true, but not guaranteed to be so
-```
-
-```java
-Scanner scn = new Scanner(System.in);
-String x = "hello";
-String y = scn.nextLine(); // let's imagine the user enters the same text, "hello"...
-boolean theSameMemoryAddress = (x == y); // -> most likely false!, but not guaranteed to be so
-```
 
 ---
 
@@ -1179,7 +1156,7 @@ template: operators
 
 ## Precedence
 
-What is an expression contains more than one operator?
+What if an expression contains more than one operator?
 
 Java uses precedence to determine the order of evaluation.
 
@@ -1225,7 +1202,7 @@ name: conclusions
 
 Phew, that was a lot!
 
-You will become more familiar with these expression with practice. :-)
+You will become more familiar with these expressions with practice. :-)
 
 Next week: Booleans; if/else statements, and for loops.
 
