@@ -8,14 +8,6 @@ class: center, middle
 
 # Branching
 
-> Two roads diverged in a yellow wood,
->
-> And sorry I could not travel both
->
-> ...
-
--Robert Frost, [The Road Not Taken](https://www.poetryfoundation.org/poems/44272/the-road-not-taken)
-
 ---
 
 # Agenda
@@ -32,8 +24,6 @@ class: center, middle
 name: concept
 
 # Overview
-
---
 
 ## Concept
 
@@ -70,7 +60,6 @@ Understanding the flow of a program's control can be visualized easily with diag
 ---
 
 template: flow-charts
-name: flow-charts-6
 
 ## Example
 
@@ -82,7 +71,6 @@ A virtual card game program randomly picks two cards, from 1 to 11.
 ---
 
 template: flow-charts
-name: flow-charts-7
 
 ## Example
 
@@ -91,7 +79,6 @@ name: flow-charts-7
 ---
 
 template: flow-charts
-name: activity-diagrams
 
 ## UML Activity Diagram Rules
 
@@ -132,7 +119,6 @@ if (card1 + card2 == 21) {
 ---
 
 template: ifs
-name: ifs-2
 
 ## Binary choice
 
@@ -155,7 +141,6 @@ else {
 ---
 
 template: ifs
-name: ifs-3
 
 ## n-ary
 
@@ -182,7 +167,6 @@ else {
 ---
 
 template: ifs
-name: ifs-4
 
 ## UML Activity Diagram
 
@@ -207,7 +191,6 @@ In Java, an alternative to if/else if/else statements is switch/case statements.
 ---
 
 template: switch-case
-name: switch-case-5
 
 ## Example
 
@@ -218,7 +201,6 @@ Imagine a program that recommends how to dress.
 ---
 
 template: switch-case
-name: switch-case-6
 
 ## Not using switch / case
 
@@ -245,7 +227,6 @@ else {
 ---
 
 template: switch-case
-name: switch-case-7
 
 ## Using switch / case
 
