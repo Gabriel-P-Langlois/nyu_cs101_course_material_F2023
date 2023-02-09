@@ -31,7 +31,6 @@ name: concept
 ---
 
 template: concept
-name: concept-1
 
 ## Concept
 
@@ -44,6 +43,10 @@ It is often useful to repeat a block of code more than once.
 name: while
 
 # While Loops
+
+---
+
+template: while
 
 ## Concept
 
@@ -116,7 +119,9 @@ name: for
 
 # For Loops
 
---
+---
+
+template: for
 
 ## Concept
 
@@ -191,6 +196,8 @@ for (; ;) {
 name: common
 
 # Some Common Tasks
+
+---
 
 ## Iterating through values in an array
 
