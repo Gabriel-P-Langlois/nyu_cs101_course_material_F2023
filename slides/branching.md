@@ -8,6 +8,14 @@ class: center, middle
 
 # Branching
 
+> Two roads diverged in a yellow wood,
+>
+> And sorry I could not travel both
+>
+> ...
+
+-Robert Frost, [The Road Not Taken](https://www.poetryfoundation.org/poems/44272/the-road-not-taken)
+
 ---
 
 # Agenda
@@ -33,13 +41,19 @@ template: concept
 
 The flow of a program can be controlled such that it deviates from its '_normal_' path.
 
+--
+
 - What is a program's 'normal' path?
+
+--
 
 - By default, a program will execute statements in the order written, from top to bottom.
 
 - Some branches are _unconditional_ - the control will always break out of this sequential flow every time the program is executed.
 
 - Other branches are _conditional_ - certain contextual conditions must be met if the control of the program is to break out of its usual flow.
+
+--
 
 - Conditional branches are our focus here.
 
@@ -57,9 +71,13 @@ template: flow-charts
 
 Understanding the flow of a program's control can be visualized easily with diagrams, irrespective of the programming language and code.
 
+--
+
 - Writing code is precarious, laborious, and error-prone.
 
 - Creating such flow diagrams can help understand and communicate the problem being solved without such burden.
+
+--
 
 - The [Unified Modeling Language](https://en.wikipedia.org/wiki/Activity_diagram) (UML) has attempted to define the "Activity Diagram" - a standard for how such diagrams should be drawn.
 
@@ -92,15 +110,27 @@ template: flow-charts
 
 UML Activity Diagrams follow a few basic rules:
 
+--
+
 - program control starts at the top of the diagram and ends at the bottom.
+
+--
 
 - the start point is indicated with just filled circle, the end with a filled circle with a line around it
 
+--
+
 - any process is indicated with an ellipse (or a rounded rectangle)
+
+--
 
 - if any process being diagrammed is so complex it makes the diagram complex and difficult to understand, make a separate activity diagram for that sub-process, and represent it as a single process in this diagram.
 
+--
+
 - any decision point leading to more than one branch is indicated with a diamond shape (also called a rhombus)
+
+--
 
 - branches should have simple annotations indicating in what decision context they are followed
 
