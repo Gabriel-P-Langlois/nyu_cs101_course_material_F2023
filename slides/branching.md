@@ -22,6 +22,7 @@ class: center, middle
 
 1. [Overview](#concept)
 1. [Flow Charts](#flow-charts)
+1  [Boolean variables](#boolean)
 1. [If/Else if/Else](#ifs)
 1. [Switch/Case](#switch-case)
 1. [The Ternary Operator](#ternary)
@@ -158,8 +159,6 @@ Mathematical Theories of Logic and Probabilities`.
 
 That book introduced a system of logic that has come to be known as Boolean algebra, which
 is the foundation for the boolean data type.
-
---
 
 ---
 
