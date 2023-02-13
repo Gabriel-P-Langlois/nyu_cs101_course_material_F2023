@@ -202,11 +202,44 @@ template: boolean
 
 ## More on Boolean operators
 
+--
+
+Remember: Java uses `=` to denote assignments. To test whether two values are equal, you must use the `==` operator.
+
+--
+
+Java does not allow using more than one relational operator at a time.
+ - For instance, the inequality `0 <= x <= 9` must be written in Java as
+ - `0 <= x && x <= 9`.
+
+--
+
+The operator `||` means `either` or `both`, which is not always clear in the English interpretation of `or`.
+
 ---
 
 template: boolean
 
 ## Short-circuit evaluation
+
+--
+
+Java evaluates `&&` and `||` using a strategy called short-circuit mode in which it evaluates the right operand only
+if it needs to do so.
+
+For example, if n is 0, the right hand operand of `&&` in
+
+```java
+n != 0 && x % n == 0
+```
+
+is not evaluated because `n != 0` is false.
+
+--
+
+One of the advantages of short-circuit evaluation is that you can use `&&` and `||`
+to prevent execution errors. If n were 0 in the earlier example, evaluating `x % n` would cause a
+“division by zero ” error.
 
 ---
 
