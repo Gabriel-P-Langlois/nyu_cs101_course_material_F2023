@@ -248,32 +248,6 @@ Imagine a program that recommends how to dress.
 
 template: switch-case
 
-## Not using switch / case
-
-This could be handled by if/else if/else statements with some boolean operators thrown in.
-
-```java
-Scanner scn = new Scanner(System.in);
-String weather = scn.nextLine();
-
-if ( weather.equals("very sunny") || weather.equals("raining") ) {
-    // if it's raining or very sunny...
-	System.out.println("Take an umbrella");
-}
-else if (weather.equals("snowing") ) {
-    // otherwise, if it's snowing...
-	System.out.println("Wear a hat!");
-}
-else {
-    // otherwise...
-	System.out.println("Good luck!");
-}
-```
-
----
-
-template: switch-case
-
 ## Using switch / case
 
 Using switch/case would remove the need for boolean operations and provide more readable code.
@@ -295,6 +269,32 @@ switch (weather) {
     default:
         // otherwise...
         System.out.println("Good luck!");
+}
+```
+
+---
+
+template: switch-case
+
+## Not using switch / case
+
+This could be handled by if/else if/else statements with some boolean operators thrown in.
+
+```java
+Scanner scn = new Scanner(System.in);
+String weather = scn.nextLine();
+
+if ( weather.equals("very sunny") || weather.equals("raining") ) {
+    // if it's raining or very sunny...
+	System.out.println("Take an umbrella");
+}
+else if (weather.equals("snowing") ) {
+    // otherwise, if it's snowing...
+	System.out.println("Wear a hat!");
+}
+else {
+    // otherwise...
+	System.out.println("Good luck!");
 }
 ```
 
