@@ -136,6 +136,80 @@ UML Activity Diagrams follow a few basic rules:
 
 ---
 
+name: boolean
+
+# Boolean expressions
+
+---
+
+template: boolean
+
+In many ways, the most important primitive data type in Java is **boolean**.
+
+The only value a boolean value can take are `true` and `false`.
+
+These are exactly the values if you want your program to make decisions!
+
+--
+
+The name boolean comes from the English mathematician **George Boole** who in 1854
+wrote a book entitled `An Investigation into the Laws of Thought, on Which are Founded the
+Mathematical Theories of Logic and Probabilities`.
+
+That book introduced a system of logic that has come to be known as Boolean algebra, which
+is the foundation for the boolean data type.
+
+--
+
+---
+
+template: boolean
+
+## Boolean operators
+
+Boolean operators fall into two categories: **relational** and **logical** operators.
+
+There are six relational operators that compares values of other types and produce a boolean's result:
+ - `==` equals
+ - `<` less than
+ - `>` greater than
+ - `!=` not equal
+ - `<=` lesser than or equal to
+ - `>=` greater than or equal to
+
+For example, the expression `n<=10` has the value `true` if x is less
+than or equal to 10 and the value `false` otherwise.
+
+---
+
+template: boolean
+
+## Boolean operators
+
+There are three logical operators:
+ - `&&` Logical `AND`
+ - `||` Logical `OR`
+ - `!` Logical `NOT`
+
+For instance:
+ - `p && q` means both `p` and `q`.
+ - `p || q` means either `p` or `q` (or both).
+ - `!p` means the opposite of p.
+
+---
+
+template: boolean
+
+## More on Boolean operators
+
+---
+
+template: boolean
+
+## Short-circuit evaluation
+
+---
+
 name: ifs
 
 # If/Else if/Else
