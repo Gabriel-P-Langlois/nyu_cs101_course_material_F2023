@@ -19,7 +19,7 @@ class: center, middle
 1. [Overview](#concept)
 1. [While Loops](#while)
 1. [For Loops](#for)
-1. [do..while](#do-while)
+1. [do..while](#dowhile)
 1. [Some Common Tasks](#common)
 1. [Conclusions](#conclusions)
 
@@ -233,15 +233,15 @@ while (i < N) {
 
 ---
 
-name: do-while
+name: dowhile
 
 # Do..while statement
 
 ---
 
-template: do-while
+template: dowhile
 
-You can use a ``do...while`` statement to check a certain condition only after executing the repeating statements
+You can use a `do...while` statement to check a certain condition only after executing the repeating statements
 
 ```java
 do {
