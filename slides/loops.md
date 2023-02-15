@@ -206,6 +206,7 @@ for (; ;) {
     System.out.println("Iterating!");
 }
 ```
+
 ---
 
 template: for
@@ -259,6 +260,8 @@ name: common
 # Some Common Tasks
 
 ---
+
+template: common
 
 ## Iterating through values in an array
 
