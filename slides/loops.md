@@ -19,6 +19,7 @@ class: center, middle
 1. [Overview](#concept)
 1. [While Loops](#while)
 1. [For Loops](#for)
+1. [do..while](#do-while)
 1. [Some Common Tasks](#common)
 1. [Conclusions](#conclusions)
 
@@ -56,6 +57,14 @@ While loops give us ultimate flexibility in controlling repetition.
 
 - We can also write infinite loops that never stop repeating.
 
+--
+
+```java
+while(condition) {
+    // statements to be repeated
+}
+```
+
 ---
 
 template: while
@@ -64,13 +73,16 @@ template: while
 
 One of the classic patterns, where a counter stops the loop after a certain number of iterations.
 
+This is the **Repeat-N-Times** Idiom.
+
 ```java
 int i = 0; // set the starting value of the counter
+int N = 10; // set the how many iterations we wish to perform
 
-while (i < 10) {
+while (i < N) {
     // iterate as long as the counter is below some target value
     System.out.println("The value of i is" + i);
-    i++; // increment the counter
+    i++; // increment the counter -- equivalent to i = i + 1;
 }
 ```
 
@@ -80,20 +92,22 @@ template: while
 
 ## Flag-based loop
 
-Another of the classic patterns, where the value of a boolean variable causes the loop to stop iterating at some point.
+Another classic pattern, where the value of a boolean variable causes the loop to stop iterating at some point.
+
+This is the **Repeat-Until-Sentinel** Idiom.
 
 ```java
-boolean keepGoing = true; // by default, iterate!
+boolean sentinel = true; // This is the sentinel (a.k.a. the flag).
 
-while (keepGoing) {
+while (sentinel) { // by default, iterate.
     // iterate as long as the boolean value in the flag is true
-    System.out.println("Iterating!");
+    System.out.println("Iterating...");
 
     // stop the loop if a random number between 1-100 is equal to 22
     int rand = (int) (Math.random() * 100) + 1;
 
     // use the ternary operator to flip the value of the flag, if necessary
-    keepGoing = (rand == 22) ? false : true; // set to false if the rand value is 22, true otherwise
+    sentinel = (rand == 22) ? false : true; // set to false if the rand value is 22, true otherwise
 }
 ```
 
@@ -112,6 +126,8 @@ while (true) {
     System.out.println("Iterating!");
 }
 ```
+
+In Visual Studio Code, press CTRL + P and type `>task terminate` to stop the execution of the program and get out of the infinite loop.
 
 ---
 
@@ -190,6 +206,51 @@ for (; ;) {
     System.out.println("Iterating!");
 }
 ```
+---
+
+template: for
+
+## Equivalent statements
+
+The statements below are equivalent:
+
+```java
+int s = 0;
+for (i = 0; i < N; ++i) {
+    s += i;
+}
+```
+
+```java
+i = 0;
+s = 0;
+while (i < N) {
+    s += i;
+    ++i;
+}
+```
+
+---
+
+name: do-while
+
+# Do..while statement
+
+---
+
+template: do-while
+
+You can use a ``do...while`` statement to check a certain condition only after executing the repeating statements
+
+```java
+do {
+    // statement 1
+    // statement 2
+    // ...
+} while(sentinel);
+```
+
+Important: The statements will always be executed once, and even so if `sentinel` is `false`!
 
 ---
 
@@ -300,3 +361,10 @@ name: conclusions
 --
 
 You now have a basic understanding of for loops, while loops, and a few common tasks performed by each.
+
+Upcoming deadlines:
+- Quiz 3 is due tomorrow by 11:59 pm.
+- Assignment 2 is due next Tuesday by 3 pm.
+- Quiz 4 will be posted today and be due next Tuesday by 11:59 pm.
+
+Have a nice weekend!
