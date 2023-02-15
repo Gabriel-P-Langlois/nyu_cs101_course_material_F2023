@@ -330,7 +330,7 @@ template: common
 
 ## Calculating a running total
 
-A 'running total' is a specific sub-variety of an accumulator pattern, where a value is added to with each iteration.
+A 'running total' is a specific sub-variety of an accumulator pattern.
 
 ```java
 Scanner scn = new Scanner(System.in);
