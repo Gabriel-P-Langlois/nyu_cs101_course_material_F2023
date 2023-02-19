@@ -79,6 +79,8 @@ name: simple
 
 --
 
+template: simple
+
 Syntax:
 ```java
 scope returnType methodName(list-of-parameters) {
@@ -124,7 +126,7 @@ public static int max(int num1, int num2){
 - The scope is specified by `public static` (more on this later in the course).
 - `int` is the return type
 - `max` is the method name.
-- `num1 and `num2` are the formal parameters.
+- `num1` and `num2` are the formal parameters.
 - `max(int num1, int num2)` is the method signature.
 - You return a value from a method by including a `return` statement.
 
