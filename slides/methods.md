@@ -49,7 +49,7 @@ of a method from the user (hiding complexity). This is called **information hidi
 
 ---
 
-name: overview
+template: overview
 
 ## Concept
 
@@ -134,13 +134,15 @@ public static int max(int num1, int num2){
 
 template: simple
 
-When you call the method, you are executing the code contained within the method. 
+Calling the method means executing the code contained within the method. 
 
 The previous method can be called into the `main` method.
 
-You can store values returned by methods inside variables. E.g., `int n = max(2,19);`
+You can store values returned by methods inside variables. 
+- E.g., `int n = max(2,19);`
 
-Methods of type void can be used like statements. E.g., `System.out.println(“Hello World”);`
+Methods of type void can be used like statements. 
+- E.g., `System.out.println(“Hello World”);`
 
 --
 
@@ -148,9 +150,124 @@ An **Activation Record** is information about a method that contains values of p
 
 When a method is called, this Activation Record is stored in a location on memory known as a **stack**.
 
+---
+
+name: parameter-scope
+
+# Passing parameters and scope
+
+---
+
+template: parameter-scope
+
+## Passing parameters to methods
+
+When you call a method, the arguments **must** match the list of parameters from the method definition
+in **order**, **number**, and **variable type**.
+
+--
+
+Consider a method whose header is `public int onePlusOne(int num1, int num2, String s)`
+
+To call this method, you must do the following:
+
+--
+
+- Insert integers for num1 and num2, and a string for s.
+- Insert the correct number of variables.
+- You must also enter the parameters in the correct order.
+
+Anything else yields an error!
+
+---
+
+template: parameter-scope
+
+## Scope of methods
+
+What is the output of the following code?
+
+```java
+public class Increment{
+    public class static void main(String[] args) {
+    int x = 1;
+    System.out.println("Before the call, x is " + x");
+    increment(x);
+    System.out.println("After the call, x is " + x");
+    }
+    
+    public static void increment(int n) {
+        n++;
+        System.out.println("n inside the method is " + n);
+    }
+}
+```
+
+---
+
+template: parameter-scope
+
+## Scope of method
+
+**Scope** – This determines who has access to a method (where it can be referenced and used).
+
+**Local Variable** – This scope allows variables to be used only where they are declared. 
+- If a variable is declared inside a method, it may only be used within that method.
+
+**Block Scope** – This scope allows variables to be used only within a block of code. 
+- In this instance, a variable is declared within a block of code and may only be used within that block.
 
 
 ---
+
+template: parameter-scope
+
+## Understanding scope
+
+Example 1:
+- When the code blocks are not nested, the variable name can be reused.
+
+```java
+public static void main(String[] args) {
+    ...
+    {
+        int x = 5;
+        System.out.println("The value of x is " + x);
+    }
+    {
+        int x = 7;
+        System.out.println("The value of x is " + x);
+    }
+...
+}
+```
+
+---
+
+template: parameter-scope
+
+## Understanding scope
+
+Example 2:
+- When the code blocks are nested, the variable name cannot be reused.
+
+```java
+public static void main(String[] args) {
+    ...
+    {
+        int x = 5;
+        System.out.println("The value of x is " + x);
+        {
+            int x = 7;
+            System.out.println("The value of x is " + x);
+        }
+    }
+...
+}
+```
+
+---
+
 
 template: simple
 name: simple-2
