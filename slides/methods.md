@@ -149,7 +149,7 @@ Methods of type void can be used like statements.
 
 --
 
-Note: Once the method invocation completes, any local variables, including parameters, are wiped out of memory.
+Once the method invocation completes, any local variables, including parameters, are wiped out of memory.
 
 --
 
@@ -327,9 +327,7 @@ void sum(double a,double b) {System.out.println(a+b);}
 
 --
 
-Note: A method cannot be overloaded by changing the return type of method.
-
-This will confuse the compiler and cause compilation errors.
+A method cannot be overloaded by changing the return type of method!
 
 ---
 
