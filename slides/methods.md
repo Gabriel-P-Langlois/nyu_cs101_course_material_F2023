@@ -137,11 +137,17 @@ Calling the method means executing the code contained within the method.
 
 The previous method can be called into the `main` method.
 
+--
+
 You can store values returned by methods inside variables. 
 - E.g., `int n = max(2,19);`
 
+--
+
 Methods of type void can be used like statements. 
 - E.g., `System.out.println(“Hello World”);`
+
+--
 
 Note: Once the method invocation completes, any local variables, including parameters, are wiped out of memory.
 
@@ -310,25 +316,20 @@ void sum(int a,int b, int c) {
 }
 ```
 
----
-
-template: overloading
+--
 
 Same name but different argument types:
 ```java
-void sum(int a,int b) {
-    System.out.println(a+b);
-}
+void sum(int a,int b) {System.out.println(a+b);}
 
-void sum(double a,double b) {
-    System.out.println(a+b);
-}
+void sum(double a,double b) {System.out.println(a+b);}
 ```
 
 --
 
 Note: A method cannot be overloaded by changing the return type of method.
-- This will confuse the compiler and cause compilation errors.
+
+This will confuse the compiler and cause compilation errors.
 
 ---
 
