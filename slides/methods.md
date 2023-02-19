@@ -20,6 +20,7 @@ class: center, middle
 1. [Simple Methods](#simple)
 1. [Parameters & scope](#parameter-scope)
 1. [Overloading](#overloading)
+1. [Method abstraction and stepwise refinement](#method-abstraction)
 1. [Conclusions](#conclusions)
 
 ---
@@ -328,6 +329,18 @@ void sum(double a,double b) {System.out.println(a+b);}
 --
 
 A method cannot be overloaded by changing the return type of method!
+
+---
+
+name: method-abstraction
+
+# Method abstraction and stepwise refinement
+
+---
+
+template: method-abstraction
+
+TBC.
 
 ---
 
