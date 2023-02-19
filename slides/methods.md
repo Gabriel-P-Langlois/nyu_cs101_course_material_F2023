@@ -75,23 +75,78 @@ A few more notes:
 
 name: simple
 
-# Simple Methods
+# Defining methods
 
 --
 
-## Super simple
-
-At their simplest, methods can have no parameters and no return value.
-
-For example, a method named 'doSomething1':
-
+Syntax:
 ```java
-public static void doSomething1() {
-    System.out.println("Running  doSomething1");
-    // imagine some useful stuff happens in the middle here
-    System.out.println("Exiting  doSomething1");
+scope returnType methodName(list-of-parameters) {
+    // method body
 }
 ```
+
+--
+
+**Scope** specifies who has access to the method.
+
+**returnType** can be any data type or void. Void methods do not return a value.
+
+**methodName** is the name of the method.
+
+**List-of-parameters** is a comma separated list of parameters written as type1
+var1, type 2 var 2....This may also be just one parameter if a list is not required.
+
+
+---
+
+template: simple
+
+Consider the following method for computing the maximum of two integers:
+
+```java
+public static int max(int num1, int num2){
+    // method body is below
+    int result;
+    
+    if (num1 > num2){
+        result = num1;
+    else
+        result = num2;
+    }
+    return result;  // returned value
+}
+```
+
+--
+
+- The method header is `public static int`.
+- The scope is specified by `public static` (more on this later in the course).
+- `int` is the return type
+- `max` is the method name.
+- `num1 and `num2` are the formal parameters.
+- `max(int num1, int num2)` is the method signature.
+- You return a value from a method by including a `return` statement.
+
+---
+
+template: simple
+
+When you call the method, you are executing the code contained within the method. 
+
+The previous method can be called into the `main` method.
+
+You can store values returned by methods inside variables. E.g., `int n = max(2,19);`
+
+Methods of type void can be used like statements. E.g., `System.out.println(“Hello World”);`
+
+--
+
+An **Activation Record** is information about a method that contains values of parameters and local variables. 
+
+When a method is called, this Activation Record is stored in a location on memory known as a **stack**.
+
+
 
 ---
 
