@@ -18,8 +18,7 @@ class: center, middle
 
 1. [Overview](#concept)
 1. [Simple Methods](#simple)
-1. [Parameters & Arguments](#parameters)
-1. [Return Values](#return)
+1. [Parameters & scope](#parameter-scope)
 1. [Overloading](#overloading)
 1. [Conclusions](#conclusions)
 
@@ -146,9 +145,14 @@ Methods of type void can be used like statements.
 
 --
 
+Note: Once the method invocation completes, any local variables, including parameters, are wiped out of memory.
+
+--
+
 An **Activation Record** is information about a method that contains values of parameters and local variables. 
 
 When a method is called, this Activation Record is stored in a location on memory known as a **stack**.
+
 
 ---
 
@@ -183,7 +187,24 @@ Anything else yields an error!
 
 template: parameter-scope
 
-## Scope of methods
+## Calling methods within methods
+
+Methods can call other methods.
+
+The order is determined by the control flow of the program.
+
+- Each method invocation creates a new 'stack frame' - an area of memory dedicated to the newly invoked method.
+
+- The Java interpreter is only ever looking at the method invocation at the top of the stack - the most recently invoked method.
+
+- Once a method that has been invoked completes, its stack frame is popped (deleted) from the call stack and its memory is wiped clean.
+
+
+---
+
+template: parameter-scope
+
+## Understanding scope
 
 What is the output of the following code?
 
@@ -207,7 +228,7 @@ public class Increment{
 
 template: parameter-scope
 
-## Scope of method
+## Understanding scope
 
 **Scope** – This determines who has access to a method (where it can be referenced and used).
 
@@ -268,151 +289,44 @@ public static void main(String[] args) {
 
 ---
 
-
-template: simple
-name: simple-2
-
-## Methods calling methods
-
-Of course, methods can call other methods, as our `doSomething1` already displayed - it called the `System.out.println` method several times.
-
-Note the order in which the print statements are executed.
-
-```java
-public static void doSomething1() {
-    System.out.println("Begin doSomething1");
-    // imagine some useful stuff happens in the middle here
-    System.out.println("End doSomething1");
-}
-
-public static void doSomething2() {
-    System.out.println("Begin doSommething2");
-    doSomething1(); // call the method
-    System.out.println("End doSomething2");
-}
-```
-
----
-
-template: simple
-name: simple-3
-
-## Call stack
-
-The order is determined by the control flow of the program.
-
---
-
-- Each method invocation creates a new 'stack frame' - an area of memory dedicated to the newly invoked method.
-
---
-
-- The Java interpreter is only ever looking at the method invocation at the top of the stack - the most recently invoked method.
-
---
-
-- Each stack frame has its own variable namespace, so you can have two variables named `x` in two different method invocations, and they will be different variables in two different areas of memory with potentially different values.
-
---
-
-- Once a method that has been invoked completes, its stack frame is popped (deleted) from the call stack and its memory is wiped clean.
-
----
-
-name: parameters
-
-# Parameters
-
---
-
-## Concept
-
-Methods can accept 'arguments' - values sent into the method.
-
---
-
-- These arguments are stored in 'parameters' - local variables within the namespace of the method invocation's stack frame.
-
---
-
-- Once the method invocation completes, any local variables, including parameters, are wiped out of memory.
-
---
-
-```java
-public static void doSomething1(int x) {
-    x++; // increment x
-    System.out.println("Begin doSomething1, x=" + x);
-    System.out.println("End doSomething1, x=" + x);
-}
-```
-
----
-
-name: return
-
-# Return values
-
---
-
-## Concept
-
-Methods can return a single value in Java.
-
---
-
-- The method signature line must state the data type of the returned value
-
---
-
-- This value is returned to the part of the code from which the method was originally invoked.
-
---
-
-- Think of it as if the method invocation is replaced by that method's return value.
-
---
-
-```java
-public static int doSomething1(int x) {
-    x++; // increment x
-    System.out.println("Begin doSomething1, x=" + x);
-    System.out.println("End doSomething1, x=" + x);
-    return x;
-}
-```
-
----
-
 name: overloading
 
 # Overloading
 
---
-
 ## Concept
 
-Java allows multiple methods with the same name but different parameter sets. These are called overloaded methods.
+Java allows multiple methods with the same name but different parameter sets. These are called **overloaded methods**.
 
 --
 
-- Which version of the method is invoked depends upon the arguments in the method call.
-
---
-
+Same name but different number of arguments:
 ```java
-public static void foo() {
-    ...
+void sum(int a,int b) {
+    System.out.println(a+b);
 }
 
-public static void foo(String bar) {
-    ...
-}
-
-public static void foo(String bar, boolean baz) {
-    ...
+void sum(int a,int b, int c) {
+    System.out.println(a+b+c);
 }
 ```
+
+--
+
+Same name but different argument types:
+```java
+void sum(int a,int b) {
+    System.out.println(a+b);
+}
+
+void sum(double a,double b) {
+    System.out.println(a+b);
+}
+```
+
+--
+
+Note: A method cannot be overloaded by changing the return type of method.
+- This will confuse the compiler and cause compilation errors.
 
 ---
 
@@ -426,4 +340,8 @@ You now have a basic understanding of methods in Java.
 
 --
 
-- Thank you. Bye.
+Upcoming deadlines + Info:
+- Homework 2 is due today at 3 pm.
+- Quiz 4 is due today at 11:59 pm.
+- Quiz 5 will be posted today and due this coming Friday at 11:59 pm.
+- Homework 3 will be posted on **Thursday** and due a week after.
