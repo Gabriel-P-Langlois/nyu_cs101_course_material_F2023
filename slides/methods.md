@@ -29,26 +29,46 @@ name: overview
 
 # Overview
 
---
+---
+
+template: overview
 
 ## Concept
 
-Methods are modular reusable blocks of code.
+A **method** is a reusable sequence of statements that have been grouped
+together under the same name.
 
 --
+
+Put another way, a method is a modular reusable block of code.
+
+--
+
+Methods make it easier to debug your code. In addition, they allow you to hide the details
+of a method from the user (hiding complexity). This is called **information hiding**.
+
+---
+
+name: overview
+
+## Concept
+
+The following terms are useful when learning about methods:
+
+--
+
+- The **caller** is one who invokes a method.
+- Invoking a method using its name is known as **calling** that method.
+- You can pass information to a method by using **arguments**.
+- When a method completes an operation, it **returns** to its caller.
+- A method can pass information to the caller by **returning a result**.
+
+--
+
+A few more notes:
 
 - The control flow of a program can easily switch to code within a method from anywhere else in the code.
-
---
-
-- Switching to code within a method is termed 'calling' or 'invoking' that method.
-
---
-
 - Calling a method is a form of unconditional branching - disrupting the 'usual' flow of a program.
-
---
-
 - Once the control flow reaches the end of an invoked method, the control flow returns to the line of code from which it originally branched.
 
 ---
