@@ -143,8 +143,6 @@ You can store values returned by methods inside variables.
 Methods of type void can be used like statements. 
 - E.g., `System.out.println(“Hello World”);`
 
---
-
 Note: Once the method invocation completes, any local variables, including parameters, are wiped out of memory.
 
 --
@@ -293,7 +291,9 @@ name: overloading
 
 # Overloading
 
-## Concept
+---
+
+template: overloading
 
 Java allows multiple methods with the same name but different parameter sets. These are called **overloaded methods**.
 
@@ -310,7 +310,9 @@ void sum(int a,int b, int c) {
 }
 ```
 
---
+---
+
+template: overloading
 
 Same name but different argument types:
 ```java
