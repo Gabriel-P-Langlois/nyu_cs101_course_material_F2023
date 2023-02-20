@@ -385,6 +385,22 @@ template: method-abstraction
 
 ---
 
+template: method-abstraction
+
+Choosing how to decompose a task is a very subtle process in software engineering.
+
+One of the primary goals of decomposition is to simplify the programming process. A good
+decomposition strategy must avoid spreading or increasing complexity.
+
+As a general rule, each level in the decomposition should take responsibility for certain
+details and avoid pushing that responsibility to higher levels.
+
+In most cases, the best decomposition format follows the structure of the real-world
+problem. If the problem appears to have natural subdivisions then these may provide a
+useful basis for designing the program decomposition.
+
+---
+
 name: conclusions
 
 # Conclusions
