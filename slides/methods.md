@@ -340,22 +340,25 @@ name: method-abstraction
 
 template: method-abstraction
 
-Two concepts: **method abstraction** and **stepwise refinement**
+**Method Abstraction**: The implementation of a method is hidden, but anyone can use the 
+method as long as you have the method signature (name and parameter list), the return type and the documentation. 
 
-Method Abstraction : The implementation of a method is hidden but anyone can continue to use
-the method as long as you have the method signature (name and parameter
-list), the return type, and the documentation. The author can make edits to
-the method as long as the header of the method remains the same.
+The author can make edits to the method as long as the header of the method remains the same.
 
 --
 
-Stepwise Refinement: The process of deconstructing a problem into smaller manageable steps until
-you are left with the smallest most manageable components. From here, you
-can turn these small steps into simple methods or lines of code. When
-engaging in this process you do not think about the code at first. You begin
-by outlining the problem and finding the most logical path of deconstruction
-until you cannot continue further. Then you begin your coding.
+Stepwise Refinement: Deconstruct a problem into its smallest, most manageable components. 
+You can turn these small components into simple methods or lines of code.
 
+You do not have to think about the code at first. 
+You can begin outlining the problem and finding the most logical deconstruction. Then you start your coding.
+
+
+---
+
+template: method-abstraction
+
+TBC.
 
 ---
 
