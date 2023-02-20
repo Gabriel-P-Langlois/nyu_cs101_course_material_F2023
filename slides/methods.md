@@ -347,7 +347,7 @@ The author can make edits to the method as long as the header of the method rema
 
 --
 
-Stepwise Refinement: Deconstruct a problem into its smallest, most manageable components. 
+**Stepwise Refinement**: Deconstruct a problem into its smallest, most manageable components. 
 You can turn these small components into simple methods or lines of code.
 
 You do not have to think about the code at first. 
@@ -358,7 +358,36 @@ You can begin outlining the problem and finding the most logical deconstruction.
 
 template: method-abstraction
 
-TBC.
+Methods make it possible to break a large task down into simpler
+parts in a process called decomposition.
+
+--
+
+Suppose you have been given a task that seems too large to code in
+a single run method.
+
+--
+
+Some of the subtasks may be too difficult to complete on their
+own. In this case you might break them down further and continue
+until each individual subtask is manageable.
+
+--
+
+Once you have completed the decomposition, you can then write a
+method to implement each subtask.
+
+---
+
+template: method-abstraction
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
 
 ---
 
