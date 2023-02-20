@@ -381,13 +381,7 @@ method to implement each subtask.
 
 template: method-abstraction
 
-```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
-```
+![Task decomposition](../files/task_decomposition.png)
 
 ---
 
