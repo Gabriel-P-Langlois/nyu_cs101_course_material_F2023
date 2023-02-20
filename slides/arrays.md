@@ -563,8 +563,6 @@ name: pass-by-value-3
 
 ## Passing value types as arguments to methods
 
-Take the following example:
-
 ```java
 public static void doSomething(int x) {
     x = 10;
@@ -670,4 +668,8 @@ You now have a basic understanding of arrays in Java.
 
 --
 
-- Thank you. Bye.
+Upcoming deadlines + info:
+- Homework 3 is due next week on Thursday by 11:59 pm.
+- Quiz 5 is due tomorrow by 11:59 pm.
+- Quiz 6 is out and is due next Tuesday (Feb 28th) by 11:59 pm.
+- Next week is dedicated to reviewing the material in preparation for the midterm on March 7th.
