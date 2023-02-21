@@ -215,11 +215,11 @@ What is the output of the following code?
 
 ```java
 public class Increment{
-    public class static void main(String[] args) {
+    public static void main(String[] args) {
     int x = 1;
-    System.out.println("Before the call, x is " + x");
+    System.out.println("Before the call, x is " + x);
     increment(x);
-    System.out.println("After the call, x is " + x");
+    System.out.println("After the call, x is " + x);
     }
     
     public static void increment(int n) {
