@@ -561,8 +561,6 @@ When a _value type_ (e.g. a primitive data type value) is passed as an argument 
 template: pass-by-value
 name: pass-by-value-3
 
-## Passing value types as arguments to methods
-
 ```java
 public static void doSomething(int x) {
     x = 10;
@@ -585,8 +583,6 @@ The output of the above program is `5`, since the local variable within the main
 
 template: pass-by-value
 name: pass-by-value-5
-
-## Passing reference types as arguments to methods
 
 When a _reference type_ (e.g. an array or object) is passed as an argument to a function, the situation is straightforward.
 
