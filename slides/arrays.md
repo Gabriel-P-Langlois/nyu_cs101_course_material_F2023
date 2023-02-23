@@ -102,6 +102,9 @@ You can also use [regular expressions syntax](https://docs.oracle.com/javase/tut
 ```java
 String myMessageToYou = "Don't, worry?about-a .thing";
 String[] words = myMessageToYou.split("[ ,?-.]+");
+// .split("[ ,?-.]+") means: split the string if you encounter *any* combination of " " or "," or "?" or "-" or "."
+// In this example, the split method will encounter the comma and a space before encountering the charater 'w'. Thus it will parse out
+// "Don't" from the delimiter ", ". split will then proceed from the rest of the string "worry?about-a .thing"".
 // now you have an array { "Don't", "worry", "about", "a", "thing" }
 ```
 
@@ -665,7 +668,7 @@ You now have a basic understanding of arrays in Java.
 --
 
 Upcoming deadlines + info:
-- Homework 3 is due on March 5th (Sundat) by 11:59 pm.
+- Homework 3 is due on March 5th (Sunday) by 11:59 pm.
 - Please start homework 3 early!
 - Quiz 5 is due tomorrow by 11:59 pm.
 - Quiz 6 is out and is due next Tuesday (Feb 28th) by 11:59 pm.
