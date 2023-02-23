@@ -92,6 +92,8 @@ You can create an array of different types using Object[].
 Object[] x = new Object[]{1,2,3,"srk"};
 ```
 
+The first three elements of x are integers, and the last element is a string.
+
 ---
 
 template: creation
