@@ -669,7 +669,8 @@ You now have a basic understanding of arrays in Java.
 --
 
 Upcoming deadlines + info:
-- Homework 3 is due next week on Thursday by 11:59 pm.
+- Homework 3 is due on March 5th (Sundat) by 11:59 pm.
+- Please start homework 3 early!
 - Quiz 5 is due tomorrow by 11:59 pm.
 - Quiz 6 is out and is due next Tuesday (Feb 28th) by 11:59 pm.
 - Next week is dedicated to reviewing the material in preparation for the midterm on March 7th.
