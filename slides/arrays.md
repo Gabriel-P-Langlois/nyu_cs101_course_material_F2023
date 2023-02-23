@@ -83,6 +83,18 @@ char[] myFavoriteCharacters = { 'f', 'o', 'o' };
 ---
 
 template: creation
+
+## Object[] arrays
+
+You can create an array of different types using Object[].
+
+```java
+Object[] x = new Object[]{1,2,3,"srk"};
+```
+
+---
+
+template: creation
 name: creation-3
 
 ## Using String's split function
