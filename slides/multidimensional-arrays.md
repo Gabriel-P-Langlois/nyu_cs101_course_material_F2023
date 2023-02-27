@@ -344,6 +344,7 @@ You now have a basic understanding of multidimensional arrays - especially two-d
 --
 
 Upcoming deadlines + Info:
+- Quiz 6 is due today by 11:59 pm.
 - Assignment 3 is due this coming Sunday at 5 pm.
 - Midterm 1 will be in-class next Tuesday from 8:00-9:15 am.
 - I will have assignment 2 graded by this coming Thursday.
