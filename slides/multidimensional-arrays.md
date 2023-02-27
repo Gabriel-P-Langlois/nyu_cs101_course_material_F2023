@@ -47,11 +47,11 @@ Multidimensional arrays are arrays that store other arrays nested within them.
 
 --
 
-- An array that stores arrays that themselves store arrays that in turn also store arrays is called a four-dimensional array
+- An array that stores arrays that themselves store arrays that in turn also store arrays is called a four-dimensional array...
 
 --
 
-- and so on.
+- ...and so on.
 
 ---
 
@@ -79,7 +79,7 @@ name: overview-3
 
 ## Two-dimensional example (continued)
 
-To output the third value in the second inner array - 3
+To output the third value in the second inner array, which is 3,
 
 ```java
 System.out.println( numbers[1][2] );
