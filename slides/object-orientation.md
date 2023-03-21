@@ -8,9 +8,6 @@ class: center, middle
 
 # Object-Oriented Programming
 
-> Object-oriented programming is an exceptionally bad idea which could only have originated in California.
->
-
 ---
 
 # Agenda
