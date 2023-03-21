@@ -10,7 +10,6 @@ class: center, middle
 
 > Object-oriented programming is an exceptionally bad idea which could only have originated in California.
 >
-> –[Edsger Dijkstra](https://www.quora.com/Why-did-Dijkstra-say-that-%E2%80%9CObject-oriented-programming-is-an-exceptionally-bad-idea-which-could-only-have-originated-in-California-%E2%80%9D)
 
 ---
 
