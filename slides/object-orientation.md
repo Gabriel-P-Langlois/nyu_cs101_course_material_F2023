@@ -74,35 +74,6 @@ With object-oriented programming, a developer writes a _description_ of things o
 ---
 
 template: overview
-name: concept-digression
-
-## Digression
-
-In the 5th century, B.C., the astonishingly brilliant philsopher, Plato, described what we now call the [Theory of Forms](https://philosophynow.org/issues/90/Plato_A_Theory_of_Forms).
-
---
-
-- In this theory, **forms** are the non-physical essences of all things, of which **objects** in the physical world are merely imitations or stand-ins.
-
---
-
-- Things, transient as they are, are not as **real** or true as the eternal concepts or blueprints from whence they come.
-
---
-
-- So, for example, any given **tree** is not as real as the concept of Tree.
-
---
-
-- But we cannot **encounter** forms directly, only through the objects that embody them, however imperfectly.
-
---
-
-- It took us only 2.5 thousand years to begin to code in that direction.
-
----
-
-template: overview
 name: overview-2
 
 ## Understand this: it's imperative!
@@ -137,40 +108,6 @@ name: black-box-1
 Despite being a form of imperative-style programming, specifying in detail how problems are to be solved, object-orientation nevertheless attempts to put to practice the [black box metaphor](https://en.wikipedia.org/wiki/Black_box) of engineering, where, provided particular inputs, a machine produces a predictable output and _the user of it doesn't have to know the implementation details_, even though they are written in the code.
 
 ![Black box metapahor](../files/oop-black-box-metaphor.png)
-
----
-
-template: black-box
-name: black-box-2
-
-## Digression
-
-The black box approach transcends any one discipline. For example, it was popular in the [Behaviorist school of psychology](https://en.wikipedia.org/wiki/Behaviorism), which held that human psychology could be defined by the empirically observed responses to given stimuli, regardless of the internal psychological thought patterns internal to the person.
-
---
-
-- It modeled humans as input-output machines.... black boxes where it was not necessary to understand the internal psychology of the person.
-
---
-
-- A pioneer of this movement was [B.F. Skinner](https://en.wikipedia.org/wiki/B._F._Skinner), who purportedly raised his own children in literal black boxes!
-
----
-
-template: black-box
-name: black-box-2c
-
-## Digression (continued)
-
-The "Skinner Box":
-
-![Skinner box](../files/oop-skinner-box.jpg)
-
----
-
-name: example-1
-
-# Example 1 - Files
 
 ---
 
@@ -1245,18 +1182,6 @@ Tobik, a 3-year-old German Shepherd
 name: pillars
 
 # The 4 Pillars of Object-Orientation
-
---
-
-## Concept
-
-No university course would pass the censors unless it mentioned at least one set of immutable laws students must memorize despite their better judgment.
-
---
-
-- Our course is no different. So here they are.
-
---
 
 The **four pillars of object-oriented programming**:
 
