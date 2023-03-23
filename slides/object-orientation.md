@@ -37,7 +37,12 @@ name: overview-1
 
 ## Concept
 
-Object-Oriented Programming (OOP), first experimented with in the 1950's, is today the standard programming paradigm. Nearly all major contemporary programming languages offer the ability to program with objects.
+Object-Oriented Programming (OOP) is a software design method that models the characteristics of real 
+or abstract objects using software **classes** and **objects**.
+
+--
+
+It is today the standard programming paradigm. It helps design effective large scale software applications.
 
 --
 
@@ -62,7 +67,7 @@ With object-oriented programming, a developer writes a _description_ of things o
 
 --
 
-- This acts as a fixed plan or _concept_ for things of this type - a **class**.
+- This acts as a blueprint or _concept_ for things of this type - a **class**.
 
 --
 
@@ -73,7 +78,7 @@ With object-oriented programming, a developer writes a _description_ of things o
 template: overview
 name: overview-2
 
-## Understand this: it's imperative!
+## Imperative programming
 
 Object-oriented programming is a variety of **imperative programming**.
 
@@ -102,7 +107,7 @@ name: black-box-1
 
 ## Smoke and mirrors
 
-Despite being a form of imperative-style programming, specifying in detail how problems are to be solved, object-orientation nevertheless attempts to put to practice the [black box metaphor](https://en.wikipedia.org/wiki/Black_box) of engineering, where, provided particular inputs, a machine produces a predictable output and _the user of it doesn't have to know the implementation details_, even though they are written in the code.
+Despite specifying in detail how problems are to be solved, object-orientation nevertheless attempts to put to practice the [black box metaphor](https://en.wikipedia.org/wiki/Black_box) of engineering, where, provided particular inputs, a machine produces a predictable output and _the user of it doesn't have to know the implementation details_, even though they are written in the code.
 
 ![Black box metapahor](../files/oop-black-box-metaphor.png)
 
