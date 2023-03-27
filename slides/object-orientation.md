@@ -50,11 +50,11 @@ It is today the standard programming paradigm. It helps design effective large s
 
 --
 
-- each thing has certain **properties** (i.e. variables) that belong to it.
+- each thing has certain **properties** (i.e., variables) that belong to it.
 
 --
 
-- each thing has certain **actions** (i.e. methods) that it can perform.
+- each thing has certain **actions** (i.e., methods) that it can perform.
 
 ---
 
@@ -173,7 +173,7 @@ Calling these methods automatically updates the internal state of the _thing_.
 --
 
 ```java
-// ...causes an internal update of its state - i.e. the values of the properties
+// ...causes an internal update of its state - i.e., the values of the properties
 filename = "foobar.txt";
 data = someData;
 ```
@@ -652,7 +652,6 @@ for (int i=0; i<dogs.length; i++) {
 }
 ```
 
-[Try it!](https://repl.it/repls/ExtraneousAdolescentConnection)
 
 ---
 
@@ -885,7 +884,7 @@ template: belongingness
 
 ## Shared concerns
 
-There are, of course, cases where it makes sense for a property or method to belong to the class as a whole... i.e. for it to be declared as `static`.
+There are, of course, cases where it makes sense for a property or method to belong to the class as a whole... i.e., for it to be declared as `static`.
 
 --
 
@@ -953,8 +952,6 @@ Dog dog2 = new Dog("Tobik", "German Shepherd", 3);
 ```java
 System.out.printf( "There exist %d dogs in our world.\n", Dog.getNumDogs() );
 ```
-
-[Try it!](https://repl.it/repls/FirsthandUnlawfulPaint)
 
 ---
 
@@ -1134,7 +1131,6 @@ System.out.println(text);
 --
 
 By default, the output would show the **class** name of the object and a **[hashcode](https://coderanch.com/t/321515/java/HashCode)** - random-looking text that is not probably what you hoped for.
-[Try it!](https://repl.it/repls/MysteriousNormalLoaderprogram)
 
 ```
 The dog as a string looks like: Dog@63961c42
@@ -1177,7 +1173,6 @@ Now, converting the object to a String will result in something more descriptive
 Tobik, a 3-year-old German Shepherd
 ```
 
-[Try it!](https://repl.it/repls/UnusualDistantPostscript)
 
 ---
 
@@ -1313,25 +1308,15 @@ name: alternative-paradigms
 
 --
 
-## Free choice
-
-There is currently no major threat to object-oriented programming, since it is so widespread. However, other programming paradigms do exist:
+Other programming paradigms include:
 
 --
 
-- **Functional programming** is focused on _data flow_ (i.e. immutable values being used in formulae to compute other values) , rather than control flow (i.e. "Do this, then do that!" and where variables are not values but rather memory locations with changing values over time). Popular languages for functional programming are **Excel** and **Haskell**. There is growing interest in this 70-year-old style! [Learn more!](https://www.infoq.com/presentations/Taming-Effect-Simon-Peyton-Jones/)
+- **Functional programming** is focused on _data flow_ (i.e., immutable values being used in formulae to compute other values) , rather than control flow (i.e., "Do this, then do that!" and where variables are not values but rather memory locations with changing values over time). Popular languages for functional programming are **Excel** and **Haskell**. [Learn more!](https://www.infoq.com/presentations/Taming-Effect-Simon-Peyton-Jones/)
 
 --
 
-- **Procedural programming** was the standard paradigm before object-oriented programming took over. It is still what is taught 70 years later in many entry-level programming courses, where the instructors are perhaps afraid to talk (or think) abstractly. The problem to be solved by a program is decomposed into sub-problems, and procedures (a.k.a. functions) to solve each problem are written and executed in sequence.
-
----
-
-template: alternative-paradigms
-
-## The future
-
-- Many see a **multi-paradigm future**, and some see a multi-paradigm present, where paradigms are mixed and matched, and each is used for its unique strengths.
+- **Procedural programming** was the standard paradigm before object-oriented programming took over. In this paradigm, the problem to be solved by a program is decomposed into sub-problems, and procedures (a.k.a. functions) to solve each problem are written and executed in sequence.
 
 ---
 
@@ -1343,6 +1328,5 @@ name: conclusions
 
 You now have a basic understanding of object-oriented programming in Java. Well done.
 
---
-
-- Thank you. Bye.
+- Assigment 4 is due this Thursday at 5 pm.
+- Quiz 7 is due this coming Monday at 5 pm.
