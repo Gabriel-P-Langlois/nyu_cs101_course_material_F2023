@@ -354,7 +354,12 @@ name: commons-csv
 
 name: conclusions
 
-# Info + upcoming deadlines
+# Conclusions
+
+I've uploaded on Brightspace several examples of Java code pertaining to Strings.
+See the Examples tab on Brightspace.
+
+Info + Upcoming deadlines:
 
 - Assignment 4 due tomorrow at 11:59pm.
 - Quiz 7 due on Monday at 5pm.
