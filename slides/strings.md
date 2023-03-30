@@ -39,9 +39,9 @@ name: overview-1
 
 ## Concept
 
-The term 'String', used in programming to indicate a 'string of characters', first came into regular usage in the mid 1960's, as languages such as Lisp allowed textual data processing to flourish. A more general meaning, to order a series of mathematical values, as if beads on a string, dates possibly to the 1930's.
+The term 'String', used in programming to indicate a 'string of characters', first came into regular usage in the mid 1960's, as languages such as Lisp allowed textual data processing to flourish.
 
-- We will reframe our existing understanding of Strings in light of our newfound mastery of object-oriented programming.
+- Our aim today is to reframe our understanding of Strings in light of object-oriented programming.
 
 ---
 
@@ -60,7 +60,7 @@ char[] charr = { 'w','o','r','r','y',' ', 'n','o','t' };
 String myMessageToYou = new String(charr);
 ```
 
-- To make Strings appear more like primitive values, i.e. to simplify their overly verbose usage, Java offers syntactic sugar for their instantiation.
+- To make Strings appear more like primitive values, i.e., to simplify their overly verbose usage, Java offers syntactic sugar for their instantiation.
 
 ```java
 String myMessageToYou = "worry not";
@@ -72,7 +72,7 @@ template: string
 
 ## Many functions return Strings
 
-Rather than directly instantiating a String object, there are many functions in the Java API that instantiate new String object's on our behalf, e.g.
+Rather than directly instantiating a String object, there are many functions in the Java API that instantiate new String object's on our behalf, e.g.,
 
 - `String myMessageToYou = "worry" + " " + "not";`
 
@@ -215,7 +215,7 @@ name: character
 
 ## Concept
 
-The Character class is a _wrapper class_, used to do processing and analysis of char primitive values, e.g.
+The Character class is a _wrapper class_, used to do processing and analysis of char primitive values, e.g.,
 
 - `char[] a = "my, my".toCharArray();`
 
@@ -263,7 +263,7 @@ template: string-builder
 
 ## Extracting the String from StringBuilder
 
-Converting the contents of a StringBuilder to a regular String is a facile matter.
+Converting the contents of a StringBuilder to a regular String is easy:
 
 - `myBuilder.toString()`
 
@@ -279,7 +279,7 @@ name: stringutils
 
 ## Patching the Java API
 
-Java, remarkable though it is, is lacking in many basic functionality today's programmers might expect. [Apache Commons Lang](https://commons.apache.org/proper/commons-lang/) attempts to fill in many of those gaps.
+Note that Java lacks some basic functionality found in other proramming languages. [Apache Commons Lang](https://commons.apache.org/proper/commons-lang/) attempts to fill in those gaps.
 
 **StringUtils** is one class in the Apache Commons Lang library that might be of interest to us here.
 
@@ -330,7 +330,7 @@ Similar to [Commons Lang](#stringutils), Apache's [Commons Text](https://commons
 
 - `WordUtils` - a class containing methods specific to text composed of words, for example capitalization changes of the first letter of each word or line-wrapping text based on word boundaries.
 
-- `StrTokenizer` - contains methods to tokenize (i.e. parses or split) a string based on delimiters and pattern matching.
+- `StrTokenizer` - contains methods to tokenize (i.e., parses or split) a string based on delimiters and pattern matching.
 
 - `StringEscapeUtils` - a class containing methods to escape and unescape Java, JavaScript, HTML and XML.
 
@@ -356,6 +356,6 @@ name: conclusions
 
 # Conclusions
 
---
-
-Thank you. Bye.
+- Assignment 4 due tomorrow at 11:59pm.
+- Quiz 7 due on Monday at 5pm.
+- Assignment 5 will be assigned today; it will be due Tuesday, April 11th at 11:59 pm (no extensions).
