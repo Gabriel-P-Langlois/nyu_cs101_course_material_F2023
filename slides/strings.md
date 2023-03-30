@@ -41,7 +41,7 @@ name: overview-1
 
 The term 'String', used in programming to indicate a 'string of characters', first came into regular usage in the mid 1960's, as languages such as Lisp allowed textual data processing to flourish.
 
-- Our aim today is to reframe our understanding of Strings in light of object-oriented programming.
+- Our aim today is to reframe our understanding of Strings in the context of object-oriented programming.
 
 ---
 
