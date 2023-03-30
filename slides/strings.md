@@ -354,7 +354,7 @@ name: commons-csv
 
 name: conclusions
 
-# Conclusions
+# Info + upcoming deadlines
 
 - Assignment 4 due tomorrow at 11:59pm.
 - Quiz 7 due on Monday at 5pm.
