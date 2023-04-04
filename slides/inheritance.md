@@ -119,7 +119,7 @@ System.out.println( bObj.getMessage() );
 
 template: implementation
 
-## Abstract Example (continued again)
+## Abstract Example (continued)
 
 We often create UML diagrams indicating class relationships, where the arrow points from parent to child.
 
@@ -131,7 +131,7 @@ We often create UML diagrams indicating class relationships, where the arrow poi
 
 template: implementation
 
-## Abstract Example (continued once more)
+## Abstract Example (continued)
 
 When this program is run, two lines are output:
 
@@ -158,7 +158,7 @@ public B() {
 
 template: implementation
 
-## Abstract Example (continued the final time)
+## Abstract Example (continued)
 
 The second line output above, '_Hello!_', is a result of the call to the `B` object's `getMessage()` method.
 
@@ -423,102 +423,6 @@ for (A myObj : myObjects) {
     }
 }
 ```
-
-- [Try it](https://repl.it/repls/GuiltyIcyLeads)
-
----
-
-name: composition
-
-# Inheritance vs. Composition
-
---
-
-## In context
-
-The goals of inheritance are to reuse code, reduce redundancy, and provide conceptual clarity in code.
-
-- A child class can be based on, and inherit all public properties and methods of, a parent class.
-
-- **Composition**, in contrast is the practice of storing an object of one type as a property of an object of another type.
-
-- Composition can be useful when the two objects are do not share method implementation code in common, but one of the objects nevertheless benefits from being able to access some methods of the other.
-
----
-
-template: composition
-
-## Example
-
-For example, when using the **Processing** animation framework, the **PApplet** class contains lots of useful animation-related public properties and methods.
-
-- To use that framework, we want one of our classes to inherit those useful functions and thus represent the app window.
-
-```java
-public class App extends PApplet { ... }
-```
-
-- `App` objects now will have `PApplet` behaviors, such as popping open a new animation window, drawing ellipses, detecting mouse clicks and key presses, having its `draw()` method called 60 times per second, etc.
-
-- In our animations we may want to have donkeys floating across the screen, so we might create a `Donkey` class to encapsulate all things related to donkeys - their width, height, x position, y position, etc.
-
-```java
-public class Donkey { ... }
-```
-
----
-
-template: composition
-
-## Example (continued)
-
-Our `Donkey` objects don't need to pop open windows, draw ellipses, detect mouse clicks, key presses, or do the other things that the `PApplet` class can do. Our `Donkey` class represents donkeys, not app windows.
-
-- But our `Donkey` objects will want to make themselves appear within a PApplet window once in a while using just PApplet's `image()` method.
-
-- This is a good candidate for composition, not inheritance - the vast majority of the `PApplet` code is unrelated and undesireable to `Donkey`.
-
-```java
-public class Donkey {
-    private App app; // will hold an App object, which is our child class of PApplet
-
-    public Donkey(App app) {
-        this.app = app; //store the App object composed within this Donkey
-    }
-
-    public void drawMeToScreen() {
-        this.app.image( ... ); // use the App object's image method to draw to screen
-    }
-    // ...
-
-```
-
----
-
-template: composition
-
-## Example (continued again)
-
-The App class can instantiate a Donkey object and pass itself to its constructor for the Donkey to hold a reference to.
-
-```java
-public class App extends PApplet {
-
-    private Donkey myDonkey; // will hold a Donkey object
-
-    public void setup() {
-        // pass this App object as an argument to the Donkey constructor
-        this.myDonkey = new Donkey(this); // the Donkey will now have a reference to the App object
-    }
-
-    public void draw() {
-        // the donkey can now draw itself to the screen
-        this.myDonkey.drawMeToScreen();
-    }
-}
-```
-
-- We would normally use a `setter` to set the value of the `myDonkey` property, but have simplified this code in order to focus on the conceptual point.
 
 ---
 
