@@ -37,8 +37,6 @@ name: overview
 
 **Inheritance** is a mechanism for basing one object or a class on another object or class when the two objects or classes include similar implementations of their behaviors.
 
---
-
 - Properties and methods of one object or class are automatically "passed down" to the objects or classes that inherit from it.
 
 ---
@@ -79,19 +77,11 @@ template: overview
 
 The touted benefits of inheritance include:
 
---
-
 - Code reuse
-
---
 
 - Less code redundancy
 
---
-
 - Easier code maintenance
-
---
 
 - Conceptual clarity
 
@@ -100,8 +90,6 @@ The touted benefits of inheritance include:
 name: implementation
 
 # Basic Implementation
-
---
 
 ## Abstract Example
 
@@ -161,8 +149,6 @@ We often create UML diagrams indicating class relationships, where the arrow poi
 
 ![Class inheritance UML diagram](../files/oop-inheritance-simple.png)
 
---
-
 - In almost all cases, the child class would contain its own unique additional properties and methods that make it different in some way from the parent... we have kept class `B` blank just to focus on the inherited properties and methods.
 
 ---
@@ -178,19 +164,11 @@ A new A object is born!
 Hello!
 ```
 
---
-
 - The first line above, '_A new A object is born!_' is output by the `A` class's constructor function, which our code does not explicitly call.
-
---
 
 - All classes, including our `B` class, are given a default **no-args constructor** by Java if no other constructor is defined within them.
 
---
-
 - This no-args constructor automatically calls **super()**.
-
---
 
 - If we were to write this constructor for `B` ourselves, it would look like:
 
@@ -199,8 +177,6 @@ public B() {
         super();
 }
 ```
-
---
 
 - The **super** keyword is a reference to the code in the parent class.
 
@@ -212,11 +188,7 @@ template: implementation
 
 The second line output above, '_Hello!_', is a result of the call to the `B` object's `getMessage()` method.
 
---
-
 - This method, like all other **public properties and methods**, is inherited from the parent class, `A`, into the child class, `B`.
-
---
 
 - **Private properties and methods** are not inherited by a child class, but can be accessed through public getter and setter methods.
 
@@ -228,8 +200,6 @@ template: implementation
 
 By definition, the _private_ property, `message`, of the `A` class is not visible from the `B` class.
 
---
-
 - Yet, the `A` class's getter for that property, `getMessage()`, is public and thus is visible from within the `B` class.
 
 ---
@@ -238,13 +208,9 @@ name: multi-level
 
 # Multi-Level Inheritance
 
---
-
 ## Concept
 
 We can continue our example by giving `B` its own child, `C`.
-
---
 
 ```java
 public class C extends B {
@@ -273,8 +239,6 @@ A UML diagram showing multi-class inheritance.
 
 ![Multi-class inheritance UML diagram](../files/oop-inheritance-multi.png)
 
---
-
 - As with `B`, we would normally add some unique public methods to child classes like `C` that make them behave differently from their parent, but we are not doing that here just to focus on the inherited components.
 
 ---
@@ -285,19 +249,11 @@ template: multi-level
 
 `C` is now a child of `B`, which itself is a child of `A`.
 
---
-
 - All the **public** properties and methods of `A` are inherited by `B`.
-
---
 
 - All the **public** properties and methods of `B`, including those inherited from `A`, are inherited by `C`.
 
---
-
 - Thus, `C` implements the **public interface** of both `A` and `B`.
-
---
 
 - What would the following code output?
 
@@ -305,8 +261,6 @@ template: multi-level
 C cObj = new C( "Welcome!!" );
 System.out.println( cObj.getMessage() );
 ```
-
---
 
 [Try it!](https://repl.it/repls/CraftyRawStrategy)
 
@@ -316,21 +270,13 @@ name: polymorphism
 
 # Polymorphism
 
---
-
 ## Concept
 
 An object or class can assume more than one 'shape'.
 
---
-
 - In our example, a `C` object implements the public interfaces of `C`, `B`, and an `A`.
 
---
-
 - We could say that our `C` object _is_ a `C` object, as well as a `B` object, and an `A` object.
-
---
 
 - It's possible to verify this in code using the `instanceof` operator.
 
@@ -348,8 +294,6 @@ template: polymorphism
 
 Polymorphism can be useful when we want to store a bunch of related objects of different-but-related types into an array or other grouping data structure in order to perform some kind of batch operation on them.
 
---
-
 ```java
 A[] myObjs = {
     new A(),
@@ -363,8 +307,6 @@ for (A myObj : myObjs) {
 }
 ```
 
---
-
 - [Try it!](https://repl.it/repls/PeriodicAliveHypotenuse)
 
 ---
@@ -375,27 +317,17 @@ template: polymorphism
 
 It is often desireable to have child classes implement the instance methods defined in the parent class somewhat differently.
 
---
-
 - A child class can define methods with the same signatures as the instance methods in the parent class - this is called **[overriding](https://coderanch.com/wiki/659959/Overriding-Hiding)**.
-
---
 
 - For example, each of our `A`, `B`, and `C` classes could contain different implementations of the `getMessage()` method.
 
---
-
 - It is possible for a child class's overridden method to call the parent class's version of that same method.
-
---
 
 - A child class can call any public method as-defined in its parent class's code by using the keyword **super**, e.g.
 
 ```java
 super.getMessage();
 ```
-
---
 
 - [Try it!](https://repl.it/repls/HiddenJumboObjectcode)
 
@@ -405,13 +337,9 @@ name: difference
 
 # Similarity & Difference
 
---
-
 ## Concept
 
 In real applications, child classes almost invariably do something different from their parent classes, whether by overriding some parent methods or implementing their own unique methods that are not present in the parent. This difference gives the child class a reaason to exist.
-
---
 
 - We'll take a look at the similarity and difference in two simple classes we'll call `A` and `B`.
 
@@ -449,7 +377,7 @@ template: difference
 
 Since `B` inherits from `A`, both classes encapsulate `A`'s `doSomething()` method.
 
---
+
 
 - `doSomething()` can be called on any `A` object, since it is defined within the `A` class.
 
@@ -458,7 +386,7 @@ A myA = new A();
 myA.doSomething();
 ```
 
---
+
 
 - and it can be called on any `B` object, since `B` objects inherit it.
 
@@ -475,7 +403,7 @@ template: difference
 
 Both `A` and `B` objects can be considered `A` objects, since `B` implements `A`'s public interface. So we can take advantage of **polymorphism** to perform a batch operation on both objects.
 
---
+
 
 ```java
 // instantiate an A and a B object
@@ -483,14 +411,10 @@ A myA = new A();
 B myB = new B();
 ```
 
---
-
 ```java
 // put them both into an A-typed array
 A[] myObjects = { myA, myB };
 ```
-
---
 
 ```java
 // loop through all objects in array
@@ -498,8 +422,6 @@ for (A myObj : myObjects) {
     myObj.doSomething(); // works fine, since they both have this method
 }
 ```
-
---
 
 - [Try it!](https://repl.it/repls/DarkorangeCarefreePreprocessor)
 
@@ -510,8 +432,6 @@ template: difference
 ## Difference
 
 `B` objects, of course, have their own unique `doSomethingDifferent()` method that `A` objects do not have.
-
---
 
 - In a polymorphic context, we can perform a batch operation on both objects using a loop, as done previously, but also have `B` objects do their own unique behavior, if desired, by using the `instanceof` operator.
 
@@ -532,8 +452,6 @@ for (A myObj : myObjects) {
 }
 ```
 
---
-
 - [Try it](https://repl.it/repls/GuiltyIcyLeads)
 
 ---
@@ -542,21 +460,13 @@ name: composition
 
 # Inheritance vs. Composition
 
---
-
 ## In context
 
 The goals of inheritance are to reuse code, reduce redundancy, and provide conceptual clarity in code.
 
---
-
 - A child class can be based on, and inherit all public properties and methods of, a parent class.
 
---
-
 - **Composition**, in contrast is the practice of storing an object of one type as a property of an object of another type.
-
---
 
 - Composition can be useful when the two objects are do not share method implementation code in common, but one of the objects nevertheless benefits from being able to access some methods of the other.
 
@@ -568,19 +478,13 @@ template: composition
 
 For example, when using the **Processing** animation framework, the **PApplet** class contains lots of useful animation-related public properties and methods.
 
---
-
 - To use that framework, we want one of our classes to inherit those useful functions and thus represent the app window.
 
 ```java
 public class App extends PApplet { ... }
 ```
 
---
-
 - `App` objects now will have `PApplet` behaviors, such as popping open a new animation window, drawing ellipses, detecting mouse clicks and key presses, having its `draw()` method called 60 times per second, etc.
-
---
 
 - In our animations we may want to have donkeys floating across the screen, so we might create a `Donkey` class to encapsulate all things related to donkeys - their width, height, x position, y position, etc.
 
@@ -596,15 +500,9 @@ template: composition
 
 Our `Donkey` objects don't need to pop open windows, draw ellipses, detect mouse clicks, key presses, or do the other things that the `PApplet` class can do. Our `Donkey` class represents donkeys, not app windows.
 
---
-
 - But our `Donkey` objects will want to make themselves appear within a PApplet window once in a while using just PApplet's `image()` method.
 
---
-
 - This is a good candidate for composition, not inheritance - the vast majority of the `PApplet` code is unrelated and undesireable to `Donkey`.
-
---
 
 ```java
 public class Donkey {
@@ -646,8 +544,6 @@ public class App extends PApplet {
 }
 ```
 
---
-
 - We would normally use a `setter` to set the value of the `myDonkey` property, but have simplified this code in order to focus on the conceptual point.
 
 ---
@@ -656,17 +552,11 @@ name: evils
 
 # Criticisms of Inheritance
 
---
-
 ## Concept
 
 There are certainly those who criticise object-oriented progrmaming, and some specifically who disapprove of Java's inheritance model.
 
---
-
 - The main criticism rests upon Java's inability to handle inheritance from multiple classes.
-
---
 
 - This inability can lead to convoluted and undesireable code.
 
@@ -678,15 +568,9 @@ template: evils
 
 Take, for example, the ["Diamond-problem" scenario](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53).
 
---
-
 - Imagine an `ElectronicDevice` class that has some behaviors that all electronic devices have, such as powering on and off.
 
---
-
 - Next, imagine a `Scanner` class - a document scanner is an electronic device, so it makes sense to inherit the code from `ElectronicDevice` class.
-
---
 
 - Next, imagine a `Printer` class - a document printer is also an electronic device, so it makes sense also to inherit the code from `ElectronicDevice` class.
 
@@ -708,8 +592,6 @@ template: evils
 
 So far so good. But what if we added a `Copier` to the mix?
 
---
-
 - A `Copier` has behaviors of both a `Scanner` and a `Printer`. Ideally, it would inherit the public interfaces of both.
 
 ![Evil inheritance problem](../files/oop-inheritance-evil-problem.png)
@@ -722,11 +604,7 @@ template: evils
 
 In Java, and many other languages, inheritance from multiple classes is impossible.
 
---
-
 - The only working solution would be to use **composition** rather than inheritance.
-
---
 
 ```java
 public class Copier {
@@ -740,11 +618,7 @@ public class Copier {
 }
 ```
 
---
-
 - Why this limitation?
-
---
 
 - Because what if `Scanner` and `Printer` had a method by the same name, let's say `start()`. Which version would `Copier` inherit?
 
@@ -754,10 +628,6 @@ name: conclusions
 
 # Conclusions
 
---
-
 You have now extended your understanding of object-oriented programming to include class-based inheritance and polymorphism.
-
---
 
 - Thank you. Bye.
