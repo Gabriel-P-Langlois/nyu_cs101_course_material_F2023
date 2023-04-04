@@ -49,23 +49,13 @@ Inheritance was first implemented in Norway in 1969 for [Simula](https://en.wiki
 
 - Objects
 
---
-
 - Classes
-
---
 
 - Constructors
 
---
-
 - Inheritance
 
---
-
 - Garbage collection
-
---
 
 Think about that next time you hear someone say technology develops at lightning-speed rates of innovation.
 
@@ -90,6 +80,8 @@ The touted benefits of inheritance include:
 name: implementation
 
 # Basic Implementation
+
+--
 
 ## Abstract Example
 
@@ -269,6 +261,8 @@ System.out.println( cObj.getMessage() );
 name: polymorphism
 
 # Polymorphism
+
+--
 
 ## Concept
 
