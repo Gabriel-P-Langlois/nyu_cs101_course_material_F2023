@@ -37,27 +37,9 @@ name: overview
 
 **Inheritance** is a mechanism for basing one object or a class on another object or class when the two objects or classes include similar implementations of their behaviors.
 
-- Properties and methods of one object or class are automatically "passed down" to the objects or classes that inherit from it.
+--
 
----
-
-template: overview
-
-## Historical tangent
-
-Inheritance was first implemented in Norway in 1969 for [Simula](https://en.wikipedia.org/wiki/Simula), considered the first fully object-oriented programming language. Simula included now-standard, pedestrian, object-oriented features such as:
-
-- Objects
-
-- Classes
-
-- Constructors
-
-- Inheritance
-
-- Garbage collection
-
-Think about that next time you hear someone say technology develops at lightning-speed rates of innovation.
+Properties and methods of one object or class are automatically "passed down" to the objects or classes that inherit from it.
 
 ---
 
@@ -74,6 +56,10 @@ The touted benefits of inheritance include:
 - Easier code maintenance
 
 - Conceptual clarity
+
+--
+
+However, this is a controversial topic! See, e.g., this [link](https://codeburst.io/inheritance-is-evil-stop-using-it-6c4f1caf5117).
 
 ---
 
@@ -128,8 +114,6 @@ public class B extends A {
 B bObj = new B();
 System.out.println( bObj.getMessage() );
 ```
-
-- [Try it!](https://repl.it/repls/DemandingSizzlingSpreadsheet)
 
 ---
 
@@ -254,8 +238,6 @@ C cObj = new C( "Welcome!!" );
 System.out.println( cObj.getMessage() );
 ```
 
-[Try it!](https://repl.it/repls/CraftyRawStrategy)
-
 ---
 
 name: polymorphism
@@ -301,8 +283,6 @@ for (A myObj : myObjs) {
 }
 ```
 
-- [Try it!](https://repl.it/repls/PeriodicAliveHypotenuse)
-
 ---
 
 template: polymorphism
@@ -322,8 +302,6 @@ It is often desireable to have child classes implement the instance methods defi
 ```java
 super.getMessage();
 ```
-
-- [Try it!](https://repl.it/repls/HiddenJumboObjectcode)
 
 ---
 
@@ -418,8 +396,6 @@ for (A myObj : myObjects) {
     myObj.doSomething(); // works fine, since they both have this method
 }
 ```
-
-- [Try it!](https://repl.it/repls/DarkorangeCarefreePreprocessor)
 
 ---
 
@@ -630,4 +606,7 @@ name: conclusions
 
 You have now extended your understanding of object-oriented programming to include class-based inheritance and polymorphism.
 
-- Thank you. Bye.
+- Assignment 5 is due next week.
+- Another quiz will be out soon; it will be due in a week from now.
+- No class on Thursday!
+- Next week: Review + Practice problems for the second midterm.
