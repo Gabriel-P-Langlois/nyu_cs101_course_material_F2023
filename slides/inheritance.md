@@ -160,9 +160,7 @@ Hello!
 
 - All classes, including our `B` class, are given a default **no-args constructor** by Java if no other constructor is defined within them.
 
-- This no-args constructor automatically calls **super()**.
-
-- If we were to write this constructor for `B` ourselves, it would look like:
+- This no-args constructor automatically calls **super()**. Note that if we were to write this constructor for `B` ourselves, it would look like:
 
 ```java
 public B() {
@@ -199,6 +197,8 @@ By definition, the _private_ property, `message`, of the `A` class is not visibl
 name: multi-level
 
 # Multi-Level Inheritance
+
+--
 
 ## Concept
 
@@ -331,6 +331,8 @@ name: difference
 
 # Similarity & Difference
 
+--
+
 ## Concept
 
 In real applications, child classes almost invariably do something different from their parent classes, whether by overriding some parent methods or implementing their own unique methods that are not present in the parent. This difference gives the child class a reaason to exist.
@@ -454,6 +456,8 @@ name: composition
 
 # Inheritance vs. Composition
 
+--
+
 ## In context
 
 The goals of inheritance are to reuse code, reduce redundancy, and provide conceptual clarity in code.
@@ -545,6 +549,8 @@ public class App extends PApplet {
 name: evils
 
 # Criticisms of Inheritance
+
+--
 
 ## Concept
 
