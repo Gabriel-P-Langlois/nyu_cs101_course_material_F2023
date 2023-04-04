@@ -21,7 +21,6 @@ class: center, middle
 1. [Multi-Level Inheritance](#multi-level)
 1. [Polymorphism](#polymorphism)
 1. [Similarity & Difference](#difference)
-1. [Inheritance vs. Composition](#composition)
 1. [Is Inheritance Evil?](#evils)
 1. [Conclusions](#conclusions)
 
