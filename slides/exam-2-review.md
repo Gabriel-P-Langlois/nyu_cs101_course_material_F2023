@@ -37,8 +37,8 @@ name: structure
 
 The exam will take place during class time. It will be composed of two parts:
 
-1. Google Form Quiz (40%)
-1. GitHub Assignment (60%)
+1. Multiple choice, True/False and Multiselect questions (50%)
+1. Two written programming questions (%50)
 
 ---
 
