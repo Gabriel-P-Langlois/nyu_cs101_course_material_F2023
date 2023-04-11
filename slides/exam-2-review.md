@@ -212,7 +212,9 @@ public class GradeExam {
   char[] keys = {'D', 'B', 'A', 'C'};
   
   // Grade all answers
-  // COMPLETE
+  // Complete
+  // Note: You'll have to loop over the elements of the multidimensional arrays.
+  // You should be able to loop over the elements using both the "for loop" style and the "foreach loop" style. 
   
   }
 
