@@ -192,6 +192,8 @@ Being able to implement a public class from a Unified Modeling Language (UML) di
 
 ---
 
+template: practice-problems
+
 # Practicing for the midterm:
 Complete the following program. The program must grades the test and displays the result. It compares each student's answers with the key, counts the number of correct answers, and displays it.
 
