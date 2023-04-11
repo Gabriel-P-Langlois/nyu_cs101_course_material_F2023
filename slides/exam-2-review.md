@@ -53,10 +53,14 @@ name: multidimensional-arrays
   - first dimension is like the rows
   - second dimension is like the columns
 - Declaring, allocating, and assigning values
+  - Using syntactic sugar
+  - Without using syntactic sugar
 - Looping through multi-dimensional arrays
   - the 'standard' way using nested counter-based loops
   - using the **foreach** type of loop (e.g. `for (String[] val : values) { /* ... */ }`)
 - Ragged arrays exist
+  - Declaring ragged arrays with syntactic sugar
+  - Declaring ragged arrays without syntactic sugar
 - Passing arrays as arguments to methods
 
 ---
@@ -181,9 +185,34 @@ name: this-super
 
 name: practice-problems
 
-# Practicing for the midterm
+# Practicing for the midterm:
 
 Please attempt some of the following exercises on this [website]{https://www3.ntu.edu.sg/home/ehchua/programming/java/j3f_oopexercises.html#zz-4}: 1.1 to 1.9.
 Being able to implement a public class from a Unified Modeling Language (UML) diagram is **crucial**.
 
+---
 
+# Practicing for the midterm:
+Complete the following program. The program must grades the test and displays the result. It compares each student's answers with the key, counts the number of correct answers, and displays it.
+
+```java
+public class GradeExam {
+  /** Main method */
+  public static void main(String[] args) {
+  // Students' answers to the questions
+  char[][] answers = {
+    {'A', 'B', 'A', 'C'},
+    {'D', 'B', 'A', 'B'},
+    {'E', 'D', 'D', 'A'},
+    {'C', 'B', 'A', 'E'}};
+  
+  // Key to the questions
+  char[] keys = {'D', 'B', 'A', 'C'};
+  
+  // Grade all answers
+  // COMPLETE
+  
+  }
+
+}
+```
