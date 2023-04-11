@@ -15,7 +15,6 @@ Intro to Computer Science
 # Agenda
 
 1. [Exam Structure](#structure)
-1. [ArrayList](#arraylist)
 1. [Multidimensional Arrays](#multidimensional-arrays)
 1. [Object-Oriented Programming](#oop)
 1. [Pillars](#pillars)
@@ -23,7 +22,6 @@ Intro to Computer Science
 1. [Strings](#strings)
 1. [Inheritance](#inheritance)
 1. [This is Super](#this-super)
-1. [Conclusions](#conclusions)
 
 ---
 
@@ -38,55 +36,7 @@ name: structure
 The exam will take place during class time. It will be composed of two parts:
 
 1. Multiple choice, True/False and Multiselect questions (50%)
-1. Two written programming questions (%50)
-
----
-
-template: structure
-
-## Accepting the Exam
-
-Students **must** accept the exam by...
-
-1. Clicking the link provided by the instructor to the Google Form.
-1. Clicking the link provided by the instructor to the GitHub Assignment, and following the instructions therein to "accept" the assignment.
-
----
-
-template: structure
-
-## Submitting the Exam
-
-Students **must** submit the exam by the end of the exam period.
-
-1. Click the Submit button on the Google Form.
-1. `push` the GitHub Assignment code to GitHub.
-
----
-
-template: structure
-
-## Verifying Your Submission
-
-Students **must** verify on your own that you have actually submitted the exam.
-
-1. See the confirmation message on the Google Quiz after clicking submit.
-1. Click the link provided by the instructor to the GitHub Assignment, and verifying that your code has been pushed to the repository.
-
----
-
-name: arraylist
-
-# ArrayList
-
---
-
-## Main themes
-
-- a class in the Java API (i.e. `java.util.ArrayList`)
-- behaves similarly to the fundamental primitive array data structure, but has a malleable length and stores only objects
-- easy to `add()`, `remove()`, and `get()` objects to/from an `ArrayList`.
-- odd syntax, e.g. `ArrayList<Alien> = new ArrayList<Alien>()`, which we won't talk about (called Java "generics")
+1. Two written programming questions (%50), one on multidimensional arrays and one OOP implementation question.
 
 ---
 
@@ -98,16 +48,16 @@ name: multidimensional-arrays
 
 ## Main themes
 
-- must first understand one-dimensional arrays
-- two-dimensional arrays can be visualized as tables with rows and columns
+- You must first understand one-dimensional arrays
+- Two-dimensional arrays can be visualized as tables with rows and columns
   - first dimension is like the rows
   - second dimension is like the columns
-- declaring, allocating, and assigning values
-- looping through multi-dimensional arrays
+- Declaring, allocating, and assigning values
+- Looping through multi-dimensional arrays
   - the 'standard' way using nested counter-based loops
   - using the **foreach** type of loop (e.g. `for (String[] val : values) { /* ... */ }`)
-- ragged arrays exist
-- passing arrays as arguments to methods
+- Ragged arrays exist
+- Passing arrays as arguments to methods
 
 ---
 
@@ -121,15 +71,14 @@ name: #oop
 
 Basic object-oriented programming
 
-- Classes are a sort of representation of Platonic idealism and a solution to the metaphysical problem of universals.
 - Classes are essentially custom data types.
 - Classes are reference types in Java.
 - Objects are instances of a class.
-- Defining a class
-- Constructors
-- Instance methods and properties
-- Static methods and properties
-- Instantiating an object
+- Defining a class...
+- Constructors...
+- Instance methods and properties...
+- Static methods and properties...
+- Instantiating an object...
 
 ---
 
@@ -165,7 +114,7 @@ name: patterns
 - overloaded methods and contructors provide multiple variants of the same action
 - `static` for shared properties and methods
 - `final` for values that never change
-- inheritance vs. composition
+- inheritance
 
 ---
 
@@ -215,20 +164,6 @@ Polymorphism goes hand-in-hand with inheritance.
 
 ---
 
-template: inheritance
-
-## Processing
-
-Processing as a case study in inheritance:
-
-- inheritance of many useful properties (e.g. `width`, `height`, `mouseX`, `mouseY`)
-- inheritance of many useful methods (e.g. `ellipse()`, `rect()`, `image()`, etc)
-- inheritance of behaviors (e.g. `draw()` method magically called every 1/60th second, `mouseX` and `mouseY` automagically assigned the mouse position values)
-- abstraction: we don't need to know _how_ it works, just how to use it
-- some poor quality design (e.g. we should not be able to directly access `width`, `height`, `mouseX` and `mouseY` - we should be using getters)
-
----
-
 name: this-super
 
 # This is Super
@@ -244,10 +179,11 @@ name: this-super
 
 ---
 
-name: conclusions
+name: practice-problems
 
-# Conclusions
+# Practicing for the midterm
 
---
+Please attempt some of the following exercises on this [website]{https://www3.ntu.edu.sg/home/ehchua/programming/java/j3f_oopexercises.html#zz-4}: 1.1 to 1.9.
+Being able to implement a public class from a Unified Modeling Language (UML) diagram is **crucial**.
 
-- Thanks. Bye.
+
