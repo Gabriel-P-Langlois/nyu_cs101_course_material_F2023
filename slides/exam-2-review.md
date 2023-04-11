@@ -22,6 +22,7 @@ Intro to Computer Science
 1. [Strings](#strings)
 1. [Inheritance](#inheritance)
 1. [This is Super](#this-super)
+1. [Practice problems](#practice-problems)
 
 ---
 
@@ -183,16 +184,17 @@ name: this-super
 
 ---
 
-name: practice-problems
+template: practice-problems
 
 # Practicing for the midterm:
 
-Please attempt some of the following exercises on this [website]{https://www3.ntu.edu.sg/home/ehchua/programming/java/j3f_oopexercises.html#zz-4}: 1.1 to 1.9.
+Please attempt some of the following exercises on this [website](https://www3.ntu.edu.sg/home/ehchua/programming/java/j3f_oopexercises.html#zz-4): 1.1 to 1.9.
+
 Being able to implement a public class from a Unified Modeling Language (UML) diagram is **crucial**.
 
 ---
 
-template: practice-problems
+name: practice-problems
 
 # Practicing for the midterm:
 Complete the following program. The program must grades the test and displays the result. It compares each student's answers with the key, counts the number of correct answers, and displays it.
