@@ -490,4 +490,4 @@ Like function arguments and return values, checked exceptions are yet another me
 Info:
 
 - New quiz will be released later today.
-- Next assignment will be released next week.
+- Next (and last) assignment will be released on Thursday and be due two weeks after (May 4th).
