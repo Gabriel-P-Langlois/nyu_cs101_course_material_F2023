@@ -107,19 +107,19 @@ template: overview
 
 ## Why two types?
 
-Why all exceptions aren't checked by the compiler, so Java can avoid runtime crashes?
+Why doesn't the compiler check all exceptions so Java can avoid runtime crashes?
 
 --
 
-- Answer: Exceptions can occur frequently; if they were all checked (which requires extra code), _it would put a big burden on the programmer and the code_.
+- Exceptions can occur frequently; if they were all checked (which requires extra code), _it would put a big burden on the programmer and the code_.
 
 --
 
-But now you may wonder _why not leave all exceptions unchecked_? The programmer and codebase wouldn't be then overburdened with checks!
+Now you may wonder why not leave all exceptions unchecked. The checks wouldn't then overburden the programmer and codebase!
 
 --
 
-- Answer: In some languages, like C++, _all exceptions are unchecked_. The compiler does not get involved and it is up to the programmer to make sure their code is reliable. _Java is not one of these languages_.
+- In some languages, like C++, _all exceptions are unchecked_. The compiler does not get involved and it is up to the programmer to make sure their code is reliable. _Java is not one of these languages_.
 
 --
 
