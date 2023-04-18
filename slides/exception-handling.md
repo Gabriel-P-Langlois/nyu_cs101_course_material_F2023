@@ -67,18 +67,17 @@ Exceptions are divided into two types, depending upon when they appear.
 
 --
 
-Note: **It is wrong** to think of exceptions as being errors.
+**It is wrong** to think of exceptions as being errors.
 
 --
+
 **Errors**, in Java, are failures that result from factors outside the control of the program, such as running out of memory. Like unchecked exceptions, they cause the program to crash.
 
 ---
 
 template: overview
 
-## Exceptional lineage
-
-The ancestry of `Exception` and `Error` objects is quite exceptional.
+## Exception lineage
 
 ```
 Throwable
