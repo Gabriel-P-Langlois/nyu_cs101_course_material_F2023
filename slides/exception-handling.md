@@ -59,18 +59,18 @@ Exceptions are divided into two types, depending upon when they appear.
 
 --
 
-- **Checked exceptions** are reported during compilation, because the compiler checks for the them and crashes if they are not _handled_. 
+**Checked exceptions** are reported during compilation. These exceptions will crash the compiler if they are not _handled_. 
 
 --
 
-- **Unchecked exceptions** are reported during execution and are not checked by the compiler.
-- It is possible the developers haven't created any code to _handle_ them, and so the program may crash if they occur during runtime.
+**Unchecked exceptions** are reported during execution. These exceptions are not checked by the compiler. Your program may crash if not _handled_ in your program.
 
 --
 
-- **It is wrong** to think of exceptions as being errors.
--  **Errors**, in Java, are catastrophic failures that result from factors outside the control of the program, such as running out of memory. 
--  Like unchecked exceptions, they cause the program to crash.
+Note: **It is wrong** to think of exceptions as being errors.
+
+--
+**Errors**, in Java, are failures that result from factors outside the control of the program, such as running out of memory. Like unchecked exceptions, they cause the program to crash.
 
 ---
 
@@ -98,9 +98,8 @@ Throwable
    |---> Error
 ```
 
-- All exceptions are descended from the Java API's `Exception` class.
-- All **unchecked** exceptions are descended from `Exception`'s child, `RuntimeException`.
-- Errors are descended from `Error`
+- Exceptions are descended from the Java API's `Exception` class. **Unchecked** exceptions are descended from `Exception`'s child, `RuntimeException`.
+- Errors are descended from `Error`.
 - All these inherit from a `Throwable` ancestor.
 
 ---
@@ -109,23 +108,23 @@ template: overview
 
 ## Why two types?
 
-You may wonder _why all exceptions aren't checked_ by the compiler, so Java can avoid runtime crashes.
+Why all exceptions aren't checked by the compiler, so Java can avoid runtime crashes?
 
 --
 
-- exceptions can occur frequently; if they were all checked (which requires extra code), _it would put a big burden on the programmer and the code_.
+- Answer: Exceptions can occur frequently; if they were all checked (which requires extra code), _it would put a big burden on the programmer and the code_.
 
 --
 
-- if that is the case, you may wonder _why all exceptions aren't left unchecked_, so the programmer and codebase aren't overburdened with checks...
+But now you may wonder _why not leave all exceptions unchecked_? The programmer and codebase wouldn't be then overburdened with checks!
 
 --
 
-- ... _in some languages, like C++, all exceptions are unchecked_. The compiler does not get involved and it is up to the programmer to make sure their code is reliable. _Java is not one of these languages_.
+- Answer: In some languages, like C++, _all exceptions are unchecked_. The compiler does not get involved and it is up to the programmer to make sure their code is reliable. _Java is not one of these languages_.
 
 --
 
-- this discussion is known as **The Java Unchecked Exceptions Controversy** - [read more about it](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html).
+- This discussion is known as **The Java Unchecked Exceptions Controversy** - [read more about it](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html).
 
 ---
 
@@ -137,19 +136,15 @@ template: overview
 
 In conclusion, the Java people recommend the following:
 
-- _use checked exceptions if the program could reasonably be expected to recover_ from the situation in which the exception occurrs.
+- _Use checked exceptions if the program could reasonably be expected to recover_ from the situation in which the exception occurs.
 
 --
 
-- ...and _use unchecked exceptions if there would be no good way of programmatically recovering_ from the situation in which the exception occurrs.
+- _Use unchecked exceptions if your program can't recover_ from the situation in which the exception occurs.
 
 --
 
-- our focus here is on understanding checked exceptions.
-
---
-
-- we must master the code used to create them, detect when they have occurred, and handle them so our programs do not unnecessarily crash.
+- We'll focus on understanding checked exceptions.
 
 ---
 
@@ -165,13 +160,13 @@ Any method that includes code that _might_ cause a checked exception to occur _m
 
 --
 
-- encapsulate the uncertain code within a `try`/`catch` block.
+- First way: Encapsulate the uncertain code within a `try`/`catch` block.
 
 --
 
 name: handling-options
 
-- declare in the method signature that the method `throws` one or more exceptions.
+- Second way: declare in the method signature that the method `throws` one or more exceptions.
 
 ---
 
@@ -184,15 +179,16 @@ For example, take a method that opens a file... this might cause a checked excep
 --
 
 ```java
-public void doSomething() {
-  Scanner scn = new Scanner( new File( "foo.csv" ) );
-  // .. imagine we do something useful with this file here ...
+public static void doSomething() {
+   Scanner scn = new Scanner( new File( "data/foo.txt" ) );
+   String line = scn.nextLine();
+   System.out.println(line);
 }
 ```
 
 --
 
-- This code will not compile. [See for yourself!](https://repl.it/repls/FittingSnoopyOpenlook)
+- This code will not compile. (**Demo**)
 
 --
 
@@ -215,24 +211,21 @@ One way to get the code to compile would be to surround the code of concern with
 name: example-try-catch
 
 ```java
-public void doSomething() {
-
-  try {
-    // attempt to open the file... this may or may not fail
-    Scanner scn = new Scanner( new File( "foo.csv" ) );
-    // .. imagine we do something useful with this file here ...
-  }
-  catch (FileNotFoundException e) {
-    // handle the situation in which the file was not found
-    System.out.println("So sorry, we couldn't open the file.");
-    // put whatever you want to do in this situation here.
-  }
-}
+   public static void doSomething(){
+        try{
+            Scanner scn = new Scanner( new File( "data/foo.txt" ) );
+            String line = scn.nextLine();
+		    System.out.println(line);
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("Couldn't find the file...");
+        }
+    }
 ```
 
 --
 
-- [Try it!](https://repl.it/repls/CrispExtrasmallOutsourcing)
+- (**Demo**)
 
 ---
 
@@ -247,23 +240,24 @@ An alternative way to get that code to compile would have been to declare that t
 name: example-throws
 
 ```java
-public void doSomething() throws FileNotFoundException {
-  Scanner scn = new Scanner( new File( "foo.csv" ) );
-  // .. imagine we do something useful with this file here ...
+public static void doSomething() throws FileNotFoundException{
+   Scanner scn = new Scanner( new File( "data/foo.txt" ) );
+   String line = scn.nextLine();
+   System.out.println(line);
 }
 ```
 
 --
 
-- this is a form of '[passing the buck](https://dictionary.cambridge.org/us/dictionary/english/pass-the-buck)'.
+- This is a form of '[passing the buck](https://dictionary.cambridge.org/us/dictionary/english/pass-the-buck)'.
 
 --
 
-- the `doSomething()` method has abdicated responsibility for the exception that may occur, and it is now the responsibility of any method that calls this method to handle the exception.
+- The `doSomething()` method has abdicated responsibility for the exception that may occur, and it is now the responsibility of any method that calls `doSomething()` to handle the exception.
 
 --
 
-- any method that calls this method must now itself handle the situation in one of [the two ways we've discussed](#handling-options): using `try`/`catch` around the call to this method, or declaring that it too `throws` an exception.
+- Any method that calls this method must now itself handle the situation in one of [the two ways we've discussed](#handling-options): using `try`/`catch` around the call to this method, or declaring that it too `throws` an exception.
 
 ---
 
@@ -283,15 +277,15 @@ public void anotherMethod() {
 
 --
 
-- if `doSomething()` encapsulates the file opening code within a `try`/`catch` block, as in [an earlier example](#example-try-catch), then this code is fine - no need for any worry, since the exception is fully handled.
+- If `doSomething()` encapsulates the file opening code within a `try`/`catch` block, as in [an earlier example](#example-try-catch), then this code is fine - no need for any worry, since the exception is fully handled.
 
 --
 
-- if `doSomething()` instead declared that it `throws` an exception, as in our [most recent example](#example-throws), then this code will not compile.
+- If `doSomething()` instead declared that it `throws` an exception, as in our [most recent example](#example-throws), then this code will not compile.
 
 --
 
-- in the latter scenario, this method must either surround the call to `doSomething()` in a `try`/`catch` block, or declare that it too `throws` an exception.
+- In the latter scenario, this method must either surround the call to `doSomething()` in a `try`/`catch` block, or declare that it too `throws` an exception.
 
 ---
 
@@ -299,7 +293,7 @@ template: handling
 
 ## Example - the throws solution (continued again)
 
-Here are the two options for our `anotherMethod()` in order for it to compile.
+Assuming `doSomething()` `throws` an exception, here are the two options for our `anotherMethod()` in order for it to compile:
 
 --
 
@@ -317,7 +311,6 @@ public void anotherMethod() {
 ```
 
 --
-[Try it!](https://repl.it/repls/AshamedBurdensomeEquation)... - or - [try this](https://repl.it/repls/SerpentineSecondhandObjectdatabase):...
 
 ```java
 // the throws way
@@ -352,7 +345,7 @@ template: custom
 
 ## Subclassing Exception
 
-Here is an example of a custom exception type, useful for the situation where a virtual person sips a burning hot virtual cup of coffeee.
+Here is an example of a custom exception type, useful for the situation where a virtual person sips a burning hot virtual cup of coffee.
 
 --
 
@@ -387,10 +380,6 @@ public class Person {
   }
 }
 ```
-
---
-
-- [Try it!](https://repl.it/repls/MixedRepentantLocations)
 
 --
 
@@ -455,10 +444,6 @@ catch (OutOfCoffeeException e) {
 
 --
 
-- [Try it!](https://repl.it/repls/WatchfulSqueakyProduct)
-
---
-
 - Notice that we can catch the two exceptions separately, allowing us to take different follow-up actions in each scenario.
 
 ---
@@ -467,7 +452,7 @@ template: custom
 
 ## Handling exceptions (continued)
 
-Alternatively, of course, this method could have declared that it `throws` the two exceptions that the `sip()` method might throw, thereby _passing the buck_ to any method that calls it.
+Alternatively, this method could have declared that it `throws` the two exceptions that the `sip()` method might throw, thereby _passing the buck_ to any method that calls it.
 
 --
 
@@ -481,10 +466,6 @@ public static void main(String[] args) throws BurnedMouthException, OutOfCoffeeE
 
 }
 ```
-
---
-
-- [Try it!](https://repl.it/repls/MagentaSameLanguage)
 
 --
 
@@ -506,4 +487,7 @@ Like function arguments and return values, checked exceptions are yet another me
 
 --
 
-- Thank you. Bye.
+Info:
+
+- New quiz will be released later today.
+- Next assignment will be released next week.
