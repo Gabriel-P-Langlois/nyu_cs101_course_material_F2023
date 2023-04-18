@@ -35,19 +35,19 @@ An **exception** is a disruption to the _normal_ control flow of of a program.
 
 --
 
-- these typically occur when something unexpected has happened and are reported either during compilation or execution of the program.
+- Exceptions occur when something unexpected has happened and are reported either during compilation or execution of the program.
 
 --
 
-- for example, if Java code tries to open up a file that might not exist, an exception will be reported _during compilation_.
+- Ex 1: If Java code tries to open up a file that might not exist, an exception will be reported _during compilation_.
 
 --
 
-- another example, if an array has a length of `5` and your code tries to access the array value at index position `7`, an exception will be reported _during execution_.
+- Ex 2: If an array has a length of `5` and your code tries to access the array value at index position `7`, an exception will be reported _during execution_.
 
 --
 
-- whether an exception is reported during compilation or execution depends upon whether it is _checked_ or _unchecked_.
+- Whether an exception is reported during compilation or execution depends upon whether it is _checked_ or _unchecked_.
 
 ---
 
@@ -59,15 +59,18 @@ Exceptions are divided into two types, depending upon when they appear.
 
 --
 
-- **Checked exceptions** are reported during compilation, because the compiler checks for the them and crashes if they are not _handled_. Thus, any program that compiles has been programmed to gracefully handle any checked exceptions.
+- **Checked exceptions** are reported during compilation, because the compiler checks for the them and crashes if they are not _handled_. 
 
 --
 
-- **Unchecked exceptions** are reported during execution. The compiler does not check for the them so it is possible the developers haven't created any code to _handle_ them, and so the program may crash if they occur during runtime. They are usually the result of poor programming.
+- **Unchecked exceptions** are reported during execution and are not checked by the compiler.
+- It is possible the developers haven't created any code to _handle_ them, and so the program may crash if they occur during runtime.
 
 --
 
-- **It is wrong** to think of exceptions as being errors. **Errors**, in Java, are catastrophic failures that result from factors outside the control of the program, such as running out of memory. Like unchecked exceptions, they cause the program to crash.
+- **It is wrong** to think of exceptions as being errors.
+-  **Errors**, in Java, are catastrophic failures that result from factors outside the control of the program, such as running out of memory. 
+-  Like unchecked exceptions, they cause the program to crash.
 
 ---
 
