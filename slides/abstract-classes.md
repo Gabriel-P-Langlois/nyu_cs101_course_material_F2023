@@ -17,6 +17,9 @@ class: center, middle
 1. [Overview of Interfaces](#overview-interfaces)
 1. [Example of an Interface](#example-interface)
 1. [Methods with Implementations](#default-methods)
+1. [Multiple interfaces](#multiple-interfaces)
+1. [Polymorphism for interfaces](#polymorphism)
+1. [Abstract classes or Interfaces?](#picking2)
 1. [Conclusions](#conclusions)
 
 ---
@@ -364,9 +367,6 @@ public interface Vehicle {
     }
 }
 ```
-\
-
-You can override a default method, and even call the default version using _super_.
 
 ---
 
@@ -395,6 +395,91 @@ public class Plane implements Vehicle, Flyable {
   // All properties and abstract methods from Flyable must be implemented.
 }
 ```
+
+---
+
+template: multiple-interfaces
+
+## Indirect implementation of multiple interfaces
+
+Interfaces can also inherit from one-another.
+
+--
+
+For example:
+
+```java
+public interface Vehicle {
+    // Attributes -- all attributes are public, static, and final by default.
+    final float MAX_VELOCITY;
+    
+    // Methods -- all methods are public and abstract by default
+    void speedUp(int a);
+    void applyBrakes(int a);
+}
+```
+
+```java
+public interface Plane extends Vehicle {
+  // public void fly();
+}
+```
+
+--
+
+A class that implements an interface has to implement any abstract methods in the interface, _including_ those passed down from ancestor interfaces.
+
+---
+
+name: polymorphism
+
+# A note about polymorphism
+
+--
+
+Objects that implement a given interface can polymorphically be considered to be of the interface type.
+
+For example, a Plane object could be referenced by a Vehicle-typed variable
+
+```java
+Vehicle jet = new Plane();
+```
+
+--
+
+As with all polymorphism, this can be used to perform batch operations:
+
+--
+
+```java
+Vehicle[] planes = {
+  new Plane1(),
+  new Plane2(),
+  };
+  
+  // iterate through each object
+  for (Vehicle plane : planes) {
+    plane.speedUp(1);
+  }
+```
+
+---
+
+name: picking2
+
+# Picking an abstraction
+
+--
+
+## Deciding between abstract classes and interfaces
+
+Given both abstract classes and interfaces have the ability to encapsulate abstract methods, _how do you pick between the two_?
+
+It's easy:
+
+- Interfaces are used to enforce a common set of behavioral capabilities on otherwise-disparate classes with very little code in common.
+
+- Abstract classes are used to enforce a common set of behavioral capabilities on classes that share a significant amount of code in common.
 
 ---
 
