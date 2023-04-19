@@ -146,7 +146,7 @@ public class Pig extends Animal {
 
 name: picking
 
-# Concrete or abstact classes?
+# Concrete or abstract classes?
 
 Given that abstract classes can share all the same sorts of code as a concrete class, and more, _how do you pick between the two_?
 
@@ -162,15 +162,15 @@ It's easy:
 
 template: picking
 
-# Concrete or abstact classes?
-
 Example:
 
 - Dogs, cats and pigs are all animals. What if we wanted to write code for representing them? 
 
 - **One way**: Create an Animal class that encapsulates what dogs, cats and pigs have in common and have them inherit the properties of the Animal class.
 
-- Does it make sense to instantiate an Animal object? No, not in this case. But it makes sense to create an abstract Animal class containing a lot of code shared in common by three concrete child classes, Dog, Cat and Pig.
+- Does it make sense to instantiate an Animal object? No, not in this case. 
+
+- But it makes sense to create an abstract Animal class containing a lot of code shared in common by three concrete child classes, Dog, Cat and Pig.
 
 ---
 
