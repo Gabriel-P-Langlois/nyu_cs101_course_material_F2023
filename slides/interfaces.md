@@ -289,7 +289,9 @@ name: multiples
 
 # Implementing Multiple Interfaces
 
-## Direct implementation of multiples
+--
+
+## Direct implementation of multiple interfaces
 
 Unlike with class-based inheritance, it is possible for a class to implement more than one interface.
 
@@ -311,7 +313,7 @@ public class RecentCollegeGrad implements IdealEmployee, IndependentThinker {
 
 template: multiples
 
-## Indirect implementation of multiples
+## Indirect implementation of multiple interface
 
 Interfaces can also inherit from one-another.
 
@@ -339,7 +341,7 @@ public interface IndependentThinker extends Thinker {
 
 template: multiples
 
-## Indirect implementation of multiples (continued)
+## Indirect implementation of multiple interfaces (continued)
 
 A class that implements an interface has to implement any abstract methods in the interface, including those passed down from ancestor interfaces.
 
