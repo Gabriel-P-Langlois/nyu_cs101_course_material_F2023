@@ -158,7 +158,11 @@ It's easy:
 
 - Use a concrete class if it does make sense.
 
---
+---
+
+template: picking
+
+# Concrete or abstact classes?
 
 Example:
 
