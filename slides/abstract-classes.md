@@ -13,9 +13,7 @@ class: center, middle
 # Agenda
 
 1. [Overview](#concept)
-1. [Cannot Instantiate](#no-instantiate)
 1. [Pick Your Abstraction](#picking)
-1. [Mixing Abstractions](#mixing)
 1. [Conclusions](#conclusions)
 
 ---
@@ -45,7 +43,7 @@ public abstract class Animal {
   public String name;
 
   // Methods
-  public abstract void animalSound();
+  public abstract void makeSound();
   public void sleep(); {
     System.out.println("Zzz");
   }
@@ -62,13 +60,15 @@ A class which is not abstract is called a **concrete class**.
 
 --
 
-An abstract class can encapsulate _all the same properties and methods as a concrete class_:
+An abstract class can encapsulate _all the same properties and methods_ as a concrete class:
 
-- private, protected, or public properties and methods
+- Private, protected, or public properties and methods
 
-- static or non-static properties and methods
+- Static or non-static properties and methods
 
-- constants and non-constants
+- Constants and non-constants
+
+- Etc.
 
 ---
 
@@ -87,7 +87,7 @@ public abstract class Animal {
   public String name;
 
   // Methods
-  public abstract void animalSound();
+  public abstract void makeSound();
   public void sleep(); {
     System.out.println("Zzz");
   }
@@ -106,95 +106,42 @@ template: overview
 
 ## Legacy
 
-Since abstract classes can contain abstract methods and because an abstract class cannot be instantiated...
+An abstract class has no use unless some other class extends it.
 
-- any non-abstract child class _must implement any abstract methods_ declared in an abstract parent or other ancestor class.
-
-```java
-public abstract class Foo {
-
-  // an abstract method, for example
-  pubic abstract int getRandom(int lowerBound, int upperBound);
-
-}
-```
+Any non-abstract child class **must** implement abstract methods declared in an abstract parent or other ancestor class.
 
 ```java
-public class Bar extends Foo {
+public abstract class Animal {
+  // Attributes
+  public int legCount;
+  public String name;
 
-  // this class *must* contain a concrete implementation of the abstract method
-  public int getRandom(int lowerBound, int upperBound) {
-    return rand = ( (int) Math.random() * (upperBound - lowerBound) ) + lowerBound;
+  // Methods
+  public abstract void makeSound();
+  public void sleep(); {
+    System.out.println("Zzz");
   }
-
 }
 ```
 
----
-
-template: overview
-
-## Frequently asked questions
-
-There are three questions that commonly arise in relation to abstract classes:
-
-1. Why can you not instantiate an abstract class?
-
-1. When would you use an abstract class over an interface, and vice-versa?
-
----
-
-name: no-instantiate
-
-# Cannot Instantiate
-
---
-
-## Justification
-
-An abstract class cannot be instantiated because any object made from it would potentially be missing the implementation of one or more methods.
-
-- For example, given the following abstract class...
-
 ```java
-public abstract class Foo {
-
-  // an abstract method, for example
-  pubic abstract int getRandom(int lowerBound, int upperBound);
-
+public class Pig extends Animal {
+  public Pig(int legCount, String name) {
+    super(legcount,name);
+  }
+  
+  @Override
+  public void makeSound(){
+    System.out.println("Oink oink!")
+  }
 }
-```
-
-- Imagine instantiating and calling this method... what would happen?
-
-```java
-Foo f = new Foo();
-int num = f.getRandom(1, 10); // not allowed - this method has no concrete implementation!
 ```
 
 ---
 
 name: picking
 
-# Picking an Abstraction
-
---
-
-## Deciding between abstract classes and interfaces
-
-Given both abstract classes and interfaces have the ability to encapsulate abstract methods, _how do you pick between the two_?
-
-It's easy:
-
-- Interfaces are used to enforce a common set of behavioral capabilities on otherwise-disparate classes with very little code in common.
-
-- Abstract classes are used to enforce a common set of behavioral capabilities on classes that share a significant amount of code in common.
-
----
-
-template: picking
-
-## Deciding between abstract and concrete classes
+# Concrete or abstact classes?
 
 Given that abstract classes can share all the same sorts of code as a concrete class, and more, _how do you pick between the two_?
 
@@ -204,31 +151,13 @@ It's easy:
 
 - Use a concrete class if it does make sense.
 
-- For example, dogs and cats share a lot of internals in common - they are both mammals. Imagine writing code representing them... you might create a Mammal class that encapsulates what Dog and Cat have in common and have Mammal be inherited by each.
+Example:
 
-- Would it make sense to be able to instantiate a Mammal object? Or might it be better to create an abstract Mammal class that contains a lot of code shared in common by two concrete child classes, Dog and Cat.
+- Dogs, cats and pigs are all animals. What if we wanted to write code for representing them? 
 
----
+- **One way**: Create an Animal class that encapsulates what dogs, cats and pigs have in common and have them inherit the properties of the Animal class.
 
-name: mixing
-
-# Mixing Abstractions
-
---
-
-## Choices
-
-When dealing with inheritance, polymorphism, interfaces, and abstract classes, we often study them in isolation. However, in reality, a single class might take advantage of all of these.
-
-Imagine, for example, the following scenarios:
-
-- a single class can use class-based inheritance (whether from an abstract class or a concrete class) as well as implement an interface
-
-- a single class might implement multiple interfaces
-
-- a single class might implement an interface that inherits from another interface
-
-- a single class might inherit from an abstract class that implements multiple interfaces
+- Does it make sense to instantiate an Animal object? No, not in this case. But it makes sense to create an abstract Animal class containing a lot of code shared in common by three concrete child classes, Dog, Cat and Pig.
 
 ---
 
