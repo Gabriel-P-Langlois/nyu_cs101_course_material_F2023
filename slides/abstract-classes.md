@@ -20,7 +20,6 @@ class: center, middle
 1. [Multiple interfaces](#multiple-interfaces)
 1. [Polymorphism for interfaces](#polymorphism)
 1. [Abstract classes or Interfaces?](#picking2)
-1. [Conclusions](#conclusions)
 
 ---
 
@@ -480,13 +479,3 @@ It's easy:
 - Interfaces are used to enforce a common set of behavioral capabilities on otherwise-disparate classes with very little code in common.
 
 - Abstract classes are used to enforce a common set of behavioral capabilities on classes that share a significant amount of code in common.
-
----
-
-name: conclusions
-
-# Conclusions
-
---
-
-Abstract classes can be useful, when implemented with tact. You now have an understanding of the various ways in which this might be the case.
