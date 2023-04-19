@@ -111,10 +111,6 @@ public static int fibonacci(int n) {
 }
 ```
 
---
-
-- [Try it!](https://repl.it/repls/SandyCheerfulQuark)
-
 ---
 
 template: fibonacci
@@ -180,10 +176,6 @@ public static String backwards(String original) {
 
 }
 ```
-
---
-
-- [Try it!](https://repl.it/repls/UnselfishWorstBoastmachine)
 
 ---
 
@@ -314,27 +306,22 @@ And let's revisit the backwards string algorithm.
 
 ```java
 public static String backwards(String original) {
-
     // base case: return the original
     if (original.length() <= 1) {
       return original;
     }
-
     // recursive case: return the last character + the backwards of the remainder
     else {
       char lastChar = original.charAt(original.length() - 1);
       String remainder = original.substring(0, original.length() - 1);
       return lastChar + backwards(remainder);
     }
-
 }
 ```
 
 --
 
 - the _base case_ occurs when the length is 1 or 0, we return the original.
-
---
 
 - the _recursive case_ decomposes the problem and returns a value resulting, in part, from recursion.
 
@@ -412,18 +399,6 @@ One of the "classic" fractal images is the [Sierpiński triangle](https://en.wik
 
 template: fractals
 
-## Koch snowflake
-
-Another is the [Koch snowflake](https://en.wikipedia.org/wiki/Koch_snowflake).
-
---
-
-[![Koch snowflake](../files/recursion-koch-snowflake.gif)](../files/recursion-koch-snowflake.gif)
-
----
-
-template: fractals
-
 ## Mandelbrot set
 
 Perhaps the most famous fractal images are those derived from the [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set).
@@ -441,7 +416,3 @@ name: conclusions
 --
 
 Recursion takes some time to get familiar with. However, it can some problems that are inherently recursive in a more intuitive way, with simpler code, than other forms of iteration.
-
---
-
-- Thank you. Bye.
