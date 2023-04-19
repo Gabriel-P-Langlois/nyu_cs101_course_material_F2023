@@ -12,8 +12,9 @@ class: center, middle
 
 # Agenda
 
-1. [Overview](#concept)
+1. [Overview of Abstract classes](#concept)
 1. [Concrete or Abstract classes?](#picking)
+1. [Overview of Interfaces](#overview-interfaces)
 1. [Conclusions](#conclusions)
 
 ---
@@ -231,8 +232,6 @@ name: example-interface
 
 --
 
-## Vehicle interface
-
 Imagine the following vehicle interface:
 
 ```java
@@ -279,6 +278,47 @@ Classes that implement an interface _must_ implement the methods declared within
 The value of an interface is that it can ensure the same set of behaviors across several different classes.
 
 - The expectation is that these behaviors are implemented differently among the classes that implement them.
+
+--
+
+- All methods are abstract public and abstract by default.
+- All properties are public, static and final by default.
+
+---
+
+name: default-methods
+
+# Methods with implementations
+
+--
+
+## Default methods
+
+We can include an instance method with an implementation in an interface. This is called a **default** method and serves one specific use case.
+
+--
+
+- Imagine our Vehicle interface is already in use (e.g., the Bicycle implementation).
+- Imagine now added a new method to the interface:
+
+--
+
+```java
+void blowHorn(); // Honk honk!
+```
+
+--
+
+- Anyone using the Bicycle implementation without the new method would then fail to compile their Bicycle implementation!
+- A **default** method solves this problem.
+
+---
+
+template: default-methods
+
+## Default methods
+
+(TBC.)
 
 ---
 
