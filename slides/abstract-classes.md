@@ -150,6 +150,8 @@ name: picking
 
 --
 
+## Choosing between the two
+
 Given that abstract classes can share all the same sorts of code as a concrete class, and more, _how do you pick between the two_?
 
 --
@@ -164,7 +166,7 @@ It's easy:
 
 template: picking
 
-Example:
+## Example
 
 - Dogs, cats and pigs are all animals. What if we wanted to write code for representing them? 
 
