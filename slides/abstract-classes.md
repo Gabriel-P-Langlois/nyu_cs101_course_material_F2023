@@ -148,6 +148,8 @@ name: picking
 
 # Concrete or abstract classes?
 
+--
+
 Given that abstract classes can share all the same sorts of code as a concrete class, and more, _how do you pick between the two_?
 
 --
