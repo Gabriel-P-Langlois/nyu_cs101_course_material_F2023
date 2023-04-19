@@ -6,7 +6,7 @@ permalink: /slides/abstract-classes/
 
 class: center, middle
 
-# Abstract Classes
+# Abstract Classes and Iinterfaces
 
 ---
 
