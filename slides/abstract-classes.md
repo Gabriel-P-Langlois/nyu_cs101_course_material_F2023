@@ -28,13 +28,27 @@ name: overview
 
 ## Concept
 
-An **abstract class** is a Java class that has been _declared as abstract_.
+An **abstract class** is a class that contains one or more **abstract methods**, which are simply method declarations without a body.
+
+Think of an abstract method like a prototype for a method. It declares the method’s return type and parameter list without implementing the method.
+
+--
+
+Purpose: Provide a common definition of a base class that multiple derived classes can share.
+
+--
 
 ```java
-public abstract class Foo {
+public abstract class Animal {
+  // Attributes
+  public int legCount;
+  public String name;
 
-  /* some stuff here */
-
+  // Methods
+  public abstract void animalSound();
+  public void sleep(); {
+    System.out.println("Zzz");
+  }
 }
 ```
 
@@ -44,7 +58,11 @@ template: overview
 
 ## Similarity to concrete classes
 
-Code-wise, an abstract class can encapsulate _all the same properties and methods as a concrete class_.
+A class which is not abstract is called a **concrete class**.
+
+--
+
+An abstract class can encapsulate _all the same properties and methods as a concrete class_:
 
 - private, protected, or public properties and methods
 
@@ -52,30 +70,34 @@ Code-wise, an abstract class can encapsulate _all the same properties and method
 
 - constants and non-constants
 
-- etc.
-
 ---
 
 template: overview
 
 ## Difference from concrete classes
 
-The only two differences between an abstract class and a concrete class are...
+There are only two differences between an abstract class and a concrete class:
 
-- abstract classes _can contain abstract methods_ - i.e. method signatures without their corresponding implementation.
+- Abstract classes _can contain abstract methods_, that is, method declarations without their corresponding implementation.
 
 ```java
-public abstract class Foo {
+public abstract class Animal {
+  // Attributes
+  public int legCount;
+  public String name;
 
-  pubic abstract int getRandom(int lowerBound, int upperBound);
-
+  // Methods
+  public abstract void animalSound();
+  public void sleep(); {
+    System.out.println("Zzz");
+  }
 }
 ```
 
-- abstract classes _can never be instantiated_
+- Abstract classes _can never be instantiated_!
 
 ```java
-Foo f = new Foo(); // a good view of a compilation error!
+Animal a = new Animal(); // This will result in a compilation error
 ```
 
 ---
