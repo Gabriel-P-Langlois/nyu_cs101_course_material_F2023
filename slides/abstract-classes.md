@@ -15,6 +15,8 @@ class: center, middle
 1. [Overview of Abstract classes](#concept)
 1. [Concrete or Abstract classes?](#picking)
 1. [Overview of Interfaces](#overview-interfaces)
+1. [Example of an Interface](#example-interface)
+1. [Methods with Implementations](#default-methods)
 1. [Conclusions](#conclusions)
 
 ---
@@ -299,6 +301,7 @@ We can include an instance method with an implementation in an interface. This i
 --
 
 - Imagine our Vehicle interface is already in use (e.g., the Bicycle implementation).
+
 - Imagine now added a new method to the interface:
 
 --
@@ -310,6 +313,7 @@ void blowHorn(); // Honk honk!
 --
 
 - Anyone using the Bicycle implementation without the new method would then fail to compile their Bicycle implementation!
+
 - A **default** method solves this problem.
 
 ---
@@ -318,7 +322,79 @@ template: default-methods
 
 ## Default methods
 
-(TBC.)
+The new version of interface would look like this:
+
+```java
+public interface Vehicle {
+    // Attributes
+    final float MAX_VELOCITY;
+    
+    // Methods
+    void speedUp(int a);
+    void applyBrakes(int a);
+    public default void blowHorn() {
+      System.out.println("Honk honk!");
+    }
+}
+```
+
+You can override a default method, and even call the default version using _super_.
+
+---
+
+template: default-methods
+
+## Static methods
+
+Interfaces can also implement static methods:
+
+```java
+public interface Vehicle {
+    // Attributes -- all attributes are public, static, and final by default.
+    final float MAX_VELOCITY;
+    
+    // Methods -- all methods are public and abstract by default
+    public static void cleanVehicle() {
+      // Implementation goes here
+    }
+    void speedUp(int a);
+    void applyBrakes(int a);
+    public default void blowHorn() {
+      System.out.println("Honk honk!");
+    }
+}
+```
+\
+
+You can override a default method, and even call the default version using _super_.
+
+---
+
+name: multiple-interfaces
+
+# Implementing multiple interfaces
+
+--
+
+## Direct implementation of multiple interfaces
+
+Unlike with class-based inheritance, a class can implement more than one interface.
+
+--
+
+- Imagine we had a second interface called `Flyable`.
+
+- A single class could implement both the Vehicle and Flyable interfaces
+
+--
+
+```java
+public class Plane implements Vehicle, Flyable {
+  // All properties and abstract methods from Vehicle must be implemented.
+  
+  // All properties and abstract methods from Flyable must be implemented.
+}
+```
 
 ---
 
