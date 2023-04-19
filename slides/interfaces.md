@@ -38,8 +38,6 @@ name: overview
 
 An **interface**, like a class, is a Java reference type.
 
---
-
 ```java
 public interface Foo {
 
@@ -55,8 +53,6 @@ template: overview
 ## Similarity to classes
 
 Like classes, interfaces can contain...
-
---
 
 - properties
 
@@ -87,7 +83,6 @@ But all is not as it seems.
 - Interfaces are intended to _solve a very different problem_ than classes.
 
 - Because of their intended use, there are very specific _limitations_ on what kinds of properties and methods can be placed within an interface.
-- 
 ---
 
 name: raison-detre
@@ -117,6 +112,8 @@ At their core, interfaces specify a set of **method signatures**.
 - This contractually _guarantees_ that the class will implement the methods specified in the interface.
 
 - Other code can rely on the fact that the class will be able to perform the behaviors the interface specifies.
+
+---
 
 name: example
 
@@ -224,6 +221,8 @@ name: implemented-methods
 
 # Methods With Implementations
 
+--
+
 ## Default methods
 
 It is possible to include an _instance method with an implementation_ in an interface. This is called a **default** method and serves one specific use case, and no other.
@@ -260,7 +259,7 @@ public interface IdealEmployee {
 }
 ```
 
-- In this way, developers using `v1` of the interface can upgrade to `v2` with no worry about their code breaking.
+In this way, developers using `v1` of the interface can upgrade to `v2` with no worry about their code breaking.
 
 ---
 
