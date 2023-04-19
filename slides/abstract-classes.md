@@ -28,18 +28,19 @@ name: overview
 
 An **abstract class** is a class that contains one or more **abstract methods**, which are simply method declarations without a body.
 
+--
+
 Think of an abstract method like a prototype for a method. It declares the method’s return type and parameter list without implementing the method.
 
 --
 
-Purpose: Provide a common definition of a base class that multiple derived classes can share.
+Abstract methods provide _a common definition of a base class that multiple derived classes can share_.
 
 --
 
 ```java
 public abstract class Animal {
   // Attributes
-  public int legCount;
   public String name;
 
   // Methods
@@ -83,7 +84,6 @@ There are only two differences between an abstract class and a concrete class:
 ```java
 public abstract class Animal {
   // Attributes
-  public int legCount;
   public String name;
 
   // Methods
@@ -110,10 +110,15 @@ An abstract class has no use unless some other class extends it.
 
 Any non-abstract child class **must** implement abstract methods declared in an abstract parent or other ancestor class.
 
+---
+
+template: overview
+
+## Legacy
+
 ```java
 public abstract class Animal {
   // Attributes
-  public int legCount;
   public String name;
 
   // Methods
@@ -126,8 +131,8 @@ public abstract class Animal {
 
 ```java
 public class Pig extends Animal {
-  public Pig(int legCount, String name) {
-    super(legcount,name);
+  public Pig(String name) {
+    super(name);
   }
   
   @Override
@@ -145,11 +150,15 @@ name: picking
 
 Given that abstract classes can share all the same sorts of code as a concrete class, and more, _how do you pick between the two_?
 
+--
+
 It's easy:
 
 - Use an abstract class if it makes no conceptual sense for the class to ever be instantiated.
 
 - Use a concrete class if it does make sense.
+
+--
 
 Example:
 
