@@ -6,21 +6,21 @@ permalink: /slides/abstract-classes/
 
 class: center, middle
 
-# Abstract Classes and Iinterfaces
+# Abstract Classes and Interfaces
 
 ---
 
 # Agenda
 
 1. [Overview](#concept)
-1. [Pick Your Abstraction](#picking)
+1. [Concrete or Abstract classes?](#picking)
 1. [Conclusions](#conclusions)
 
 ---
 
 name: overview
 
-# Overview
+# Overview of Abstract classes
 
 --
 
@@ -175,6 +175,110 @@ template: picking
 - Does it make sense to instantiate an Animal object? No, not in this case. 
 
 - But it makes sense to create an abstract Animal class containing a lot of code shared in common by three concrete child classes, Dog, Cat and Pig.
+
+---
+
+name: overview-interfaces
+
+# Overview of Interfaces
+
+--
+
+## Concept
+
+An **interface** is a blueprint of a class.
+
+A java interface contains static constants and abstract methods. _It cannot contain anything else_.
+
+--
+
+```java
+public interface Vehicle {
+    // Attributes -- all attributes are public, static, and final by default.
+    final float MAX_VELOCITY;
+    
+    // Methods -- all methods are public and abstract by default
+    void speedUp(int a);
+    void applyBrakes(int a);
+}
+```
+
+---
+
+template: overview-interfaces
+
+## Concept
+
+Interfaces serve as a sort of contract.
+
+--
+
+- An interface is similar to an abstract class, but its intent is to specify what methods that a class **must** implement.
+
+--
+
+- Any class can declare that it implements an interface, meaning it agrees to implement the behaviors the interface specifies.
+
+--
+
+- Java will not compile the code if any class that agreed to adhere to an interface does not properly implement its public interface.
+
+---
+
+name: example-interface
+
+# Example
+
+--
+
+## Vehicle interface
+
+Imagine the following vehicle interface:
+
+```java
+public interface Vehicle {
+    // Attributes -- all attributes are public, static, and final by default.
+    final float MAX_VELOCITY;
+    
+    // Methods -- all methods are public and abstract by default
+    void speedUp(int a);
+    void applyBrakes(int a);
+}
+```
+
+--
+
+Any class can adhere to this interface using the **implements** keyword.
+
+```java
+public class Bicycle implements Vehicle {
+  float MAX_VELOCITY = 30; // MPH
+  
+  public void speedUp(int a) {
+    // implementation goes there
+  }
+  
+  public void applyBrakes(int a) {
+    // implementation goes there
+  }
+}
+```
+
+---
+
+template: example-interface
+
+## Some notes
+
+Classes that implement an interface _must_ implement the methods declared within the interface. The code won't compile otherwise.
+
+- The class may contain other properties and methods in addition to those specified in the interface.
+
+--
+
+The value of an interface is that it can ensure the same set of behaviors across several different classes.
+
+- The expectation is that these behaviors are implemented differently among the classes that implement them.
 
 ---
 
