@@ -29,6 +29,8 @@ name: structure
 
 # Structure
 
+--
+
 The exam will take place on Monday, May 15th in CIWW 101 from 8:00-09:50 am. It will be composed of three parts:
 
 Multiple choice, True/False and Multiselect questions (~30%)
