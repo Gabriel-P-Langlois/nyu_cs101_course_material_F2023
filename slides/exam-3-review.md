@@ -29,7 +29,7 @@ name: structure
 
 # Structure
 
-The exam will take place on May 15th in CIWW 101 from 8:00-09:50 am. It will be composed of two parts
+The exam will take place on Monday, May 15th in CIWW 101 from 8:00-09:50 am. It will be composed of three parts:
 
 Multiple choice, True/False and Multiselect questions (~30%)
 
@@ -39,6 +39,10 @@ Multiple choice, True/False and Multiselect questions (~30%)
 One short answer question (~10%) about exception handling.
 - E.g., Create your own exception class (by extending the Exception class).
 - Given a public class with a user defined method and a main method, show me how 1) you can handle the exception at the level of the user defined method and 2) you can handle the exception in the main method.
+
+---
+
+template: structure
 
 Written programming questions (~60%)
 
@@ -53,7 +57,7 @@ Note: The written programming questions will be designed to test your understand
 - Inheritance
 - Polymorphism
 
-One short bonus question about recursion (+5%)
+One short bonus question on recursion (+5%)
 
 ---
 
