@@ -29,11 +29,31 @@ name: structure
 
 # Structure
 
-The exam will take place on May 15th in CIWW 101 from 8:00-09:50 am. It will be composed of three parts:
+The exam will take place on May 15th in CIWW 101 from 8:00-09:50 am. It will be composed of two parts
 
-1. Multiple choice, True/False and Multiselect questions (?)
-2. Short answer questions (?)
-3. Written programming questions (?)
+Multiple choice, True/False and Multiselect questions (~30%)
+
+- About 15 questions from quizzes 9 and 10 (Exceptions and Abstract Classes and Interfaces)
+- About 15 questions from quizzes 1-8.
+
+One short answer question (~10%) about exception handling.
+- E.g., Create your own exception class (by extending the Exception class).
+- Given a public class with a user defined method and a main method, show me how 1) you can handle the exception at the level of the user defined method and 2) you can handle the exception in the main method.
+
+Written programming questions (~60%)
+
+- One question about OOP \w Abstract Classes. E.g., I give you the UML Class diagram of an abstract class and a child class that extends it. Write those classes.
+- One question about OOP \w Interfaces. E.g., I give you the UML Class diagram of one or two interfaces and a child class that implements either or both. Write said classes.
+
+Note: The written programming questions will be designed to test your understanding of
+
+- Method overloading
+- Method overriding
+- Abstract classes, abstract methods, default methods
+- Inheritance
+- Polymorphism
+
+One short bonus question about recursion (+5%)
 
 ---
 
@@ -106,7 +126,7 @@ template: polymorphism
 
 ## In practice
 
-In many cases, polymorophism is practically applied when it is convenient to do batch processes on a bunch of objects that share a common ancestor. In such situations, we place those various objects into some sort of collection (array, ArrayList, etc) that is typed as the ancestor class or interface that all the objects share in common.
+In practice, polymorophism is applied to process a bunch of objects that share a common ancestor. We place those various objects into some sort of collection (array, ArrayList, etc) that is typed as the ancestor class or interface that all the objects share in common.
 
 ```java
 //say you have a bunch of Mammals
@@ -139,7 +159,7 @@ name: interfaces
 
 ## Overview
 
-Interfaces are a reference type that provide a form of inheritance, similar to classes, but with some key differences in purpose and implementation. Interfaces are often named with words ending in the [https://en.wiktionary.org/wiki/-able#Suffix suffix, "able"]].
+Interfaces are a reference type that provide a form of inheritance, similar to classes, but with some key differences in purpose and implementation.
 
 ---
 
