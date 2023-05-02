@@ -292,4 +292,9 @@ name: conclusions
 
 # Conclusions
 
-Thank you. Good luck!
+I'll provide supplementary exercises and practice questions to help you prepare for the exam.
+
+For now, start with this:
+- [Java Programming Tutorial (ntu.edu.sg)](Java Programming Tutorial (ntu.edu.sg)): Exercises 6.1 to 6.8.
+- [Linuxtopia](https://www.linuxtopia.org/online_books/programming_books/thinking_in_java/TIJ311_024.htm): Exercises 1 to 3.
+
