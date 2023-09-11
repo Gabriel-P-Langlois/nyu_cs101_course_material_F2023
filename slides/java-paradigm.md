@@ -22,7 +22,7 @@ class: center, middle
 6. [Compiling](#compiling)
 7. [Interpreting](#interpreting)
 8. [Java](#java)
-9. [Conclusions](#conclusions)
+9. [Announcements](#conclusions)
 
 ---
 
@@ -36,12 +36,6 @@ template: computers
 name: computers-1
 
 ## Definition
-
-> "[People don't have buttons and a computer does](http://www.youtube.com/watch?v=kccWna71sqk)"
->
-> -Some little kid from PS-272 in Brooklyn in the 1980s
-
---
 
 A computer is any device, entity, or object that can perform computations.
 
@@ -69,7 +63,7 @@ A computer is any device, entity, or object that can perform computations.
 
 name: processor
 
-# Procesesor
+# Processor
 
 --
 
@@ -77,39 +71,39 @@ The processor is the part of an electronic computer that does the computation.
 
 --
 
-At any given moment, a processor only does one of a few different types of things.
+A processor can...
 
 --
 
-- jump to a particular location in memory
+- ...jump to a particular location in memory
 
 --
 
-- read a number from RAM
+- ...read a number from Random-Access Memory (RAM)
 
 --
 
-- save a number to RAM
+- ...save a number to RAM
 
 --
 
-- add two numbers together
+- ...add two numbers together
 
 --
 
-- compare two numbers to see which is larger
+- ...compare two numbers to see which is larger
 
 --
 
-- send a number to a particular device (e.g. a monitor)
+- ...send a number to a particular device (e.g., a monitor)
 
 --
 
-- receive a number from a particular device (e.g. a keyboard)
+- ...receive a number from a particular device (e.g., a keyboard)
 
 --
 
-Ultimately, every statement in a computer program must be reduced to a sequence of these processor actions.
+Note: **Every** statement in a computer program is reduced to a sequence of these processor actions!
 
 ---
 
@@ -124,7 +118,7 @@ name: programming-1
 
 ## Purpose
 
-> Computer programming is the process of designing and building an executable computer program for accomplishing a specific computing result.
+> Computer programming is the process of writing an executable computer program to accomplish a specific computing result.
 >
 > -[Wikipedia](https://en.wikipedia.org/wiki/Computer_programming)
 
@@ -135,7 +129,7 @@ name: programming-2
 
 ## Levels of abstraction
 
-Programmers have established increasingly higher levels of abstraction in order to make programming faster and more intuitive to humans.
+Programmers have established increasingly higher levels of abstraction in order to make programming faster and more intuitive.
 
 --
 
@@ -161,7 +155,7 @@ name: machine-code
 
 ## Binary instructions
 
-At the lowest level, a programming can directly inform a computer what it should do by sending binary instructions directly to the processor.
+At the lowest level, a program directly informs a computer what it should do by sending binary instructions to the processor.
 
 --
 
@@ -173,7 +167,7 @@ Example of a set of machine instructions for an x86 processor to move the number
 
 --
 
-The number `1011` is the machine instruction to do a move operation, `0000` is the address of the AL register, and `01100001` is the number `97` written in binary.
+The number `1011` is the machine's instruction to do a move operation, `0000` is the address of the AL register, and `01100001` is the number `97` written in binary.
 
 --
 
@@ -192,7 +186,7 @@ name: assembly-1
 
 ## Mnemonics
 
-It's easier for most humans to memorize words than binary numbers. Assembly languages provide mnemonics that a programmer can write, which are converted automatically to machine language equivalents.
+It's easier for most humans to memorize words than binary numbers. Assembly languages provide mnemonics that a programmer can write, which are converted to machine language.
 
 --
 
@@ -204,7 +198,7 @@ MOV AL, 61h
 
 --
 
-`MOV` is a mnemonic for `1011`, `AL` is a mnemnoic for `0000`, and `61` is the number `97` written in hexadecimal notation.
+`MOV` is a mnemonic for `1011`, `AL` is a mnemonic for `0000`, and `61` is the number `97` written in hexadecimal notation.
 
 ---
 
@@ -213,7 +207,7 @@ name: assembly-4
 
 ## Assembling
 
-Converting code written in assembly language to the equivalent machine language is known as **assembling** - it's essentially a search/replace operation where mnemonics are replaced with their machine code equialents.
+Converting code written in assembly language to the equivalent machine language is known as **assembling** - it's essentially a search/replace operation where mnemonics are replaced with their machine code equivalents.
 
 The program to do so is called an **assembler**.
 
@@ -230,7 +224,7 @@ name: high-level-languages-1
 
 ## Abstraction
 
-High-level languages are more intuitive for most humans to read and write.
+High-level languages are designed to be more intuitive.
 
 The written code is further abstracted away from the machine instructions the processor will ultimately execute.
 
@@ -273,27 +267,27 @@ name: compiling
 
 ## Concept
 
-Code written in a high-level programming language is translated to its machine code equivalent all at once as a single bulk operation.
+Code written in a high-level programming language is translated to its machine code equivalent all at once.
 
 --
 
-- a tool called a **compiler** reads the code, analyzes it, makes optimizations, and outputs a file with the required machine code instructions.
+- A tool called a **compiler** reads the code, analyzes it, and outputs a file with the required machine code instructions.
 
 --
 
-- time-consuming
+- It can be time-consuming.
 
 --
 
-- efficient
+- Once compiled, the code can be executed efficiently.
 
 --
 
-- many errors easily detected during compilation
+- Many errors can be detected during compilation.
 
 --
 
-- processor-specific
+- Compilation is processor-specific.
 
 ---
 
@@ -310,15 +304,15 @@ The C programming language is a classic example of a compiled language.
 
 --
 
-- The high-level source code must often be tweaked to match the features of the target processor before compiled.
+- The high-level source code must be tweaked to match the features of the target processor before being compiled.
 
 --
 
-- Not very portable!
+- It is not very portable...
 
 --
 
-- But fast!
+- ...but it is fast!
 
 ---
 
@@ -332,19 +326,19 @@ Code written in a high-level programming language is translated to its machine c
 
 --
 
-- a tool called an **interpreter** traditionally reads one statement of high-level code at a time, converts it to its machine code equivalent, and immediately executes that machine code.
+- A tool called an **interpreter** reads one statement of high-level code at a time, converts it to its machine code equivalent, and immediately executes that machine code.
 
 --
 
-- starts running immediately
+- It starts running immediately.
 
 --
 
-- not necessarily efficient, since only looking at one-statement at a time
+- It is not necessarily efficient since it only looks at one statement at a time.
 
 --
 
-- does not traditionally identify errors in statements that have not yet been interpreted
+- It does not always identify errors in statements that have not yet been interpreted.
 
 ---
 
@@ -356,11 +350,11 @@ name: java
 
 ## Write once, run anywhere
 
-Unlike C code, Java source code is highly portable, being executable on machines with almost any processor. How is this possible?
+Unlike C code, Java source code is highly portable and executable on machines with almost any processor. How is this possible?
 
 --
 
-- Java is both compiled and interpreted
+- Java is both compiled and interpreted.
 
 --
 
@@ -372,15 +366,15 @@ Unlike C code, Java source code is highly portable, being executable on machines
 
 --
 
-- JVMs are created for most popular processor families
+- JVMs are created for most processor families.
 
 --
 
-- Thus Java byte code is highly portable
+- Thus, Java byte code is highly portable.
 
 --
 
-- This is the Java paradigm!
+- This is the **Java paradigm**!
 
 ---
 
@@ -398,19 +392,19 @@ name: java-9
 
 ## Byte code and the JVM
 
-Byte code is somewhere between machine code and high-level source in abstraction - an _intermediate-level_ language.
+Byte code is somewhere between machine code and a high-level source in abstraction - an _intermediate-level_ language.
 
 --
 
-- The Java Virtual Machines are virtual computers (a software simulation a physical computer), which are designed to view byte code as their native machine code.
+- The Java Virtual Machines are virtual computers (a software simulation of a physical computer) that are designed to view byte code as their native machine code.
 
 --
 
-- These JVMs contain within them interpreters which can translate this byte code to the appropriate machine code for whichever physical processessor they are actually running on.
+- These JVMs contain interpreters that can translate this byte code to the appropriate machine code for whichever physical processor they are actually running on.
 
 --
 
-- Any programaming language that can be compiled Java byte code can run in a JVM... Groovy, Kotlin, and Scala are popular high-level languages with different syntax from Java that take advantage of this.
+- Any programming language that can be compiled Java byte code can run in a JVM... Groovy, Kotlin, and Scala are popular high-level languages with different syntax from Java that take advantage of this.
 
 ---
 
@@ -419,37 +413,7 @@ name: java-13
 
 ## Byte code and the JVM
 
-When viewed as hexadecimal, all byte code files start with the text, `cafe babe` - this is a [magic number](https://en.wikipedia.org/wiki/Magic_number_%28programming%29).
-
-```
-cafe babe 0000 0034 001f 0700 0201 0033
-6564 752f 6e79 752f 6373 2f66 6231 3235
-382f 6469 6666 6572 656e 745f 7061 636b
-6167 652f 5468 6972 6443 6c61 7373 436c
-...
-```
-
-One of Java's inventors, James Gosling, has [explained the origin of this](http://radio-weblogs.com/0100490/2003/01/28.html).
-
----
-
-template: java
-
-## commands
-
-The `javac` command compiles Java source code into Java byte code, while the `java` command sends the Java byte code to the JVM's interpreter for execution.
-
---
-
-```bash
-foo@bar$ javac -d bin src/foo/bar/SomeFile.java
-```
-
---
-
-```bash
-foo@bar$ java -cp bin foo.bar.SomeFile
-```
+TBC -- Add Unix information here instead.
 
 ---
 
@@ -459,8 +423,4 @@ name: conclusions
 
 --
 
-You now have a basic understanding of compiling, interpreting, and how the Java paradigm fits into these schemes.
-
---
-
-- Thank you. Bye.
+TBC. Add announcements here...
