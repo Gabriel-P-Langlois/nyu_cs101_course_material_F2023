@@ -437,6 +437,26 @@ Byte code is somewhere between machine code and a high-level source in abstracti
 
 ---
 
+template: java
+
+## Byte code and the JVM
+
+When viewed as hexadecimal, all byte code files start with the text, `cafe babe` - this is a [magic number](https://en.wikipedia.org/wiki/Magic_number_%28programming%29).
+
+```
+cafe babe 0000 0034 001f 0700 0201 0033
+6564 752f 6e79 752f 6373 2f66 6231 3235
+382f 6469 6666 6572 656e 745f 7061 636b
+6167 652f 5468 6972 6443 6c61 7373 436c
+...
+```
+
+One of Java's inventors, James Gosling, has [explained the origin of this](http://radio-weblogs.com/0100490/2003/01/28.html).
+
+
+
+---
+
 name: git
 template: git
 
