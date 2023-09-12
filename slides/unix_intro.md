@@ -75,8 +75,9 @@ At any moment, you are actively within one specific directory, known as the curr
 foo@bar$ pwd
 /Users/foo
 ```
+
 <div align="center">
-<span style="color: red;">**Try it yourself!**</span> </div>
+<span style="color: red;">Try it yourself!</span> </div>
 
 Read more about the [current working directory](https://nyu-python-programming.github.io/course-material/basic-computer-concepts#the-working-directory).
 
