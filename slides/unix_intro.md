@@ -69,14 +69,14 @@ You may find chapters 1 and 2 of the following [tutorial](http://www.ee.surrey.a
 
 ## Where am I?
 
-At any point in time, you are actively within one specific directory, known as the current working directory. To determine which directory that is at any point, run the `pwd` command:
+At any moment, you are actively within one specific directory, known as the current working directory. To determine which directory you are in, run the `pwd` (Present Working Directory) command:
 
 ```bash
 foo@bar$ pwd
 /Users/foo
 ```
-
-<span style="color: red;"> **Try it yourself!** </span>
+<div align="center">
+<span style="color: red;">**Try it yourself!**</span> </div>
 
 Read more about the [current working directory](https://nyu-python-programming.github.io/course-material/basic-computer-concepts#the-working-directory).
 
