@@ -12,6 +12,12 @@ class: center, middle
 
 ---
 
+# Announcements
+
+- TBC.
+
+---
+
 # Agenda
 
 1. [Computers](#computers)
@@ -22,7 +28,7 @@ class: center, middle
 6. [Compiling](#compiling)
 7. [Interpreting](#interpreting)
 8. [Java](#java)
-9. [Announcements](#conclusions)
+9. [Setting up Git Bash for VSC](#git)
 
 ---
 
@@ -75,31 +81,31 @@ A processor can...
 
 --
 
-- ...jump to a particular location in memory
+- jump to a particular location in memory
 
 --
 
-- ...read a number from Random-Access Memory (RAM)
+- read a number from [Random-Access Memory](https://en.wikipedia.org/wiki/Random-access_memory) (RAM)
 
 --
 
-- ...save a number to RAM
+- save a number to RAM
 
 --
 
-- ...add two numbers together
+- add two numbers together
 
 --
 
-- ...compare two numbers to see which is larger
+- compare two numbers to see which is larger
 
 --
 
-- ...send a number to a particular device (e.g., a monitor)
+- send a number to a particular device (e.g., a monitor)
 
 --
 
-- ...receive a number from a particular device (e.g., a keyboard)
+- receive a number from a particular device (e.g., a keyboard)
 
 --
 
@@ -186,7 +192,11 @@ name: assembly-1
 
 ## Mnemonics
 
-It's easier for most humans to memorize words than binary numbers. Assembly languages provide mnemonics that a programmer can write, which are converted to machine language.
+It's easier to memorize words than binary numbers. 
+
+--
+
+Assembly languages provide mnemonics that a programmer can write, which are converted to machine language.
 
 --
 
@@ -207,7 +217,11 @@ name: assembly-4
 
 ## Assembling
 
-Converting code written in assembly language to the equivalent machine language is known as **assembling** - it's essentially a search/replace operation where mnemonics are replaced with their machine code equivalents.
+Converting code written in assembly language to the equivalent machine language is known as **assembling**.
+
+It's essentially a search/replace operation where mnemonics are replaced with their machine code equivalents.
+
+--
 
 The program to do so is called an **assembler**.
 
@@ -408,19 +422,15 @@ Byte code is somewhere between machine code and a high-level source in abstracti
 
 ---
 
-template: java
-name: java-13
+name: Git
+template: git
 
-## Byte code and the JVM
+## Install Git Bash
 
-TBC -- Add Unix information here instead.
+Get git [for Mac](https://git-scm.com/downloads) or [Git for Windows](https://gitforwindows.org/).
+
+- Git for Windows additionally comes with Git Bash, which gives Windows users a UNIX-like command shell.
+- **Windows users**: You should use Git Bash or Windows Subsystem for Linux (WSL) rather than Windows' default Powershell or other command line shell program. To set Git Bash as the default terminal shell within Visual Studio Code, **follow** the instructions in [the second answer here](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal) by **Mahade Walid** and edited by **FruityOatyBar** (ignore the first answer, which is outdated).
+- Mac users already have a UNIX command shell in the Terminal app.
 
 ---
-
-name: conclusions
-
-# Conclusions
-
---
-
-TBC. Add announcements here...
