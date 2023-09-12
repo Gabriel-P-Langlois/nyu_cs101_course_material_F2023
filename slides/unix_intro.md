@@ -12,6 +12,13 @@ class: center, middle
 
 ---
 
+# Announcements
+
+<br />
+
+- Quiz 2 will be online this coming weekend.
+---
+
 # Agenda
 
 1. [Assumptions](#assumptions)
@@ -36,7 +43,7 @@ name: assumptions
 In order to run Unix or Linux commands, you will need a terminal emulator:
 
 - OS X users already have the Terminal app we will use for this purpose.
-- Windows users must have [Git for Windows](https://gitforwindows.org/) installed.
+- Windows users must have [Git Bash for Windows](https://git-scm.com/downloads) installed.
 
 ---
 
@@ -50,7 +57,7 @@ name: navigation
 
 ## Overview
 
-Unix commands are necessary in order to be able to navigate directories/folders in a UNIX-like system.
+Unix commands are necessary for navigating directories/folders in a UNIX-like system.
 
 - all Unix commands are run in the command-line interface, such as that offered by Terminal on OS X or Git Bash on Windows.
 
