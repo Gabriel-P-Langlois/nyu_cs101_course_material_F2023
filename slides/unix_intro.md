@@ -25,8 +25,6 @@ class: center, middle
 1. [Navigating with \*NIX](#navigation)
 1. [Managing files](#files)
 1. [Permissions](#permissions)
-1. [Running Java](#java)
-1. [Conclusions](#conclusions)
 
 ---
 
@@ -78,7 +76,7 @@ foo@bar$ pwd
 /Users/foo
 ```
 
-It's fine to read about this, but you'll learn better if you try it out yourself.
+<span style="color: red;"> **Try it yourself!** </span>
 
 Read more about the [current working directory](https://nyu-python-programming.github.io/course-material/basic-computer-concepts#the-working-directory).
 
@@ -466,103 +464,3 @@ All other users besides the user and group who own the file are known as 'others
 ```bash
 foo@bar$ chmod o+wx file1.sh
 ```
-
----
-
-name: java
-
-# Running Java
-
---
-
-## Directory structure
-
-A well-organized Java project might consist of a project directory with at least 3 sub-directories:
-
-```bash
-project-directory/
-       |
-       |----------> src/
-       |
-       |----------> lib/
-       |
-       |----------> bin/
-```
-
---
-
-- **src/** - holds the Java source code files
-
---
-
-- **lib/** - holds any dependencies (i.e. external libraries your code refers to)
-
---
-
-- **bin/** - holds compiled Java byte code files
-
----
-
-template: java
-
-## Compiling
-
-Before a Java project can be run, any Java source code in the `src/` directory must be compiled into Java byte code in the `bin/` directory.
-
---
-
-Assuming the current working directory is the project directory:
-
-```bash
-foo@bar$ javac -d bin src/foo/bar/SomeFile.java
-```
-
---
-
-- `javac` is the Java compiler command.
-
---
-
-- This command would produce a Java byte code file, `SomeFile.class` in the `bin/foo/bar/` sub-directory.
-
----
-
-template: java
-
-## Executing
-
-To run the Java project, you can execute the Java byte code file in the `bin/` directory.
-
---
-
-Assuming the current working directory is the project directory:
-
-```bash
-foo@bar$ java -cp bin foo.bar.SomeFile
-```
-
---
-
-- `java` is the Java runtime engine that executes Java programs.
-
---
-
-- the `-cp bin` flag indicates that Java should add the `bin/` directory to the "classpath" - the list of directories where Java looks for executables
-
---
-
-- `foo.bar.SomeFile` is the complete name of the code to execute, including any **package** name (e.g. `foo.bar`) and the file name without the extension (e.g. `SomeFile`).
-
----
-
-name: conclusions
-
-# Conclusions
-
---
-
-- We can now do basic file management on the UNIX command line.
-
---
-
-- Thank you!
