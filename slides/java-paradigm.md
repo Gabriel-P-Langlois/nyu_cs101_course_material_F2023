@@ -432,12 +432,12 @@ Byte code is somewhere between machine code and a high-level source in abstracti
 name: git
 template: git
 
-## What to do for the next class: Install Git Bash
+## What to do for the next class: Install Git
 
-Get git [for Mac](https://git-scm.com/downloads) or [Git for Windows](https://gitforwindows.org/).
+Get Git for your machine (Windows/macOS/Linux)[here](https://git-scm.com/downloads).
 
-Git for Windows additionally comes with Git Bash, which gives Windows users a UNIX-like command shell.
+Installing Git will install Git Bash, which is what we want.
 
-**Windows users**: You should use Git Bash or Windows Subsystem for Linux (WSL) rather than Windows' default Powershell or other command line shell program. To set Git Bash as the default terminal shell within Visual Studio Code, **follow** the instructions in [the second answer here](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal) by **Mahade Walid** and edited by **FruityOatyBar** (ignore the first answer, which is outdated).
+This will let us use the Git Bash terminal in VSC...
 
-Mac users already have a UNIX command shell in the Terminal app.
+<span style="color: red;">Demonstration</span> .
