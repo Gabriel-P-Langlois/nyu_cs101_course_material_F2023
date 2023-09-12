@@ -14,11 +14,18 @@ class: center, middle
 
 # Announcements
 
-- TBC.
+The tutoring sessions schedule for this semester has been posted. Go on Brightspace, click the the Schedule + Lectures tab,
+and click the link above the schedule table.
+
+Quiz 1 is online -- you have plenty of time to finish it (two days after the add/drop deadline).
+
+Assignment 1 will be posted next week on the 19th.
 
 ---
 
 # Agenda
+
+We'll talk a bit more about computers and programming.
 
 1. [Computers](#computers)
 2. [Programming](#programming)
@@ -422,15 +429,15 @@ Byte code is somewhere between machine code and a high-level source in abstracti
 
 ---
 
-name: Git
+name: git
 template: git
 
-## Install Git Bash
+## What to do for the next class: Install Git Bash
 
 Get git [for Mac](https://git-scm.com/downloads) or [Git for Windows](https://gitforwindows.org/).
 
-- Git for Windows additionally comes with Git Bash, which gives Windows users a UNIX-like command shell.
-- **Windows users**: You should use Git Bash or Windows Subsystem for Linux (WSL) rather than Windows' default Powershell or other command line shell program. To set Git Bash as the default terminal shell within Visual Studio Code, **follow** the instructions in [the second answer here](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal) by **Mahade Walid** and edited by **FruityOatyBar** (ignore the first answer, which is outdated).
-- Mac users already have a UNIX command shell in the Terminal app.
+Git for Windows additionally comes with Git Bash, which gives Windows users a UNIX-like command shell.
 
----
+**Windows users**: You should use Git Bash or Windows Subsystem for Linux (WSL) rather than Windows' default Powershell or other command line shell program. To set Git Bash as the default terminal shell within Visual Studio Code, **follow** the instructions in [the second answer here](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal) by **Mahade Walid** and edited by **FruityOatyBar** (ignore the first answer, which is outdated).
+
+Mac users already have a UNIX command shell in the Terminal app.
