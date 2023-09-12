@@ -25,6 +25,10 @@ and click on the appropriate link above the schedule table.
 
 - Assignment 1 will be posted next week on the 19th.
 
+<br />
+
+- **Important**: Bring your laptop with you next class if you can.
+
 ---
 
 # Agenda
@@ -444,9 +448,12 @@ template: git
 
 - This will let us use the Git Bash terminal in VSC...
 
+- See also this [VSC website](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git).
+
 --
 
 <br />
 
 <div align="center">
 <span style="color: red;"> **Live demonstration**</span> </div>
+
