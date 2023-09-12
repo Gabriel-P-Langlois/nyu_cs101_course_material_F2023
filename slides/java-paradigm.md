@@ -434,10 +434,13 @@ template: git
 
 ## What to do for the next class: Install Git
 
-Get Git for your machine (Windows/macOS/Linux)[here](https://git-scm.com/downloads).
+- Get Git for your machine (Windows/macOS/Linux) [here](https://git-scm.com/downloads).
 
-Installing Git will install Git Bash, which is what we want.
+- Installing Git will install Git Bash, which is what we want.
 
-This will let us use the Git Bash terminal in VSC...
+- This will let us use the Git Bash terminal in VSC...
 
-<span style="color: red;">Demonstration</span> .
+--
+
+<div align="center">
+<span style="color: red;"> **Live demonstration**</span> </div>
