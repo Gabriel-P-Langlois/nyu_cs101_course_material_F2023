@@ -14,8 +14,8 @@ class: center, middle
 
 # Announcements
 
-The tutoring sessions schedule for this semester has been posted. Go on Brightspace, click the the Schedule + Lectures tab,
-and click the link above the schedule table.
+The tutoring sessions schedule for this semester is available. Go on Brightspace, click the the Schedule + Lectures tab,
+and click on the appropriate link above the schedule table.
 
 Quiz 1 is online -- you have plenty of time to finish it (two days after the add/drop deadline).
 
