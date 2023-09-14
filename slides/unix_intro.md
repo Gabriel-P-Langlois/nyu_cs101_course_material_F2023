@@ -16,7 +16,9 @@ class: center, middle
 
 <br />
 
-- Quiz 2 will be online this coming weekend.
+- Quiz 2 will be online today or tomorrow.
+
+- Assignment 1 will be posted this coming Tuesday.
 ---
 
 # Agenda
@@ -38,10 +40,16 @@ name: assumptions
 
 ## Ability to run \*NIX commands
 
-In order to run Unix or Linux commands, you will need a terminal emulator:
+In order to run Unix or Linux commands, you will need a terminal emulator.
 
-- OS X users already have the Terminal app we will use for this purpose.
+- If you use Linux/Unix, I assume you already know how to do that.
+- MacOS users already have the Terminal app that can be used for this purpose.
 - Windows users must have [Git Bash for Windows](https://git-scm.com/downloads) installed.
+
+To use the Terminal within Visual Studio Code, you will need to download Git for your machine. Refer to the end of the previous lecture slides.
+
+<div align="center">
+<span style="color: red;">Live demo.</span> </div>
 
 ---
 
@@ -61,7 +69,7 @@ Unix commands are necessary for navigating directories/folders in a UNIX-like sy
 
 We'll go over some of the basic commands in \*NIX.
 
-You may find chapters 1 and 2 of the following [tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/) useful.
+I **strongly** encourage you to read chapters 1 and 2 in [tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/) after class
 
 ---
 
@@ -76,10 +84,14 @@ foo@bar$ pwd
 /Users/foo
 ```
 
-<div align="center">
-<span style="color: red;">Try it yourself!</span> </div>
+Read [current working directory](https://nyu-python-programming.github.io/course-material/basic-computer-concepts#the-working-directory) for more info.
 
-Read more about the [current working directory](https://nyu-python-programming.github.io/course-material/basic-computer-concepts#the-working-directory).
+--
+
+<div align="center">
+<span style="color: red;">Try it yourself.</span> </div>
+
+
 
 ---
 
