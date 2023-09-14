@@ -48,8 +48,10 @@ In order to run Unix or Linux commands, you will need a terminal emulator.
 
 To use the Terminal within Visual Studio Code, you will need to download Git for your machine. Refer to the end of the previous lecture slides.
 
+--
+
 <div align="center">
-<span style="color: red;">Live demo.</span> </div>
+<span style="color: red;">Live demo</span> </div>
 
 ---
 
@@ -448,7 +450,7 @@ Given the file metadata above, we can see the following permission settings:
 
 ## Revoke permissions
 
-Revoke permissions with the `-` sign. In this case we revoke the user `foo`'s execute permission:
+Revoke permissions with the `-` sign. In this case, we revoke the user `foo`'s execute permission:
 
 ```bash
 foo@bar$ chmod u-x file1.sh
@@ -460,7 +462,7 @@ foo@bar$ chmod u-x file1.sh
 
 ## Grant permissions
 
-Grant permissions with the `+` sign. In this case we grant the group `bar` write permission:
+Grant permissions with the `+` sign. In this case, we grant the group `bar` write permission:
 
 ```bash
 foo@bar$ chmod g+w file1.sh
