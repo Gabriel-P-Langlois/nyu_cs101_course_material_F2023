@@ -452,7 +452,7 @@ foo@bar$ mkdir -p vegetables/arugula/baby
 
 # Managing files and folders
 
-## Create multiple directories
+## Copying directories
 
 You can use the copy `cp` command to copy directories.
 
