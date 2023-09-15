@@ -372,7 +372,7 @@ The `cp` command is used to copy files or groups of files or directories.
 If the command contains two file names, then it copies the contents of the first file to the second file.
 
 - If the second file doesn't exist, then it will be created with the same content as the first file.
-- If the second file exists, then its content is overwritten **without any warning**. So be careful!
+- If the second file exists, then its content is overwritten.
 
 ```bash
 foo@bar$ ls
@@ -447,6 +447,8 @@ The `-p` flag allows it to create a series of directories and sub-directories in
 ```bash
 foo@bar$ mkdir -p vegetables/arugula/baby
 ```
+
+---
 
 # Managing files and folders
 
