@@ -365,7 +365,7 @@ foo@bar$ rm /meat/fillers/heme_rich_foods.csv
 
 # Managing files and folders
 
-## Copying  files
+## Copying files
 
 The `cp` command is used to copy files or groups of files or directories.
 
