@@ -178,7 +178,7 @@ Both files and directories may be hidden by naming them prefixed with a period,`
 
 ## File listing with metadata
 
-To view a listing of files and directories including metadata about each item, use the `l` flag on the `ls` command.
+To view a listing of files and directories, including metadata about each item, use the `l` flag on the `ls` command.
 
 ```bash
 foo@bar$ ls -a
@@ -228,7 +228,7 @@ The metadata included in a long listing of files and directories in the working 
 
 ## How do I drill down?
 
-To navigate to sub-directory that is within the current directory, use the `cd` command with the name of the sub-directory that is the desired destination.
+To navigate to a sub-directory that is within the current directory, use the `cd` command with the name of the sub-directory that is the desired destination.
 
 ```bash
 foo@bar$ cd bar
@@ -238,7 +238,7 @@ foo@bar$ pwd
 
 Note that writing `cd /bar`, with the forward slash, would navigate to a directory named `bar` that is a sub-directory of the root directory, if any such directory exists, which is not what you wanted.
 
-You can, of course drill down several levels of directories at once.
+You can, of course, drill down several levels of directories at once.
 
 ```bash
 foo@bar$ cd bar/baz/blue
@@ -252,7 +252,7 @@ foo@bar$ pwd
 
 ## How do I jump to a directory from anywhere
 
-If you kmow the full path of a directory to which you want to navigate, type it after the `cd` command.
+If you know the full path of a directory to which you want to navigate, type it after the `cd` command.
 
 ```bash
 foo@bar$ pwd
@@ -260,6 +260,32 @@ foo@bar$ pwd
 foo@bar$ cd /Users/foo/Documents/my_favorite_ice_cream
 foo@bar$ pwd
 /Users/foo/Documents/my_favorite_ice_cream
+```
+
+---
+
+# Navigating with \*NIX
+
+## Miscellaneous
+
+The single dot `.` in UNIX represents the directory you are in right now.
+
+```bash
+foo@bar$ pwd
+/Users/foo/Documents/my_favorite_ice_cream
+foo@bar$ cd ./..
+foo@bar$ pwd
+/Users/foo/Documents
+```
+
+The tilde `~` in UNIX is used to represent the current user's home directory.
+
+```bash
+foo@bar$ pwd
+/Users/foo/Documents/my_favorite_ice_cream
+foo@bar$ cd ~
+foo@bar$ pwd
+/Users/foo
 ```
 
 ---
@@ -297,7 +323,7 @@ Renaming is a variety of moving, using the `mv` command to move a file from one 
 foo@bar$ mv environmental_cosmetology.txt ecdp.txt
 ```
 
-Or keep its current name, but move it to an entirely different directory:
+Or keep its current name but move it to an entirely different directory:
 
 ```bash
 foo@bar$ mv environmental_cosmetology.txt /Users/foo/Documents/
