@@ -365,6 +365,33 @@ foo@bar$ rm /meat/fillers/heme_rich_foods.csv
 
 # Managing files and folders
 
+## Copying  files
+
+The `cp` command is used to copy files or groups of files or directories.
+
+If the command contains two file names, then it copies the contents of the first file to the second file.
+
+- If the second file doesn't exist, then it will be created with the same content as the first file.
+- If the second file exists, then its content is overwritten **without any warning**. So be careful!
+
+```bash
+foo@bar$ ls
+a.txt
+foo@bar$ cp a.txt b.txt
+foo@bar$ ls
+a.txt b.txt
+```
+
+You can also copy multiple files to a directory.
+
+```bash
+foo@bar cp a.txt b.txt c.txt destination_directory
+```
+
+---
+
+# Managing files and folders
+
 ## Delete a directory
 
 The `rmdir` command deletes empty directories, while the `rm` command can be used to delete non-empty directories.
@@ -413,12 +440,32 @@ foo@bar$ mkdir /Users/foo/Photos/Animals/Penguins
 
 ## Create multiple directories
 
-The `mkdir` command by default will only create one directory at a time.
+The `mkdir` command, by default, will only create one directory at a time.
 
 The `-p` flag allows it to create a series of directories and sub-directories in one command, e.g.:
 
 ```bash
 foo@bar$ mkdir -p vegetables/arugula/baby
+```
+
+# Managing files and folders
+
+## Create multiple directories
+
+You can use the copy `cp` command to copy directories.
+
+To copy a directory, you have to execute the `cp` command with the `-r` option (`r` stands for recursive) and specify the source and destination directories to be copied.
+
+```bash
+foo@bar$ cp -r source_directory destination_directory
+```
+
+Note: If destination_directory already exists and is non-empty, its content will be overwritten. 
+
+If you want to copy the **content** of the source directory, as opposed to the source directory itself, add a trailing `/` at the end of the source directory.
+
+```bash
+foo@bar$ cp -r source_directory/ destination_directory
 ```
 
 ---
