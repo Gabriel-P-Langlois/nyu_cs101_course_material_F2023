@@ -280,10 +280,9 @@ The `touch` command is useful for creating a blank file with a given name.
 foo@bar$ touch environmental_cosmetology.txt
 ```
 
-To open up this new file in the notorious `emacs` command-line text editor:
-
+To open this new file, you can use `start` if on a Windows computer or `open` if on a macOS or Linux computer:
 ```bash
-foo@bar$ emacs environmental_cosmetology.txt
+foo@bar$ start environmental_cosmetology.txt
 ```
 
 ---
