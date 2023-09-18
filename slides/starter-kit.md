@@ -10,18 +10,32 @@ class: center, middle
 
 ---
 
+# Announcements
+
+Assignment 1 is out. It is due in two weeks from now (October 3rd, 11:59 pm).
+
+- This assignment will familiarize you with programming in Java.
+- Start early.
+- I will not give extensions for this assignment (and the next two).
+
+Assignment 0 and Quiz 1 are due this coming Thursday.
+
+Quiz 2 is due this coming Friday.
+
+---
+
 # Agenda
-Part I: Starter code and I/O using the Scanner class
+Part I: Starter code and I/O using the Scanner class; organizing projects.
 1. [Things you need](#assumptions)
 1. [Your first Java program](#starter-code) 
 1. [Explaining your first Java program](#java-program-explained)
 1. [A Java program with the Scanner class](#code-scanner) 
 1. [More about the Scanner class](#input)
 1. [A note about division and type casts](#division-type-casts)
-
-Part II: Organizing projects, variables and identifiers, data types, operators and operans.
 1. [Organizing projects I](#organizationI)
 1. [Organizing projects II](#organizationII)
+
+Part II: Variables and identifiers; data types; operators and operands.
 1. [Variables and identifiers](#variables-identifiers)
 1. [Data types](#data-types)
 1. [Operators and operands](#operators)
@@ -47,11 +61,7 @@ You will need a UNIX terminal emulator.
 You will need to have the [Java Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/) (JDK) installed.
 
 
-You will need a text editor. I will use [Visual Studio Code](https://code.visualstudio.com), which is a good plain text editor.
-
-- OS X users should read [this](https://code.visualstudio.com/docs/setup/mac) to use Visual Studio Code in the command line. 
-- In particular, you need to open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
-- After that, restart the terminal and you should be good to go.
+You will need a text editor. I will use [Visual Studio Code](https://code.visualstudio.com)
 
 ---
 
@@ -179,9 +189,9 @@ public class MyFirstJavaProgram {
 
 The second line defines the **main method**.
 
-A java program is executed from the main method. It is the entry point where the program begins execution.
+A Java program is executed from the main method. It is the entry point where the program begins execution.
 
-A method has a name (e.g., main) and contains a set a statements.
+A method has a name (e.g., main) and contains a set of statements.
 
 ---
 
@@ -223,7 +233,7 @@ A comment documents information about the program.
 
 Comments help programmers communicate and understand the program.
 
-Note: Comment your programs! See this [website](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/) for best practices.
+Note: Add comments to your programs! See this [website](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/) for best practices.
 
 ---
 
@@ -1198,14 +1208,8 @@ name: conclusions
 
 # Conclusions
 
---
-
 Phew, that was a lot!
 
 You will become more familiar with these expressions with practice. :-)
 
 Next week: Booleans; if/else statements, and for loops.
-
---
-
-- Thank you!
