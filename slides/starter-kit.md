@@ -424,6 +424,8 @@ Note: Using `nextInt()` or `nextDouble()` with `nextLine()` can create complicat
 ```java
 import java.util.Scanner;
 
+Write or copy/paste this code snippet and try running it. What happens?
+
 public class LookHowGreatJavaIs {
 	public static void main(String[] args) {
 		Scanner scnr = new Scanner(System.in);
@@ -442,7 +444,7 @@ public class LookHowGreatJavaIs {
 
 --
 
-This program will always output, `Welcome, !` no matter what you do...
+This program will always print `Welcome, !` no matter what you write as input...
 
 ---
 
