@@ -541,7 +541,7 @@ name: organizationI
 
 template: organizationI
 
-In assignments 2 and beyond, we'll organize projects into specific directories.
+Starting with Assignment 2, we'll organize projects into specific directories.
 
 ```bash
 project-directory/
@@ -673,7 +673,7 @@ foo@bar$ mkdir -p src/edu/nyu/cs/gp2442
 foo@bar$ mv AddingDoubles.* src/edu/nyu/cs/gp2442
 ```
 
-The Java source code must now be re-compiled, since the byte code is no longer up to date.
+The Java source code must now be re-compiled since the byte code is no longer up to date.
 
 ```bash
 foo@bar$ javac -d bin src/edu/nyu/cs/gp2442/AddingDoubles.java
@@ -764,7 +764,7 @@ Java natively supports 8 fundamental [primitive data types](http://docs.oracle.c
 template: data-types
 
 **Byte**:
-- Byte date type is an 8-bit signed two's complement integer.
+- Byte data type is an 8-bit signed two's complement integer.
 - Minimum value is -128 (-2^7).
 - Max value is 127 (2^7 - 1).
 - Default value is 0.
@@ -808,7 +808,7 @@ template: data-types
 - IEEE stands for `Institute of Electrical and Electronics Engineers`.
 - Float is used to save memory in large arrays of floating point numbers.
 - Default value is 0.0f.
-- Don't use it if you need precisce value! Use BigDecimal instead.
+- Don't use it if you need precise value! Use BigDecimal instead.
 - Example: float f1 = 234.5f;
 - Example: BigDecimal k = BigDecimal.valueOf(floatvalue);
 
@@ -816,7 +816,7 @@ template: data-types
 - double data type is a double-precision 64-bit IEEE 754 floating point.
 - **Generally the default data type for decimal values**.
 - Default value is 0.0d.
-- Don't use it if you need precisce value! Use BigDecimal instead.
+- Don't use it if you need precise value! Use BigDecimal instead.
 - Example: double d1 = 123.4;
 - Example: BigDecimal k = BigDecimal.valueOf(doublevalue);
 
@@ -846,7 +846,7 @@ template: data-types
 
 There is no `String` primitive data type in Java. Instead, `String` is a predefined class that is written in Java code.
 
-There is no `Arrays` primitive data type in Java. Instead, `Arrays` is a predefined class that is written in java code.
+There is no `Arrays` primitive data type in Java. Instead, `Arrays` is a predefined class that is written in Java code.
 - It is a fundamental data structure in Java (more on this later in the course).
 
 Because Java contains primitive data types that are not only `class` types, _Java is not a purely object-oriented language_.
@@ -1089,7 +1089,7 @@ template: data-types
 
 ## Converting data types
 
-Use **exception handline** to handle any problems encountered while attempting to convert one data type to another.
+Use an **exception handline** to handle problems encountered while attempting to convert one data type to another.
 
 ```
 String aString = "foo bar baz bum"; //  a string that has no obvious int equivalent
@@ -1099,10 +1099,12 @@ try{
 	i = Integer.parseInt(aString); // will fail and produce an Exception
 }
 catch(NumberFormatException e) {
-	// this block of code will run if there was a failure
+	// this block of code will run if there is a failure
 	System.out.println(e); // will output the Exception but not crash the program
 }
 ```
+
+We'll talk more about exceptions later in the course.
 
 ---
 
@@ -1116,7 +1118,7 @@ template: operators
 
 Java specifies computation in the form of arithmetic expressions that closely resemble expressions in mathematics.
 
-**Operators** usually appear between two subexpressions, which are called its **operands**.
+**Operators** usually appear between two subexpressions, which are called **operands**.
 
 Common operators include:
 - `+` Addition
@@ -1198,10 +1200,8 @@ There are even increment and decrement operators, such as `x++;` and `x--;`, whi
 
 name: conclusions
 
-# Conclusions
+# Announcements
 
-Phew, that was a lot!
+Get started on Assignment 1 if you haven't done so already.
 
-You will become more familiar with these expressions with practice. :-)
-
-Next week: Booleans; if/else statements, and for loops.
+Next week: Booleans; if/else statements, and for loops...
