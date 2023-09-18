@@ -25,7 +25,6 @@ class: center, middle
 1. [ArrayList Class](#arraylist)
 1. [Java Is Pass By Value Language](#pass-by-value)
 1. [Basic Usage Examples](#examples)
-1. [Conclusions](#conclusions)
 
 ---
 
@@ -668,22 +667,3 @@ The phrase, "Java is a 'pass by value' language is thus a bit confusing.
 - Arguments that are reference types (i.e. arrays and objects) as values, but the values in this case are memory addresses (called "references" by most normal people).
 
 The trick to this is that the **references are themselves passed as values** - the value being the integer memory address at which the array or object resides.
-
----
-
-name: conclusions
-
-# Conclusions
-
---
-
-You now have a basic understanding of arrays in Java.
-
---
-
-Upcoming deadlines + info:
-- Homework 3 is due on March 5th (Sunday) by 11:59 pm.
-- Please start homework 3 early!
-- Quiz 5 is due tomorrow by 11:59 pm.
-- Quiz 6 is out and is due next Tuesday (Feb 28th) by 11:59 pm.
-- Next week is dedicated to reviewing the material in preparation for the midterm on March 7th.
