@@ -419,9 +419,7 @@ Demo: Try it yourself!
 
 template: input
 
-## Note: Scanner weirdness
-
-Using `nextInt()` or `nextDouble()` with `nextLine()` can create complications. For example:
+Note: Using `nextInt()` or `nextDouble()` with `nextLine()` can create complications. For example:
 
 ```java
 import java.util.Scanner;
@@ -450,9 +448,7 @@ This program will always output, `Welcome, !` no matter what you do...
 
 template: input
 
-## Note: Scanner weirdness
-
-One way to avoid Scanner's weirdness, when asking the user for data types besides String, is to use `nextLine()` for all input and then convert the String it returns to other data types.
+One way to avoid this is to use `nextLine()` for all input and then convert the String it returns to other data types.
 
 ```java
 import java.util.Scanner;
