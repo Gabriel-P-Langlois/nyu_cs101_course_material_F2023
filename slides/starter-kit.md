@@ -670,7 +670,7 @@ Create an appropriate set of sub-directories, and move both files at once (repla
 
 ```bash
 foo@bar$ mkdir -p src/edu/nyu/cs/gp2442
-foo@bar$ mv AddingDoubles.* src/edu/nyu/cs/gp2442
+foo@bar$ mv src/AddingDoubles.java src/edu/nyu/cs/gp2442
 ```
 
 The Java source code must now be re-compiled since the byte code is no longer up to date.
