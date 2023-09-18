@@ -419,12 +419,10 @@ Demo: Try it yourself!
 
 template: input
 
-Note: Using `nextInt()` or `nextDouble()` with `nextLine()` can create complications. For example:
+Using `nextInt()` or `nextDouble()` with `nextLine()` can create complications. For example:
 
 ```java
 import java.util.Scanner;
-
-Write or copy/paste this code snippet and try running it. What happens?
 
 public class LookHowGreatJavaIs {
 	public static void main(String[] args) {
@@ -444,7 +442,7 @@ public class LookHowGreatJavaIs {
 
 --
 
-This program will always print `Welcome, !` no matter what you write as input...
+This program will always print `Welcome, !` no matter what give as input...
 
 ---
 
