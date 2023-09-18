@@ -21,7 +21,6 @@ class: center, middle
 1. [For Loops](#for)
 1. [do..while](#dowhile)
 1. [Some Common Tasks](#common)
-1. [Conclusions](#conclusions)
 
 ---
 
@@ -354,13 +353,3 @@ while (!users_response.equals(stop_response)) {
 }
 System.out.println("The total is " + total);
 ```
-
----
-
-name: conclusions
-
-# Conclusions
-
---
-
-TBC.
