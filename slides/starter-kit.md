@@ -66,6 +66,8 @@ name: starter-code
 
 template: starter-code
 
+---
+
 ## Create a file
 
 Use the command line to make a new plain text file with the `.java` extension somewhere you know you can find it later.
