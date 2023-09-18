@@ -64,8 +64,6 @@ name: starter-code
 
 # Your first Java program
 
-template: starter-code
-
 ---
 
 template: starter-code
