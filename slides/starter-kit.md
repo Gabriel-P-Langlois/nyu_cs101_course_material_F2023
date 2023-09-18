@@ -144,6 +144,7 @@ Note the command does not require the `.java` or `.class` file extension.
 name: java-program-explained
 
 # Your first java program explained
+
 ---
 
 template: java-program-explained
