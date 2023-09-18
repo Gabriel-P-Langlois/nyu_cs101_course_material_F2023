@@ -26,7 +26,6 @@ class: center, middle
 1. [If/Else if/Else](#ifs)
 1. [Switch/Case](#switch-case)
 1. [The Ternary Operator](#ternary)
-1. [Conclusions](#conclusions)
 
 ---
 
@@ -432,10 +431,3 @@ The ternary operator, `?`, thankfully allows us to simplify such syntax:
 satiationLevel = breakfastWasServed && breakfastWasEaten ? "full" : "hungry";
 ```
 
----
-
-name: conclusions
-
-# Conclusions
-
-You now have a basic understanding of UML activity diagrams, if/else if/else statements, and switch/case statements.
