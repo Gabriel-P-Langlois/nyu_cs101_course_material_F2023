@@ -26,16 +26,15 @@ Quiz 2 is due this coming Friday.
 
 # Agenda
 Part I: Starter code and I/O using the Scanner class; organizing projects.
-1. [Things you need](#assumptions)
 1. [Your first Java program](#starter-code) 
 1. [Explaining your first Java program](#java-program-explained)
 1. [A Java program with the Scanner class](#code-scanner) 
 1. [More about the Scanner class](#input)
 1. [A note about division and type casts](#division-type-casts)
 1. [Organizing projects I](#organizationI)
-1. [Organizing projects II](#organizationII)
 
-Part II: Variables and identifiers; data types; operators and operands.
+Part II: More on organizing projects; Variables and identifiers; data types; operators and operands.
+1. [Organizing projects II](#organizationII)
 1. [Variables and identifiers](#variables-identifiers)
 1. [Data types](#data-types)
 1. [Operators and operands](#operators)
@@ -44,13 +43,7 @@ Part II: Variables and identifiers; data types; operators and operands.
 
 ---
 
-name: assumptions
-
 # Things you need
-
----
-
-template: assumptions
 
 You will need a UNIX terminal emulator.
 
@@ -61,15 +54,15 @@ You will need a UNIX terminal emulator.
 You will need to have the [Java Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/) (JDK) installed.
 
 
-You will need a text editor. I will use [Visual Studio Code](https://code.visualstudio.com)
+You will need a text editor. I will use [Visual Studio Code](https://code.visualstudio.com).
+
+All of this was discussed in the previous lecture slides.
 
 ---
 
 name: starter-code
 
 # Your first Java program
-
----
 
 template: starter-code
 
@@ -79,8 +72,8 @@ Use the command line to make a new plain text file with the `.java` extension so
 
 ```bash
 foo@bar$ cd ~
-foo@bar$ mkdir first_try
-foo@bar$ cd first_try
+foo@bar$ mkdir starting_java
+foo@bar$ cd starting_java
 foo@bar$ touch MyFirstJavaProgram.java
 ```
 
@@ -96,7 +89,7 @@ Edit the text file you just created. Assuming you are using Visual Studio Code,
 foo@bar$ code MyFirstJavaProgram.java
 ```
 
-Add the following code:
+Write or copy/paste the following code within MyFirstJavaProgram.java:
 
 ```java
 public class MyFirstJavaProgram {
@@ -501,7 +494,7 @@ public class CelciusToFahrenheit {
 }
 ```
 
-Demo: What happens when the code is run?
+Demo: Run the code. What do you observe?
 
 ---
 
@@ -521,7 +514,7 @@ The problem arises from the fact that both 9 and 5 are of type `int`, which mean
 
 Thus 9 / 5 = 1 in Java (!)
 
-You can fix this problem by converting the fraction to a double, either by inserting decimal points or by using a type cast:
+You can fix this problem by converting the fraction to a double, either by inserting decimal points or by using a type cast.
 
 ---
 
@@ -537,7 +530,7 @@ public class BetterCelciusToFahrenheit {
 }
 ```
 
-Demo: Now it should work!
+Demo: Try it now!
 
 ---
 
@@ -549,7 +542,7 @@ name: organizationI
 
 template: organizationI
 
-We'll organize different projects into different project directories.
+In assignments 2 and beyond, we'll organize projects into specific directories.
 
 ```bash
 project-directory/
