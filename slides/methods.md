@@ -21,7 +21,6 @@ class: center, middle
 1. [Parameters & scope](#parameter-scope)
 1. [Overloading](#overloading)
 1. [Method abstraction and stepwise refinement](#method-abstraction)
-1. [Conclusions](#conclusions)
 
 ---
 
@@ -398,21 +397,3 @@ details and avoid pushing that responsibility to higher levels.
 In most cases, the best decomposition format follows the structure of the real-world
 problem. If the problem appears to have natural subdivisions then these may provide a
 useful basis for designing the program decomposition.
-
----
-
-name: conclusions
-
-# Conclusions
-
---
-
-You now have a basic understanding of methods in Java.
-
---
-
-Upcoming deadlines + Info:
-- Homework 2 is due today at 3 pm.
-- Quiz 4 is due today at 11:59 pm.
-- Quiz 5 will be posted today and due this coming Friday at 11:59 pm.
-- Homework 3 will be posted on **Thursday** and due a week after.
