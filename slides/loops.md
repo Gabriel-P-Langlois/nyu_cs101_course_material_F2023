@@ -363,11 +363,4 @@ name: conclusions
 
 --
 
-You now have a basic understanding of for loops, while loops, and a few common tasks performed by each.
-
-Upcoming deadlines:
-- Quiz 3 is due tomorrow by 11:59 pm.
-- Assignment 2 is due next Tuesday by 3 pm.
-- Quiz 4 will be posted today and be due next Tuesday by 11:59 pm.
-
-Have a nice weekend!
+TBC.
