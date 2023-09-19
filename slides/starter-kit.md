@@ -31,9 +31,9 @@ Part I: Starter code and I/O using the Scanner class; organizing projects.
 1. [A Java program with the Scanner class](#code-scanner) 
 1. [More about the Scanner class](#input)
 1. [A note about division and type casts](#division-type-casts)
-1. [Organizing projects I](#organizationI)
 
 Part II: More on organizing projects; Variables and identifiers; data types; operators and operands.
+1. [Organizing projects I](#organizationI)
 1. [Organizing projects II](#organizationII)
 1. [Variables and identifiers](#variables-identifiers)
 1. [Data types](#data-types)
@@ -56,7 +56,7 @@ You will need to have the [Java Development Kit](https://www.oracle.com/technetw
 
 You will need a text editor. I will use [Visual Studio Code](https://code.visualstudio.com).
 
-All of this was discussed in the previous lecture slides.
+Note: If you have issues using the command line `code` for opening a file in VSC, try using the command `open` or look [here](https://stackoverflow.com/questions/29955500/code-is-not-working-in-on-the-command-line-for-visual-studio-code-on-os-x-ma).
 
 ---
 
@@ -383,7 +383,7 @@ template: input
 Scanner has a few different functions for fetching the user input as different data types, e.g.:
 
 - `next()` - returns a `String` with the user's input up until a space(" ") is encountered.
-- `nextLine()` - returns a `String` with the user's input up to the newline (i.e. `\n`) character they type
+- `nextLine()` - returns a `String` with the user's input up to the newline (i.e. `\n`) character data type
 - `nextInt()` - returns an `int` with the user's input, if they entered an integer; otherwise crashes
 - `nextDouble()` - returns a `double` with the user's input, if they entered a number; otherwise crashes
 
@@ -513,7 +513,7 @@ The problem arises from the fact that both 9 and 5 are of type `int`, which mean
 
 Thus 9 / 5 = 1 in Java (!)
 
-You can fix this problem by converting the fraction to a double, either by inserting decimal points or by using a type cast.
+You can fix this problem by converting the fraction to a double by inserting decimal points or using a `type cast'.
 
 ---
 
