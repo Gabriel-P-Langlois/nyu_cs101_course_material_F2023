@@ -474,12 +474,11 @@ public class StickToScanningStrings {
 
 name: division-type-casts
 
-# Note: Division and type casts
+# Division and type casts
 
 ---
 
 template: division-type-casts
-
 
 Consider the following Java codes, which intends to convert celsius temperature to its Fahrenheit equivalent:
 
@@ -509,11 +508,11 @@ public class CelciusToFahrenheit {
 }
 ```
 
-The problem arises from the fact that both 9 and 5 are of type `int`, which means that the result is also an `int`.
+The problem is that both 9 and 5 are of type `int`, which means the result is also an `int`.
 
 Thus 9 / 5 = 1 in Java (!)
 
-You can fix this problem by converting the fraction to a double by inserting decimal points or using a `type cast'.
+You can fix this problem by converting the fraction to a double by inserting decimal points or using a `type cast`.
 
 ---
 
