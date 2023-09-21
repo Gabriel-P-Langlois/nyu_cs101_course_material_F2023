@@ -462,12 +462,10 @@ To copy a directory, you have to execute the `cp` command with the `-r` option (
 foo@bar$ cp -r source_directory destination_directory
 ```
 
-Note: If destination_directory already exists and is non-empty, its content will be overwritten. 
-
-If you want to copy the **content** of the source directory, as opposed to the source directory itself, add a trailing `/` at the end of the source directory.
+If you want to copy the **content** of the source directory, as opposed to the source directory itself, add a trailing `/.` at the end of the source directory.
 
 ```bash
-foo@bar$ cp -r source_directory/ destination_directory
+foo@bar$ cp -r source_directory/. destination_directory
 ```
 
 ---
