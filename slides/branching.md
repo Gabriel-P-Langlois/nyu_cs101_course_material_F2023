@@ -26,7 +26,7 @@ Here are a few reminders and things to remember for the week:
 # Agenda
 
 1. [Overview](#concept)
-1. [Flow Charts](#flow-charts)
+1. [Flow Charts](#flow_charts)
 1  [Boolean variables](#boolean)
 1. [If/Else if/Else](#ifs)
 1. [Switch/Case](#switch-case)
@@ -44,7 +44,7 @@ template: concept
 
 ## Concept
 
-In computer science, [control flow](https://en.wikipedia.org/wiki/Control_flow) is the order in which individual statements, instructions or function calls of an imperative program are executed or evaluated. 
+In computer science, [control flow](https://en.wikipedia.org/wiki/Control_flow) is the order in which individual statements, instructions or function calls of a program are executed or evaluated. 
 
 We can change the control flow of a program such that it deviates from its '_normal_' path.
 
@@ -66,23 +66,23 @@ We will focus on **conditional branches**.
 
 ---
 
-name: flow-charts
+name: flow_charts
 
 # Flow Charts
 
 ---
 
-template: flow-charts
+template: flow_charts
 
 ## Concept
 
-Understanding the flow of a program's control can be visualized easily with diagrams, irrespective of the programming language and code.
+We can visualize the control flow of a program using `flow diagrams`, irrespective of the programming language and code.
 
 --
 
 - Writing code is precarious, laborious, and error-prone.
 
-- Creating such flow diagrams can help understand and communicate the problem being solved without such burden.
+- Creating flow diagrams can help understand and communicate the problem being solved without such burden.
 
 --
 
@@ -92,7 +92,7 @@ Understanding the flow of a program's control can be visualized easily with diag
 
 ---
 
-template: flow-charts
+template: flow_charts
 
 ## Example
 
@@ -103,7 +103,7 @@ A virtual card game program randomly picks two cards, from 1 to 11.
 
 ---
 
-template: flow-charts
+template: flow_charts
 
 ## Example
 
@@ -111,7 +111,7 @@ template: flow-charts
 
 ---
 
-template: flow-charts
+template: flow_charts
 
 ## UML Activity Diagram Rules
 
