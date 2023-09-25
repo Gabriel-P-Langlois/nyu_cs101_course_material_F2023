@@ -36,7 +36,9 @@ template: concept
 
 It is often useful to repeat a block of code more than once.
 
-- Rather than copy/paste the same code multiple times in sequence, loops provide a way of writing the code only once and indicating the instructions for how many iterations it should be repeated.
+- Loops provide a way to write code `once` and indicate insturctions for how many iterations it should be repeated.
+
+- Better that than copy/paste the same code multiple times in a sequence!
 
 ---
 
@@ -52,7 +54,7 @@ template: while
 
 While loops give us ultimate flexibility in controlling repetition.
 
-- We can easily set up counter-based loops known as 'accumulators', or loops based on the value in flag variables.
+- We can easily set up counter-based loops known as **accumulators** or loops based on the value in flag variables called **sentinels**.
 
 - We can also write infinite loops that never stop repeating.
 
@@ -286,7 +288,7 @@ for (int i=0; i<messages.length; i++) {
 
 template: common
 
-## Iterating until a particular response is received from a user
+## Iterating until a specific response is received from a user
 
 ```java
 Scanner scn = new Scanner(System.in); // open the scanner outside the loop, since we could potentially need to get more than one int of input
