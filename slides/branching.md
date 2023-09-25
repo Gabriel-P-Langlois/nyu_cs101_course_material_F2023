@@ -8,13 +8,18 @@ class: center, middle
 
 # Branching
 
-> Two roads diverged in a yellow wood,
->
-> And sorry I could not travel both
->
-> ...
+---
 
--Robert Frost, [The Road Not Taken](https://www.poetryfoundation.org/poems/44272/the-road-not-taken)
+# Announcements
+
+Here are a few reminders and things to remember for the week:
+
+- If you have not done so already, I encourage you to start working on Assignment 1.
+- Assignment 2 will come out tomorrow (Sep 26) and will be due two weeks after (Oct 10).
+- Quiz 3 will be released on Sep 26 and will be due on Sep 29.
+- Quiz 4 will be released on Sep 28 and will be due on Oct 02.
+
+**Important:** Please use the resources from the tutoring center (Fall 2023 Tutoring schedule. See also CS101 Tutoring Guidelines for Students.pdf), and use them as your primary resource for questions about the course material and the assignments.
 
 ---
 
@@ -39,7 +44,9 @@ template: concept
 
 ## Concept
 
-The flow of a program can be controlled such that it deviates from its '_normal_' path.
+In computer science, [control flow](https://en.wikipedia.org/wiki/Control_flow) is the order in which individual statements, instructions or function calls of an imperative program are executed or evaluated. 
+
+We can change the control flow of a program such that it deviates from its '_normal_' path.
 
 --
 
@@ -55,7 +62,7 @@ The flow of a program can be controlled such that it deviates from its '_normal_
 
 --
 
-- Conditional branches are our focus here.
+We will focus on **conditional branches**.
 
 ---
 
@@ -112,27 +119,27 @@ UML Activity Diagrams follow a few basic rules:
 
 --
 
-- program control starts at the top of the diagram and ends at the bottom.
+- The control flow starts at the top of the diagram and ends at the bottom.
 
 --
 
-- the start point is indicated with just filled circle, the end with a filled circle with a line around it
+- The start point is indicated with a **filled circle**, the end is indicated with a **filled circle with a line around it**.
 
 --
 
-- any process is indicated with an ellipse (or a rounded rectangle)
+- Any process is indicated with an **ellipse** or a **rounded rectangle**.
 
 --
 
-- if any process being diagrammed is so complex it makes the diagram complex and difficult to understand, make a separate activity diagram for that sub-process, and represent it as a single process in this diagram.
+- If any process being diagrammed is so complex that it makes the diagram difficult to understand, make a separate activity diagram for that sub-process, and represent it as a single process in this diagram.
 
 --
 
-- any decision point leading to more than one branch is indicated with a diamond shape (also called a rhombus)
+- Any decision point leading to more than one branch is indicated with a **rhombus** (diamond shape).
 
 --
 
-- branches should have simple annotations indicating in what decision context they are followed
+- Branches should have simple annotations indicating in what decision context they are followed.
 
 ---
 
@@ -144,9 +151,9 @@ name: boolean
 
 template: boolean
 
-In many ways, the most important primitive data type in Java is **boolean**.
+## Some history
 
-The only value a boolean value can take are `true` and `false`.
+The most important primitive data type in Java is **boolean** ('true' and 'false).
 
 These are exactly the values if you want your program to make decisions!
 
@@ -199,8 +206,6 @@ For instance:
 template: boolean
 
 ## More on Boolean operators
-
---
 
 Remember: Java uses `=` to denote assignments. To test whether two values are equal, you must use the `==` operator.
 
