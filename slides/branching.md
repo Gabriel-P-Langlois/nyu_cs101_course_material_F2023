@@ -26,11 +26,11 @@ Here are a few reminders and things to remember for the week:
 # Agenda
 
 1. [Overview](#concept)
-1. [Flow Charts](#flow_charts)
-1  [Boolean variables](#boolean)
-1. [If/Else if/Else](#ifs)
-1. [Switch/Case](#switch-case)
-1. [The Ternary Operator](#ternary)
+2. [Flow Charts](#flow_charts)
+3. [Boolean variables](#boolean)
+4. [If/Else if/Else](#ifs)
+5. [Switch/Case](#switch-case)
+6. [The Ternary Operator](#ternary)
 
 ---
 
