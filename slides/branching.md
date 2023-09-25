@@ -27,10 +27,10 @@ Here are a few reminders and things to remember for the week:
 
 1. [Overview](#concept)
 2. [Flow Charts](#flow_charts)
-3. [Boolean variables](#boolean)
-4. [If/Else if/Else](#ifs)
-5. [Switch/Case](#switch-case)
-6. [The Ternary Operator](#ternary)
+4. [Boolean variables](#boolean)
+5. [If/Else if/Else](#ifs)
+6. [Switch/Case](#switch-case)
+7. [The Ternary Operator](#ternary)
 
 ---
 
