@@ -15,7 +15,6 @@ class: center, middle
 - Assignment 1 is due today at 11:59 p.m.
 - Quiz 5 is out and is due on Friday, Oct 6.
 - Assignment 2 is due next Tuesday, Oct. 10, at 11:59 p.m.
-
 - Assignment 3 is out today and due on Tuesday, Oct. 17, at 11:59 p.m.
 
 Important: My office hours next week will be held virtually on Zoom. I will also expand them (TBA on Thursday).
@@ -167,6 +166,8 @@ name: parameter-scope
 ---
 
 template: parameter-scope
+
+## The concept of Scope
 
 **Important**: Once the method invocation completes, any local variables, including parameters, are wiped out of memory.
 
