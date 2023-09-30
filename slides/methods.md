@@ -8,9 +8,17 @@ class: center, middle
 
 # Methods
 
-> "Take a method and try it. If it fails, admit it frankly, and try another. But by all means, try something."
->
-> -[Franklin D. Roosevelt](https://en.wikipedia.org/wiki/Franklin_D._Roosevelt)
+---
+
+# Reminders and announcements
+
+- Assignment 1 is due today at 11:59 p.m.
+- Quiz 5 is out and is due on Friday, Oct 6.
+- Assignment 2 is due next Tuesday, Oct. 10, at 11:59 p.m.
+
+- Assignment 3 is out today and due on Tuesday, Oct. 17, at 11:59 p.m.
+
+Important: My office hours next week will be held virtually on Zoom. I will also expand them (TBA on Thursday).
 
 ---
 
