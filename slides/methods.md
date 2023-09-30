@@ -173,7 +173,10 @@ template: parameter-scope
 
 --
 
-Live demo
+<br />
+
+<div align="center">
+<span style="color: red;"> **Live demonstration**</span> </div>
 
 --
 
