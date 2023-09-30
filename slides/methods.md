@@ -42,8 +42,8 @@ template: overview
 
 ## Concept
 
-A **method** is a reusable sequence of statements that have been grouped
-together under the same name.
+A **method** is a block of statements that has a name and can be executed by 
+invoking it from some other place in your program.
 
 --
 
@@ -51,8 +51,12 @@ Put another way, a method is a modular reusable block of code.
 
 --
 
-Methods make it easier to debug your code. In addition, they allow you to hide the details
-of a method from the user (hiding complexity). This is called **information hiding**.
+Methods make it easier to organize and debug your code. 
+
+--
+
+In addition, methods allow you to hide the details
+of a method from the user (hiding complexity).
 
 ---
 
@@ -60,22 +64,21 @@ template: overview
 
 ## Concept
 
-The following terms are useful when learning about methods:
+Technical terms pertaining to methods:
 
 --
 
-- The **caller** is one who invokes a method.
-- Invoking a method using its name is known as **calling** that method.
+- The **invoker** is one who invokes a method.
+- Invoking a method using its name is known as **invoking** that method.
 - You can pass information to a method by using **arguments**.
 - When a method completes an operation, it **returns** to its caller.
 - A method can pass information to the caller by **returning a result**.
 
 --
 
-A few more notes:
+Invoking a method is a form of `unconditional branching`:
 
-- The control flow of a program can easily switch to code within a method from anywhere else in the code.
-- Calling a method is a form of unconditional branching - disrupting the 'usual' flow of a program.
+- The control flow of a program can switch to code within a method from anywhere else in the program.
 - Once the control flow reaches the end of an invoked method, the control flow returns to the line of code from which it originally branched.
 
 ---
@@ -88,7 +91,8 @@ name: simple
 
 template: simple
 
-Syntax:
+Here's the syntax of a method:
+
 ```java
 scope returnType methodName(list-of-parameters) {
     // method body
@@ -111,8 +115,7 @@ var1, type 2 var 2....This may also be just one parameter if a list is not requi
 
 template: simple
 
-Consider the following method for computing the maximum of two integers:
-
+Here's a method for computing the maximum of two integers:
 ```java
 public static int max(int num1, int num2){
     // method body is below
@@ -155,22 +158,27 @@ You can store values returned by methods inside variables.
 Methods of type void can be used like statements. 
 - E.g., `System.out.println(“Hello World”);`
 
+---
+
+name: parameter-scope
+
+# Passing parameters and scope
+
+---
+
+template: parameter-scope
+
+**Important**: Once the method invocation completes, any local variables, including parameters, are wiped out of memory.
+
 --
 
-Once the method invocation completes, any local variables, including parameters, are wiped out of memory.
+Live demo
 
 --
 
 An **Activation Record** is information about a method that contains values of parameters and local variables. 
 
 When a method is called, this Activation Record is stored in a location on memory known as a **stack**.
-
-
----
-
-name: parameter-scope
-
-# Passing parameters and scope
 
 ---
 
