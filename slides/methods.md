@@ -352,48 +352,45 @@ A method cannot be overloaded by changing the return type of method!
 
 name: method-abstraction
 
-# Method abstraction and stepwise refinement
+# Software engineering concept: Stepwise refinement
 
 ---
 
 template: method-abstraction
 
-**Method Abstraction**: The implementation of a method is hidden, but anyone can use the 
-method as long as you have the method signature (name and parameter list), the return type and the documentation. 
-
-The author can make edits to the method as long as the header of the method remains the same.
+How should we write a large computer program? 
 
 --
 
-**Stepwise Refinement**: Deconstruct a problem into its smallest, most manageable components. 
-You can turn these small components into simple methods or lines of code.
+**Stepwise refinement** refers to the progressive refinement in small steps of a program specification into a computer program.
+
+--
+
+This is sometimes called **top-down design**.
+
+--
 
 You do not have to think about the code at first. 
-You can begin outlining the problem and finding the most logical deconstruction. Then you start your coding.
-
+You can outline the problem, find a good logical deconstruction, and then write your code.
 
 ---
 
 template: method-abstraction
 
-Methods make it possible to break a large task down into simpler
-parts in a process called decomposition.
+Methods are useful for stepwise refinement because they let us break a large task into simpler parts.
 
 --
 
-Suppose you have been given a task that seems too large to code in
-a single run method.
+An important related concept is that of *method abstraction*.
 
 --
 
-Some of the subtasks may be too difficult to complete on their
-own. In this case you might break them down further and continue
-until each individual subtask is manageable.
+**Method Abstraction**: Write the method, write its documentation, and 'hide' (abstract away) its implementation. 
+The method is 'hidden', but anyone can use the method as long as you have the method signature (name and parameter list), the return type and the documentation. 
 
 --
 
-Once you have completed the decomposition, you can then write a
-method to implement each subtask.
+The author can make edits to the method as long as the header of the method remains the same.
 
 ---
 
@@ -405,14 +402,23 @@ template: method-abstraction
 
 template: method-abstraction
 
-Choosing how to decompose a task is a very subtle process in software engineering.
+Decomposing a large task is a subtle process in software engineering.
 
-One of the primary goals of decomposition is to simplify the programming process. A good
-decomposition strategy must avoid spreading or increasing complexity.
+--
+
+A good decomposition strategy must avoid spreading or increasing complexity.
+
+--
 
 As a general rule, each level in the decomposition should take responsibility for certain
 details and avoid pushing that responsibility to higher levels.
 
+--
+
 In most cases, the best decomposition format follows the structure of the real-world
 problem. If the problem appears to have natural subdivisions then these may provide a
 useful basis for designing the program decomposition.
+
+--
+
+Interesting example: [Poe's top-down design of the "Raven"](https://www.youtube.com/watch?v=GiDI2JH3_zk&embeds_referring_euri=https%3A%2F%2Fwww.cs.cornell.edu%2F&source_ve_path=MjM4NTE&feature=emb_title)
