@@ -188,46 +188,6 @@ When a method is called, this Activation Record is stored in a location on memor
 
 template: parameter-scope
 
-## Passing parameters to methods
-
-When you call a method, the arguments **must** match the list of parameters from the method definition
-in **order**, **number**, and **variable type**.
-
---
-
-Consider a method whose header is `public int onePlusOne(int num1, int num2, String s)`
-
-To call this method, you must do the following:
-
---
-
-- Insert integers for num1 and num2, and a string for s.
-- Insert the correct number of variables.
-- You must also enter the parameters in the correct order.
-
-Anything else yields an error!
-
----
-
-template: parameter-scope
-
-## Calling methods within methods
-
-Methods can call other methods.
-
-The order is determined by the control flow of the program.
-
-- Each method invocation creates a new 'stack frame' - an area of memory dedicated to the newly invoked method.
-
-- The Java interpreter is only ever looking at the method invocation at the top of the stack - the most recently invoked method.
-
-- Once a method that has been invoked completes, its stack frame is popped (deleted) from the call stack and its memory is wiped clean.
-
-
----
-
-template: parameter-scope
-
 ## Understanding scope
 
 What is the output of the following code?
@@ -310,6 +270,45 @@ public static void main(String[] args) {
 ...
 }
 ```
+
+---
+
+template: parameter-scope
+
+## Passing parameters to methods
+
+When you call a method, the arguments **must** match the list of parameters from the method definition
+in **order**, **number**, and **variable type**.
+
+--
+
+Consider a method whose header is `public int onePlusOne(int num1, int num2, String s)`
+
+To call this method, you must do the following:
+
+--
+
+- Insert integers for num1 and num2, and a string for s.
+- Insert the correct number of variables.
+- You must also enter the parameters in the correct order.
+
+Anything else yields an error!
+
+---
+
+template: parameter-scope
+
+## Calling methods within methods
+
+Methods can call other methods.
+
+The order is determined by the control flow of the program.
+
+- Each method invocation creates a new 'stack frame' - an area of memory dedicated to the newly invoked method.
+
+- The Java interpreter is only ever looking at the method invocation at the top of the stack - the most recently invoked method.
+
+- Once a method that has been invoked completes, its stack frame is popped (deleted) from the call stack and its memory is wiped clean.
 
 ---
 
