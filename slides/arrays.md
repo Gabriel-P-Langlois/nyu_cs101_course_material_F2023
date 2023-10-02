@@ -8,10 +8,6 @@ class: center, middle
 
 # Arrays
 
-> Days of absence, sad and dreary, clothed in sorrow's dark array. Days of absence, I am weary; she, I love, is far away.
->
-> -[Jean-Jacques Rousseau](https://en.wikipedia.org/wiki/Jean-Jacques_Rousseau), Days of Absence
-
 ---
 
 # Agenda
@@ -32,10 +28,19 @@ name: overview
 
 # Overview
 
-Arrays are a grouping data structure.
+Arrays are used to store multiple values in a single variable.
 
-- Multiple values or references can be stored within an array.
-- Arrays can store any other data type or data structure, including arrays.
+--
+
+There is no need to declare multiple variables for each value; use an array!
+
+--
+
+Formally, an array in Java is a *non-primitive* data type used to store multiple values of the *same* data type.
+
+--
+
+Arrays can store any data type or data structure, including arrays, so long they are all of the same type.
 
 ---
 
@@ -45,11 +50,9 @@ name: creation
 
 --
 
-## The old-fashioned way
+## First way: Using the `new` keyword
 
-Arrays can be created using the `new` keyword.
-
-- The `new` keyword causes Java to allocate a certain amount of memory for this array, even before it has been populated.
+The `new` keyword tells Java to allocate a certain amount of memory for this array, *before* it has been populated.
 
 ```java
 char[] myFavoriteCharacters = new char[3];
@@ -60,18 +63,20 @@ myFavoriteCharacters[2] = 'o';
 
 - In this case, Java knows that each `char` value consumes 16 bits, so it reserves enough memory space for 3 of them.
 
-- The length of the array cannot be modified once memory has been allocated for an array of a specific length.
+- The length of the array **cannot** be modified once memory has been allocated for an array of a specific length.
 
 ---
 
 template: creation
 name: creation-2
 
-## Using syntactic sugar
+## Second way: Using syntactic sugar
 
-Arrays can be created using `syntactic sugar`, or shorthand syntax that is converted to the longer-form automatically by Java upon compilation.
+Arrays can be created using shorthand syntax that Java converts at compilation to longer form.
 
-- This can be useful if you know the values you want to put into the array up-front.
+--
+
+This is useful if you know the values you want to put into the array.
 
 ```java
 char[] myFavoriteCharacters = { 'f', 'o', 'o' };
@@ -85,7 +90,11 @@ template: creation
 
 ## Object[] arrays
 
-You can create an array of different types using Object[].
+Actually, you can create an array of different types.
+
+--
+
+To do that, use Object[] for the type of your array.
 
 ```java
 Object[] x = new Object[]{1,2,3,"srk"};
@@ -98,9 +107,9 @@ The first three elements of x are integers, and the last element is a string.
 template: creation
 name: creation-3
 
-## Using String's split function
+## Third way (for strings): Using String's split function
 
-Arrays can easily be made from text that contains a particular separator.
+Arrays can be made from text that contains a particular separator.
 
 ```java
 String myMessageToYou = "Don't worry about a thing";
@@ -110,7 +119,7 @@ String[] words = myMessageToYou.split(" ");
 
 --
 
-You can also use [regular expressions syntax](https://docs.oracle.com/javase/tutorial/essential/regex/) to split by one of several separators:
+You can also use [regular expressions syntax](https://docs.oracle.com/javase/tutorial/essential/regex/) to split a string using one of several separators:
 
 ```java
 String myMessageToYou = "Don't, worry?about-a .thing";
@@ -120,6 +129,10 @@ String[] words = myMessageToYou.split("[ ,?-.]+");
 // "Don't" from the delimiter ", ". split will then proceed from the rest of the string "worry?about-a .thing"".
 // now you have an array { "Don't", "worry", "about", "a", "thing" }
 ```
+
+--
+
+**Warning**: You'll have to use this for the assignment 3. :-)
 
 ---
 
@@ -133,6 +146,8 @@ name: length
 
 The `length` property of any array counts its members.
 
+--
+
 ```java
 Scanner scn = new Scanner(System.in);
 String[] veggies; // reference to an as-yet unallocated array
@@ -145,7 +160,9 @@ while (num < 1) {
 }
 ```
 
-- Note that **arrays in Java are fixed length**. New positions cannot be added or nor existing positions removed from an array, although the values at each position can be modified.
+--
+
+Remember: Arrays in Java have **fixed length**. New positions cannot be added and existing positions cannot be removed from an array.
 
 ---
 
