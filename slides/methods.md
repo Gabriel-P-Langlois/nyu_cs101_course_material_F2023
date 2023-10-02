@@ -350,13 +350,13 @@ A method cannot be overloaded by changing the return type of method!
 
 ---
 
-name: method-abstraction
+name: method-abstraction1
 
 # Concept: Stepwise refinement
 
 ---
 
-template: method-abstraction
+template: method-abstraction1
 
 How should we write a large computer program? 
 
@@ -371,11 +371,23 @@ This is sometimes called **top-down design**.
 --
 
 You do not have to think about the code at first. 
-You can outline the problem, find a good logical deconstruction, and then write your code.
+You can outline the problem, find a logical deconstruction, and write your code.
 
 ---
 
-template: method-abstraction
+template: method-abstraction1
+
+![Task decomposition](../files/task_decomposition.png)
+
+---
+
+name: method-abstraction2
+
+# Concept: Method abstraction
+
+---
+
+template: method-abstraction2
 
 Methods are useful for stepwise refinement because they let us break a large task into simpler parts.
 
@@ -394,7 +406,7 @@ The author can make edits to the method as long as the header of the method rema
 
 ---
 
-template: method-abstraction
+template: method-abstraction2
 
 We've already seen this in action!
 
@@ -415,13 +427,13 @@ The statement 'println()' is a method. Do we need to see its implementation to u
 
 ---
 
-template: method-abstraction
+name: method-abstraction3
 
-![Task decomposition](../files/task_decomposition.png)
+# Decomposition
 
 ---
 
-template: method-abstraction
+template: method-abstraction3
 
 Decomposing a large task is a subtle process in software engineering.
 
@@ -436,7 +448,7 @@ details and avoid pushing that responsibility to higher levels.
 
 --
 
-The best decomposition usually depends on the problem at hand...
+In Java, methods are useful for this. But the top-down design is useful outside of programming, too.
 
 --
 
