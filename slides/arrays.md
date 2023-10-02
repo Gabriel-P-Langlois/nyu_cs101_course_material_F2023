@@ -30,8 +30,7 @@ Important: My office hours next week will be held virtually on Zoom. I will also
 1. [Search an Array](#binary-search)
 1. [Challenges](#challenges)
 1. [ArrayList Class](#arraylist)
-1. [Java Is Pass By Value Language](#pass-by-value)
-1. [Basic Usage Examples](#examples)
+1. [Value and reference types](#pass-by-value)
 
 ---
 
@@ -546,7 +545,7 @@ name: pass-by-value-2
 
 ## Primitives are value types
 
-When we pass a _value type_ (e.g., a primitive data type value) argument to a function, the situation is easy.
+This situation is easy when we pass a _value type_ (e.g., a primitive data type value) argument to a function.
 
 --
 
@@ -581,7 +580,7 @@ The output of the above program is `5`, since the local variable within the main
 template: pass-by-value
 name: pass-by-value-5
 
-When we pass a _reference type_ (e.g., an array or object) argument to a function, the situation is easy.
+The situation is easy when we pass a _reference type_ (e.g., an array or object) argument to a function.
 
 ```java
 public static void doSomething(int[] x) {
