@@ -170,10 +170,19 @@ name: arrays-class
 
 ## Useful array-related functions
 
-The Arrays utility class is part of the Java API
+An array is *not* a primitive data type in Java.
 
-- provides useful methods for manipulating arrays
-- `import java.util.Arrays`
+--
+
+Nonetheless, Java provides different methods and utilities for arrays through the *Arrays utility class*.
+
+--
+
+The **Arrays utility class** provides methods for manipulating arrays.
+
+--
+
+Use `import java.util.Arrays` to invoke the library.
 
 ---
 
@@ -227,6 +236,8 @@ String[][] arrVar1 = { {"hello", "world"}, {"goodbye", "world"} }; // a two-dime
 String[][] arrVar2 = { {"hello", "world"}, {"goodbye", "world"} }; // a separate array with the same values as arrVar1 but at a different location in memory
 boolean sameValues = Arrays.deepEquals(arrVar1, arrVar); // -> true!
 ```
+
+Note: Do **not** use the comparison operator `==` for this.
 
 ---
 
@@ -297,99 +308,10 @@ Arrays.fill(arrVar, defaultValue);
 
 ---
 
-name: binary-search
+template: arrays-class
+name: arrays-class-8
 
-# Search an array
-
---
-
-## Overview
-
-The two most common ways of searching for a value within an array are:
-
-- linear search
-- binary search
-
-Each has its advantages and disadvantages.
-
----
-
-template: binary-search
-
-## Linear search
-
-The most basic and reliable way to search for a value in an array is **linear search**, a.k.a. **the brute-force approach**, where we simply loop through each value in the array and compare it to the value we are looking for.
-
-```java
-String[] words = {"good", "how", "morning", "are", "you"};
-String searchTerm = "morning";
-int pos = -1; // start out with a value that indicates we haven't found the searched-for value yet
-for (int i=0; i < words.length; i++) {
-    if (words[i] == searchTerm) {
-        pos = i; // we have found the value at the position i
-    }
-}
-// i -> 2
-```
-
---
-
-_For a large array, this can be an inefficient way of searching, since we often have to loop through almost every value in the array before concluding the search._
-
----
-
-template: binary-search
-
-## The binary search algorithm
-
-The binary search algorithm **more efficiently** searches for a value in an array as follows:
-
-1. The values in the array are sorted
-2. The value in the middle of the array of interest is compared to the value we are searching for.
-   - If the value in the middle is the value we are looking for, the search is finished
-   - If the value in the middle is greater than the value we are looking for, we repeat step 2, but looking only at a subset with the first half of the values in the original array
-   - If the value in the middle is less than the value we are looking for, we repeat step 2, but looking only at a subset with the second half of the values in the original array
-
---
-
-_This algorithm is only beneficial for arrays of values that can be sorted._
-
----
-
-template: binary-search
-
-## Binary search from scratch
-
-An example of a **recursive** implementation of a binary search algorithm.
-
-```java
-public static int binarySearch(int arr[], int startPos, int endPos, int searchTerm) {
-    if (endPos >= startPos) {
-        int midPos = startPos + (endPos - startPos) / 2; // find the middle position of the array
-        int middleValue = arr[midPos] // the value at the middle position
-
-        if (middleValue == searchTerm) {
-            // if the value we're looking for is exactly in the middle, return it
-            return midPos; // return it if so
-        }
-        else if (searchTerm < middleValue) {
-            // if the searchTerm is smaller than the middle value, it can only be present in the left half subset of the array
-            return binarySearch(arr, startPos, midPos-1, searchTerm); // return the result of a binary search on only the left half
-        }
-        else {
-            // otherwise, if the searchTerm is larger than the middle value, the searchTerm can only be in the right half
-            return binarySearch(arr, midPos+1, endPos, searchTerm); // return the result of a binary search on only the right half
-        }
-    }
-    return -1; // if we haven't yet returned anything, the value is not present in the array
-}
-```
-
----
-
-template: binary-search
-
-## Binary search using the Arrays utility class
+## Searching an array
 
 Binary search can be performed using the `Arrays.binarySearch()` method:
 
@@ -398,6 +320,16 @@ int[] numbers = {2456, 35, 25986, 10, 12};
 int searchTerm = 10;
 int pos = Arrays.binarySearch(numbers, searchTerm); // -> 3
 ```
+
+--
+
+- The term `binary` refers to the type of searching algorithm used.
+- It can only be used if the array can be *sorted*. (What does that mean?)
+
+--
+
+- Use .linearSearch() if you want to search an array that cannot be sorted.
+- Search and sort algorithms will be encountered in CS 102. :-)
 
 ---
 
