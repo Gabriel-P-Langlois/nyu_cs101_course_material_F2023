@@ -8,10 +8,6 @@ class: center, middle
 
 # Multidimensional Arrays
 
-> The universe is not a stagnant place where technology stands still and only the few govern its destiny. Rather, it is a multidimensional dynamic entity that interacts with all things, even the very smallest. And what part we each place in it and the effect we have on it is a matter of our own choice.
->
-> -[R.G. Risch](https://www.goodreads.com/book/show/5618917-beyond-mars), Beyond Mars: Crimson Fleet
-
 ---
 
 # Agenda
@@ -36,7 +32,7 @@ name: overview-1
 
 ## Concept
 
-Multidimensional arrays are arrays that store other arrays nested within them.
+**Multidimensional arrays** store other arrays nested within them.
 
 --
 
@@ -48,7 +44,7 @@ Multidimensional arrays are arrays that store other arrays nested within them.
 
 --
 
-- An array that stores arrays that themselves store arrays that in turn also store arrays is called a four-dimensional array...
+- An array that stores arrays that themselves store arrays that themselves also store arrays is called a four-dimensional array...
 
 --
 
@@ -61,9 +57,11 @@ name: overview-2
 
 ## Two-dimensional example
 
-A two-dimensional array - an array that stores inner arrays of type `int`.
+Here's a two-dimensional array that stores inner arrays of type `int`.
 
-- Note the **two** sets of square brackets after the data type declaration.
+--
+
+Note the **two** sets of square brackets after the data type declaration.
 
 ```java
 int[][] numbers = {
@@ -80,7 +78,7 @@ name: overview-3
 
 ## Two-dimensional example (continued)
 
-To output the third value in the second inner array, which is 3,
+To output the third value in the second inner array, which is 3, write
 
 ```java
 System.out.println( numbers[1][2] );
@@ -88,7 +86,7 @@ System.out.println( numbers[1][2] );
 
 --
 
-The syntax to modify one of the values in a two dimensional array is the same.
+The syntax to modify one of the values in a two-dimensional array is the same.
 
 ```java
 // modify the third value in the second inner array
@@ -110,9 +108,11 @@ name: overview-4
 
 ## Three-dimensional example
 
-A three-dimensional array - an array that stores inner arrays of type `String`.
+Here's a three-dimensional array that stores inner arrays of type `String`.
 
-- Note the **three** sets of square brackets after the data type declaration.
+--
+
+Note the **three** sets of square brackets after the data type declaration.
 
 ```java
 String[][][] words = {
@@ -145,19 +145,19 @@ name: truth
 
 ## It's all a lie!
 
-Multidimensional arrays do not exist in Java.
+Multidimensional arrays do not exist in Java
 
 --
 
-- In a true multidimensional array, all elements within the array occupy a continuous block of memory.
+In a true multidimensional array, all elements within the array occupy a continuous block of memory.
 
 --
 
-- This is not the case in Java.
+This is not the case in Java.
 
 --
 
-- Java two-dimensional arrays are arrays of pointers - references to other memory locations where the inner arrays are kept, separately from the outer array.
+In Java, a two-dimensional array is actually an array of pointers, that is, references to other memory locations where the inner arrays are kept, separately from the outer array.
 
 ---
 
