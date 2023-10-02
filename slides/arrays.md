@@ -140,8 +140,6 @@ name: length
 
 # Array Length
 
---
-
 ## Counting elements in an array
 
 The `length` property of any array counts its members.
@@ -159,8 +157,6 @@ while (num < 1) {
     num = veggies.length;
 }
 ```
-
---
 
 Remember: Arrays in Java have **fixed length**. New positions cannot be added and existing positions cannot be removed from an array.
 
