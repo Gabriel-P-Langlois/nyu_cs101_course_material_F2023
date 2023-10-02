@@ -323,12 +323,16 @@ int pos = Arrays.binarySearch(numbers, searchTerm); // -> 3
 
 --
 
-- The term `binary` refers to the type of searching algorithm used.
-- It can only be used if the array can be *sorted*. (What does that mean?)
+- The term `binary` refers to the searching algorithm used.
+- It can only be used if the array can be `sorted`.
+
+'Sorted': All primitive data types and `objects` that `implement` the Comparable `interface`. 
+
+The concepts of objects, implementation and interface will all be covered later during the course.
 
 --
 
-- Use .linearSearch() if you want to search an array that cannot be sorted.
+- Use .linearSearch() to search an array that cannot be sorted.
 - Search and sort algorithms will be encountered in CS 102. :-)
 
 ---
@@ -341,11 +345,11 @@ name: challenges
 
 ## Overview
 
-Due to the **fixed-length** nature of arrays, it is not possible to add or remove values to an array "on-the-fly".
+Due to the **fixed-length** nature of arrays, it is not possible to add or remove values to an array "on the fly."
 
 --
 
-However, when it is desired to **"add" a new value to an array**, it is possible to:
+If we want to **"add" a new value to an array**, then we can:
 
 1. Create a new array that is one longer than the old array
 1. Copy the values from the old array into the new array (using a for loop or methods in the [Arrays utility class](#arrays-class-6).)
@@ -353,7 +357,7 @@ However, when it is desired to **"add" a new value to an array**, it is possible
 
 --
 
-Similarly, it is possible to **"remove" a value from an array** by:
+Similarly, if we want to **"remove" a value from an array**, then we can:
 
 1. Create a new array that is one shorter than the old array
 1. Copy the values you want to keep into the new array, but don't copy the one you want to remove (using a for loop or methods in the [Arrays utility class](#arrays-class-copy).)
@@ -363,9 +367,9 @@ Similarly, it is possible to **"remove" a value from an array** by:
 template: challenges
 name: challenges-solution
 
-## Solution: Copy data into a new array one bigger
+## Example: Copy data into a new, bigger array
 
-An example of simulating "adding" new values on-the-fly to an array. Here we take an arbitrary number of inputs from the user and store whatever they enter into an array.
+Here, a user provides us with inputs, and we store whatever they enter into an array.
 
 ```java
 String[] veggies = new String[1]; // start with an array to hold just one value
