@@ -16,7 +16,8 @@ class: center, middle
 1. [Simple Methods](#simple)
 1. [Parameters & scope](#parameter-scope)
 1. [Overloading](#overloading)
-1. [Method abstraction and stepwise refinement](#method-abstraction)
+1. [Concept: Stepwise refinement](#method-abstraction1)
+1. [Concept: Method abstraction](#method-abstraction2)
 
 ---
 
