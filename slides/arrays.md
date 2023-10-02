@@ -397,11 +397,17 @@ System.out.println(Arrays.toString(veggies));
 
 template: challenges
 
-## Solution: Use Apache Commons Lang's ArrayUtiles
+## Another way: Use Apache Commons Lang's ArrayUtils
 
-A second solution to the problem of "adding" elements to an existing array is to use [Apache Commons Lang](https://commons.apache.org/proper/commons-lang/)'s `ArrayUtils` class.
+All of this was very tedious! *Question*: Can we do better?
 
-- This requires first downloading and installing the Commons Lang library `.jar` file into a project's dependencies directory (often the `lib` directory) and then importing it using `import org.apache.commons.lang3.ArrayUtils;`
+--
+
+*Answer*: Yes, we can. We can use another utility class developed for Arrays: [Apache Commons Lang](https://commons.apache.org/proper/commons-lang/)'s `ArrayUtils` class.
+
+--
+
+To use it, download and install the Commons Lang library `.jar` file into a project's dependencies directory (often the `lib` directory) and then import it using `import org.apache.commons.lang3.ArrayUtils;`
 
 ```java
 int[] fibb = {0, 1, 2, 3, 5, 8};
@@ -411,7 +417,7 @@ System.out.println(Arrays.toString(fibb)); // outputs "[0, 1, 2, 3, 5, 8, 13]"
 
 --
 
-- Note that this technique only works with arrays of primitive data types.
+Note that this technique only works with arrays of primitive data types.
 
 ---
 
@@ -423,25 +429,27 @@ name: arraylist
 
 ## Overview
 
-The `ArrayList` class, part of the `java.util` package, is designed to give programmers a more dynamic array-like expeirence than the primitive arrays can do.
+The `ArrayList` class, part of the `java.util` package, gives programmers a more dynamic array-like experience than what primitive arrays can do.
 
-- an `ArrayList` does not have a fixed length
 
---
 
-- an `ArrayList` can have new members added to it at any time
+- an `ArrayList` does not have a fixed length.
 
 --
 
-- an `ArrayList` can have existing members removed from it at any time
+- an `ArrayList` can have new members added to it at any time.
 
 --
 
-- `ArrayList` is not a primitive data type or data structure in Java - it is not built into the language as a native type
+- an `ArrayList` can have existing members removed from it at any time.
 
 --
 
-- `ArrayList` is a reference type, as are all non-primitive data types or data structures
+- `ArrayList` is not a primitive data type or data structure in Java.
+
+--
+
+- `ArrayList` is a reference type, as are all non-primitive data types or data structures.
 
 ---
 
@@ -463,16 +471,19 @@ String sweetStuff = veggies.get(pos); // returns "ketchup", which is at position
 
 --
 
-- Here we have seen some of the most useful methods in the `ArrayList` class.
-- See the [full set of methods in ArrayLists](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html).
+The example above shows some of the most useful methods in the `ArrayList` class.
+
+--
+
+See the [full set of methods in ArrayLists](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html).
 
 ---
 
 template: arraylist
 
-## Another example
+## The veggies example, revisited
 
-An example of adding new values on-the-fly to an `ArrayList`. Here we take an arbitrary number of inputs from the user and store whatever they enter into an `ArrayList`.
+Here, a user provides us with inputs, and we store whatever they enter into an array.
 
 ```java
 ArrayList<String> veggies = new ArrayList<String>(); // create a blank ArrayList
@@ -499,15 +510,23 @@ Compare this to performing the same task [using primitive arrays](#challenges-so
 
 name: pass-by-value
 
-# Java Is A Pass By Value Language
+# Value and reference types
 
 --
 
-## The word on the street
+We've talked a lot about primitive, non-primitive and reference data types.
 
-Some textbooks and online discussions say, "[Java is a 'pass by value' language!](https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value)" What does this mean?
+--
 
-- This refers to what exactly is passed to a method when it is invoked with arguments.
+What happens when we pass a primitive, non-primitive or reference argument to a method?
+
+--
+
+For example, what happens if we give an array as an argument to a method versus, say, an integer?
+
+--
+
+Let's slow down a little to consider this...
 
 ---
 
@@ -516,9 +535,11 @@ name: pass-by-value-2
 
 ## Primitives are value types
 
-When a _value type_ (e.g. a primitive data type value) is passed as an argument to a function, the situation is straightforward.
+When we pass a _value type_ (e.g., a primitive data type value) argument to a function, the situation is easy.
 
-- A copy of the argument's _value_ is passed to the function!
+--
+
+- A copy of the argument's _value_ is passed to the function.
 - Primitive values are called '**value types**' for this reason.
 
 ---
@@ -539,17 +560,17 @@ public static void main(String[] args) {
 
 The output of the above program is `5`, since the local variable within the main function is never reassigned to refer to anything other than 5.
 
-- `doSomething()` is invoked and passed a copy of the value `5` (the value the main function's local variable `x`).
+- `doSomething()` is invoked and passed a copy of the value `5` (the value of the main function's local variable `x`).
 - `doSomething()` creates its own local parameter variable `x` which refers to this value, `5`.
 - `doSomething()` reassigns its local variable `x` to refer to `10` instead.
-- `doSomething()` completes and control flows back to the main method, where the main method's local varible `x` still is assigned the value `5`.
+- `doSomething()` completes and control flows back to the main method, where the local variable `x` still is assigned the value `5`.
 
 ---
 
 template: pass-by-value
 name: pass-by-value-5
 
-When a _reference type_ (e.g. an array or object) is passed as an argument to a function, the situation is straightforward.
+When we pass a _reference type_ (e.g., an array or object) argument to a function, the situation is easy.
 
 ```java
 public static void doSomething(int[] x) {
@@ -562,12 +583,7 @@ public static void main(String[] args) {
 }
 ```
 
-The output of the above program is `[ 5, 10, 15, 20 ]`, since the local variable within the main function is never reassigned to refer to anything other than that array, and that array has never had its contents modified.
-
-- `doSomething()` is invoked and passed a copy of the memory address of the array referred to by the main method's variable `x` (the "value" the main function's local variable `x`).
-- `doSomething()` creates its own local parameter variable `x` which refers to this "value" - the memory address of that array.
-- `doSomething()` reassigns its local variable `x` to refer to the memory address of a different array instead.
-- `doSomething()` completes and control flows back to the main method, where the main method's local varible `x` still is assigned the "value" of the memory address of the original array.
+The output of this program is `[ 5, 10, 15, 20 ]`, since the local variable within the main function is never reassigned to refer to anything other than that array, and that array has never had its contents modified.
 
 ---
 
@@ -576,9 +592,10 @@ name: pass-by-value-4
 
 ## Arrays and objects are reference types
 
-When an _array_ or an _object_ is passed as an argument to a function, the situation is a bit less straightforward.
+When we pass an _array_ or an _object_ argument to a function, the situation is not so easy.
 
-- A copy of the argument's _reference_ - the memory address at which the array or object is stored - is passed to the function, not the values encapsulated within the array or object.
+- A copy of the argument's _reference_ - the **memory address** at which the array or object is stored - is passed to the function.
+- Important: The values encapsulated within the array or object are NOT passed to the function.
 - Arrays and objects are called '**reference types**' for this reason.
 
 ---
@@ -603,16 +620,10 @@ public static void main(String[] args) {
 
 The output of the above program is `[ 5, 10, 555, 20 ]`, since the local variable within the doSomething function is an alias of the variable within the main function - they both refer to the same array in the same memory location and that array's inner values have been modified.
 
----
-
-template: pass-by-value
-name: pass-by-value-6
-
-## Doesn't this mean Java is both a 'pass by value' and 'pass by reference' language?
-
-The phrase, "Java is a 'pass by value' language is thus a bit confusing.
-
-- Arguments that are value types (i.e. primitives) are passed as values
-- Arguments that are reference types (i.e. arrays and objects) as values, but the values in this case are memory addresses (called "references" by most normal people).
+--
 
 The trick to this is that the **references are themselves passed as values** - the value being the integer memory address at which the array or object resides.
+
+--
+
+**Warning**: You'll encounter this soon in future assignments and CS 102. :-)
