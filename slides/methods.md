@@ -394,6 +394,8 @@ The author can make edits to the method as long as the header of the method rema
 
 ---
 
+template: method-abstraction
+
 We've already seen this in action!
 
 --
