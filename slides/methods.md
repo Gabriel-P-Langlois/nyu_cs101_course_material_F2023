@@ -352,7 +352,7 @@ A method cannot be overloaded by changing the return type of method!
 
 name: method-abstraction
 
-# Software engineering concept: Stepwise refinement
+# Concept: Stepwise refinement
 
 ---
 
@@ -394,6 +394,25 @@ The author can make edits to the method as long as the header of the method rema
 
 ---
 
+We've already seen this in action!
+
+--
+
+For example, take our HelloNYU.java program:
+
+```java
+public class HelloNYU{
+    public static void main(String[] args) {
+    System.out.println("Hello NYU!");
+}
+```
+
+--
+
+The statement 'println()' is a method. Do we need to see its implementation to use it?
+
+---
+
 template: method-abstraction
 
 ![Task decomposition](../files/task_decomposition.png)
@@ -406,19 +425,17 @@ Decomposing a large task is a subtle process in software engineering.
 
 --
 
-A good decomposition strategy must avoid spreading or increasing complexity.
+A good decomposition strategy avoids spreading or increasing complexity.
 
 --
 
-As a general rule, each level in the decomposition should take responsibility for certain
+Generally, each level in the decomposition should take responsibility for certain
 details and avoid pushing that responsibility to higher levels.
 
 --
 
-In most cases, the best decomposition format follows the structure of the real-world
-problem. If the problem appears to have natural subdivisions then these may provide a
-useful basis for designing the program decomposition.
+The best decomposition usually depends on the problem at hand...
 
 --
 
-Interesting example: [Poe's top-down design of the "Raven"](https://www.youtube.com/watch?v=GiDI2JH3_zk&embeds_referring_euri=https%3A%2F%2Fwww.cs.cornell.edu%2F&source_ve_path=MjM4NTE&feature=emb_title)
+Interesting example: [Edgar Allan Poe's top-down design of the "Raven"](https://www.youtube.com/watch?v=GiDI2JH3_zk&embeds_referring_euri=https%3A%2F%2Fwww.cs.cornell.edu%2F&source_ve_path=MjM4NTE&feature=emb_title)
