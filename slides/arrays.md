@@ -583,13 +583,18 @@ name: pass-by-value-5
 The situation is easy when we pass a _reference type_ (e.g., an array or object) argument to a function.
 
 ```java
-public static void doSomething(int[] x) {
-    x = {25, 30, 35}; // the local variable is re-assigned to point to a different memory address
-}
-public static void main(String[] args) {
-    int x[] = {5, 10, 15, 20};
-    doSomething(x); // the memory address of the array is passed to the function
-    System.out.println( Arrays.toString(x) );
+import java.util.Arrays;
+public class array4{
+
+    public static void doSomething(int[] x) {
+        int[] y = {25, 30, 35, 40};
+        x = y; // the local variable is re-assigned to point to a different memory address
+    }
+    public static void main(String[] args) {
+       int x[] = {5, 10, 15, 20};
+       doSomething(x); // the memory address of the array is passed to the function
+       System.out.println(Arrays.toString(x) );
+    }
 }
 ```
 
