@@ -8,10 +8,6 @@ class: center, middle
 
 # Inheritance & Polymorphism
 
-> The problem with object-oriented languages is they’ve got all this implicit environment that they carry around with them. You wanted a banana but what you got was a gorilla holding the banana and the entire jungle.
->
-> –[Joe Armstrong](https://en.wikipedia.org/wiki/Joe_Armstrong_%28programmer%29), creator of Erlang, a functional programming language
-
 ---
 
 # Agenda
@@ -22,7 +18,6 @@ class: center, middle
 1. [Polymorphism](#polymorphism)
 1. [Similarity & Difference](#difference)
 1. [Is Inheritance Evil?](#evils)
-1. [Conclusions](#conclusions)
 
 ---
 
@@ -500,16 +495,3 @@ public class Copier {
 - Why this limitation?
 
 - Because what if `Scanner` and `Printer` had a method by the same name, let's say `start()`. Which version would `Copier` inherit?
-
----
-
-name: conclusions
-
-# Conclusions
-
-You have now extended your understanding of object-oriented programming to include class-based inheritance and polymorphism.
-
-- Assignment 5 is due next week.
-- Another quiz will be out soon; it will be due in a week from now.
-- No class on Thursday!
-- Next week: Review + Practice problems for the second midterm.
