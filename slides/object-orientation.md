@@ -10,6 +10,11 @@ class: center, middle
 
 ---
 
+# Announcements
+TBC.
+
+---
+
 # Agenda
 
 1. [Overview](#concept)
@@ -1321,12 +1326,3 @@ Other programming paradigms include:
 ---
 
 name: conclusions
-
-# Conclusions
-
---
-
-You now have a basic understanding of object-oriented programming in Java. Well done.
-
-- Assigment 4 is due this Thursday at 5 pm.
-- Quiz 7 is due this coming Monday at 5 pm.
