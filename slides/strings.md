@@ -8,9 +8,6 @@ class: center, middle
 
 # String & Related Classes
 
-> We are all instruments endowed with feeling and memory. Our senses are so many strings that are struck by surrounding objects and that also frequently strike themselves.
->
-> –[Denis Diderot](https://en.wikipedia.org/wiki/Denis_Diderot)
 
 ---
 
@@ -24,7 +21,6 @@ class: center, middle
 1. [Apache Commons Lang](#stringutils)
 1. [Apache Commons Text](#commons-text)
 1. [Apache Commons CSV](#commons-csv)
-1. [Conclusions](#conclusions)
 
 ---
 
@@ -349,18 +345,3 @@ name: commons-csv
 - Commons CSV can parse data in files following standard CSV format, Excel format, and other similar formats.
 
 - As with Commons Lang, the main `.jar` file of Commons Text must be added as a dependency to a project, such as by placing it within the `lib` directory.
-
----
-
-name: conclusions
-
-# Conclusions
-
-I've uploaded on Brightspace several examples of Java code pertaining to Strings.
-See the Examples tab on Brightspace.
-
-Info + Upcoming deadlines:
-
-- Assignment 4 due tomorrow at 11:59pm.
-- Quiz 7 due on Monday at 5pm.
-- Assignment 5 will be assigned today; it will be due Tuesday, April 11th at 11:59 pm (no extensions).
