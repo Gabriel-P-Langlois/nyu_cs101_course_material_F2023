@@ -8,10 +8,6 @@ class: center, middle
 
 # Exception Handling
 
-> Beginner knows rules, but veterans know exceptions.
->
-> –Amit Kalantri, in [Wealth of Words](https://www.goodreads.com/book/show/32181272-wealth-of-words)
-
 ---
 
 # Agenda
@@ -19,7 +15,6 @@ class: center, middle
 1. [Overview](#concept)
 1. [Exception Handling](#handling)
 1. [Custom Exceptions](#custom)
-1. [Conclusions](#conclusions)
 
 ---
 
@@ -473,20 +468,3 @@ public static void main(String[] args) throws BurnedMouthException, OutOfCoffeeE
 --
 
 - The compiler ignores any exceptions thrown by the `main` method.... but the program crashes during runtime.
-
----
-
-name: conclusions
-
-# Conclusions
-
---
-
-Like function arguments and return values, checked exceptions are yet another mechanism by which messages are passed from one part of a Java program to another.
-
---
-
-Info:
-
-- New quiz will be released later today.
-- Next (and last) assignment will be released on Thursday and be due two weeks after (May 4th).
