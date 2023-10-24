@@ -243,15 +243,15 @@ A **class** definition is a template from which **objects** can be made as we li
 
 --
 
-- Each specific File object has its own copy of the properties and methods defined in the File class - these are termed **instance properties ** and **instance methods**.
+- Each File object has its copy of the properties and methods defined in the File class - these are termed **instance properties ** and **instance methods**.
 
 --
 
-- Each specific File object can have its own specific set of values for the properties defined in the class.
+- Each File object can have its own specific set of values for the properties defined in the class.
 
 --
 
-- Each specific File object will respond to calls to it using any of the methods defined in the class.
+- Each File object will respond to calls to it using any of the methods defined in the class.
 
 --
 
@@ -270,7 +270,7 @@ name: example-2a
 
 ## Concept
 
-Imagine **dog**, the concept.
+Let's imagine a **dog**, as a concept.
 
 ---
 
@@ -279,7 +279,7 @@ name: example-2b
 
 ## Properties
 
-Every dog might have some properties, e.g.
+Dogs share, for example, the following properties:
 
 - name
 - age
@@ -288,20 +288,20 @@ Every dog might have some properties, e.g.
 
 --
 
-Different dogs will probably have different values for each of these properties.
+Different dogs will have different values for each of these properties.
 
 --
 
-- The value of each dog's properties at any given moment in time repesents that dog's **internal state**.
+The value of each dog's properties at any given moment in time represents that dog's **internal state**.
 
 ---
 
 template: example-2
 name: example-2c
 
-## Actions...
+## Actions and their complications.
 
-If we say a dog is in control of its own destiny (a big if), we could say a dog has a few actions it could take, e.g.:
+What actions could a dog _object_ make? Perhaps it could, e.g.:
 
 --
 
@@ -315,22 +315,17 @@ If we say a dog is in control of its own destiny (a big if), we could say a dog 
 
 - sleep
 
----
+--
 
-template: example-2
-name: example-2d
-
-## ... and their complications
-
-Two dogs with different internal states might implement these same actions differently.
+There's a catch: Two dogs with different _internal states_ might make the same actions differently. For example:
 
 --
 
-- For example, a lightweight lap dog might have a rapid fire tinny yapping sort of bark, whereas a heavy shepherd might occasionally produce a mellow deep woof sound.
+- A lightweight lap dog might have a fast tinny yapping bark, whereas a heavy shepherd might occasionally produce a mellow deep woof sound.
 
 --
 
-- A young dog might generally successfully fetch an object, while an elderly dog might generally fail at this.
+- A young dog might generally successfully fetch an object, while an elderly dog might not.
 
 --
 
