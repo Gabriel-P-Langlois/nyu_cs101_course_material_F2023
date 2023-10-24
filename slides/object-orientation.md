@@ -11,7 +11,14 @@ class: center, middle
 ---
 
 # Announcements
-TBC.
+
+- Assignment 3 is due on Tuesday, October 24th, at 11:59 p.m.
+- Quiz 7 is due on Thursday, October 26th, at 11:59 p.m.
+- Assignment 4 will be released on Tuesday, October 24th. It will be due a week later on Tuesday, October 31st.
+- I may release Quiz 8 this Thursday or Tuesday next week; I will keep you informed.
+
+- Regarding Exam 1: I will grade the exam by Tuesday next week, in time for the NYU midterm evaluations. I hope to have assignment 2 graded by Wednesday or Thursday this week.
+
 
 ---
 
@@ -42,24 +49,25 @@ name: overview-1
 
 ## Concept
 
-Object-Oriented Programming (OOP) is a software design method that models the characteristics of real 
-or abstract objects using software **classes** and **objects**.
+Object-oriented programming (OOP) is a programming paradigm that organizes software design
+around **classes** and **objects**.
 
 --
 
-It is today the standard programming paradigm. It helps design effective large scale software applications.
+Most widely used programming languages  (e.g., C++, Java, Python, etc.) support OOP to some degree,
+typically in combination with imperative programming.
 
 --
 
-- code is written to represent virtual _things_.
+- Code is written to represent virtual _things_.
 
 --
 
-- each thing has certain **properties** (i.e., variables) that belong to it.
+- Each thing has certain **properties** (i.e., variables) that belong to it.
 
 --
 
-- each thing has certain **actions** (i.e., methods) that it can perform.
+- Each thing has certain **actions** (i.e., methods) that it can perform.
 
 ---
 
@@ -89,15 +97,19 @@ Object-oriented programming is a variety of **imperative programming**.
 
 --
 
-- With imperative programming, we instruct the computer **how** to solve the tasks.
+- With imperative programming, we instruct the computer **how** to solve tasks.
 
 --
 
-- Programs make heavy use of memory and **control flow**: loops, conditional statements with branching, and so on, to establish the sequence of steps necessary to solve the problem.
+- Programs use lots of memory and **control flow** (loops, conditional statements with branching, etc.) to establish the steps necessary to solve the problem.
 
 --
 
-- An alternative to imperative programming would be **declarative programming**, where a desired end goal is declared, but the implementation details of how to achieve it are not. **SQL** is an example of a declarative language.
+- An alternative to imperative programming is **declarative programming**.
+
+--
+
+-   With declarative programming, we instruct the computer on the desired end goal without providing the implementation details. **SQL** is an example of a declarative language.
 
 ---
 
