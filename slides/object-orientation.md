@@ -97,7 +97,7 @@ Object-oriented programming is a variety of **imperative programming**.
 
 --
 
-- With imperative programming, we instruct the computer **how** to solve tasks.
+- With imperative programming, we tell the computer **how** to solve tasks.
 
 --
 
@@ -109,7 +109,7 @@ Object-oriented programming is a variety of **imperative programming**.
 
 --
 
--   With declarative programming, we instruct the computer on the desired end goal without providing the implementation details. **SQL** is an example of a declarative language.
+-   With declarative programming, we tell the computer our desired end goal without providing the implementation details. **SQL** is an example of a declarative language.
 
 ---
 
@@ -124,7 +124,15 @@ name: black-box-1
 
 ## Smoke and mirrors
 
-Despite specifying in detail how problems are to be solved, object-orientation nevertheless attempts to put to practice the [black box metaphor](https://en.wikipedia.org/wiki/Black_box) of engineering, where, provided particular inputs, a machine produces a predictable output and _the user of it doesn't have to know the implementation details_, even though they are written in the code.
+In object-oriented programming, we specify in detail how problems should be solved.
+
+--
+
+Nevertheless, object orientation attempts to put into practice the [black box metaphor](https://en.wikipedia.org/wiki/Black_box) of engineering.
+
+--
+
+**Black box programming**: Given some input, a black box produces predictable output, but _the user  doesn't see or know implementation details_.
 
 ![Black box metapahor](../files/oop-black-box-metaphor.png)
 
@@ -133,45 +141,37 @@ Despite specifying in detail how problems are to be solved, object-orientation n
 template: example-1
 name: example-1a
 
-## Concept
+## Example 1: Files
 
-Imagine you wanted to write code that represented **files** on a computer's hard drive.
-
----
-
-template: example-1
-name: example-1b
-
-## Properties
-
-Every file on the hard drive might have some properties, e.g.
-
-- the data stored within the file
-- metadata: filename, size, date modified, etc.
+Imagine you want to write code that represents **files** on a computer's hard drive.
 
 --
 
-The values these properties hold collectively represent the _internal state_ of any given file at any given moment in time.
+Every file on the hard drive might have some properties, e.g.
+
+- The data stored within the file
+- Metadata: filename, size, date modified, etc.
+
+--
+
+The values these properties hold collectively represent the _internal state_ of any given file at any given moment.
 
 ---
 
 template: example-1
 name: example-1c
 
-## Actions...
+## Example 1: Files
 
-If we say a file is in control of its own destiny (a big if), we could say a file has a few actions it could take, e.g.:
+Suppose a file was in control of its destiny (a big if); what actions could it take? Perhaps it could:
+
+--
 
 - update the data it holds
 - change its filename
 - save itself to a particular location on the hard drive
 
----
-
-template: example-1
-name: example-1d
-
-## ... and their consequences
+--
 
 These actions represent a _public interface_ through which other code can interact with any given file and instruct it what actions to take.
 
@@ -211,7 +211,7 @@ There is a standardized way of representing such _things_, called the Unified Mo
 template: example-1
 name: example-1e
 
-## Class definition
+## UML class diagram to class definition
 
 This diagram can be translated into code as such:
 
@@ -239,7 +239,7 @@ name: example-1f
 
 ## Intention
 
-A **class** definition is a template from which as many **objects** can be made as we like.
+A **class** definition is a template from which **objects** can be made as we like.
 
 --
 
