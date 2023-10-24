@@ -373,28 +373,28 @@ name: example-2i
 
 ## Intention
 
-This Dog **class** definition is a template from which as many Dog **objects** can be made as we like.
+This Dog **class** definition is a template from which Dog **objects** can be made.
 
 ---
 
 template: example-2i
 name: example-2j
 
-- Each specific Dog object has its own specific values for each of the properties the class defines.
+- Each Dog object has its own specific values for each of the properties the class defines.
 
 ---
 
 template: example-2j
 name: example-2k
 
-- Each specific Dog object will respond to calls to any of the methods that the File class defines.
+- Each Dog object responds to calls to any of the methods that the Dog class defines.
 
 ---
 
 template: example-2k
 name: example-2l
 
-- The actions produced by these method calls may differ slightly, depending upon the internal state of each Dog object
+- The actions produced by these method calls may differ slightly, depending upon the internal state of each Dog object.
 
 ---
 
@@ -409,14 +409,14 @@ name: difference-1
 
 ## Constructing different objects from the same class
 
-Our intention in creating a class is to be able to instantiate multiple distinct objects from that class template.
+Why create a Dog template class? Because we want to _instantiate_ multiple, distinct objects from it.
 
 ---
 
 template: difference-1
 name: difference-2
 
-- We typically want these objects to have some differences from one-another.
+- We also  want these objects to have some differences from one another...
 
 ---
 
@@ -461,7 +461,7 @@ name: difference-3
 
 ## Difference!
 
-If the internal properties of each Dog object were **public** or **protected** (which they are not), it might be possible to give each object distinct values:
+If the internal properties of each Dog object were **public** or **protected** (which they are not), it would be possible to give each object distinct values:
 
 --
 
@@ -490,7 +490,11 @@ name: difference-3
 
 ## Difference! (continued)
 
-If we were able to set each Dog's name, breed, and age to different internal states, while retaining hidden internal properties for each object, then we would achieve our goal.
+What do we want? 
+
+--
+
+We want to set each Dog's name, breed, and age to different internal states, while retaining hidden internal properties for each object.
 
 --
 
@@ -503,7 +507,7 @@ Dog dog2 = new Dog("Tobik", "German Shepherd", 3);
 
 --
 
-At the moment, our class definition provides no mechanism for setting a given object's internal properties.
+At the moment, our class definition provides no mechanism for setting a given object's internal properties... How can we do this?
 
 ---
 
@@ -632,9 +636,7 @@ With constructor functions, we can instantiate as many objects as we like with w
 ```java
 Dog dog1 = new Dog("Fido", "Bugle", 10);
 Dog dog2 = new Dog("Tobik", "German Shepherd", 3);
-```
-
-[Try it](https://repl.it/repls/AcidicOrangeredProcess)
+``
 
 ---
 
