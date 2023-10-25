@@ -634,7 +634,7 @@ With constructor functions, we can instantiate as many objects as we like with w
 ```java
 Dog dog1 = new Dog("Fido", "Bugle", 10);
 Dog dog2 = new Dog("Tobik", "German Shepherd", 3);
-``
+```
 
 ---
 
