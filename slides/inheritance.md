@@ -277,7 +277,7 @@ template: polymorphism
 
 ## Application
 
-Polymorphism can be useful when we want to store a bunch of related objects of different-but-related types into an array or other grouping data structure in order to perform some kind of batch operation on them.
+Polymorphism is when we want to store objects of different, but related, types into an array to perform some kind of batch operation on them.
 
 ```java
 A[] myObjs = {
@@ -298,15 +298,19 @@ template: polymorphism
 
 ## Overriding
 
-It is often desireable to have child classes implement the instance methods defined in the parent class somewhat differently.
+We often want to have child classes implement the instance methods defined in the parent class differently.
 
-- A child class can define methods with the same signatures as the instance methods in the parent class - this is called **[overriding](https://coderanch.com/wiki/659959/Overriding-Hiding)**.
+--
+
+A child class can define methods with the same signatures as the instance methods in the parent class - this is called **[overriding](https://coderanch.com/wiki/659959/Overriding-Hiding)**.
+
+--
 
 - For example, each of our `A`, `B`, and `C` classes could contain different implementations of the `getMessage()` method.
 
 - It is possible for a child class's overridden method to call the parent class's version of that same method.
 
-- A child class can call any public method as-defined in its parent class's code by using the keyword **super**, e.g.
+- A child class can call any public method as defined in its parent class's code by using the keyword **super**, e.g.
 
 ```java
 super.getMessage();
@@ -317,18 +321,6 @@ super.getMessage();
 name: difference
 
 # Similarity & Difference
-
---
-
-## Concept
-
-In real applications, child classes almost invariably do something different from their parent classes, whether by overriding some parent methods or implementing their own unique methods that are not present in the parent. This difference gives the child class a reaason to exist.
-
-- We'll take a look at the similarity and difference in two simple classes we'll call `A` and `B`.
-
----
-
-template: difference
 
 ## Example classes
 
@@ -341,6 +333,8 @@ public class A {
     }
 }
 ```
+
+--
 
 The child class:
 
@@ -358,7 +352,7 @@ template: difference
 
 ## Similarity
 
-Since `B` inherits from `A`, both classes encapsulate `A`'s `doSomething()` method.
+Since `B` inherits from `A`, both classes **encapsulate** `A`'s `doSomething()` method.
 
 
 
@@ -481,8 +475,6 @@ template: evils
 
 So far so good. But what if we added a `Copier` to the mix?
 
-- A `Copier` has behaviors of both a `Scanner` and a `Printer`. Ideally, it would inherit the public interfaces of both.
-
 ![Evil inheritance problem](../files/oop-inheritance-evil-problem.png)
 
 ---
@@ -491,9 +483,15 @@ template: evils
 
 ## The problem
 
-In Java, and many other languages, inheritance from multiple classes is impossible.
+In Java and other languages, inheritance from multiple classes is impossible.
 
-- The only working solution would be to use **composition** rather than inheritance.
+--
+
+Why? Well, suppose `Scanner` and `Printer` both had a method with the same name, say `start()`. Which version would `Copier` inherit?
+
+--
+
+The only solution is to use **composition** rather than inheritance:
 
 ```java
 public class Copier {
@@ -507,6 +505,3 @@ public class Copier {
 }
 ```
 
-- Why this limitation?
-
-- Because what if `Scanner` and `Printer` had a method by the same name, let's say `start()`. Which version would `Copier` inherit?
