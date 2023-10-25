@@ -1292,7 +1292,7 @@ template: pillars
 
 name: overview2
 
-# Overview
+# Inheritance and polymorphism
 
 --
 
