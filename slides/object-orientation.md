@@ -33,8 +33,6 @@ class: center, middle
 1. [Comparing Sameness](#comparisons)
 1. [Stringification](#stringification)
 1. [The 4 Pillars of Object-Orientation](#pillars)
-1. [Alternative Paradigms](#alternative-paradigms)
-1. [Conclusions](#conclusions)
 
 ---
 
@@ -1021,17 +1019,11 @@ Because objects are reference types, when they are passed as arguments to a meth
 
 --
 
-- For example, imagine a method that changes any dog's name to "Dog"...
-
 ```java
 public void rename(Dog d) {
         d.setName("Dog");
 }
 ```
-
---
-
-- ... and let's say we call that method from some other method.
 
 ```java
 Dog dog1 = new Dog("Fido", "Bugle", 10);
@@ -1053,11 +1045,11 @@ template: comparisons
 
 ## Internal state comparison
 
-To check whether two objects share the same internal state, even if they are different objects in memory, we have to roll our own solution.
+To check whether two objects share the same internal state, even if they are different objects in memory, we have to write our own method.
 
 --
 
-- Conventionally, this would be done by defining a method named `equals` that performs the comparison.
+- This is typically done by defining a method named `equals` that performs the comparison.
 
 --
 
@@ -1093,32 +1085,6 @@ if ( dog1.equals(dog2) ) {
 
 ---
 
-template: comparisons
-
-## EqualsBuilder
-
-Since object's properties are often of many different types, writing a custom [].equals()](#tedium) method must be done carefully and tediously. Fortunately, [Apache Commons Lang](https://commons.apache.org/proper/commons-lang/)'s `EqualsBuilder` class can make object comparisons easier and less prone to silly errors.
-
-```java
-public class Dog {
-        //...
-
-        public boolean equals(Dog that) {
-            return new EqualsBuilder()
-                            .append(this.name, that.name)
-                            .append(this.age, that.age)
-                            .append(this.breed, that.breed)
-                            .append(this.weight, that.weight)
-                            .isEquals();
-        }
-        //...
-```
-
-- To use `EqualsBuilder`, Commons Lang's main `.jar` file must be downloaded and added as a project dependency, for example by placing it within a project's `lib` directory.
-- The library must then be imported with `import org.apache.commons.lang3.SystemUtils;`.
-
----
-
 name: stringification
 
 # Stringification
@@ -1144,7 +1110,7 @@ System.out.println(text);
 
 --
 
-By default, the output would show the **class** name of the object and a **[hashcode](https://coderanch.com/t/321515/java/HashCode)** - random-looking text that is not probably what you hoped for.
+By default, the output would show the **class** name of the object and a **[hashcode](https://coderanch.com/t/321515/java/HashCode)**.
 
 ```
 The dog as a string looks like: Dog@63961c42
@@ -1152,7 +1118,7 @@ The dog as a string looks like: Dog@63961c42
 
 --
 
-Wouldn't it be nice if we could instead output something descriptive, like,
+Wouldn't it be nice if we could instead output something descriptive:
 
 ```
 The dog as a string looks like: Tobik, a 3-year-old German Shepherd
@@ -1164,7 +1130,7 @@ template: stringification
 
 ## Fulfilling our desires
 
-Java allows an object to describe how it should be converted to a String with a special method named `toString()` that returns the String equivalent of the object.
+Java allows us to describe how an object should be converted to a String: With a special method named `toString()`.
 
 --
 
@@ -1313,25 +1279,3 @@ template: pillars
 --
 
 - **Objects** can also be instances of one or more interfaces (we have not discussed this yet).
-
----
-
-name: alternative-paradigms
-
-# Alternative Paradigms
-
---
-
-Other programming paradigms include:
-
---
-
-- **Functional programming** is focused on _data flow_ (i.e., immutable values being used in formulae to compute other values) , rather than control flow (i.e., "Do this, then do that!" and where variables are not values but rather memory locations with changing values over time). Popular languages for functional programming are **Excel** and **Haskell**. [Learn more!](https://www.infoq.com/presentations/Taming-Effect-Simon-Peyton-Jones/)
-
---
-
-- **Procedural programming** was the standard paradigm before object-oriented programming took over. In this paradigm, the problem to be solved by a program is decomposed into sub-problems, and procedures (a.k.a. functions) to solve each problem are written and executed in sequence.
-
----
-
-name: conclusions
