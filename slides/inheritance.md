@@ -191,8 +191,6 @@ name: multi-level
 
 # Multi-Level Inheritance
 
---
-
 ## Concept
 
 We can continue our example by giving `B` its own child, `C`.
@@ -224,7 +222,6 @@ A UML diagram showing multi-class inheritance.
 
 ![Multi-class inheritance UML diagram](../files/oop-inheritance-multi.png)
 
-- As with `B`, we would normally add some unique public methods to child classes like `C` that make them behave differently from their parent, but we are not doing that here just to focus on the inherited components.
 
 ---
 
@@ -240,7 +237,9 @@ template: multi-level
 
 - Thus, `C` implements the **public interface** of both `A` and `B`.
 
-- What would the following code output?
+--
+
+What would the following code output?
 
 ```java
 C cObj = new C( "Welcome!!" );
@@ -263,7 +262,9 @@ An object or class can assume more than one 'shape'.
 
 - We could say that our `C` object _is_ a `C` object, as well as a `B` object, and an `A` object.
 
-- It's possible to verify this in code using the `instanceof` operator.
+--
+
+It's possible to verify this in code using the `instanceof` operator.
 
 ```java
 if (cObj instanceof C && cObj instanceof B && cObj instanceof A) {
@@ -321,6 +322,10 @@ super.getMessage();
 name: difference
 
 # Similarity & Difference
+
+---
+
+template: difference
 
 ## Example classes
 
