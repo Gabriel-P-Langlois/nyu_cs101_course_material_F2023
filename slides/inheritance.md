@@ -29,11 +29,11 @@ name: overview
 
 ## Concept
 
-**Inheritance** is a mechanism for basing one object or a class on another object or class when the two objects or classes include similar implementations of their behaviors.
+**Inheritance** is the mechanism of basing an object or a class on another object or class, retaining a similar implementation.
 
 --
 
-Properties and methods of one object or class are automatically "passed down" to the objects or classes that inherit from it.
+The properties and methods of one object or class are "passed down" automatically to the objects or classes that inherit from it.
 
 ---
 
@@ -94,15 +94,16 @@ template: implementation
 
 ## Abstract Example (continued)
 
-Another class, `B`, could inherit the properties and methods of `A` by using the `extends` keyword.
+Another class, `B`, inherits the properties and methods of `A` using the `extends` keyword.
 
 ```java
 public class B extends A {
 
 }
 ```
+--
 
-- A `B` object could be instantiated with no further code and it would automatically inherit the public interface defined by `A`.
+- A `B` object is instantiated with no further code and automatically inherits the public interface defined by `A`.
 
 ```java
 B bObj = new B();
@@ -119,7 +120,9 @@ We often create UML diagrams indicating class relationships, where the arrow poi
 
 ![Class inheritance UML diagram](../files/oop-inheritance-simple.png)
 
-- In almost all cases, the child class would contain its own unique additional properties and methods that make it different in some way from the parent... we have kept class `B` blank just to focus on the inherited properties and methods.
+--
+
+In almost all cases, the child class contains its own additional properties and methods that make it different in some way from the parent... We have kept class `B` blank just to focus on the inherited properties and methods.
 
 ---
 
@@ -134,11 +137,23 @@ A new A object is born!
 Hello!
 ```
 
-- The first line above, '_A new A object is born!_' is output by the `A` class's constructor function, which our code does not explicitly call.
+--
 
-- All classes, including our `B` class, are given a default **no-args constructor** by Java if no other constructor is defined within them.
+The first line above, '_A new A object is born!_' is output by the `A` class's constructor function, which our code does not explicitly call.
 
-- This no-args constructor automatically calls **super()**. Note that if we were to write this constructor for `B` ourselves, it would look like:
+---
+
+template: implementation
+
+## Abstract Example (continued)
+
+All classes, including our `B` class, are given a default **no-args constructor** by Java if no other constructor is defined.
+
+--
+
+This no-args constructor automatically calls **super()**. Note that if we were to write this constructor for `B` ourselves, it would look like:
+
+--
 
 ```java
 public B() {
@@ -146,7 +161,7 @@ public B() {
 }
 ```
 
-- The **super** keyword is a reference to the code in the parent class.
+The **super** keyword is a reference to the code in the parent class.
 
 ---
 
