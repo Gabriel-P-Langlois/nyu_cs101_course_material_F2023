@@ -1460,6 +1460,10 @@ name: multi-level
 
 # Multi-Level Inheritance
 
+---
+
+template: multi-level
+
 ## Concept
 
 We can continue our example by giving `B` its own child, `C`.
