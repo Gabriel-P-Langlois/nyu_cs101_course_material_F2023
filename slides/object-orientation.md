@@ -24,7 +24,7 @@ class: center, middle
 
 # Agenda
 
-1. [Overview](#concept)
+1. [Overview](#overview)
 1. [Black Box](#black-box)
 1. [Files](#example-1)
 1. [Dogs](#example-2)
@@ -33,6 +33,12 @@ class: center, middle
 1. [Comparing Sameness](#comparisons)
 1. [Stringification](#stringification)
 1. [The 4 Pillars of Object-Orientation](#pillars)
+1. [Inheritance and polymorphism](#overview2)
+1. [Basic Implementation](#implementation)
+1. [Multi-Level Inheritance](#multi-level)
+1. [Polymorphism](#polymorphism)
+1. [Similarity & Difference](#difference)
+1. [Is Inheritance Evil?](#evils)
 
 ---
 
@@ -1281,6 +1287,8 @@ template: pillars
 - **Objects** can also be instances of one or more interfaces (we have not discussed this yet).
 
 ---
+
+
 
 name: overview2
 
