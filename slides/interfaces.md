@@ -8,10 +8,6 @@ class: center, middle
 
 # Interfaces
 
-> As far as the customer is concerned, the interface is the product.
->
-> –[Jef Raskin](https://en.wikipedia.org/wiki/Jef_Raskin), initial creator of the Apple Macintosh
-
 ---
 
 # Agenda
@@ -372,6 +368,10 @@ public class OfficePuppy implements IndependentThinker {
 name: polymorphism
 
 # Polymorphism
+
+---
+
+template: polymorphism
 
 ## Concept
 
