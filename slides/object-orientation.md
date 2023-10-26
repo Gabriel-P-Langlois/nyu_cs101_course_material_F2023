@@ -1351,8 +1351,8 @@ public class A {
     public String getMessage() {
         return this.message;
     }
-    public void setMessage(String message) {
-        if (msg.length > 0) this.message = message;
+    public void setMessage(String msg) {
+        if (msg.length > 0) this.message = msg;
     }
 }
 ```
@@ -1385,7 +1385,7 @@ template: implementation
 
 ## Abstract Example (continued)
 
-We often create UML diagrams indicating class relationships, where the arrow points from parent to child.
+We often create UML diagrams indicating class relationships, where the arrow points from child to parent.
 
 ![Class inheritance UML diagram](../files/oop-inheritance-simple.png)
 
