@@ -35,11 +35,11 @@ An **abstract class** is a class that contains one or more **abstract methods**,
 
 --
 
-Think of an abstract method like a prototype for a method. It declares the method’s return type and parameter list without implementing the method.
+Think of an abstract method like a prototype for a method.
 
 --
 
-Abstract methods provide _a common definition of a base class that multiple derived classes can share_.
+Abstract methods provide _a common definition of a base class.
 
 --
 
@@ -62,11 +62,11 @@ template: overview
 
 ## Similarity to concrete classes
 
-A class which is not abstract is called a **concrete class**.
+A class that is not abstract is called a **concrete class**.
 
 --
 
-An abstract class can encapsulate _all the same properties and methods_ as a concrete class:
+An abstract class encapsulates _all the properties and methods_ as a concrete class:
 
 - Private, protected, or public properties and methods
 
@@ -111,7 +111,7 @@ template: overview
 
 ## Legacy
 
-An abstract class has no use unless some other class extends it.
+An abstract class is only useful if some other class extends it!
 
 Any non-abstract child class **must** implement abstract methods declared in an abstract parent or other ancestor class.
 
@@ -214,7 +214,7 @@ template: overview-interfaces
 
 ## Concept
 
-Interfaces serve as a sort of contract.
+Interfaces serve as a sort of **contract**.
 
 --
 
