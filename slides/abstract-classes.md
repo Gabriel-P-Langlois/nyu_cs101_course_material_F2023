@@ -305,7 +305,7 @@ We can include an instance method with an implementation in an interface. This i
 
 - Imagine our Vehicle interface is already in use (e.g., the Bicycle implementation).
 
-- Imagine now added a new method to the interface:
+- Suppose we want to add a new method to the interface:
 
 --
 
