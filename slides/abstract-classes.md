@@ -193,7 +193,7 @@ name: overview-interfaces
 
 An **interface** is a blueprint of a class.
 
-A java interface contains static constants and abstract methods. _It cannot contain anything else_.
+A java interface can contain abstract methods, static methods, and default methods (more on this later). 
 
 --
 
@@ -218,7 +218,7 @@ Interfaces serve as a sort of **contract**.
 
 --
 
-- An interface is similar to an abstract class, but its intent is to specify what methods that a class **must** implement.
+- An interface is similar to an abstract class, but it intends to specify what methods a class **must** implement.
 
 --
 
@@ -472,10 +472,10 @@ name: picking2
 
 ## Deciding between abstract classes and interfaces
 
-Given both abstract classes and interfaces have the ability to encapsulate abstract methods, _how do you pick between the two_?
+Given both abstract classes and interfaces can encapsulate abstract methods, _how do you pick between the two_?
 
 It's easy:
 
-- Interfaces are used to enforce a common set of behavioral capabilities on otherwise-disparate classes with very little code in common.
+- Interfaces enforce a common set of behavioral capabilities on otherwise disparate classes with very little code in common.
 
-- Abstract classes are used to enforce a common set of behavioral capabilities on classes that share a significant amount of code in common.
+- Abstract classes enforce a common set of behavioral capabilities on classes that share a significant amount of code.
