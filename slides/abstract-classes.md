@@ -241,7 +241,7 @@ Imagine the following vehicle interface:
 ```java
 public interface Vehicle {
     // Attributes -- all attributes are public, static, and final by default.
-    final float MAX_VELOCITY;
+    final float MAX_VELOCITY = 100;
     
     // Methods -- all methods are public and abstract by default
     void speedUp(int a);
@@ -255,7 +255,8 @@ Any class can adhere to this interface using the **implements** keyword.
 
 ```java
 public class Bicycle implements Vehicle {
-  float MAX_VELOCITY = 30; // MPH
+  float MAX_VELOCITY = 100;
+  float actual_velocity = MAX_VELOCITY*0.30f;
   
   public void speedUp(int a) {
     // implementation goes there
