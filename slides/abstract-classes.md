@@ -286,8 +286,10 @@ The value of an interface is that it can ensure the same set of behaviors across
 
 --
 
-- All methods are abstract public and abstract by default.
-- All properties are public, static and final by default.
+- An interface can contain public non-static concrete methods in the form of default methods (more on this soon).
+- An interface can contain public static concrete methods (more on this soon).
+- Any other methods must be public and abstract.
+- All attributes are public, static and final.
 
 ---
 
