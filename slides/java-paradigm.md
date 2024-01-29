@@ -14,20 +14,18 @@ class: center, middle
 
 # Announcements
 
-- The tutoring sessions schedule for this semester is available. Go on Brightspace, click the the Schedule + Lectures tab,
-and click on the appropriate link above the schedule table.
+- TBC.
 
 <br />
 
-- Quiz 1 is online -- you have plenty of time to finish it (two days after the add/drop deadline).
+- **Important**: Bring your laptop with you next class.
 
 <br />
 
-- Assignment 1 will be posted next week on the 19th.
 
 <br />
 
-- **Important**: Bring your laptop with you next class if you can.
+
 
 ---
 
@@ -460,15 +458,13 @@ One of Java's inventors, James Gosling, has [explained the origin of this](http:
 name: git
 template: git
 
-## What to do for the next class: Install Git
+## Next class: UNIX and the Command line
 
-- Get Git for your machine (Windows/macOS/Linux) [here](https://git-scm.com/downloads).
+- Windows users need to get Git: Click [here](https://git-scm.com/downloads).
 
 - Installing Git will install Git Bash, which is what we want.
 
-- This will let us use the Git Bash terminal in VSC...
-
-- See also this [VSC website](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git).
+- Windows users will then be able to use the UNIX command line.
 
 --
 
