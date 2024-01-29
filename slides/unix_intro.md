@@ -16,9 +16,8 @@ class: center, middle
 
 <br />
 
-- Quiz 2 will be online today or tomorrow.
-
-- Assignment 1 will be posted this coming Tuesday.
+- TBC.
+  
 ---
 
 # Agenda
@@ -46,7 +45,7 @@ In order to run Unix or Linux commands, you will need a terminal emulator.
 - MacOS users already have the Terminal app that can be used for this purpose.
 - Windows users must have [Git Bash for Windows](https://git-scm.com/downloads) installed.
 
-To use the Terminal within Visual Studio Code, you will need to download Git for your machine. Refer to the end of the previous lecture slides.
+
 
 --
 
