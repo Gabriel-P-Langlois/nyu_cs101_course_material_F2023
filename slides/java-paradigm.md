@@ -8,24 +8,7 @@ class: center, middle
 
 # The Java Paradigm
 
-"Write once, run anywhere"
-
----
-
-# Announcements
-
-- TBC.
-
-<br />
-
-- **Important**: Bring your laptop with you next class.
-
-<br />
-
-
-<br />
-
-
+"Write once, run anywhere."
 
 ---
 
@@ -110,10 +93,6 @@ A processor can...
 
 --
 
-- compare two numbers to see which is larger
-
---
-
 - send a number to a particular device (e.g., a monitor)
 
 --
@@ -122,7 +101,7 @@ A processor can...
 
 --
 
-Note: **Every** statement in a computer program is reduced to a sequence of these processor actions!
+**Every** statement in a computer program is reduced to a sequence of these processor actions!
 
 ---
 
@@ -465,11 +444,4 @@ template: git
 - Installing Git will install Git Bash, which is what we want.
 
 - Windows users will then be able to use the UNIX command line.
-
---
-
-<br />
-
-<div align="center">
-<span style="color: red;"> **Live demonstration**</span> </div>
 
