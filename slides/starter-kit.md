@@ -12,15 +12,7 @@ class: center, middle
 
 # Announcements
 
-Assignment 1 is out. It is due in two weeks from now (October 3rd, 11:59 pm).
-
-- This assignment will familiarize you with programming in Java.
-- Start early.
-- I will not give extensions for this assignment (and the next two).
-
-Assignment 0 and Quiz 1 are due this coming Thursday.
-
-Quiz 2 is due this coming Friday.
+TBC.
 
 ---
 
@@ -45,18 +37,13 @@ Part II: More on organizing projects; Variables and identifiers; data types; ope
 
 # Things you need
 
-You will need a UNIX terminal emulator.
-
-- OS X users already have the Terminal app we will use for this purpose.
-- Windows users must have [Git for Windows](https://gitforwindows.org/) installed.
-
 
 You will need to have the [Java Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/) (JDK) installed.
 
+You will need the Eclipse IDE. I will use [Visual Studio Code](https://code.visualstudio.com).
 
-You will need a text editor. I will use [Visual Studio Code](https://code.visualstudio.com).
-
-Note: If you have issues using the command line `code` for opening a file in VSC, try using the command `open` or look [here](https://stackoverflow.com/questions/29955500/code-is-not-working-in-on-the-command-line-for-visual-studio-code-on-os-x-ma).
+Note: I do not mind if you use other IDEs or other editors to write Java code, e.g., Visual Studio Code. However, if you intend to take CS 102, 
+you should know that some instructors require students to use Eclipse.
 
 ---
 
