@@ -24,7 +24,6 @@ We'll talk a bit more about computers and programming.
 6. [Compiling](#compiling)
 7. [Interpreting](#interpreting)
 8. [Java](#java)
-9. [Setting up Git Bash for VSC](#git)
 
 ---
 
