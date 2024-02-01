@@ -8,15 +8,6 @@ class: center, middle
 
 # Basic UNIX Commands
 
-
-
----
-
-# Announcements
-
-<br />
-
-- TBC.
   
 ---
 
@@ -39,11 +30,11 @@ name: assumptions
 
 ## Ability to run \*NIX commands
 
-In order to run Unix or Linux commands, you will need a terminal emulator.
+To run Unix or Linux commands, you will need a terminal emulator.
 
-- If you use Linux/Unix, I assume you already know how to do that.
-- MacOS users already have the Terminal app that can be used for this purpose.
 - Windows users must have [Git Bash for Windows](https://git-scm.com/downloads) installed.
+- MacOS users already have the Terminal app that can be used for this purpose.
+- If you use Linux/Unix, I assume you already know how to do that.
 
 
 
@@ -70,7 +61,7 @@ Unix commands are necessary for navigating directories/folders in a UNIX-like sy
 
 We'll go over some of the basic commands in \*NIX.
 
-I **strongly** encourage you to read chapters 1 and 2 in [tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/) after class
+After class, read chapters 1 and 2 in [tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/).
 
 ---
 
