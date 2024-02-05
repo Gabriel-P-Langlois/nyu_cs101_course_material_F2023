@@ -247,21 +247,18 @@ import java.util.Scanner; // a predefined Java library for keyboard input
 public class Welcome {
 	public static void main(String[] args) {
 		System.out.println("Enter your username:"); // prompt for input
-		
 		Scanner input = new Scanner(System.in);
 		// the next line declares a String variable named "nextName" and
 		// makes the input scanner reads the string. (input.next())
 		String nextName = input.next();
-		
 		System.out.println("Welcome to Java Programming, " + nextName + "!");
-		
 		input.close(); // closing the input Scanner
 	}
 }
 ```
 The **method** next() is used to get input from the user.
 
-It can read the input only until a space(" ") is encountered.
+It reads the input until a space character (" ") is encountered.
 
 ---
 
@@ -273,14 +270,11 @@ import java.util.Scanner; // a predefined Java library for keyboard input
 public class Welcome {
 	public static void main(String[] args) {
 		System.out.println("Enter your username:"); // prompt for input
-		
 		Scanner input = new Scanner(System.in);
 		// the next line declares a String variable named "nextName" and
 		// makes the input scanner reads the string. (input.next())
 		String nextName = input.next();
-		
 		System.out.println("Welcome to Java Programming, " + nextName + "!");
-		
 		input.close(); // closing the input Scanner
 	}
 }
@@ -304,10 +298,13 @@ template: input
 
 Scanner has a few different functions for fetching the user input as different data types, e.g.:
 
-- `next()` - returns a `String` with the user's input up until a space(" ") is encountered.
-- `nextLine()` - returns a `String` with the user's input up to the newline (i.e. `\n`) character data type
-- `nextInt()` - returns an `int` with the user's input, if they entered an integer; otherwise crashes
-- `nextDouble()` - returns a `double` with the user's input, if they entered a number; otherwise crashes
+`next()` - returns a `String` with the user's input up until a space(" ") is encountered.
+
+`nextLine()` - returns a `String` with the user's input up to the newline (i.e. `\n`) character data type
+
+`nextInt()` - returns an `int` with the user's input, if they entered an integer; otherwise crashes
+
+`nextDouble()` - returns a `double` with the user's input, if they entered a number; otherwise crashes
 
 ---
 
