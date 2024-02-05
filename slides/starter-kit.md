@@ -12,16 +12,18 @@ class: center, middle
 
 # Announcements
 
-Assignment 1 has been released and is due by February 13.
+Assignment 1 has been released and is due by **February 13**.
 
-Quiz 1 has been released and is due by February 13.
+Quiz 1 has been released and is due by **February 13**.
 
-Quiz 2 will be released later this week.
+Assignment 2 will be released later this week, but won't be due until **February 20**.
+
+Quiz 2 will be released later this week on Thursday or Friday.
 
 ---
 
 # Agenda
-Part I: Starter code and I/O using the Scanner class.
+Part I: Starter code and Input/Output (I/O) using the Scanner class.
 1. [Your first Java program](#starter-code) 
 1. [Explaining your first Java program](#java-program-explained)
 1. [A Java program with the Scanner class](#code-scanner) 
@@ -82,13 +84,14 @@ public class MyFirstJavaProgram {
 
 The first line defines a **class**.
 
-Every Java program must have at least one class.
+Each Java program must have at least one class, and each class has a name.
 
-Each class has a name.
+--
+
 - The name of our class is MyFirstJavaProgram
 - By convention, class names start with an uppercase letter.
 
-The name of the class containing the main method must match the name of the source file (MyFirstJavaProgram.java)
+Note: The class that contains the main method must match the name of the source file (MyFirstJavaProgram.java)
 
 ---
 
@@ -124,11 +127,9 @@ public class MyFirstJavaProgram {
 }
 ```
 
-`Public` , `Static` , `void` are called **reserved words**.
+`Public` , `Static` , `void`, `String` and `args` are called **reserved words**.
 
-Each one of them has a specific meaning to the compiler. 
-
-We will explain these words in detail later in the course.
+Each one of them has a specific meaning to the compiler... We will explain these words in detail as the course progresses.
 
 ---
 
@@ -150,6 +151,8 @@ A comment documents information about the program.
 
 Comments help programmers communicate and understand the program.
 
+--
+
 Note: Add comments to your programs! See this [website](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/) for best practices.
 
 ---
@@ -166,11 +169,13 @@ public class MyFirstJavaProgram {
 }
 ```
 
-`System.out.println` is a **Java statement**.
+The statement `System.out.println` is a **Java statement**.
 
-The statement `System.out.println` instructs the computer to display a message in the console.
+Here, `System.out.println` instructs the computer to display a message in the console.
 
 The message we will be displaying in the program is "Welcome to Java from the command line!".
+
+--
 
 Note: Almost all statements in Java must end with a semicolon **;**.
 
@@ -184,7 +189,7 @@ name: code-scanner
 
 template: code-scanner
 
-In order to easily receive keyboard input from a user, a Java program must import `java.util.Scanner`.
+To receive keyboard input from a user, a Java program must import `java.util.Scanner`.
 
 ```java
 import java.util.Scanner; // a predefined Java library for keyboard input
@@ -192,14 +197,11 @@ import java.util.Scanner; // a predefined Java library for keyboard input
 public class Welcome {
 	public static void main(String[] args) {
 		System.out.println("Enter your username:"); // prompt for input
-		
 		Scanner input = new Scanner(System.in);
 		// the next line declares a String variable named "nextName" and
 		// makes the input scanner reads the string. (input.next())
 		String nextName = input.next();
-		
 		System.out.println("Welcome to Java Programming, " + nextName + "!");
-		
 		input.close(); // closing the input Scanner
 	}
 }
@@ -215,20 +217,19 @@ import java.util.Scanner; // a predefined Java library for keyboard input
 public class Welcome {
 	public static void main(String[] args) {
 		System.out.println("Enter your username:"); // prompt for input
-		
 		Scanner input = new Scanner(System.in);
 		// the next line declares a String variable named "nextName" and
 		// makes the input scanner reads the string. (input.next())
 		String nextName = input.next();
-		
 		System.out.println("Welcome to Java Programming, " + nextName + "!");
-		
 		input.close(); // closing the input Scanner
 	}
 }
 ```
 
 In Java, you must declare a variable before you can use it.
+
+--
 
 The declaration establishes the name and type of the variable.
 - `Scanner` is the **type name**
@@ -258,7 +259,7 @@ public class Welcome {
 	}
 }
 ```
-The next() **method** is used to get input from the user.
+The **method** next() is used to get input from the user.
 
 It can read the input only until a space(" ") is encountered.
 
