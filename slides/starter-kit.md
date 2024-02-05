@@ -12,28 +12,30 @@ class: center, middle
 
 # Announcements
 
-- Assignment 1 has been released and is due by February 13.
-- Quiz 1 has been released and is due by February 13.
-- Quiz 2 will be released later this week.
+Assignment 1 has been released and is due by February 13.
+
+Quiz 1 has been released and is due by February 13.
+
+Quiz 2 will be released later this week.
 
 ---
 
 # Agenda
-Part I: Starter code and I/O using the Scanner class; organizing projects.
+Part I: Starter code and I/O using the Scanner class.
 1. [Your first Java program](#starter-code) 
 1. [Explaining your first Java program](#java-program-explained)
 1. [A Java program with the Scanner class](#code-scanner) 
 1. [More about the Scanner class](#input)
 1. [A note about division and type casts](#division-type-casts)
 
-Part II: More on organizing projects; Variables and identifiers; data types; operators and operands.
-1. [Organizing projects I](#organizationI)
-1. [Organizing projects II](#organizationII)
+Part II: Variables and identifiers; data types; operators and operands.
 1. [Variables and identifiers](#variables-identifiers)
 1. [Data types](#data-types)
 1. [Operators and operands](#operators)
 1. [Assignment operators](#assignment)
 3. [Conclusions](#conclusions)
+
+Part III: Mathematical stuff (TBC.)
 
 ---
 
@@ -44,7 +46,7 @@ You will need to have the [Java Development Kit](https://www.oracle.com/technetw
 
 You will need the Eclipse IDE.
 
-Note: I do not mind if you use other IDEs or other text editors to write Java code, e.g., [Visual Studio Code](https://code.visualstudio.com). However, if you intend to take CS 102, you should know that some instructors require students to use Eclipse.
+Note: You may use other IDEs or other text editors to write Java code, e.g., [Visual Studio Code](https://code.visualstudio.com). But if you intend to take the follow-up CSCI-102 course, you should know that some instructors require students to use Eclipse.
 
 ---
 
@@ -56,76 +58,7 @@ name: starter-code
 
 template: starter-code
 
-## Create a file
-
-Use the command line to make a new plain text file with the `.java` extension somewhere you know you can find it later.
-
-```bash
-foo@bar$ cd ~
-foo@bar$ mkdir starting_java
-foo@bar$ cd starting_java
-foo@bar$ touch MyFirstJavaProgram.java
-```
-
----
-
-template: starter-code
-
-## Add starter Java code to the file
-
-Edit the text file you just created. Assuming you are using Visual Studio Code,
-
-```bash
-foo@bar$ code MyFirstJavaProgram.java
-```
-
-Write or copy/paste the following code within MyFirstJavaProgram.java:
-
-```java
-public class MyFirstJavaProgram {
-	public static void main(String[] args) {
-		// put the main contents of your program below here
-		System.out.println("Welcome to Java from the command line!");
-		// put the main contents of your program above here
-	}
-}
-```
-
----
-
-template: starter-code
-
-## Save your file
-
-If you are using Visual Studio Code, press `Ctrl-S` to save.
-
-
-## Compile your file
-
-Java code must be compiled to byte code before it can be run. Use the `javac` command to do this.
-
-```bash
-foo@bar$ javac MyFirstJavaProgram.java
-```
-
-Note the full name of the .java file to compile.
-
-The compiler will now have automatically created a file named MyFirstJavaProgram.class in the same directory.
-
----
-
-template: starter-code
-
-## Execute the Java byte code
-
-The Java byte code can now be executed by the JVM, Java's interpreter, using the `java` command.
-
-```bash
-foo@bar$ java MyFirstJavaProgram
-Welcome to Java from the command line!
-```
-
-Note the command does not require the `.java` or `.class` file extension.
+## TBC.
 
 ---
 
@@ -517,160 +450,6 @@ public class BetterCelciusToFahrenheit {
 ```
 
 Demo: Try it now!
-
----
-
-name: organizationI
-
-# Organizing Java project files and folders I
-
----
-
-template: organizationI
-
-Starting with Assignment 2, we'll organize projects into specific directories.
-
-```bash
-project-directory/
-       |
-       |----------> src/ (Java source code)
-       |
-       |----------> lib/ (external dependencies)
-       |
-       |----------> bin/ (compiled byte code)
-```
-
-Each project directory contains three sub-directories: `src/`, `lib/`, and `bin/`.
-- Java source code goes into `src/`.
-- Compiled code goes into `bin/`.
-- Any external dependencies (e.g., input from an external source) go into the `lib/`.
-
----
-
-template: organizationI
-
-Create a new directory called `project-directory` and add `src/`, `lib/`, and `bin/` directories in it.
-
-```bash
-foo@bar$ mkdir project-directory
-foo@bar$ cd project-directory
-foo@bar$ mkdir src
-foo@bar$ mkdir lib
-foo@bar$ mkdir bin
-```
-
-Create an empty Java file called AddingDoubles.java inside the src folder, and open the file with VSC:
-
-```bash
-foo@bar$ touch src/AddingDoubles.java
-foo@bar$ code src/AddingDoubles.java
-```
-
----
-
-template: organizationI
-
-Write or copy-paste the code below in AddingDoubles.java:
-
-```java
-import java.util.Scanner;
-
-class AddingDoubles{
-  public static void main(String[] args) {
-    Scanner myObj = new Scanner(System.in);
-    System.out.println("Type a number:");
-
-    double x = myObj.nextDouble();
-
-    System.out.println("Type another number:");
-    double y = myObj.nextDouble(); // Read user input
-
-    double sum = x + y;
-    System.out.println("Sum is: " + sum); 
-  }
-}
-```
-
-We can compile and run the code using the following commands:
-
-```bash
-foo@bar$ javac -d bin src/AddingDoubles.java
-foo@bar$ java -cp bin AddingDoubles
-```
-
----
-
-name: organizationII
-
-# Organizing Java project files and folders II
-
----
-
-template: organizationII
-
-Java code can be organized into "packages" of related files.
-
-A **package** in Java is used to group related classes. Think of it as a folder in a file directory.
-
-Add a similar package declaration to your source code file in VSC, but replace gp2442 with your own NYU Net ID.
-
-```java
-package edu.nyu.cs.gp2442; // Add this line here, but with your NYU Net ID.
-import java.util.Scanner;
-
-class AddingDoubles{
-  public static void main(String[] args) {
-    Scanner myObj = new Scanner(System.in);
-    System.out.println("Type a number:");
-
-    double x = myObj.nextDouble();
-
-    System.out.println("Type another number:");
-    double y = myObj.nextDouble(); // Read user input
-
-    double sum = x + y;
-    System.out.println("Sum is: " + sum); 
-  }
-}
-```
-
----
-
-template: organizationII
-
-**Note**: When using a package identifier, the .java and .class files must be located in a directory that matches the package.
-
-Create an appropriate set of sub-directories, and move both files at once (replace gp2442 with your own NYU Net ID):
-
-```bash
-foo@bar$ mkdir -p src/edu/nyu/cs/gp2442
-foo@bar$ mv src/AddingDoubles.java src/edu/nyu/cs/gp2442
-```
-
----
-
-template: organizationII
-
-**Note**: When using a package identifier, the .java and .class files must be located in a directory that matches the package.
-
-Create an appropriate set of sub-directories, and move both files at once (replace gp2442 with your own NYU Net ID):
-
-```bash
-foo@bar$ mkdir -p src/edu/nyu/cs/gp2442
-foo@bar$ mv src/AddingDoubles.java src/edu/nyu/cs/gp2442
-```
-
-The Java source code must now be re-compiled since the byte code is no longer up to date.
-
-```bash
-foo@bar$ javac -d bin src/edu/nyu/cs/gp2442/AddingDoubles.java
-```
-
-Finally, we can run the compiled code:
-
-```bash
-foo@bar$ java -cp bin edu.nyu.cs.gp2442.AddingDoubles
-```
 
 ---
 
