@@ -23,15 +23,15 @@ Quiz 2 will be released later this week on Thursday or Friday.
 ---
 
 # Agenda
-Part I: Starter code and Input/Output (I/O) using the Scanner class.
+Part I: Starter code; Input/Output (I/O) using the Scanner class; Variables and identifiers;
 1. [Your first Java program](#starter-code) 
 1. [Explaining your first Java program](#java-program-explained)
 1. [A Java program with the Scanner class](#code-scanner) 
 1. [More about the Scanner class](#input)
 1. [A note about division and type casts](#division-type-casts)
-
-Part II: Variables and identifiers; data types; operators and operands.
 1. [Variables and identifiers](#variables-identifiers)
+
+Part II: Data types; operators and operands.
 1. [Data types](#data-types)
 1. [Operators and operands](#operators)
 1. [Assignment operators](#assignment)
@@ -461,14 +461,20 @@ template: variables-identifiers
 
 ## Variables
 
-A **variable** is a placeholder for a value that can be updated as the program runs.
+A **variable** is a placeholder for a value that can change as the program runs.
 
-Think of a variable a box capable of storing a value.
+--
+
+Think of a variable as a box containing a value.
+
+--
 
 Each variable has the following attributes:
 - A name, which enables you to differentiate one variable from another.
 - A type, which specifies what type of value the variable can contain.
 - A value, which represents the current contents of a variable.
+
+--
 
 Note: The name and type of a variable are fixed, but the value changes whenever you assign it a new value.
 
@@ -479,6 +485,8 @@ template: variables-identifiers
 ## Identifiers
 
 Names for variables (and other things) are called **identifiers**.
+
+--
 
 Identifiers in Java conform to certain rules:
 - A variable name must begin with a letter or the underscore letter.
