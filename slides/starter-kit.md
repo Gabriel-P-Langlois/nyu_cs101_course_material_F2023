@@ -12,7 +12,9 @@ class: center, middle
 
 # Announcements
 
-TBC.
+- Assignment 1 has been released and is due by February 13.
+- Quiz 1 has been released and is due by February 13.
+- Quiz 2 will be released later this week.
 
 ---
 
@@ -40,10 +42,9 @@ Part II: More on organizing projects; Variables and identifiers; data types; ope
 
 You will need to have the [Java Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/) (JDK) installed.
 
-You will need the Eclipse IDE. I will use [Visual Studio Code](https://code.visualstudio.com).
+You will need the Eclipse IDE.
 
-Note: I do not mind if you use other IDEs or other editors to write Java code, e.g., Visual Studio Code. However, if you intend to take CS 102, 
-you should know that some instructors require students to use Eclipse.
+Note: I do not mind if you use other IDEs or other text editors to write Java code, e.g., [Visual Studio Code](https://code.visualstudio.com). However, if you intend to take CS 102, you should know that some instructors require students to use Eclipse.
 
 ---
 
