@@ -28,15 +28,13 @@ Part I: Starter code; Input/Output (I/O) using the Scanner class; Variables and 
 1. [Explaining your first Java program](#java-program-explained)
 1. [A Java program with the Scanner class](#code-scanner) 
 1. [More about the Scanner class](#input)
-1. [A note about division and type casts](#division-type-casts)
 1. [Variables and identifiers](#variables-identifiers)
 
-Part II: Data types; operators and operands.
+Part II: Data types; operators and operands (TBC.)
 1. [Data types](#data-types)
 1. [Operators and operands](#operators)
+1. [A note about division and type casts](#division-type-casts)
 1. [Assignment operators](#assignment)
-
-Part III: Mathematical stuff (TBC.)
 
 ---
 
@@ -385,66 +383,6 @@ public class StickToScanningStrings {
     }
 }
 ```
-
----
-
-name: division-type-casts
-
-# Division and type casts
-
----
-
-template: division-type-casts
-
-Consider the following Java codes, which intends to convert celsius temperature to its Fahrenheit equivalent:
-
-```java
-public class CelciusToFahrenheit {
-	public static void main(String[] args) {
-		double c = 100; // double data type is a double-precision 64-bit IEEE 754 floating point.
-		double f = 9 / 5 *c + 32;
-        System.out.println("Fahrenheit temperature is: " + f); // Correct temperature should be 212 degrees Fahrenheit
-	}
-}
-```
-
-Demo: Run the code. What do you observe?
-
----
-
-template: division-type-casts
-
-```java
-public class CelciusToFahrenheit {
-	public static void main(String[] args) {
-		double c = 100; // double data type is a double-precision 64-bit IEEE 754 floating point.
-		double f = 9 / 5 *c + 32;
-        System.out.println("Fahrenheit temperature is: " + f); // Correct temperature should be 212 degrees Fahrenheit
-	}
-}
-```
-
-The problem is that both 9 and 5 are of type `int`, which means the result is also an `int`.
-
-Thus 9 / 5 = 1 in Java (!)
-
-You can fix this problem by converting the fraction to a double by inserting decimal points or using a `type cast`.
-
----
-
-template: division-type-casts
-
-```java
-public class BetterCelciusToFahrenheit {
-	public static void main(String[] args) {
-		double c = 100; // double data type is a double-precision 64-bit IEEE 754 floating point.
-		double f = 9.0 / 5.0 *c + 32;
-        System.out.println("Fahrenheit temperature is: " + f); // Correct temperature should be 212 degrees Fahrenheit
-	}
-}
-```
-
-Demo: Try it now!
 
 ---
 
@@ -874,6 +812,66 @@ catch(NumberFormatException e) {
 ```
 
 We'll talk more about exceptions later in the course.
+
+---
+
+name: division-type-casts
+
+# Division and type casts
+
+---
+
+template: division-type-casts
+
+Consider the following Java codes, which intends to convert celsius temperature to its Fahrenheit equivalent:
+
+```java
+public class CelciusToFahrenheit {
+	public static void main(String[] args) {
+		double c = 100; // double data type is a double-precision 64-bit IEEE 754 floating point.
+		double f = 9 / 5 *c + 32;
+        System.out.println("Fahrenheit temperature is: " + f); // Correct temperature should be 212 degrees Fahrenheit
+	}
+}
+```
+
+Demo: Run the code. What do you observe?
+
+---
+
+template: division-type-casts
+
+```java
+public class CelciusToFahrenheit {
+	public static void main(String[] args) {
+		double c = 100; // double data type is a double-precision 64-bit IEEE 754 floating point.
+		double f = 9 / 5 *c + 32;
+        System.out.println("Fahrenheit temperature is: " + f); // Correct temperature should be 212 degrees Fahrenheit
+	}
+}
+```
+
+The problem is that both 9 and 5 are of type `int`, which means the result is also an `int`.
+
+Thus 9 / 5 = 1 in Java (!)
+
+You can fix this problem by converting the fraction to a double by inserting decimal points or using a `type cast`.
+
+---
+
+template: division-type-casts
+
+```java
+public class BetterCelciusToFahrenheit {
+	public static void main(String[] args) {
+		double c = 100; // double data type is a double-precision 64-bit IEEE 754 floating point.
+		double f = 9.0 / 5.0 *c + 32;
+        System.out.println("Fahrenheit temperature is: " + f); // Correct temperature should be 212 degrees Fahrenheit
+	}
+}
+```
+
+Demo: Try it now!
 
 ---
 
