@@ -16,7 +16,7 @@ Assignment 1 has been released and is due by **February 13**.
 
 Quiz 1 has been released and is due by **February 13**.
 
-Assignment 2 will be released later this week, but won't be due until **February 20**.
+Assignment 2 will be released later this week, but it won't be due until **February 20**.
 
 Quiz 2 will be released later this week on Thursday or Friday.
 
@@ -35,7 +35,6 @@ Part II: Data types; operators and operands.
 1. [Data types](#data-types)
 1. [Operators and operands](#operators)
 1. [Assignment operators](#assignment)
-3. [Conclusions](#conclusions)
 
 Part III: Mathematical stuff (TBC.)
 
@@ -60,24 +59,26 @@ name: starter-code
 
 template: starter-code
 
-## TBC.
+Launch Eclipse, and follow the instructions in the tutorial...
+
+<div align="center">
+<span style="color: red;">Live demo</span> </div>
 
 ---
 
 name: java-program-explained
 
-# Your first java program explained
+# Your first Java program explained
 
 ---
 
 template: java-program-explained
 
 ```java
-public class MyFirstJavaProgram {
+public class HelloWorld {
 	public static void main(String[] args) {
 		// put the main contents of your program below here
-		System.out.println("Welcome to Java from the command line!");
-		// put the main contents of your program above here
+		System.out.println("Hello World!");
 	}
 }
 ```
@@ -88,21 +89,20 @@ Each Java program must have at least one class, and each class has a name.
 
 --
 
-- The name of our class is MyFirstJavaProgram
+- The name of our class is HelloWorld
 - By convention, class names start with an uppercase letter.
 
-Note: The class that contains the main method must match the name of the source file (MyFirstJavaProgram.java)
+Note: The class that contains the main method must match the name of the source file (HelloWorld.java)
 
 ---
 
 template: java-program-explained
 
 ```java
-public class MyFirstJavaProgram {
+public class HelloWorld {
 	public static void main(String[] args) {
 		// put the main contents of your program below here
-		System.out.println("Welcome to Java from the command line!");
-		// put the main contents of your program above here
+		System.out.println("Hello World!");
 	}
 }
 ```
@@ -118,11 +118,10 @@ A method has a name (e.g., main) and contains a set of statements.
 template: java-program-explained
 
 ```java
-public class MyFirstJavaProgram {
+public class HelloWorld {
 	public static void main(String[] args) {
 		// put the main contents of your program below here
-		System.out.println("Welcome to Java from the command line!");
-		// put the main contents of your program above here
+		System.out.println("Hello World!");	
 	}
 }
 ```
@@ -136,11 +135,10 @@ Each one of them has a specific meaning to the compiler... We will explain these
 template: java-program-explained
 
 ```java
-public class MyFirstJavaProgram {
+public class HelloWorld {
 	public static void main(String[] args) {
 		// put the main contents of your program below here
-		System.out.println("Welcome to Java from the command line!");
-		// put the main contents of your program above here
+		System.out.println("Hello World!");
 	}
 }
 ```
@@ -160,11 +158,10 @@ Note: Add comments to your programs! See this [website](https://stackoverflow.bl
 template: java-program-explained
 
 ```java
-public class MyFirstJavaProgram {
+public class HelloWorld {
 	public static void main(String[] args) {
 		// put the main contents of your program below here
-		System.out.println("Welcome to Java from the command line!");
-		// put the main contents of your program above here
+		System.out.println("Hello World!");
 	}
 }
 ```
