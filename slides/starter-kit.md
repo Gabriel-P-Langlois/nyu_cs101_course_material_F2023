@@ -962,13 +962,3 @@ The general form is `variable op= expression;`, where op is any of Java's binary
 Example: the following statement multiplies salary by 2: `salary *= 2;`
 
 There are even increment and decrement operators, such as `x++;` and `x--;`, which are equivalent to `x = x + 1;` and `x = x - 1;`.
-
----
-
-name: conclusions
-
-# Announcements
-
-Get started on Assignment 1 if you haven't done so already.
-
-Next week: Booleans; if/else statements, and for loops...
