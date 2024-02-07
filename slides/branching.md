@@ -12,15 +12,7 @@ class: center, middle
 
 # Announcements
 
-Here are a few reminders and things to remember for the week:
-
-- If you have not done so already, I encourage you to start working on Assignment 1.
-- Assignment 2 will come out tomorrow (Sep 26) and will be due two weeks after (Oct 10).
-- Quiz 3 will be released on Sep 26 and will be due on Sep 29.
-- Quiz 4 will be released on Sep 28 and will be due on Oct 02.
-
-**Important:** Please use the resources from the tutoring center (Fall 2023 Tutoring schedule. See also CS101 Tutoring Guidelines for Students.pdf), and use them as your primary resource for questions about the course material and the assignments.
-
+TBA.
 ---
 
 # Agenda
@@ -44,13 +36,13 @@ template: concept
 
 ## Concept
 
-In computer science, [control flow](https://en.wikipedia.org/wiki/Control_flow) is the order in which individual statements, instructions or function calls of a program are executed or evaluated. 
+In computer science, [control flow](https://en.wikipedia.org/wiki/Control_flow) is the order in which individual statements, instructions, or function calls of a program are executed or evaluated. 
 
-We can change the control flow of a program such that it deviates from its '_normal_' path.
+We can change the control flow of a program to deviate it from its '_normal_' path.
 
 --
 
-- What is a program's 'normal' path?
+What is a program's 'normal' path?
 
 --
 
@@ -58,11 +50,7 @@ We can change the control flow of a program such that it deviates from its '_nor
 
 - Some branches are _unconditional_ - the control will always break out of this sequential flow every time the program is executed.
 
-- Other branches are _conditional_ - certain contextual conditions must be met if the control of the program is to break out of its usual flow.
-
---
-
-We will focus on **conditional branches**.
+- Other branches are _conditional_ - certain conditions must be met if the control of the program is to break out of its usual flow.
 
 ---
 
@@ -243,6 +231,13 @@ is not evaluated because `n != 0` is false.
 One of the advantages of short-circuit evaluation is that you can use `&&` and `||`
 to prevent execution errors. If n were 0 in the earlier example, evaluating `x % n` would cause a
 “division by zero ” error.
+
+---
+
+template: boolean
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -431,6 +426,13 @@ if (breakfastWasServed && breakfastWasEaten) {
 ```
 
 The ternary operator, `?`, thankfully allows us to simplify such syntax:
+
+---
+
+template: ternary
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ```javascript
 satiationLevel = breakfastWasServed && breakfastWasEaten ? "full" : "hungry";
