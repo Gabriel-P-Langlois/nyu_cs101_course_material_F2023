@@ -438,7 +438,3 @@ template: ternary
 <span style="color: red;">Practice round</span> </div>
 
 ---
-
-
-```
-
