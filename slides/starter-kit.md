@@ -591,7 +591,7 @@ Utility classes contain useful methods for manipulating the types of data usuall
 
 They are often called "wrapper" or "helper" classes because they offer additional functionality built around primitive data types.
 
-These are fully-**objected-oriented** correlates of the fundamental primitive data types.
+These are **fully-objected-oriented** correlates of the fundamental primitive data types.
 
 ---
 
@@ -686,6 +686,15 @@ catch(NumberFormatException e) {
 ```
 
 We'll talk more about exceptions later in the course.
+
+---
+
+template: data-types
+
+## Converting data types
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -814,15 +823,31 @@ name: assignment
 
 template: assignment
 
-You can change the value of a variable in your program by using an assignment statement:
-- `variable = expression;`
+You can change the value of a variable in your program by using an assignment statement: `variable = expression;`
 
-The assignment statement computes the value of the expression on the right side of the equal sign and assign that value to the variable that appears on the left.
+--
+
+The assignment statement computes the value of the expression on the right side of the equal sign and assigns that value to the variable that appears on the left.
+
+--
 
 Statements such as `x = x + value;` are so common that Java allows the following shorthand: `x += value;`.
 
-The general form is `variable op= expression;`, where op is any of Java's binary operators.
+--
+
+The general form is `variable op = expression;`, where op is any of Java's binary operators.
+
+--
 
 Example: the following statement multiplies salary by 2: `salary *= 2;`
 
+--
+
 There are even increment and decrement operators, such as `x++;` and `x--;`, which are equivalent to `x = x + 1;` and `x = x - 1;`.
+
+---
+
+template: assignment
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
