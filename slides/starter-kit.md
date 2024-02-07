@@ -168,7 +168,7 @@ The statement `System.out.println` is a **Java statement**.
 
 Here, `System.out.println` instructs the computer to display a message in the console.
 
-The message we will be displaying in the program is "Welcome to Java from the command line!".
+The message displayed in the program is "Hello World!".
 
 --
 
