@@ -8,10 +8,6 @@ class: center, middle
 
 # Loops
 
-> "History doesn’t repeat itself but it often rhymes"
->
-> -Attributed mistakenly to [Mark Twain](https://en.wikipedia.org/wiki/Mark_Twain)
-
 ---
 
 # Agenda
@@ -132,6 +128,13 @@ In Visual Studio Code, press CTRL + P and type `>task terminate` to stop the exe
 
 ---
 
+template: while
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
+---
+
 name: for
 
 # For Loops
@@ -231,6 +234,10 @@ while (i < N) {
     ++i;
 }
 ```
+
+---
+
+template: for
 
 ---
 
@@ -353,3 +360,10 @@ while (!users_response.equals(stop_response)) {
 }
 System.out.println("The total is " + total);
 ```
+
+---
+
+template: common
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
