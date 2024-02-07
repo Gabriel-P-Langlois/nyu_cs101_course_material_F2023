@@ -429,6 +429,7 @@ The ternary operator, `?`, thankfully allows us to simplify such syntax:
 
 ```javascript
 satiationLevel = breakfastWasServed && breakfastWasEaten ? "full" : "hungry";
+```
 
 ---
 
