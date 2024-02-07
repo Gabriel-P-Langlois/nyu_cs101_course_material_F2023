@@ -622,6 +622,12 @@ Double dbl = new Double(5.0);
 int integer = dbl.intValue();
 ```
 
+Double to String:
+
+```java
+String str = Double.toString(5.0);
+```
+
 ---
 
 template: data-types
@@ -634,18 +640,6 @@ Integer to String:
 String str = Integer.toString(5);
 // or
 String str = ""  +  5;
-```
-
----
-
-template: data-types
-
-## Converting data types
-
-Double to String:
-
-```java
-String str = Double.toString(5.0);
 ```
 
 ---
