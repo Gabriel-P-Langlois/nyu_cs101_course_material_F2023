@@ -437,6 +437,8 @@ template: ternary
 <div align="center">
 <span style="color: red;">Practice round</span> </div>
 
+---
+
 
 ```
 
