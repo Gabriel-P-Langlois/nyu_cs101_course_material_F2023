@@ -615,6 +615,12 @@ template: data-types
 
 ## Converting data types
 
+Double to String:
+
+```java
+String str = Double.toString(5.0);
+```
+
 Double to int:
 
 ```java
@@ -622,10 +628,12 @@ Double dbl = new Double(5.0);
 int integer = dbl.intValue();
 ```
 
-Double to String:
+String to Double:
 
 ```java
-String str = Double.toString(5.0);
+double d = Double.valueOf(str).doubleValue();
+// or
+double d = Double.parseDouble(str);
 ```
 
 ---
@@ -642,36 +650,6 @@ String str = Integer.toString(5);
 String str = ""  +  5;
 ```
 
----
-
-template: data-types
-
-## Converting data types
-
-Long to String:
-
-```java
-String str = Long.toString(50L);
-```
-
----
-
-template: data-types
-
-## Converting data types
-
-Float to String:
-
-```java
-String str = Float.toString(5.0F);
-```
-
----
-
-template: data-types
-
-## Converting data types
-
 String to Integer:
 
 ```java
@@ -680,108 +658,10 @@ int i = Integer.valueOf("5").intValue();
 int i = Integer.parseInt("5");
 ```
 
----
-
-template: data-types
-
-## Converting data types
-
-String to Double:
-
-```java
-double d = Double.valueOf(str).doubleValue();
-// or
-double d = Double.parseDouble(str);
-```
-
----
-
-template: data-types
-
-## Converting data types
-
-String to Long:
-
-```java
-long l = Long.valueOf("5").longValue();
-// or
-long l = Long.parseLong("5");
-```
-
----
-
-template: data-types
-
-## Converting data types
-
-String to Float:
-
-```java
-float f = Float.valueOf("5").floatValue();
-```
-
----
-
-template: data-types
-
-## Converting data types
-
-Decimal to Binary:
-
-```java
-String bin = Integer.toBinaryString(50);
-```
-
----
-
-template: data-types
-
-## Converting data types
-
-Decimal to Hexadecimal:
-
-```java
-String hexstr = Integer.toHexString(50);
-//or
-String hexstr = Integer.toString(50, 16);
-```
-
----
-
-template: data-types
-
-## Converting data types
-
-Hexadecimal to Decimal:
-
-```java
-int i = Integer.valueOf("B8DA3", 16).intValue();
-//or
-int i = Integer.parseInt("B8DA3", 16);
-```
-
----
-
-template: data-types
-
-## Converting data types
-
 Char to String:
 
 ```java
 String s = String.valueOf('c');
-```
-
----
-
-template: data-types
-
-## Converting data types
-
-Integer to ASCII code:
-
-```java
-int i  = (int) "A";
 ```
 
 ---
