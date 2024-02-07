@@ -796,9 +796,9 @@ template: data-types
 
 ## Converting data types
 
-Use an **exception handline** to handle problems encountered while attempting to convert one data type to another.
+Use **exception handling** to handle problems encountered while attempting to convert one data type to another.
 
-```
+```java
 String aString = "foo bar baz bum"; //  a string that has no obvious int equivalent
 
 try{
@@ -815,6 +815,29 @@ We'll talk more about exceptions later in the course.
 
 ---
 
+name: operators
+
+# Operators and operands
+
+---
+
+template: operators
+
+Java specifies computation in the form of arithmetic expressions that closely resemble expressions in mathematics.
+
+**Operators** usually appear between two subexpressions, which are called **operands**.
+
+Common operators include:
+- `+` Addition
+- `-` Subtraction
+- `*` Multiplication
+- `/` Division
+- `%` Remainder
+
+Note: The `-` operator can also appear as a unary operator, as in the expression `-x`, which denotes the negative of `x`.
+
+---
+
 name: division-type-casts
 
 # Division and type casts
@@ -823,7 +846,7 @@ name: division-type-casts
 
 template: division-type-casts
 
-Consider the following Java codes, which intends to convert celsius temperature to its Fahrenheit equivalent:
+Consider the following Java codes, which intend to convert a Celsius temperature to its Fahrenheit equivalent:
 
 ```java
 public class CelciusToFahrenheit {
@@ -835,7 +858,7 @@ public class CelciusToFahrenheit {
 }
 ```
 
-Demo: Run the code. What do you observe?
+**Demo**: Run the code. What do you observe?
 
 ---
 
@@ -871,40 +894,7 @@ public class BetterCelciusToFahrenheit {
 }
 ```
 
-Demo: Try it now!
-
----
-
-name: operators
-
-# Operators and operands
-
----
-
-template: operators
-
-Java specifies computation in the form of arithmetic expressions that closely resemble expressions in mathematics.
-
-**Operators** usually appear between two subexpressions, which are called **operands**.
-
-Common operators include:
-- `+` Addition
-- `-` Subtraction
-- `*` Multiplication
-- `/` Division
-- `%` Remainder
-
-Note: The `-` operator can also appear as a unary operator, as in the expression `-x`, which denotes the negative of `x`.
-
----
-
-template: operators
-
-## Recall: Division and type casts
-
-When you apply a binary operator to numeric values in Java, the result will be of type `int` if both operands are of type `int`, and `double` if either operand is a double.
-
-Remember: `9/5 = 1` in Java, because both 9 and 5 are integers. Use the type cast `(double) 9/5` instead.
+**Demo**: Try it now!
 
 ---
 
