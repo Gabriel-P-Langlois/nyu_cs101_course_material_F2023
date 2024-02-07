@@ -427,6 +427,9 @@ if (breakfastWasServed && breakfastWasEaten) {
 
 The ternary operator, `?`, thankfully allows us to simplify such syntax:
 
+```javascript
+satiationLevel = breakfastWasServed && breakfastWasEaten ? "full" : "hungry";
+
 ---
 
 template: ternary
@@ -434,7 +437,6 @@ template: ternary
 <div align="center">
 <span style="color: red;">Practice round</span> </div>
 
-```javascript
-satiationLevel = breakfastWasServed && breakfastWasEaten ? "full" : "hungry";
+
 ```
 
