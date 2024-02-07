@@ -149,6 +149,14 @@ Methods of type void can be used like statements.
 
 ---
 
+template: simple
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
+
+---
+
 name: parameter-scope
 
 # Passing parameters and scope
@@ -160,13 +168,6 @@ template: parameter-scope
 ## The concept of Scope
 
 **Important**: Once the method invocation completes, any local variables, including parameters, are wiped out of memory.
-
---
-
-<br />
-
-<div align="center">
-<span style="color: red;"> **Live demonstration**</span> </div>
 
 --
 
@@ -299,6 +300,14 @@ The order is determined by the control flow of the program.
 - The Java interpreter is only ever looking at the method invocation at the top of the stack - the most recently invoked method.
 
 - Once a method that has been invoked completes, its stack frame is popped (deleted) from the call stack and its memory is wiped clean.
+
+---
+
+template: parameter-scope
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
 
 ---
 
@@ -443,3 +452,8 @@ In Java, methods are useful for this. But the top-down design is useful outside 
 --
 
 Interesting example: [Edgar Allan Poe's top-down design of the "Raven"](https://www.youtube.com/watch?v=GiDI2JH3_zk&embeds_referring_euri=https%3A%2F%2Fwww.cs.cornell.edu%2F&source_ve_path=MjM4NTE&feature=emb_title)
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
