@@ -10,19 +10,15 @@ class: center, middle
 
 ---
 
-# Reminders and announcements
+# Announcements
 
-- Assignment 1 is due today at 11:59 p.m.
-- Quiz 5 is out and is due on Friday, Oct 6.
-- Assignment 2 is due next Tuesday, Oct. 10, at 11:59 p.m.
-- Assignment 3 is out today and due on Tuesday, Oct. 17, at 11:59 p.m.
-
-Important: My office hours next week will be held virtually on Zoom. I will also expand them (TBA on Thursday).
+TBA.
 
 ---
 
 # Agenda
 
+Part I: One-dimensional arrays; Utility classes for arrays
 1. [Overview](#concept)
 1. [Creation](#creation)
 1. [Array Length](#length)
@@ -30,6 +26,8 @@ Important: My office hours next week will be held virtually on Zoom. I will also
 1. [Search an Array](#binary-search)
 1. [Challenges](#challenges)
 1. [ArrayList Class](#arraylist)
+
+Part II: Value and reference types; multidimensional arrays (TBC.)
 1. [Value and reference types](#pass-by-value)
 
 ---
@@ -38,19 +36,16 @@ name: overview
 
 # Overview
 
-Arrays are used to store multiple values in a single variable.
+Formally, an array in Java is a *non-primitive* data type used to store multiple values of the *same* data type.
 
 --
 
 There is no need to declare multiple variables for each value; use an array!
 
---
-
-Formally, an array in Java is a *non-primitive* data type used to store multiple values of the *same* data type.
 
 --
 
-Arrays can store any data type or data structure, including arrays, so long they are all of the same type.
+Arrays can store *any* data type or data structure, including arrays, so long they are all of the same type.
 
 ---
 
@@ -142,7 +137,7 @@ String[] words = myMessageToYou.split("[ ,?-.]+");
 
 --
 
-**Warning**: You'll have to use this for the assignment 3. :-)
+**Warning**: You'll have to use this in a future assignment.
 
 ---
 
@@ -169,6 +164,11 @@ while (num < 1) {
 ```
 
 Remember: Arrays in Java have **fixed length**. New positions cannot be added and existing positions cannot be removed from an array.
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -347,6 +347,12 @@ The concepts of objects, implementation and interface will all be covered later 
 
 ---
 
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
+
+---
+
 name: challenges
 
 # Challenges
@@ -518,6 +524,12 @@ Compare this to performing the same task [using primitive arrays](#challenges-so
 
 ---
 
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
+
+---
+
 name: pass-by-value
 
 # Value and reference types
@@ -642,3 +654,9 @@ The trick to this is that the **references are themselves passed as values** - t
 --
 
 **Warning**: You'll encounter this soon in future assignments and CS 102. :-)
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
