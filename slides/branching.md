@@ -12,7 +12,17 @@ class: center, middle
 
 # Announcements
 
-TBA.
+- Assignment 1 and Quiz 1 are due this Tuesday by 11:59 pm.
+- Assignment 2 is out and is due next week on Tuesday.
+  
+- Quiz 2 is due this Friday by 11:59 pm.
+- Quiz 3 will be released tomorrow and due this coming Sunday.
+- Quiz 4 will be released on Thursday and due Tuesday next week.
+
+This week, we will cover Branching (control flow + conditional statements) and Loops (for, while, do...while) in Java.
+
+**Important**: Use the tutoring services if you have questions about the assignments.
+
 ---
 
 # Agenda
