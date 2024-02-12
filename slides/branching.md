@@ -343,9 +343,7 @@ In Java, an alternative to if/else if/else statements is switch/case statements.
 
 template: switch-case
 
-## Example
-
-Imagine a program that recommends how to dress.
+## Example: How to dress for the weather
 
 ![UML activity diagram for weather program](../files/selections_switch_weather.png)
 
