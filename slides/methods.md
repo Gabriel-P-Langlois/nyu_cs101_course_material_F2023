@@ -303,14 +303,6 @@ The order is determined by the control flow of the program.
 
 ---
 
-template: parameter-scope
-
-<div align="center">
-<span style="color: red;">Practice round</span> </div>
-
-
----
-
 name: overloading
 
 # Overloading
