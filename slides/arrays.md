@@ -174,7 +174,7 @@ Use `import java.util.Arrays` to invoke the library.
 
 We'll discuss:
 
-- Printing the contents on array
+- Converting the contents on array into a string
 - Comparing the values of two arrays
 - Copying an array
 - Searching an array
@@ -185,7 +185,7 @@ We'll discuss:
 template: arrays-class
 name: arrays-class-2
 
-## Convert array contents to String
+## Converting an array's contents into a String
 
 The method `Arrays.toString()` prints out the array's contents.
 
@@ -194,6 +194,7 @@ The method `Arrays.toString()` prints out the array's contents.
 ```java
 String[] arrVar = { "hello", "and", "good", "morning" };
 String contents = Arrays.toString(arrVar); // -> "[hello,and,good,morning]"
+System.out.println(contents);
 ```
 
 --
@@ -230,6 +231,7 @@ For multi-dimensional arrays (next class), use `.deepEquals()`:
 ```java
 String[][] arrVar1 = { {"hello", "world"}, {"goodbye", "world"} }; // a two-dimensional array
 String[][] arrVar2 = { {"hello", "world"}, {"goodbye", "world"} }; // a separate array with the same values as arrVar1 but at a different location in memory
+
 boolean sameValues = Arrays.deepEquals(arrVar1, arrVar); // -> true!
 ```
 
@@ -293,11 +295,6 @@ The concepts of objects, implementation and interface will all be covered later 
 
 ---
 
-<div align="center">
-<span style="color: red;">Practice round</span> </div>
-
----
-
 template: arrays-class
 name: arrays-class-4
 
@@ -322,6 +319,11 @@ int endIndex = 4;
 Arrays.sort(arrVar, startIndex, endIndex);
 // arrVar now holds {134, 34, 3636, 8}
 ```
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
