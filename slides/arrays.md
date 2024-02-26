@@ -92,7 +92,7 @@ char[] myFavoriteCharacters = { 'f', 'o', 'o' };
 template: creation
 name: creation-3
 
-## Third way (for strings only): Using String's split function
+## Third way (for Strings): Using String's split function
 
 Arrays can be made from text that contains a particular separator.
 
@@ -143,6 +143,8 @@ while (num < 1) {
 }
 ```
 
+--
+
 Remember: Arrays in Java have **fixed length**. New positions cannot be added and existing positions cannot be removed from an array.
 
 ---
@@ -154,25 +156,27 @@ Remember: Arrays in Java have **fixed length**. New positions cannot be added an
 
 name: arrays-class
 
-# Arrays Utility Class
+# Java's native Arrays Utility Class
 
 --
 
-## Useful array-related functions
+## Useful functions for arrays
 
-An array is *not* a primitive data type in Java.
-
---
-
-Nonetheless, Java provides different methods and utilities for arrays through the *Arrays utility class*.
-
---
-
-The **Arrays utility class** provides methods for manipulating arrays.
+While an array is *not* a primitive data type in Java, we nonetheless have access to different methods and utilities for arrays through the *Arrays utility class*.
 
 --
 
 Use `import java.util.Arrays` to invoke the library.
+
+--
+
+We'll discuss:
+
+- Printing the contents on array
+- Comparing the values of two arrays
+- Copying an array
+- Searching an array
+- Sorting an array
 
 ---
 
@@ -181,9 +185,9 @@ name: arrays-class-2
 
 ## Convert array contents to String
 
-`Arrays.toString()` prints out the contents of the array _inelegantly_.
+The method `Arrays.toString()` prints out the array's contents.
 
-- Good for debugging.
+- Inelegant, but good for debugging.
 
 ```java
 String[] arrVar = { "hello", "and", "good", "morning" };
@@ -192,7 +196,7 @@ String contents = Arrays.toString(arrVar); // -> "[hello,and,good,morning]"
 
 --
 
-... and for multi-dimensional arrays, use `.deepToString()`:
+For multi-dimensional arrays (next class), use `.deepToString()`:
 
 ```java
 String[][] arrVar = {
@@ -209,7 +213,7 @@ name: arrays-class-3
 
 ## Comparing values in two arrays
 
-`Arrays.equals()` determines whether two arrays have the same set of values:
+The method `Arrays.equals()` determines whether two arrays have the same set of values:
 
 ```java
 String[] arrVar1 = { "hello", "and", "good", "morning" };
@@ -219,7 +223,7 @@ boolean sameValues = Arrays.equals(arrVar1, arrVar2); // -> true!
 
 --
 
-... and for multi-dimensional arrays, use `.deepEquals()`:
+For multi-dimensional arrays (next class), use `.deepEquals()`:
 
 ```java
 String[][] arrVar1 = { {"hello", "world"}, {"goodbye", "world"} }; // a two-dimensional array
@@ -227,7 +231,7 @@ String[][] arrVar2 = { {"hello", "world"}, {"goodbye", "world"} }; // a separate
 boolean sameValues = Arrays.deepEquals(arrVar1, arrVar); // -> true!
 ```
 
-Note: Do **not** use the comparison operator `==` for this.
+**Warning**: Do *not* use the comparison operator `==` for this.
 
 ---
 
@@ -236,7 +240,7 @@ name: arrays-class-4
 
 ## Sorting the values in an array
 
-Put them in order.
+The method `Arrays.sort()` sorts an array (by default, in ascending order):
 
 ```java
 int[] arrVar = {134, 5, 3636, 34, 8};
@@ -263,37 +267,29 @@ name: arrays-class-6
 
 ## Copying an array
 
-Use `Arrays.copyOf()` to make a clone:
+The method `Arrays.copyOf()` copies the specified array, truncating or padding if necessary:
 
 ```java
-int newArrLength = 10;
-Arrays.copyOf(arrVar, newArrLength); // copy into array of different length
+int org[] = {1,2,3,4};
+int[] copy1 = Arrays.copyOf(org, 4);
+int[] copy2 = Arrays.copyOf(org, 2);
+int[] copy3 = Arrays.copyOf(org, 5);
+
+System.out.println(copy1);
+System.out.println(copy2);
+System.out.println(copy3);
 ```
 
 --
 
 name: arrays-class-copy
 
-... or `.copyOfRange()` to clone a subset of the values in an array:
+Use `.copyOfRange()` to clone a subset of the values in an array:
 
 ```java
 int startIndex = 0;
 int endIndex = 3;
-Arrays.copyOfRange(arrVar, startIndex, endIndex); // copy only a subset
-```
-
----
-
-template: arrays-class
-name: arrays-class-7
-
-## Filling an array
-
-`Arrays.fill()` places default values into an array:
-
-```java
-String defaultValue = "foo";
-Arrays.fill(arrVar, defaultValue);
+int[] copy = Arrays.copyOfRange(arrVar, startIndex, endIndex);
 ```
 
 ---
@@ -319,11 +315,6 @@ int pos = Arrays.binarySearch(numbers, searchTerm); // -> 3
 'Sorted': All primitive data types and `objects` that `implement` the Comparable `interface`. 
 
 The concepts of objects, implementation and interface will all be covered later during the course.
-
---
-
-- Use .linearSearch() to search an array that cannot be sorted.
-- Search and sort algorithms will be encountered in CS 102. :-)
 
 ---
 
