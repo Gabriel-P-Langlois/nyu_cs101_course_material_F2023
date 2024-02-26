@@ -10,12 +10,6 @@ class: center, middle
 
 ---
 
-# Announcements
-
-TBA.
-
----
-
 # Agenda
 
 Part I: One-dimensional arrays; Utility classes for arrays
@@ -36,16 +30,20 @@ name: overview
 
 # Overview
 
-Formally, an array in Java is a *non-primitive* data type used to store multiple values of the *same* data type.
+Formally, an array in Java is a *non-primitive* data type used to store multiple values of the same data type.
 
 --
 
-There is no need to declare multiple variables for each value; use an array!
+```java
+int[] firstFiveFibonnaciNumbers = new int[5];
+firstFiveFibonnaciNumbers[0] = '1';
+firstFiveFibonnaciNumbers[1] = '1';
+firstFiveFibonnaciNumbers[2] = '2';
+firstFiveFibonnaciNumbers[3] = '3';
+firstFiveFibonnaciNumbers[4] = '5';
+```
 
-
---
-
-Arrays can store *any* data type or data structure, including arrays, so long they are all of the same type.
+Arrays can store *any* data type or structure as long as they are all the *same* type.
 
 ---
 
@@ -66,6 +64,8 @@ myFavoriteCharacters[1] = 'o';
 myFavoriteCharacters[2] = 'o';
 ```
 
+--
+
 - In this case, Java knows that each `char` value consumes 16 bits, so it reserves enough memory space for 3 of them.
 
 - The length of the array **cannot** be modified once memory has been allocated for an array of a specific length.
@@ -77,42 +77,23 @@ name: creation-2
 
 ## Second way: Using syntactic sugar
 
-Arrays can be created using shorthand syntax that Java converts at compilation to longer form.
-
---
-
-This is useful if you know the values you want to put into the array.
+Arrays can be created using shorthand syntax:
 
 ```java
 char[] myFavoriteCharacters = { 'f', 'o', 'o' };
 ```
-
-- Note that both operations - declaring the variable and allocating and populating the array - must be done in one statement with this style.
-
----
-
-template: creation
-
-## Object[] arrays
-
-Actually, you can create an array of different types.
-
 --
 
-To do that, use Object[] for the type of your array.
+- This is useful if you know what values you want to put into the array.
 
-```java
-Object[] x = new Object[]{1,2,3,"srk"};
-```
-
-The first three elements of x are integers, and the last element is a string.
+- Note that both operations, declaring the variable and allocating and populating the array, must be done in one statement with this style.
 
 ---
 
 template: creation
 name: creation-3
 
-## Third way (for strings): Using String's split function
+## Third way (for strings only): Using String's split function
 
 Arrays can be made from text that contains a particular separator.
 
@@ -124,7 +105,7 @@ String[] words = myMessageToYou.split(" ");
 
 --
 
-You can also use [regular expressions syntax](https://docs.oracle.com/javase/tutorial/essential/regex/) to split a string using one of several separators:
+You can use [regular expressions syntax](https://docs.oracle.com/javase/tutorial/essential/regex/) to split a string using one of several separators:
 
 ```java
 String myMessageToYou = "Don't, worry?about-a .thing";
@@ -137,7 +118,7 @@ String[] words = myMessageToYou.split("[ ,?-.]+");
 
 --
 
-**Warning**: You'll have to use this in a future assignment.
+**Warning**: You *will* have to use this in a future assignment!
 
 ---
 
