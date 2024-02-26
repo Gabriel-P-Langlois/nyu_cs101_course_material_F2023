@@ -433,17 +433,17 @@ name: pass-by-value-4
 
 ## Arrays and objects are reference types
 
-The first output of this program (before we invoke doSomethingElse) is `[ 5, 10, 15, 20 ]`. Why? 
+The first output (before we invoke doSomethingElse) is `[ 5, 10, 15, 20 ]`. Why? 
 - The local variable within the main function is never reassigned to refer to anything other than that array.
 - That array has never had its contents modified!
 
 --
 
-The second output of this program (after we invoke doSomethingElse) is `[ 5, 10, 555, 20 ]`. Why?
+The second output (after we invoke doSomethingElse) is `[ 5, 10, 555, 20 ]`. Why?
 - The local variable within the doSomething function is an alias of the variable within the main function.
-- They both refer to the same array in the same memory location and that array's inner values have been modified.
+- They both refer to the same array in the same memory location and its inner values have been modified.
 - **Important**: The values encapsulated within the array or object are NOT passed to the function.
-- Hence changing the value in the method will change it outside the method!
+- Changing the value in the method changes it outside the method!
 
 --
 
@@ -487,7 +487,7 @@ name: challenges-solution
 
 ## Example: Copy data into a new, bigger array
 
-Here, a user provides us with inputs, and we store whatever they enter into an array.
+A user provides inputs, and we store them in an array.
 
 ```java
 String[] veggies = new String[1]; // start with an array to hold just one value
