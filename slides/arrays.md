@@ -17,11 +17,13 @@ Part I: One-dimensional arrays; Utility classes for arrays
 1. [Creation](#creation)
 1. [Array Length](#length)
 1. [Arrays Utility Class](#arrays-class)
-1. [Challenges](#challenges)
-1. [ArrayList Class](#arraylist)
+1. [Value and reference types](#pass-by-value)
+
 
 Part II: Value and reference types; multidimensional arrays (TBC.)
-1. [Value and reference types](#pass-by-value)
+
+1. [Challenges](#challenges)
+1. [ArrayList Class](#arraylist)
 
 ---
 
@@ -327,6 +329,139 @@ Arrays.sort(arrVar, startIndex, endIndex);
 
 ---
 
+name: pass-by-value
+
+# Value and reference types
+
+--
+
+We've talked a lot about primitive, non-primitive and reference data types.
+
+--
+
+What happens when we pass a primitive, non-primitive or reference argument to a method?
+
+--
+
+For example, what happens if we give an array as an argument to a method versus, say, an integer?
+
+--
+
+Let's slow down a little to consider this...
+
+---
+
+template: pass-by-value
+name: pass-by-value-2
+
+## Primitives are value types
+
+This situation is easy when we pass a _value type_ (e.g., a primitive data type value) argument to a function.
+
+--
+
+- A copy of the argument's _value_ is passed to the function.
+- Primitive values are called '**value types**' for this reason.
+
+---
+
+template: pass-by-value
+name: pass-by-value-3
+
+```java
+public static void doSomething(int x) {
+    x = 10;
+}
+public static void main(String[] args) {
+    int x = 5;
+    doSomething(x); // the value 5 is passed to the function
+    System.out.println(x);
+}
+```
+
+The output of the above program is `5`, since the local variable within the main function is never reassigned to refer to anything other than 5.
+
+- `doSomething()` is invoked and passed a copy of the value `5` (the value of the main function's local variable `x`).
+- `doSomething()` creates its own local parameter variable `x` which refers to this value, `5`.
+- `doSomething()` reassigns its local variable `x` to refer to `10` instead.
+- `doSomething()` completes and control flows back to the main method, where the local variable `x` still is assigned the value `5`.
+
+---
+
+template: pass-by-value
+name: pass-by-value-5
+
+The situation is easy when we pass a _reference type_ (e.g., an array or object) argument to a function.
+
+```java
+import java.util.Arrays;
+public class array4{
+
+    public static void doSomething(int[] x) {
+        int[] y = {25, 30, 35, 40};
+        x = y; // the local variable is re-assigned to point to a different memory address
+    }
+    public static void main(String[] args) {
+       int x[] = {5, 10, 15, 20};
+       doSomething(x); // the memory address of the array is passed to the function
+       System.out.println(Arrays.toString(x) );
+    }
+}
+```
+
+The output of this program is `[ 5, 10, 15, 20 ]`, since the local variable within the main function is never reassigned to refer to anything other than that array, and that array has never had its contents modified.
+
+---
+
+template: pass-by-value
+name: pass-by-value-4
+
+## Arrays and objects are reference types
+
+When we pass an _array_ or an _object_ argument to a function, the situation is not so easy.
+
+- A copy of the argument's _reference_ - the **memory address** at which the array or object is stored - is passed to the function.
+- Important: The values encapsulated within the array or object are NOT passed to the function.
+- Arrays and objects are called '**reference types**' for this reason.
+
+---
+
+template: pass-by-value
+name: pass-by-value-6
+
+## Arrays and objects are reference types (continued)
+
+But consider the following example:
+
+```java
+public static void doSomething(int[] x) {
+    x[2] = 555; // the third spot within the array is re-assigned to refer to a different integer
+}
+public static void main(String[] args) {
+    int x[] = {5, 10, 15, 20};
+    doSomething(x); // the memory address of the array is passed to the function
+    System.out.println( Arrays.toString(x) );
+}
+```
+
+The output of the above program is `[ 5, 10, 555, 20 ]`, since the local variable within the doSomething function is an alias of the variable within the main function - they both refer to the same array in the same memory location and that array's inner values have been modified.
+
+--
+
+The trick to this is that the **references are themselves passed as values** - the value being the integer memory address at which the array or object resides.
+
+--
+
+**Warning**: You'll encounter this soon in future assignments and CS 102. :-)
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
+
+---
+
 name: challenges
 
 # Challenges
@@ -504,133 +639,5 @@ Compare this to performing the same task [using primitive arrays](#challenges-so
 
 ---
 
-name: pass-by-value
 
-# Value and reference types
-
---
-
-We've talked a lot about primitive, non-primitive and reference data types.
-
---
-
-What happens when we pass a primitive, non-primitive or reference argument to a method?
-
---
-
-For example, what happens if we give an array as an argument to a method versus, say, an integer?
-
---
-
-Let's slow down a little to consider this...
-
----
-
-template: pass-by-value
-name: pass-by-value-2
-
-## Primitives are value types
-
-This situation is easy when we pass a _value type_ (e.g., a primitive data type value) argument to a function.
-
---
-
-- A copy of the argument's _value_ is passed to the function.
-- Primitive values are called '**value types**' for this reason.
-
----
-
-template: pass-by-value
-name: pass-by-value-3
-
-```java
-public static void doSomething(int x) {
-    x = 10;
-}
-public static void main(String[] args) {
-    int x = 5;
-    doSomething(x); // the value 5 is passed to the function
-    System.out.println(x);
-}
-```
-
-The output of the above program is `5`, since the local variable within the main function is never reassigned to refer to anything other than 5.
-
-- `doSomething()` is invoked and passed a copy of the value `5` (the value of the main function's local variable `x`).
-- `doSomething()` creates its own local parameter variable `x` which refers to this value, `5`.
-- `doSomething()` reassigns its local variable `x` to refer to `10` instead.
-- `doSomething()` completes and control flows back to the main method, where the local variable `x` still is assigned the value `5`.
-
----
-
-template: pass-by-value
-name: pass-by-value-5
-
-The situation is easy when we pass a _reference type_ (e.g., an array or object) argument to a function.
-
-```java
-import java.util.Arrays;
-public class array4{
-
-    public static void doSomething(int[] x) {
-        int[] y = {25, 30, 35, 40};
-        x = y; // the local variable is re-assigned to point to a different memory address
-    }
-    public static void main(String[] args) {
-       int x[] = {5, 10, 15, 20};
-       doSomething(x); // the memory address of the array is passed to the function
-       System.out.println(Arrays.toString(x) );
-    }
-}
-```
-
-The output of this program is `[ 5, 10, 15, 20 ]`, since the local variable within the main function is never reassigned to refer to anything other than that array, and that array has never had its contents modified.
-
----
-
-template: pass-by-value
-name: pass-by-value-4
-
-## Arrays and objects are reference types
-
-When we pass an _array_ or an _object_ argument to a function, the situation is not so easy.
-
-- A copy of the argument's _reference_ - the **memory address** at which the array or object is stored - is passed to the function.
-- Important: The values encapsulated within the array or object are NOT passed to the function.
-- Arrays and objects are called '**reference types**' for this reason.
-
----
-
-template: pass-by-value
-name: pass-by-value-6
-
-## Arrays and objects are reference types (continued)
-
-But consider the following example:
-
-```java
-public static void doSomething(int[] x) {
-    x[2] = 555; // the third spot within the array is re-assigned to refer to a different integer
-}
-public static void main(String[] args) {
-    int x[] = {5, 10, 15, 20};
-    doSomething(x); // the memory address of the array is passed to the function
-    System.out.println( Arrays.toString(x) );
-}
-```
-
-The output of the above program is `[ 5, 10, 555, 20 ]`, since the local variable within the doSomething function is an alias of the variable within the main function - they both refer to the same array in the same memory location and that array's inner values have been modified.
-
---
-
-The trick to this is that the **references are themselves passed as values** - the value being the integer memory address at which the array or object resides.
-
---
-
-**Warning**: You'll encounter this soon in future assignments and CS 102. :-)
-
----
-
-<div align="center">
-<span style="color: red;">Practice round</span> </div>
 
