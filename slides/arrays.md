@@ -525,21 +525,23 @@ All of this was very tedious! *Question*: Can we do better?
 
 --
 
-*Answer*: Yes, we can. We can use another utility class developed for Arrays: [Apache Commons Lang](https://commons.apache.org/proper/commons-lang/)'s `ArrayUtils` class.
+*Answer*: Yes, we can. We'll do so using the `ArrayList` class.
 
 --
 
-To use it, download and install the Commons Lang library `.jar` file into a project's dependencies directory (often the `lib` directory) and then import it using `import org.apache.commons.lang3.ArrayUtils;`
-
-```java
-int[] fibb = {0, 1, 2, 3, 5, 8};
-fibb = ArrayUtils.add(fibb, 13);
-System.out.println(Arrays.toString(fibb)); // outputs "[0, 1, 2, 3, 5, 8, 13]"
-```
+The `ArrayList` class, part of the `java.util` package, gives programmers a more dynamic array-like experience than what primitive arrays can do.
 
 --
 
-Note that this technique only works with arrays of primitive data types.
+- an `ArrayList` does not have a fixed length.
+
+- an `ArrayList` can have new members added to it at any time.
+
+- an `ArrayList` can have existing members removed from it at any time.
+
+- `ArrayList` is not a primitive data type or data structure in Java.
+
+- `ArrayList` is a reference type, as are all non-primitive data types or data structures.
 
 ---
 
@@ -551,27 +553,7 @@ name: arraylist
 
 ## Overview
 
-The `ArrayList` class, part of the `java.util` package, gives programmers a more dynamic array-like experience than what primitive arrays can do.
 
-
-
-- an `ArrayList` does not have a fixed length.
-
---
-
-- an `ArrayList` can have new members added to it at any time.
-
---
-
-- an `ArrayList` can have existing members removed from it at any time.
-
---
-
-- `ArrayList` is not a primitive data type or data structure in Java.
-
---
-
-- `ArrayList` is a reference type, as are all non-primitive data types or data structures.
 
 ---
 
@@ -579,21 +561,25 @@ template: arraylist
 
 ## Example
 
+The example below shows some of the most useful methods in the `ArrayList` class.
+
 ```java
 ArrayList<String> veggies = new ArrayList<String>(); // initialize an ArrayList that will hold Strings
-veggies.add("avocado"); // add avocado (a fruit) to our list of vegetables
-veggies.add("tomato"); // add tomato (a fruit) to our list of vegetables
-veggies.add("crispy lettuce"); // add crispy lettuce to our list of vegetables
-veggies.add("ketchup"); // add ketchup (a sweetened condiment) to our list of vegetables
-veggies.add("bacon"); // add bacon (an animal product) to our list of vegetables
-veggies.remove("avocado"); // remove avocado from our list of vegetables
+
+veggies.add("avocado");
+veggies.add("tomato");
+veggies.add("crispy lettuce");
+veggies.add("ketchup");
+
+veggies.remove("avocado");
+
 int pos = veggies.indexOf("ketchup"); // returns 3, since "ketchup" is at position 3
 String sweetStuff = veggies.get(pos); // returns "ketchup", which is at position 3
 ```
 
 --
 
-The example above shows some of the most useful methods in the `ArrayList` class.
+Notice how easy it is to add or remove elements from an ArrayList
 
 --
 
@@ -605,7 +591,7 @@ template: arraylist
 
 ## The veggies example, revisited
 
-Here, a user provides us with inputs, and we store whatever they enter into an array.
+A user provides inputs, and we store them in an array.
 
 ```java
 ArrayList<String> veggies = new ArrayList<String>(); // create a blank ArrayList
