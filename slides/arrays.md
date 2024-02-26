@@ -17,7 +17,6 @@ Part I: One-dimensional arrays; Utility classes for arrays
 1. [Creation](#creation)
 1. [Array Length](#length)
 1. [Arrays Utility Class](#arrays-class)
-1. [Search an Array](#binary-search)
 1. [Challenges](#challenges)
 1. [ArrayList Class](#arraylist)
 
