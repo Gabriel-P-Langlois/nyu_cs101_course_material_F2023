@@ -939,6 +939,10 @@ for ( int i=0; i<naughtsAndCrosses.length; i++ ) {
         // print out the column value
         System.out.println( row[j] );
 
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
     }
 
 }
