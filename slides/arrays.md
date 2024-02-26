@@ -519,7 +519,7 @@ System.out.println(Arrays.toString(veggies));
 
 template: challenges
 
-## Another way: Use Apache Commons Lang's ArrayUtils
+## Another way: Using the ArrayList class
 
 All of this was very tedious! *Question*: Can we do better?
 
