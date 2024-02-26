@@ -333,7 +333,9 @@ name: pass-by-value
 
 # Value and reference types
 
-We've talked a lot about primitive (e.g., int, char,...) and non-primitive (e.g., Strings, Arrays...) data types.
+--
+
+We've discussed primitive (e.g., int, char...) and non-primitive (e.g., Strings, Arrays...) data types.
 
 --
 
