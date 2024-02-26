@@ -627,7 +627,7 @@ name: concept-ma
 
 ---
 
-template: overview
+template: concept-ma
 name: overview-1
 
 ## Concept
@@ -673,7 +673,7 @@ int[][] numbers = {
 
 ---
 
-template: overview
+template: concept-ma
 name: overview-3
 
 ## Two-dimensional example (continued)
