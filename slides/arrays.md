@@ -35,6 +35,7 @@ Formally, an array in Java is a *non-primitive* data type used to store multiple
 
 ```java
 int[] firstFiveFibonnaciNumbers = new int[5];
+
 firstFiveFibonnaciNumbers[0] = '1';
 firstFiveFibonnaciNumbers[1] = '1';
 firstFiveFibonnaciNumbers[2] = '2';
@@ -42,7 +43,9 @@ firstFiveFibonnaciNumbers[3] = '3';
 firstFiveFibonnaciNumbers[4] = '5';
 ```
 
-Arrays can store *any* data type or structure as long as they are all the *same* type.
+Arrays can store *any* data type or structure... 
+
+... as long as they are all the *same* type!
 
 ---
 
@@ -58,6 +61,7 @@ The `new` keyword tells Java to allocate a certain amount of memory for this arr
 
 ```java
 char[] myFavoriteCharacters = new char[3];
+
 myFavoriteCharacters[0] = 'f';
 myFavoriteCharacters[1] = 'o';
 myFavoriteCharacters[2] = 'o';
@@ -143,9 +147,7 @@ while (num < 1) {
 }
 ```
 
---
-
-Remember: Arrays in Java have **fixed length**. New positions cannot be added and existing positions cannot be removed from an array.
+Remember: Arrays in Java have **fixed length**. New positions cannot be added, and existing positions cannot be removed from an array.
 
 ---
 
@@ -236,33 +238,6 @@ boolean sameValues = Arrays.deepEquals(arrVar1, arrVar); // -> true!
 ---
 
 template: arrays-class
-name: arrays-class-4
-
-## Sorting the values in an array
-
-The method `Arrays.sort()` sorts an array (by default, in ascending order):
-
-```java
-int[] arrVar = {134, 5, 3636, 34, 8};
-Arrays.sort(arrVar);
-// arrVar now holds {5, 8, 34, 134, 3636}
-```
-
---
-
-It is also possible to sort a subset of the array:
-
-```java
-int[] arrVar = {134, 5, 3636, 34, 8};
-int startIndex = 1;
-int endIndex = 4;
-Arrays.sort(arrVar, startIndex, endIndex);
-// arrVar now holds {134, 34, 3636, 8}
-```
-
----
-
-template: arrays-class
 name: arrays-class-6
 
 ## Copying an array
@@ -321,6 +296,32 @@ The concepts of objects, implementation and interface will all be covered later 
 <div align="center">
 <span style="color: red;">Practice round</span> </div>
 
+---
+
+template: arrays-class
+name: arrays-class-4
+
+## Sorting the values in an array
+
+The method `Arrays.sort()` sorts an array (by default, in ascending order):
+
+```java
+int[] arrVar = {134, 5, 3636, 34, 8};
+Arrays.sort(arrVar);
+// arrVar now holds {5, 8, 34, 134, 3636}
+```
+
+--
+
+It is also possible to sort a subset of the array:
+
+```java
+int[] arrVar = {134, 5, 3636, 34, 8};
+int startIndex = 1;
+int endIndex = 4;
+Arrays.sort(arrVar, startIndex, endIndex);
+// arrVar now holds {134, 34, 3636, 8}
+```
 
 ---
 
