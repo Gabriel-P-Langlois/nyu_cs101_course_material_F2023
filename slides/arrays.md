@@ -258,9 +258,9 @@ int[] copy1 = Arrays.copyOf(org, 4);
 int[] copy2 = Arrays.copyOf(org, 2);
 int[] copy3 = Arrays.copyOf(org, 5);
 
-System.out.println(copy1);
-System.out.println(copy2);
-System.out.println(copy3);
+System.out.println(Arrays.toString(copy1));
+System.out.println(Arrays.toString(copy2));
+System.out.println(Arrays.toString(copy3));
 ```
 
 --
