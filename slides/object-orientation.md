@@ -8,17 +8,6 @@ class: center, middle
 
 # Object-Oriented Programming
 
----
-
-# Announcements
-
-- Assignment 3 is due on Tuesday, October 24th, at 11:59 p.m.
-- Quiz 7 is due on Thursday, October 26th, at 11:59 p.m.
-- Assignment 4 will be released on Tuesday, October 24th. It will be due a week later on Tuesday, October 31st.
-- I may release Quiz 8 this Thursday or Tuesday next week; I will keep you informed.
-
-- Regarding Exam 1: I will grade the exam by Tuesday next week, in time for the NYU midterm evaluations. I hope to have assignment 2 graded by Wednesday or Thursday this week.
-
 
 ---
 
