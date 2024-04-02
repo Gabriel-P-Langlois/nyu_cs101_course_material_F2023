@@ -13,6 +13,7 @@ class: center, middle
 
 # Agenda
 
+Part I: Overview; The Black Box Metaphor;
 1. [Overview](#overview)
 1. [Black Box](#black-box)
 1. [Files](#example-1)
@@ -21,6 +22,8 @@ class: center, middle
 1. [Controlling Belongingness](#belongingness)
 1. [Comparing Sameness](#comparisons)
 1. [Stringification](#stringification)
+
+Part II: The Pillar of Object-Orientation; Inheritance
 1. [The 4 Pillars of Object-Orientation](#pillars)
 1. [Inheritance and polymorphism](#overview2)
 1. [Basic Implementation](#implementation)
@@ -42,12 +45,15 @@ name: overview-1
 
 ## Concept
 
-Object-oriented programming (OOP) is a programming paradigm that organizes software design
-around **classes** and **objects**.
+Object-oriented programming (**OOP**) is a programming paradigm.
 
 --
 
-Most widely used programming languages  (e.g., C++, Java, Python, etc.) support OOP to some degree,
+OOP organizes software design around **classes** and **objects**.
+
+--
+
+Many programming languages  (e.g., C++, Java, Python) support OOP,
 typically in combination with imperative programming.
 
 --
@@ -69,7 +75,7 @@ name: overview-2
 
 ## Concept (continued)
 
-With object-oriented programming, a developer writes a _description_ of things of a certain type.
+In object-oriented programming, we write a _description_ of things of a certain type.
 
 --
 
@@ -78,31 +84,6 @@ With object-oriented programming, a developer writes a _description_ of things o
 --
 
 - Things are then created that _embody_ the abstract concept - **objects**.
-
----
-
-template: overview
-name: overview-2
-
-## Imperative programming
-
-Object-oriented programming is a variety of **imperative programming**.
-
---
-
-- With imperative programming, we tell the computer **how** to solve tasks.
-
---
-
-- Programs use lots of memory and **control flow** (loops, conditional statements with branching, etc.) to establish the steps necessary to solve the problem.
-
---
-
-- An alternative to imperative programming is **declarative programming**.
-
---
-
--   With declarative programming, we tell the computer our desired end goal without providing the implementation details. **SQL** is an example of a declarative language.
 
 ---
 
@@ -117,11 +98,11 @@ name: black-box-1
 
 ## Smoke and mirrors
 
-In object-oriented programming, we specify in detail how problems should be solved.
+In object-oriented programming, we specify how problems should be solved.
 
 --
 
-Nevertheless, object orientation attempts to put into practice the [black box metaphor](https://en.wikipedia.org/wiki/Black_box) of engineering.
+Object orientation attempts to implement the [black box metaphor](https://en.wikipedia.org/wiki/Black_box) of engineering.
 
 --
 
@@ -147,7 +128,7 @@ Every file on the hard drive might have some properties, e.g.
 
 --
 
-The values these properties hold collectively represent the _internal state_ of any given file at any given moment.
+The values these properties hold collectively represent the _internal state_ of any given file at any moment.
 
 ---
 
@@ -156,7 +137,7 @@ name: example-1c
 
 ## Example 1: Files
 
-Suppose a file was in control of its destiny (a big if); what actions could it take? Perhaps it could:
+What actions could files take? Perhaps they could:
 
 --
 
@@ -240,15 +221,20 @@ A **class** definition is a template from which **objects** can be made as we li
 
 --
 
-- Each File object can have its own specific set of values for the properties defined in the class.
+- Each File object can have its specific set of values for the properties defined in the class.
 
 --
 
-- Each File object will respond to calls to it using any of the methods defined in the class.
+- Each File object will respond to calls using any of the methods defined in the class.
 
 --
 
-- The internal state of each object is hidden by making the properties private. Code written inside other class definitions cannot see them.
+Making the properties private hides each object's internal state, so code written inside other class definitions cannot see it.
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -430,7 +416,7 @@ Dog dog2 = new Dog();
 template: difference-2
 name: difference-2a
 
-These are different _things_ in memory. [See for yourself.](https://repl.it/repls/QuizzicalBubblyChapter)
+These are different _things_ in memory.
 
 ```java
 (dog1 == dog2) // false... they are different references
