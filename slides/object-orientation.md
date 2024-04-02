@@ -648,12 +648,17 @@ for (int i=0; i<dogs.length; i++) {
 
 ---
 
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
+---
+
 template: difference
 name: difference-7
 
 ## Changing internal state
 
-Constructors allow us to set up an object's internal state at the moment of its creation. But what if we wanted to update those values at some later date?
+Constructors allow us to set up an object's internal state at its creation. But what if we wanted to update those values at some later date?
 
 --
 
@@ -758,6 +763,11 @@ If setters are present, they should _always_ be used whenever an object's proper
 
 ---
 
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
+---
+
 template: difference
 name: difference-9
 
@@ -817,7 +827,7 @@ name: difference-11
 
 ## Getters (continued)
 
-With a getter function, we can read the current value of a property of an object...
+With a getter function, we can read the current value of an object's property.
 
 --
 
@@ -845,6 +855,11 @@ if ( dog1.getBreed().equals("Dalmation") && dog1.getName().equals("Pepper") ) {
 
 ---
 
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
+---
+
 name: belongingness
 
 # Controlling Belongingness
@@ -853,23 +868,16 @@ name: belongingness
 
 ## Non-static properties and methods
 
-Neither _setters_ nor _getters_, nor even the methods that represent actions of the object (e.g. _bark_, _fetch_, _sleep_) were declared with the keyword `static` in their method signatures. Neither were any of the properties (e.g. _name_, _breed_, _age_).
+Neither _setters_ nor _getters_, nor even the methods that represent the object's actions (e.g., _bark_, _fetch_, _sleep_) were declared with the keyword `static` in their method signatures. Neither were any of the properties (e.g., _name_, _breed_, _age_).
 
 --
 
-- The keyword, `static`, is used to indicate that a method or property _belongs to the class as a whole_, not to each particular object independently.
+The keyword `static` indicates that a method or property belongs to the class as a whole, not to each particular object independently.
+
 
 --
 
-- Thus, properties and methods that we want to _belong to each object individually_ do not use the `static` keyword.
-
---
-
-- Each dog has its own _name_, _breed_, _age_, and each dog does its own _barking_, _fetching_, and _sleeping_. So it makes sense that these properties and methods would not be static.
-
---
-
-- Making such properties and methods static would indicate that all dogs share them - _one name for all_, _one breed for all_, _one age for all_, all _fetching as one_, _sleeping as one_, _eating as one_, etc.
+Thus, properties and methods that we want to _belong to each object individually_ do not use the `static` keyword.
 
 ---
 
@@ -877,11 +885,11 @@ template: belongingness
 
 ## Shared concerns
 
-There are, of course, cases where it makes sense for a property or method to belong to the class as a whole... i.e., for it to be declared as `static`.
+When does it makes sense for a property or method to belong to the class as a whole, i.e., for it to be declared `static`?
 
 --
 
-- For example, imagine that you wanted to keep track of how many dog objects had been instantiated from the Dog class.
+- For example, imagine that you wanted to track how many dog objects had been instantiated from the Dog class.
 
 --
 
@@ -909,15 +917,11 @@ public class Dog {
 
 --
 
-- Note that we refer to the property as `Dog.numDogs`, rather than `this.numDogs`.
+- We refer to the property as `Dog.numDogs` rather than `this.numDogs`.
 
 --
 
-- `this.numDogs` would suggest that the `numDogs` property belongs only to the Dog being instantiated, which is not correct - an error!
-
---
-
-- `Dog.numDogs` clearly communicates that the `numDogs` property belongs to the `Dog` class as a whole - correct!
+- `Dog.numDogs` communicates that the `numDogs` property belongs to the `Dog` class as a whole.
 
 ---
 
@@ -938,13 +942,18 @@ Dog dog2 = new Dog("Tobik", "German Shepherd", 3);
 
 --
 
-- if were to make a `public` _getter_ method for the `numDogs` property defined within the `Dog` class, we would be able to call it from outside the `Dog` class to find out how many dogs had been made.
+- Use a `public` _getter_ method to access the `numDogs` property!
 
 --
 
 ```java
 System.out.printf( "There exist %d dogs in our world.\n", Dog.getNumDogs() );
 ```
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -972,7 +981,7 @@ template: comparisons
 
 ## Identity comparison
 
-To check whether two supposedly-separate objects are, in fact, the same object, use the `==` operator.
+What is we use the `==` operator to compare to dog objects?
 
 --
 
@@ -988,7 +997,7 @@ if (dog1 == dog2) {
 
 --
 
-- The `==` operator, when used with a reference type, thus compares memory addresses.
+- The `==` operator, when used with a reference type, compares memory addresses.
 
 ---
 
@@ -1009,7 +1018,7 @@ public void rename(Dog d) {
 ```java
 Dog dog1 = new Dog("Fido", "Bugle", 10);
 rename(dog1);
-System.out.println ( dog1.getName() )
+System.out.println( dog1.getName() )
 ```
 
 --
@@ -1030,7 +1039,7 @@ To check whether two objects share the same internal state, even if they are dif
 
 --
 
-- This is typically done by defining a method named `equals` that performs the comparison.
+- Simply define a method named `equals` to perform the comparison.
 
 --
 
