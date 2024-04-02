@@ -13,7 +13,7 @@ class: center, middle
 
 # Agenda
 
-Part I: Overview; The Black Box Metaphor;
+Part I: Overview; The Black Box Metaphor; Basics of Creating Objects in Java
 1. [Overview](#overview)
 1. [Black Box](#black-box)
 1. [Files](#example-1)
@@ -594,7 +594,7 @@ dog1.bark(); // outputs "Fido says, 'Woof!' "
 Whereas, if we were to call that method on a dog named Tobik, then Tobik's name would be output.
 
 ```java
-Dog dog2 = new Dog("Fido", "Bugle", 10);
+Dog dog2 = new Dog("Tobik", "German Shepherd", 3);
 
 //...
 
@@ -697,14 +697,12 @@ To change an object's internal state, we need a '**setter**' function to allow u
 ```java
 public class Dog {
     // ...etc etc
-
     // a setter function
     public void setAge(int age) {
         // first validate the value, and then use it if good
-        if (age > 0 && this.age < 15) this.age = age;
+        if (age > 0 && age < 20) this.age = age;
     }
-
-    // ...and so on and so forth
+    // ...
 // ...
 ```
 
@@ -848,7 +846,7 @@ dog1.setAge( dog1.getAge() + 1 );
 Knowledge of an object's internal state can help us make decisions
 
 ```java
-if ( dog1.getBreed().equals("Dalmation") && dog1.getName().equals("Pepper") ) {
+if ( dog1.getBreed().equals("Dalmatian") && dog1.getName().equals("Pepper") ) {
     // use your imagination
 }
 ```
@@ -1196,7 +1194,7 @@ Abstraction is thus the _process of making something abstract_ or _the state of 
 
 --
 
-- **Static properties and methods** are abstractions, as they are not tied to any instance.
+- **Static properties and methods** are abstractions, too.
 
 ---
 
