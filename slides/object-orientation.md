@@ -13,7 +13,7 @@ class: center, middle
 
 # Agenda
 
-Part I: Overview; The Black Box Metaphor; Basics of Creating Objects in Java
+Part I: Overview; The Black Box Metaphor; Objects and Classes
 1. [Overview](#overview)
 1. [Black Box](#black-box)
 1. [Files](#example-1)
@@ -23,7 +23,7 @@ Part I: Overview; The Black Box Metaphor; Basics of Creating Objects in Java
 1. [Comparing Sameness](#comparisons)
 1. [Stringification](#stringification)
 
-Part II: The Pillar of Object-Orientation; Inheritance
+Part II: The Pillar of Object-Orientation; Object-oriented Thinking; Inheritance
 1. [The 4 Pillars of Object-Orientation](#pillars)
 1. [Inheritance and polymorphism](#overview2)
 1. [Basic Implementation](#implementation)
