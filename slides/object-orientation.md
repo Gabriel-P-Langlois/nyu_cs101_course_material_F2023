@@ -1438,6 +1438,11 @@ By definition, the _private_ property, `message`, of the `A` class is not visibl
 
 ---
 
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
+---
+
 name: multi-level
 
 # Multi-Level Inheritance
@@ -1500,6 +1505,11 @@ What would the following code output?
 C cObj = new C( "Welcome!!" );
 System.out.println( cObj.getMessage() );
 ```
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -1605,6 +1615,11 @@ public class B extends A {
     }
 }
 ```
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
