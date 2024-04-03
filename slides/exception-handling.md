@@ -26,11 +26,7 @@ name: overview
 
 ## Concept
 
-An **exception** is a disruption to the _normal_ control flow of of a program.
-
---
-
-- Exceptions occur when something unexpected has happened and are reported either during compilation or execution of the program.
+An **exception** is a disruption to the _normal_ control flow of a program.
 
 --
 
@@ -42,7 +38,7 @@ An **exception** is a disruption to the _normal_ control flow of of a program.
 
 --
 
-- Whether an exception is reported during compilation or execution depends upon whether it is _checked_ or _unchecked_.
+Whether an exception is reported during compilation or execution depends upon whether it is _checked_ or _unchecked_.
 
 ---
 
@@ -54,19 +50,25 @@ Exceptions are divided into two types, depending upon when they appear.
 
 --
 
-**Checked exceptions** are reported during compilation. These exceptions will crash the compiler if they are not _handled_. 
+- **Checked exceptions** are reported during compilation. The compiler checks for these exceptions and will complain if they are not _handled_. 
 
 --
 
-**Unchecked exceptions** are reported during execution. These exceptions are not checked by the compiler. Your program may crash if not _handled_ in your program.
+- **Unchecked exceptions** are reported during execution. The compiler does _not_ check these exceptions. Your program may crash if not _handled_ in your program.
 
 --
 
-**It is wrong** to think of exceptions as being errors.
+**Important:** Exceptions are not necessarily errors!
 
 --
 
-**Errors**, in Java, are failures that result from factors outside the control of the program, such as running out of memory. Like unchecked exceptions, they cause the program to crash.
+**Errors** in Java are failures that result from factors outside the program's control, e.g., running out of memory. Like unchecked exceptions, they cause the program to crash.
+
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -114,7 +116,7 @@ Now you may wonder why not leave all exceptions unchecked. The checks wouldn't t
 
 --
 
-- In some languages, like C++, _all exceptions are unchecked_. The compiler does not get involved and it is up to the programmer to make sure their code is reliable. _Java is not one of these languages_.
+- In some languages, like C++, _all exceptions are unchecked_. The compiler does not get involved, and it is up to the programmer to ensure their code is reliable.
 
 --
 
@@ -130,11 +132,11 @@ template: overview
 
 In conclusion, the Java people recommend the following:
 
-- _Use checked exceptions if the program could reasonably be expected to recover_ from the situation in which the exception occurs.
+- _Use checked exceptions if the program could reasonably be expected to recover_ from what causes the exception.
 
 --
 
-- _Use unchecked exceptions if your program can't recover_ from the situation in which the exception occurs.
+- Use unchecked exceptions if your program cannot recover from what causes the exception.
 
 --
 
@@ -168,7 +170,7 @@ template: handling
 
 ## Example - the problem
 
-For example, take a method that opens a file... this might cause a checked exception if the file being opened does not exist.
+For example, suppose we want to open a file. This might cause a checked exception if the file being opened does not exist.
 
 --
 
@@ -182,15 +184,17 @@ public static void doSomething() {
 
 --
 
-- This code will not compile. (**Demo**)
-
---
-
 - The `Scanner` class's constructor declares that it may cause a checked exception when the file is not found. It declares this using the `throws` declaration which we'll return to a bit later.
 
 --
 
 - Yet the `doSomething()` method does not have any code to handle the situation in which this exception occurs.
+
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -217,9 +221,11 @@ name: example-try-catch
     }
 ```
 
---
 
-- (**Demo**)
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -247,11 +253,17 @@ public static void doSomething() throws FileNotFoundException{
 
 --
 
-- The `doSomething()` method has abdicated responsibility for the exception that may occur, and it is now the responsibility of any method that calls `doSomething()` to handle the exception.
+- The `doSomething()` method abdicates its responsibility for the exception that may occur, and it is now the responsibility of any method that calls `doSomething()` to handle the exception.
 
 --
 
-- Any method that calls this method must now itself handle the situation in one of [the two ways we've discussed](#handling-options): using `try`/`catch` around the call to this method, or declaring that it too `throws` an exception.
+- Any method that calls this method must now handle the situation in one of [the two ways we've discussed](#handling-options): using `try`/`catch` around the call to this method, or declaring that it too `throws` an exception.
+
+  
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -313,6 +325,12 @@ public void anotherMethod() throws FileNotFoundException {
 }
 ```
 
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
 ---
 
 name: custom
@@ -323,7 +341,7 @@ name: custom
 
 ## Concept
 
-While the Java API comes with exception types useful for many common situations, it is possible to build one's own exception types.
+While the Java API provides useful exception types for many common situations, it is also possible to create one's own exception types.
 
 --
 
@@ -339,7 +357,7 @@ template: custom
 
 ## Subclassing Exception
 
-Here is an example of a custom exception type, useful for the situation where a virtual person sips a burning hot virtual cup of coffee.
+Here is an example of a custom exception type, useful for when a virtual person sips a burning hot virtual cup of coffee.
 
 --
 
@@ -382,6 +400,12 @@ public class Person {
 --
 
 - Note also that the exception is nothing but an object of a class descended from `Exception` and is thrown using the `throw` keyword.
+
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
