@@ -193,11 +193,6 @@ public static void doSomething() {
 
 ---
 
-<div align="center">
-<span style="color: red;">Practice round</span> </div>
-
----
-
 template: handling
 
 ## Example - the try/catch solution
@@ -220,12 +215,6 @@ name: example-try-catch
         }
     }
 ```
-
-
----
-
-<div align="center">
-<span style="color: red;">Practice round</span> </div>
 
 ---
 
