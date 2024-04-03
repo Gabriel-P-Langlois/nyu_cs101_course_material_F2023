@@ -67,11 +67,6 @@ Exceptions are divided into two types, depending upon when they appear.
 
 ---
 
-<div align="center">
-<span style="color: red;">Practice round</span> </div>
-
----
-
 template: overview
 
 ## Exception lineage
@@ -93,9 +88,7 @@ Throwable
    |
    |---> Error
 ```
-
-- Exceptions are descended from the Java API's `Exception` class. **Unchecked** exceptions are descended from `Exception`'s child, `RuntimeException`.
-- Errors are descended from `Error`.
+Exceptions descend from the `Exception` class. **Unchecked** exceptions descend from `Exception`'s child, `RuntimeException`.
 - All these inherit from a `Throwable` ancestor.
 
 ---
@@ -104,7 +97,7 @@ template: overview
 
 ## Why two types?
 
-Why doesn't the compiler check all exceptions so Java can avoid runtime crashes?
+Why doesn't the compiler check all exceptions to avoid runtime crashes?
 
 --
 
