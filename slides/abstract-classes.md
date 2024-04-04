@@ -183,6 +183,11 @@ template: picking
 
 ---
 
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
+
+---
+
 name: overview-interfaces
 
 # Overview of Interfaces
@@ -278,11 +283,15 @@ Classes that implement an interface _must_ implement the methods declared within
 
 - The class may contain other properties and methods in addition to those specified in the interface.
 
---
+---
+
+template: example-interface
+
+## Some notes
 
 The value of an interface is that it can ensure the same set of behaviors across several different classes.
 
-- The expectation is that these behaviors are implemented differently among the classes that implement them.
+The expectation is that these behaviors are implemented differently among the classes that implement them.
 
 --
 
@@ -290,6 +299,11 @@ The value of an interface is that it can ensure the same set of behaviors across
 - An interface can contain public static concrete methods (more on this soon).
 - Any other methods must be public and abstract.
 - All attributes are public, static and final.
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -430,6 +444,12 @@ public interface Plane extends Vehicle {
 --
 
 A class that implements an interface has to implement any abstract methods in the interface, _including_ those passed down from ancestor interfaces.
+
+
+---
+
+<div align="center">
+<span style="color: red;">Practice round</span> </div>
 
 ---
 
