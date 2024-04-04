@@ -28,6 +28,8 @@ Part II: The Pillar of Object-Orientation; Object-oriented Thinking; Inheritance
 1. [Inheritance and polymorphism](#overview2)
 1. [Basic Implementation](#implementation)
 1. [Multi-Level Inheritance](#multi-level)
+
+Part III: Polymorphism
 1. [Polymorphism](#polymorphism)
 1. [Similarity & Difference](#difference)
 1. [Is Inheritance Evil?](#evils)
@@ -1154,15 +1156,9 @@ The **four pillars of object-oriented programming**:
 
 1. Abstraction
 
---
-
 2. Encapsulation
 
---
-
 3. Inheritance
-
---
 
 4. Polymorphism
 
@@ -1184,15 +1180,9 @@ Abstraction is thus the _process of making something abstract_ or _the state of 
 
 - The **black box metaphor** encourages abstraction.
 
---
-
-- **Hiding implementation details** of code encourages abstration
-
---
+- **Hiding implementation details** of code encourages abstraction
 
 - **Classes** are abstractions of the objects that are instantiated from them.
-
---
 
 - **Static properties and methods** are abstractions, too.
 
@@ -1214,15 +1204,9 @@ Encapsulation is thus the _process of enclosing some things within other things_
 
 - **Instance properties and methods** are encapsulated within the objects to which they belong.
 
---
-
 - **Static properties and methods** are encapsulated within the class to which they belong.
 
---
-
 - **Classes** are encapsulated within the packages to which they belong.
-
---
 
 - **Packages** may be encapsulated within parent packages.
 
@@ -1242,11 +1226,9 @@ Inheritance is thus _that which is inherited from an ancestor_.
 
 --
 
-- **Classes**, and the objects instantiated from them, can inherit properties and methods from ancestor classes (we have not discussed this yet).
+- **Classes**, and the objects instantiated from them, can inherit properties and methods from ancestor classes.
 
---
-
-- **Classes**, and the objects instantiated from them, can inherit properties and methods from ancestor interfaces (we have not discussed this yet).
+- **Classes**, and the objects instantiated from them, can inherit properties and methods from ancestor interfaces.
 
 ---
 
@@ -1261,10 +1243,6 @@ template: pillars
 --
 
 - **Objects** can be instances of more than one class (we have not discussed this yet).
-
---
-
---
 
 - **Objects** can also be instances of one or more interfaces (we have not discussed this yet).
 
