@@ -39,7 +39,7 @@ Think of an abstract method like a prototype for a method.
 
 --
 
-Abstract methods provide _a common definition of a base class.
+Abstract methods provide a common definition of a base class.
 
 --
 
@@ -98,6 +98,8 @@ public abstract class Animal {
   }
 }
 ```
+
+--
 
 - Abstract classes _can never be instantiated_!
 
@@ -180,11 +182,6 @@ template: picking
 - Does it make sense to instantiate an Animal object? No, not in this case. 
 
 - But it makes sense to create an abstract Animal class containing a lot of code shared in common by three concrete child classes, Dog, Cat and Pig.
-
----
-
-<div align="center">
-<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -281,7 +278,7 @@ template: example-interface
 
 Classes that implement an interface _must_ implement the methods declared within the interface. The code won't compile otherwise.
 
-- The class may contain other properties and methods in addition to those specified in the interface.
+The class may contain other properties and methods in addition to those specified in the interface.
 
 ---
 
@@ -295,15 +292,10 @@ The expectation is that these behaviors are implemented differently among the cl
 
 --
 
-- An interface can contain public non-static concrete methods in the form of default methods (more on this soon).
-- An interface can contain public static concrete methods (more on this soon).
+- An interface can contain public non-static concrete methods in the form of default methods.
+- An interface can contain public static concrete methods.
 - Any other methods must be public and abstract.
 - All attributes are public, static and final.
-
----
-
-<div align="center">
-<span style="color: red;">Practice round</span> </div>
 
 ---
 
@@ -448,10 +440,7 @@ A class that implements an interface has to implement any abstract methods in th
 
 ---
 
-<div align="center">
-<span style="color: red;">Practice round</span> </div>
-
----
+<!---
 
 name: polymorphism
 
@@ -487,6 +476,8 @@ Vehicle[] planes = {
 
 ---
 
+-->
+
 name: picking2
 
 # Picking an abstraction
@@ -496,8 +487,6 @@ name: picking2
 ## Deciding between abstract classes and interfaces
 
 Given both abstract classes and interfaces can encapsulate abstract methods, _how do you pick between the two_?
-
-It's easy:
 
 - Interfaces enforce a common set of behavioral capabilities on otherwise disparate classes with very little code in common.
 
