@@ -347,8 +347,6 @@ public interface Vehicle {
 }
 ```
 
-You can override a default method, and even call the default version using _super_.
-
 ---
 
 template: default-methods
