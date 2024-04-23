@@ -18,7 +18,6 @@ class: center, middle
 1. [Example of an Interface](#example-interface)
 1. [Methods with Implementations](#default-methods)
 1. [Multiple interfaces](#multiple-interfaces)
-1. [Polymorphism for interfaces](#polymorphism)
 1. [Abstract classes or Interfaces?](#picking2)
 
 ---
@@ -50,7 +49,7 @@ public abstract class Animal {
 
   // Methods
   public abstract void makeSound();
-  public void sleep(); {
+  public void sleep() {
     System.out.println("Zzz");
   }
 }
@@ -93,7 +92,7 @@ public abstract class Animal {
 
   // Methods
   public abstract void makeSound();
-  public void sleep(); {
+  public void sleep() {
     System.out.println("Zzz");
   }
 }
@@ -130,7 +129,7 @@ public abstract class Animal {
 
   // Methods
   public abstract void makeSound();
-  public void sleep(); {
+  public void sleep() {
     System.out.println("Zzz");
   }
 }
@@ -139,7 +138,7 @@ public abstract class Animal {
 ```java
 public class Pig extends Animal {
   public Pig(String name) {
-    super(name);
+    super.name = name;
   }
   
   @Override
@@ -165,7 +164,7 @@ Given that abstract classes can share all the same sorts of code as a concrete c
 
 It's easy:
 
-- Use an abstract class if it makes no conceptual sense for the class to ever be instantiated.
+- Use an abstract class if it makes no conceptual sense for the class ever to be instantiated.
 
 - Use a concrete class if it does make sense.
 
@@ -202,7 +201,7 @@ A java interface can contain abstract methods, static methods, and default metho
 ```java
 public interface Vehicle {
     // Attributes -- all attributes are public, static, and final by default.
-    final float MAX_VELOCITY;
+    final int MAX_VELOCITY - 100;
     
     // Methods -- all methods are public and abstract by default
     void speedUp(int a);
@@ -243,7 +242,7 @@ Imagine the following vehicle interface:
 ```java
 public interface Vehicle {
     // Attributes -- all attributes are public, static, and final by default.
-    final float MAX_VELOCITY = 100;
+    final int MAX_VELOCITY = 100;
     
     // Methods -- all methods are public and abstract by default
     void speedUp(int a);
@@ -257,8 +256,7 @@ Any class can adhere to this interface using the **implements** keyword.
 
 ```java
 public class Bicycle implements Vehicle {
-  float MAX_VELOCITY = 100;
-  float actual_velocity = MAX_VELOCITY*0.30f;
+  int actual_velocity = MAX_VELOCITY*0.30f;
   
   public void speedUp(int a) {
     // implementation goes there
@@ -292,7 +290,7 @@ The expectation is that these behaviors are implemented differently among the cl
 
 --
 
-- An interface can contain public non-static concrete methods in the form of default methods.
+- An interface can contain public non-static concrete methods as default methods.
 - An interface can contain public static concrete methods.
 - Any other methods must be public and abstract.
 - All attributes are public, static and final.
@@ -338,7 +336,7 @@ The new version of interface would look like this:
 ```java
 public interface Vehicle {
     // Attributes
-    final float MAX_VELOCITY;
+    final int MAX_VELOCITY;
     
     // Methods
     void speedUp(int a);
@@ -362,7 +360,7 @@ Interfaces can also implement static methods:
 ```java
 public interface Vehicle {
     // Attributes -- all attributes are public, static, and final by default.
-    final float MAX_VELOCITY;
+    final int MAX_VELOCITY;
     
     // Methods -- all methods are public and abstract by default
     public static void cleanVehicle() {
@@ -419,7 +417,7 @@ For example:
 ```java
 public interface Vehicle {
     // Attributes -- all attributes are public, static, and final by default.
-    final float MAX_VELOCITY;
+    final int MAX_VELOCITY;
     
     // Methods -- all methods are public and abstract by default
     void speedUp(int a);
