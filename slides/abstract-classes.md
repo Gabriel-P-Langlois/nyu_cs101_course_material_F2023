@@ -440,44 +440,6 @@ A class that implements an interface has to implement any abstract methods in th
 
 ---
 
-<!---
-
-name: polymorphism
-
-# A note about polymorphism
-
---
-
-Objects that implement a given interface can polymorphically be considered to be of the interface type.
-
-For example, a Plane object could be referenced by a Vehicle-typed variable
-
-```java
-Vehicle jet = new Plane();
-```
-
---
-
-As with all polymorphism, this can be used to perform batch operations:
-
---
-
-```java
-Vehicle[] planes = {
-  new Plane1(),
-  new Plane2(),
-  };
-  
-  // iterate through each object
-  for (Vehicle plane : planes) {
-    plane.speedUp(1);
-  }
-```
-
----
-
--->
-
 name: picking2
 
 # Picking an abstraction
