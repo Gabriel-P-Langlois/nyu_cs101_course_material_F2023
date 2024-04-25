@@ -216,6 +216,28 @@ name: polymorphism_interfaces
 
 --
 
+- Imagine we have an interface called `Vehicle`.
+
+- Imagine we had a second interface called `Flyable`.
+
+- A single class could implement both the Vehicle and Flyable interfaces...
+
+--
+
+```java
+public class Plane implements Vehicle, Flyable {
+  // All properties and abstract methods from Vehicle must be implemented.
+  
+  // All properties and abstract methods from Flyable must be implemented.
+}
+```
+
+---
+
+template: polymorphism_interfaces
+
+# Polymorphism with interfaces
+
 Objects that implement a given interface can polymorphically be considered to be of the interface type.
 
 For example, a Plane object could be referenced by a Vehicle-typed variable
