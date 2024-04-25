@@ -236,8 +236,6 @@ public class Plane implements Vehicle, Flyable {
 
 template: polymorphism_interfaces
 
-# Polymorphism with interfaces
-
 Objects that implement a given interface can polymorphically be considered to be of the interface type.
 
 For example, a Plane object could be referenced by a Vehicle-typed variable
@@ -263,8 +261,6 @@ Vehicle[] planes = {
     plane.speedUp(1);
   }
 ```
-
----
 
 ---
 
