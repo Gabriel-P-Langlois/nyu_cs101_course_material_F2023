@@ -431,7 +431,7 @@ public interface Plane extends Vehicle {
 
 --
 
-A class that implements an interface has to implement any abstract methods in the interface, _including_ those passed down from ancestor interfaces.
+A class that implements an interface must implement any abstract methods in the interface, including those passed down from ancestor interfaces.
 
 
 ---
