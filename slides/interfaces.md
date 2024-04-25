@@ -14,6 +14,7 @@ class: center, middle
 
 1. [Polymorphism](#polymorphism)
 1. [Similarity & Difference](#difference)
+1. [Polymorphism with interfaces](#polymorphism_interfaces)
 1. [Is Inheritance Evil?](#evils)
 
 ---
@@ -206,6 +207,42 @@ for (A myObj : myObjects) {
     }
 }
 ```
+
+---
+
+name: polymorphism_interfaces
+
+# Polymorphism with interfaces
+
+--
+
+Objects that implement a given interface can polymorphically be considered to be of the interface type.
+
+For example, a Plane object could be referenced by a Vehicle-typed variable
+
+```java
+Vehicle jet = new Plane();
+```
+
+--
+
+As with all polymorphism, this can be used to perform batch operations:
+
+--
+
+```java
+Vehicle[] planes = {
+  new Plane1(),
+  new Plane2(),
+  };
+  
+  // iterate through each object
+  for (Vehicle plane : planes) {
+    plane.speedUp(1);
+  }
+```
+
+---
 
 ---
 
