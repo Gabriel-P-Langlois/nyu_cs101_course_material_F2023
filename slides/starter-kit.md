@@ -10,18 +10,6 @@ class: center, middle
 
 ---
 
-# Announcements
-
-Assignment 1 has been released and is due by **February 13**.
-
-Quiz 1 has been released and is due by **February 13**.
-
-Assignment 2 will be released later this week, but it won't be due until **February 20**.
-
-Quiz 2 will be released later this week on Thursday or Friday.
-
----
-
 # Agenda
 Part I: Starter code; Input/Output (I/O) using the Scanner class; Variables and identifiers;
 1. [Your first Java program](#starter-code) 
