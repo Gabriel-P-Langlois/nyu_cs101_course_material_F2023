@@ -151,7 +151,7 @@ This listing contains a mix of files and directories - there is no way to tell w
 
 ## How do I see what hidden directories and files are within the current working directory?
 
-Hidden files and directoriess simply begin with the '.' character. To view a listing of files and directories including them, use the `a` flag on the `ls` command.
+Hidden files and directories simply begin with the '.' character. To view a listing of files and directories including them, use the `a` flag on the `ls` command.
 
 ```bash
 foo@bar$ ls -a
@@ -296,7 +296,7 @@ The `touch` command is useful for creating a blank file with a given name.
 foo@bar$ touch environmental_cosmetology.txt
 ```
 
-To open this new file, you can use `start` if on a Windows computer or `open` if on a macOS or Linux computer:
+To open this new file, you can use `start` if on a Windows computer or `open` if on a macOS computer:
 ```bash
 foo@bar$ start environmental_cosmetology.txt
 ```
