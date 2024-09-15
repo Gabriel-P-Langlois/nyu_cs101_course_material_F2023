@@ -466,6 +466,8 @@ template: data-types
 - Byte data type is used to save space in large arrays (a byte is four times smaller than an int).
 - Example: byte a = 100;
 
+![starter-kit](../files/sign_and_magnitude_byte.png)
+
 ---
 
 template: data-types
@@ -478,6 +480,8 @@ template: data-types
 - Don't use it if you need precise value! Use BigDecimal instead.
 - Example: float f1 = 234.5f;
 - Example: BigDecimal k = BigDecimal.valueOf(floatvalue);
+
+![starter-kit](../files/float32.png)
 
 ---
 
