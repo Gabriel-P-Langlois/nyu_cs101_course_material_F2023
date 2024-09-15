@@ -466,6 +466,23 @@ template: data-types
 - Byte data type is used to save space in large arrays (a byte is four times smaller than an int).
 - Example: byte a = 100;
 
+---
+
+template: data-types
+
+**float**:
+- float data type is a single-precision 32-bit IEEE 754 floating point.
+- IEEE stands for `Institute of Electrical and Electronics Engineers`.
+- Float is used to save memory in large arrays of floating point numbers.
+- Default value is 0.0f.
+- Don't use it if you need precise value! Use BigDecimal instead.
+- Example: float f1 = 234.5f;
+- Example: BigDecimal k = BigDecimal.valueOf(floatvalue);
+
+---
+
+template: data-types
+
 **Short**:
 - Short data type is a 16-bit signed two's complement integer.
 - Minimum value is -32,768 (-2^15).
@@ -473,18 +490,6 @@ template: data-types
 - Default value is 0.
 - Short data type can also be used to save memory.
 - Example: short s = 10000;
-
----
-
-template: data-types
-
-**int**:
-- int data type is a 32-bit signed two's complement integer.
-- Minimum value is -2,147,483,648 (-2^31).
-- Max value is 2,147,483,647 (2^31 - 1).
-- Default value is 0.
-- **Generally the default data type for integers**.
-- Example: int a = 100000;
 
 **long**:
 - long data type is a 64-bit signed two's complement integer.
@@ -498,14 +503,13 @@ template: data-types
 
 template: data-types
 
-**float**:
-- float data type is a single-precision 32-bit IEEE 754 floating point.
-- IEEE stands for `Institute of Electrical and Electronics Engineers`.
-- Float is used to save memory in large arrays of floating point numbers.
-- Default value is 0.0f.
-- Don't use it if you need precise value! Use BigDecimal instead.
-- Example: float f1 = 234.5f;
-- Example: BigDecimal k = BigDecimal.valueOf(floatvalue);
+**int**:
+- int data type is a 32-bit signed two's complement integer.
+- Minimum value is -2,147,483,648 (-2^31).
+- Max value is 2,147,483,647 (2^31 - 1).
+- Default value is 0.
+- **Generally the default data type for integers**.
+- Example: int a = 100000;
 
 **double**:
 - double data type is a double-precision 64-bit IEEE 754 floating point.
