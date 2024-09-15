@@ -474,9 +474,12 @@ template: data-types
 
 Adding numbers in binary is simple: just carry the ones.
 
-$$ 719 = 1011001111 = 2^9 + 2^7 + 2^6 + 2^3 + 2^2 + 2^1 + 2^0 $$
-
-$$ 720 = 1011010000 = 2^9 + 2^7 + 2^6 + 2^4 $$
+```math
+719 = 1011001111 = 2^9 + 2^7 + 2^6 + 2^3 + 2^2 + 2^1 + 2^0
+```
+```math
+720 = 1011010000 = 2^9 + 2^7 + 2^6 + 2^4
+```
 
 If all bits are 1s, then you loop around to 000...001 or something of the sort, which is either a very small or a negative number!
 
@@ -505,15 +508,17 @@ template: data-types
 
 Here's how you represent numbers with the float data type:
 
-$$(-1)^{\mathrm{sign}} \times 2^{\mathrm{exponent}} \times 1.{\mathrm{fraction}} $$
+```math
+(-1)^{\mathrm{sign}} \times 2^{\mathrm{exponent}} \times 1.{\mathrm{fraction}}
+```
 
 Not all bits are treated equally now: One holds the sign, 8 hold the exponent, and 23 hold the fraction, i.e. the digits after the 1. 
 
-They can represent \\(\ \{-1,+1\},\{-126,...,127\}, \{1,1+2^{-23},...,2-2^{-23}\} \\). Exponents with all ones and all zeros are reserved (Inf, NaN, 0).
+They can represent $\(\ \{-1,+1\},\{-126,...,127\}, \{1,1+2^{-23},...,2-2^{-23}\} \\)$. Exponents with all ones and all zeros are reserved (Inf, NaN, 0).
 
-The smallest representable number is now \\(\ 2^{−126} × 2^{−23} \approx 1.4 \times 10^{-45} \\).
+The smallest representable number is now $\(\ 2^{−126} × 2^{−23} \approx 1.4 \times 10^{-45} \\)$.
 
-The smallest number larger than one is \\(\ 1 + 2^{−23} \approx 1 + 1.2 \times 10^{-7}\\).
+The smallest number larger than one is $\(\ 1 + 2^{−23} \approx 1 + 1.2 \times 10^{-7}\\)$.
 
 Most calculations are done in double or Float64 format.
 
