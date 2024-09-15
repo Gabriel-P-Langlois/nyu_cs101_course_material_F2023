@@ -514,11 +514,11 @@ Here's how you represent numbers with the float data type:
 
 Not all bits are treated equally now: One holds the sign, 8 hold the exponent, and 23 hold the fraction, i.e. the digits after the 1. 
 
-They can represent $\(\ \{-1,+1\},\{-126,...,127\}, \{1,1+2^{-23},...,2-2^{-23}\} \\)$. Exponents with all ones and all zeros are reserved (Inf, NaN, 0).
+They can represent $`(\{-1,+1\},\{-126,...,127\}, \{1,1+2^{-23},...,2-2^{-23}\})`$. Exponents with all ones and all zeros are reserved (Inf, NaN, 0).
 
-The smallest representable number is now $\(\ 2^{−126} × 2^{−23} \approx 1.4 \times 10^{-45} \\)$.
+The smallest representable number is now $`( 2^{−126} × 2^{−23} \approx 1.4 \times 10^{-45} \\)`$.
 
-The smallest number larger than one is $\(\ 1 + 2^{−23} \approx 1 + 1.2 \times 10^{-7}\\)$.
+The smallest number larger than one is $`\(\ 1 + 2^{−23} \approx 1 + 1.2 \times 10^{-7}\\)`$.
 
 Most calculations are done in double or Float64 format.
 
