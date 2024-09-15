@@ -520,8 +520,6 @@ The smallest representable number is now `( 2^{−126} × 2^{−23} \approx 1.4 
 
 The smallest number larger than one is `( 1 + 2^{−23} \approx 1 + 1.2 \times 10^{-7})`.
 
-Most calculations are done in double or Float64 format.
-
 ![starter-kit](../files/float32.png)
 
 ---
