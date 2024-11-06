@@ -19,6 +19,7 @@ class: center, middle
 1. [Methods with Implementations](#default-methods)
 1. [Multiple interfaces](#multiple-interfaces)
 1. [Abstract classes or Interfaces?](#picking2)
+1. [Polymorphism with interfaces](#polymorphism_interfaces)
 
 ---
 
@@ -449,3 +450,57 @@ Given both abstract classes and interfaces can encapsulate abstract methods, _ho
 - Interfaces enforce a common set of behavioral capabilities on otherwise disparate classes with very little code in common.
 
 - Abstract classes enforce a common set of behavioral capabilities on classes that share a significant amount of code.
+
+---
+
+name: polymorphism_interfaces
+
+# Polymorphism with interfaces
+
+--
+
+- Imagine we have an interface called `Vehicle`.
+
+- Imagine we had a second interface called `Flyable`.
+
+- A single class could implement both the Vehicle and Flyable interfaces...
+
+--
+
+```java
+public class Plane implements Vehicle, Flyable {
+  // All properties and abstract methods from Vehicle must be implemented.
+  
+  // All properties and abstract methods from Flyable must be implemented.
+}
+```
+
+---
+
+template: polymorphism_interfaces
+
+Objects that implement a given interface can polymorphically be considered to be of the interface type.
+
+For example, a Plane object could be referenced by a Vehicle-typed variable
+
+```java
+Vehicle jet = new Plane();
+```
+
+--
+
+As with all polymorphism, this can be used to perform batch operations:
+
+--
+
+```java
+Vehicle[] planes = {
+  new Plane1(),
+  new Plane2(),
+  };
+  
+  // iterate through each object
+  for (Vehicle plane : planes) {
+    plane.speedUp(1);
+  }
+```
