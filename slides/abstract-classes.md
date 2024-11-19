@@ -179,6 +179,8 @@ name: overview-interfaces
 
 # Overview of Interfaces
 
+--
+
 ## Concept
 
 An **interface** is a blueprint of a class.
