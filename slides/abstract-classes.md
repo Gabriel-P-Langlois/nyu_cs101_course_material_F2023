@@ -33,15 +33,9 @@ name: overview
 
 An **abstract class** is a class that contains one or more **abstract methods**, which are simply method declarations without a body.
 
---
-
 Think of an abstract method like a prototype for a method.
 
---
-
 Abstract methods provide a common definition of a base class.
-
---
 
 ```java
 public abstract class Animal {
@@ -63,8 +57,6 @@ template: overview
 ## Similarity to concrete classes
 
 A class that is not abstract is called a **concrete class**.
-
---
 
 An abstract class encapsulates _all the properties and methods_ as a concrete class:
 
@@ -98,8 +90,6 @@ public abstract class Animal {
   }
 }
 ```
-
---
 
 - Abstract classes _can never be instantiated_!
 
@@ -155,13 +145,9 @@ name: picking
 
 # Concrete or abstract classes?
 
---
-
 ## Choosing between the two
 
 Given that abstract classes can share all the same sorts of code as a concrete class, and more, _how do you pick between the two_?
-
---
 
 It's easy:
 
@@ -188,8 +174,6 @@ template: picking
 name: overview-interfaces
 
 # Overview of Interfaces
-
---
 
 ## Concept
 
@@ -218,15 +202,9 @@ template: overview-interfaces
 
 Interfaces serve as a sort of **contract**.
 
---
-
 - An interface is similar to an abstract class, but it intends to specify what methods a class **must** implement.
 
---
-
 - Any class can declare that it implements an interface, meaning it agrees to implement the behaviors the interface specifies.
-
---
 
 - Java will not compile the code if any class that agreed to adhere to an interface does not properly implement its public interface.
 
@@ -235,8 +213,6 @@ Interfaces serve as a sort of **contract**.
 name: example-interface
 
 # Example
-
---
 
 Imagine the following vehicle interface:
 
@@ -289,8 +265,6 @@ The value of an interface is that it can ensure the same set of behaviors across
 
 The expectation is that these behaviors are implemented differently among the classes that implement them.
 
---
-
 - An interface can contain public non-static concrete methods as default methods.
 - An interface can contain public static concrete methods.
 - Any other methods must be public and abstract.
@@ -314,13 +288,9 @@ We can include an instance method with an implementation in an interface. This i
 
 - Suppose we want to add a new method to the interface:
 
---
-
 ```java
 void blowHorn(); // Honk honk!
 ```
-
---
 
 - Anyone using the Bicycle implementation without the new method would then fail to compile their Bicycle implementation!
 
@@ -379,13 +349,9 @@ name: multiple-interfaces
 
 # Implementing multiple interfaces
 
---
-
 ## Direct implementation of multiple interfaces
 
 Unlike with class-based inheritance, a class can implement more than one interface.
-
---
 
 - Imagine we had a second interface called `Flyable`.
 
@@ -408,8 +374,6 @@ template: multiple-interfaces
 ## Indirect implementation of multiple interfaces
 
 Interfaces can also inherit from one-another.
-
---
 
 For example:
 
@@ -441,8 +405,6 @@ name: picking2
 
 # Picking an abstraction
 
---
-
 ## Deciding between abstract classes and interfaces
 
 Given both abstract classes and interfaces can encapsulate abstract methods, _how do you pick between the two_?
@@ -457,15 +419,11 @@ name: polymorphism_interfaces
 
 # Polymorphism with interfaces
 
---
-
 - Imagine we have an interface called `Vehicle`.
 
 - Imagine we had a second interface called `Flyable`.
 
 - A single class could implement both the Vehicle and Flyable interfaces...
-
---
 
 ```java
 public class Plane implements Vehicle, Flyable {
@@ -487,11 +445,7 @@ For example, a Plane object could be referenced by a Vehicle-typed variable
 Vehicle jet = new Plane();
 ```
 
---
-
 As with all polymorphism, this can be used to perform batch operations:
-
---
 
 ```java
 Vehicle[] planes = {
