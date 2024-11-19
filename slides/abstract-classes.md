@@ -31,11 +31,11 @@ name: overview
 
 ## Concept
 
-An **abstract class** is a class that contains one or more **abstract methods**, which are simply method declarations without a body.
+An **abstract class** is a class that contains one or more **abstract methods**.
+
+Abstract methods do not contain a body.
 
 Think of an abstract method like a prototype for a method.
-
-Abstract methods provide a common definition of a base class.
 
 ```java
 public abstract class Animal {
@@ -56,7 +56,7 @@ template: overview
 
 ## Similarity to concrete classes
 
-A class that is not abstract is called a **concrete class**.
+A class that is not abstract is called **concrete**.
 
 An abstract class encapsulates _all the properties and methods_ as a concrete class:
 
@@ -76,7 +76,7 @@ template: overview
 
 There are only two differences between an abstract class and a concrete class:
 
-- Abstract classes _can contain abstract methods_, that is, method declarations without their corresponding implementation.
+- Abstract classes _can contain abstract methods_.
 
 ```java
 public abstract class Animal {
@@ -84,7 +84,7 @@ public abstract class Animal {
   public String name;
 
   // Methods
-  public abstract void makeSound();
+  public abstract void makeSound(); // No implementation needed!
   public void sleep() {
     System.out.println("Zzz");
   }
@@ -192,7 +192,7 @@ A java interface can contain abstract methods, static methods, and default metho
 ```java
 public interface Vehicle {
     // Attributes -- all attributes are public, static, and final by default.
-    final int MAX_VELOCITY - 100;
+    final int MAX_VELOCITY = 100;
     
     // Methods -- all methods are public and abstract by default
     void speedUp(int a);
@@ -208,7 +208,7 @@ template: overview-interfaces
 
 Interfaces serve as a sort of **contract**.
 
-- An interface is similar to an abstract class, but it intends to specify what methods a class **must** implement.
+- An interface specifes what methods a class **must** implement.
 
 - Any class can declare that it implements an interface, meaning it agrees to implement the behaviors the interface specifies.
 
@@ -227,7 +227,7 @@ Imagine the following vehicle interface:
 ```java
 public interface Vehicle {
     // Attributes -- all attributes are public, static, and final by default.
-    final int MAX_VELOCITY = 100;
+    final double MAX_VELOCITY = 100;
     
     // Methods -- all methods are public and abstract by default
     void speedUp(int a);
@@ -241,7 +241,7 @@ Any class can adhere to this interface using the **implements** keyword.
 
 ```java
 public class Bicycle implements Vehicle {
-  int actual_velocity = MAX_VELOCITY*0.30f;
+  double actual_velocity = MAX_VELOCITY*0.30;
   
   public void speedUp(int a) {
     // implementation goes there
@@ -259,9 +259,9 @@ template: example-interface
 
 ## Some notes
 
-Classes that implement an interface _must_ implement the methods declared within the interface. The code won't compile otherwise.
+Classes that implement an interface _must_ implement the methods declared within the interface.
 
-The class may contain other properties and methods in addition to those specified in the interface.
+The class may contain other properties and methods as well.
 
 ---
 
@@ -269,9 +269,9 @@ template: example-interface
 
 ## Some notes
 
-The value of an interface is that it can ensure the same set of behaviors across several different classes.
+Interfaces enforce the same set of behaviors across several different classes.
 
-The expectation is that these behaviors are implemented differently among the classes that implement them.
+These behaviors may differ among the classes that implement them.
 
 - An interface can contain public non-static concrete methods as default methods.
 - An interface can contain public static concrete methods.
