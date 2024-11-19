@@ -292,7 +292,7 @@ We can include an instance method with an implementation in an interface. This i
 
 --
 
-- Imagine our Vehicle interface is already in use (e.g., the Bicycle implementation).
+- Suppose we implemented a Vehicle interface (e.g., the Bicycle implementation).
 
 - Suppose we want to add a new method to the interface:
 
@@ -403,11 +403,6 @@ public interface Plane extends Vehicle {
   // public void fly();
 }
 ```
-
---
-
-A class that implements an interface must implement any abstract methods in the interface, including those passed down from ancestor interfaces.
-
 
 ---
 
