@@ -145,6 +145,8 @@ name: picking
 
 # Concrete or abstract classes?
 
+--
+
 ## Choosing between the two
 
 Given that abstract classes can share all the same sorts of code as a concrete class, and more, _how do you pick between the two_?
@@ -155,7 +157,9 @@ It's easy:
 
 - Use a concrete class if it does make sense.
 
+
 ---
+
 
 template: picking
 
@@ -213,6 +217,8 @@ Interfaces serve as a sort of **contract**.
 name: example-interface
 
 # Example
+
+--
 
 Imagine the following vehicle interface:
 
@@ -349,6 +355,8 @@ name: multiple-interfaces
 
 # Implementing multiple interfaces
 
+--
+
 ## Direct implementation of multiple interfaces
 
 Unlike with class-based inheritance, a class can implement more than one interface.
@@ -405,6 +413,8 @@ name: picking2
 
 # Picking an abstraction
 
+--
+
 ## Deciding between abstract classes and interfaces
 
 Given both abstract classes and interfaces can encapsulate abstract methods, _how do you pick between the two_?
@@ -418,6 +428,8 @@ Given both abstract classes and interfaces can encapsulate abstract methods, _ho
 name: polymorphism_interfaces
 
 # Polymorphism with interfaces
+
+--
 
 - Imagine we have an interface called `Vehicle`.
 
