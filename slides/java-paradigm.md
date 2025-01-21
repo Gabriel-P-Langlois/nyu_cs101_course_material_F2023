@@ -235,8 +235,6 @@ High-level languages are designed to be more intuitive.
 
 The written code is further abstracted away from the machine instructions the processor will ultimately execute.
 
-E.g., Python, C, C++, Java...
-
 ---
 
 template: high-level-languages
@@ -432,8 +430,6 @@ cafe babe 0000 0034 001f 0700 0201 0033
 ```
 
 One of Java's inventors, James Gosling, has [explained the origin of this](http://radio-weblogs.com/0100490/2003/01/28.html).
-
-Java Byte Code is akin to an intermediate-level code.
 
 
 
