@@ -123,8 +123,6 @@ while (true) {
 }
 ```
 
-In Visual Studio Code, press CTRL + P and type `>task terminate` to stop the execution of the program and get out of the infinite loop.
-
 ---
 
 template: while
@@ -255,8 +253,3 @@ do {
 ```
 
 Important: The statements will always be executed once, and even so if `sentinel` is `false`!
-
----
-
-<div align="center">
-<span style="color: red;">Practice round</span> </div>
