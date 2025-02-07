@@ -16,7 +16,6 @@ class: center, middle
 1. [While Loops](#while)
 1. [For Loops](#for)
 1. [do..while](#dowhile)
-1. [Some Common Tasks](#common)
 
 ---
 
@@ -237,10 +236,6 @@ while (i < N) {
 
 ---
 
-template: for
-
----
-
 name: dowhile
 
 # Do..while statement
@@ -262,108 +257,6 @@ do {
 Important: The statements will always be executed once, and even so if `sentinel` is `false`!
 
 ---
-
-name: common
-
-# Some Common Tasks
-
----
-
-template: common
-
-## Iterating through values in an array
-
-```java
-// an array of strings
-String[] messages = {
-        "hi",
-        "how are you?",
-        "how's it going?",
-        "good to see you!",
-        "have a great day!",
-        "hope to see you around :)"
-};
-
-// classic for loop that iterates as many times as there are elements in the array
-for (int i=0; i<messages.length; i++) {
-    // print out the value at each position in the array
-    System.out.println("The value in the array at index " + i + " is: " + messages[i]);
-}
-```
-
----
-
-template: common
-
-## Iterating until a specific response is received from a user
-
-```java
-Scanner scn = new Scanner(System.in); // open the scanner outside the loop, since we could potentially need to get more than one int of input
-keepGoing = true; // set the flag to true so this loop will at least iterate once
-while (keepGoing) {
-    // get user input
-    System.out.print("Please enter an integer between 1 and 10: ");
-    int num = scn.nextInt();
-
-    // validate the user's input
-    if (num >= 1 && num <= 10) {
-        keepGoing = false; // change the value of the flag to cause the loop to terminate
-        System.out.println("Thanks for the good input!... quitting loop");
-    }
-
-    // if the user's input is invalid, x is still true, so no need to set it to that!
-}
-scn.close(); // close the scanner resource to be nice to the processor
-```
-
----
-
-template: common
-
-## Iterating through the characters in a string
-
-In Java, strings contain arrays of `char` values. Note that the length of a string is obtained using the `length()` function, not the `length` property used with arrays.
-
-```java
-String s = "asparagus";
-for (int i = 0; i < s.length(); i++) {
-    char c = s.charAt(i);
-    System.out.println(c);
-}
-```
-
----
-
-template: common
-
-## Calculating a running total
-
-```java
-Scanner scn = new Scanner(System.in);
-
-int total = 0; // start the total at zero
-String stop_response = "stop"; // what the user must type in order to stop the loop
-String users_response = ""; // will hold what the user types in each iteration
-
-// keep looping until the user types 'stop'
-while (!users_response.equals(stop_response)) {
-    System.out.println("Enter a number: "); // ask for a number
-    users_response = scn.nextLine(); // get the user's response as a string
-    try {
-        int val = Integer.parseInt(users_response); // convert the respose to an int
-        total = total + val; // add it to the running total
-    }
-    catch (Exception e) {
-        // if the user types a non-integer, an error will be caught here
-        System.out.println("Sorry, that's not a valid number");
-    }
-}
-System.out.println("The total is " + total);
-```
-
----
-
-template: common
 
 <div align="center">
 <span style="color: red;">Practice round</span> </div>
