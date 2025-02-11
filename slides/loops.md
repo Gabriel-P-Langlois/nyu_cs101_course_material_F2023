@@ -125,13 +125,6 @@ while (true) {
 
 ---
 
-template: while
-
-<div align="center">
-<span style="color: red;">Practice round</span> </div>
-
----
-
 name: for
 
 # For Loops
@@ -164,47 +157,6 @@ One of the classic patterns, where a counter stops the loop after a certain numb
 for (int i = 0; i < 10; i++) {
     // iterate as long as the counter is below some target value
     System.out.println("The value of i is" + i);
-}
-```
-
----
-
-template: for
-
-## Flag-based loop
-
-Another of the classic patterns, where the value of a boolean variable causes the loop to stop iterating at some point.
-
-- `for` loops are almost never used for this... but here we go!
-
-```java
-boolean keepGoing = true; // by default, iterate!
-
-for (; keepGoing ;) {
-    // iterate as long as the boolean value in the flag is true
-    System.out.println("Iterating!");
-
-    // stop the loop if a random number between 1-100 is equal to 22
-    int rand = (int) (Math.random() * 100) + 1;
-
-    // use the ternary operator to flip the value of the flag, if necessary
-    keepGoing = (rand == 22) ? false : true; // set to false if the rand value is 22, true otherwise
-}
-```
-
----
-
-template: for
-
-## Infinite loop
-
-Usually undesireable, but for loops can iterate infinitely.
-
-```java
-
-for (; ;) {
-    // iterate forever... until the user quits the program or the computer shuts it down
-    System.out.println("Iterating!");
 }
 ```
 
@@ -252,4 +204,4 @@ do {
 } while(sentinel);
 ```
 
-Important: The statements will always be executed once, and even so if `sentinel` is `false`!
+Important: The statements will always be executed once, even if `sentinel` is `false`!
