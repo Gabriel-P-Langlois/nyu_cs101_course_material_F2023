@@ -437,13 +437,13 @@ name: pass-by-value-4
 
 ## Arrays and objects are reference types
 
-The first output (before we invoke doSomethingElse) is `[ 5, 10, 15, 20 ]`. Why? 
+The output, before we invoke doSomethingElse, is `[ 5, 10, 15, 20 ]`. Why? 
 - The local variable within the main function is never reassigned to refer to anything other than that array.
 - That array has never had its contents modified!
 
 --
 
-The second output (after we invoke doSomethingElse) is `[ 5, 10, 555, 20 ]`. Why?
+The output, after we invoke doSomethingElse, is `[ 5, 10, 555, 20 ]`. Why?
 - The local variable within the doSomething function is an alias of the variable within the main function.
 - They both refer to the same array in the same memory location and its inner values have been modified.
 - **Important**: The values encapsulated within the array or object are NOT passed to the function.
